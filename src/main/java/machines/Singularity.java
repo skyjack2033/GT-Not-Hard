@@ -305,6 +305,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
             .orElse("None");
         if (VoidFluidMode){
             Map<Integer, FluidStack> FluidRecipes = SingularityFluidRecipes.VoidFliudRecipes.get(dim);
+
             if (FluidRecipes != null){
                 this.FluidOutPuts();
                 return CheckRecipeResultRegistry.SUCCESSFUL;
