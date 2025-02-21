@@ -32,6 +32,7 @@ import galacticgreg.registry.GalacticGregRegistry;
 import gtneioreplugin.util.DimensionHelper;
 import loader.AssemblyLineWithoutResearchRecipePool;
 import loader.CraftingLoader;
+import util.SingularityFluidRecipes;
 
 @Mod(modid = MyMod.MODID, version = Tags.VERSION, name = "GT Not Hard", acceptedMinecraftVersions = "[1.7.10]")
 public class MyMod {
@@ -74,6 +75,7 @@ public class MyMod {
         proxy.postInit(event);
         // ChaosRecipeLoader loadRecipes = new ChaosRecipeLoader();
         // loadRecipes.loadRecipes();
+        SingularityFluidRecipes.addVoidFliudRecipes();
 
     }
 

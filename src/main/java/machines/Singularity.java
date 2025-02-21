@@ -19,6 +19,7 @@ import static gregtech.api.enums.Textures.BlockIcons.casingTexturePages;
 import static gregtech.api.util.GTStructureUtility.buildHatchAdder;
 import static gregtech.common.UndergroundOil.undergroundOil;
 import static gregtech.common.UndergroundOil.undergroundOilReadInformation;
+import static util.SingularityFluidRecipes.addVoidFliudRecipes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -305,7 +306,6 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
             .orElse("None");
         if (VoidFluidMode){
             Map<Integer, FluidStack> FluidRecipes = SingularityFluidRecipes.VoidFliudRecipes.get(dim);
-
             if (FluidRecipes != null){
                 this.FluidOutPuts();
                 return CheckRecipeResultRegistry.SUCCESSFUL;
@@ -442,7 +442,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     private void FluidOutPuts() {
         Map<Integer, FluidStack> FluidRecipes = SingularityFluidRecipes.VoidFliudRecipes.get(mLastDimensionOverride);
         Random random = new Random();
-        FluidStack recipeFluid = FluidRecipes.get(random.nextInt(FluidRecipes.size())).copy();
+        FluidStack recipeFluid = FluidRecipes.get(random.nextInt(FluidRecipes.size())+1).copy();
         recipeFluid.amount = getMaxParallel();
     }
 }

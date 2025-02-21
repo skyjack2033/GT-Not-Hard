@@ -2,12 +2,14 @@ package loader;
 
 import static loader.MachinesLoader.ChaosMain;
 import static loader.MachinesLoader.OriginMain;
+import static loader.MachinesLoader.SingularityMain;
 
 import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GTModHandler;
 import machines.Origin;
+import util.SingularityFluidRecipes;
 
 public class CraftingLoader {
 
@@ -34,5 +36,10 @@ public class CraftingLoader {
             new Object[] { "CBC", "FMF", "CBC", 'M', ItemList.Hull_MV, 'B', OrePrefixes.pipeLarge.get(Materials.Steel),
                 'C', OrePrefixes.circuit.get(Materials.HV), 'F', ItemList.Electric_Pump_MV });
 
+        GTModHandler.addCraftingRecipe(
+            SingularityMain,
+            bitsd,
+            new Object[] { "CBC", "FMF", "CBC", 'M', ItemList.Hull_MV, 'B', OrePrefixes.pipeLarge.get(Materials.Steel),
+                'C', OrePrefixes.circuit.get(Materials.HV), 'F', ItemList.Electric_Pump_HV });
     }
 }
