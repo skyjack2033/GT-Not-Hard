@@ -92,8 +92,8 @@ public class AssemblyLineWithoutResearchRecipePool {
             StabilisationFieldGeneratorTier5.get(1), StabilisationFieldGeneratorTier6.get(1),
             StabilisationFieldGeneratorTier7.get(1), StabilisationFieldGeneratorTier8.get(1),
             ItemList.Hatch_Energy_LuV.get(1), ItemList.Hatch_Energy_ZPM.get(1), ItemList.Hatch_Energy_UV.get(1),
-            ItemList.Hatch_Energy_UXV.get(1), ItemList.Hatch_Dynamo_LuV.get(1), ItemList.Hatch_Dynamo_ZPM.get(1),
-            ItemList.Hatch_Dynamo_UV.get(1), ItemList.Hatch_Dynamo_UXV.get(1), ItemList.Casing_Dim_Injector.get(1),
+            ItemList.Hatch_Energy_UHV.get(1), ItemList.Hatch_Dynamo_LuV.get(1), ItemList.Hatch_Dynamo_ZPM.get(1),
+            ItemList.Hatch_Dynamo_UV.get(1), ItemList.Hatch_Dynamo_UHV.get(1), ItemList.Casing_Dim_Injector.get(1),
             ItemList.Casing_Dim_Trans.get(1), ItemRefer.Advanced_Radiation_Protection_Plate.get(1) };
 
         // start check assembly line recipes
@@ -398,7 +398,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     new Object[] { OrePrefixes.circuit.get(Materials.Infinite), 2L },
                     ItemList.UHV_Coil.get(2L),
                     ItemList.Electric_Pump_UHV.get(1L))
-                .itemOutputs(ItemList.Hatch_Energy_UXV.get(1))
+                .itemOutputs(ItemList.Hatch_Energy_UHV.get(1))
                 .fluidInputs(new FluidStack(ic2coolant, 16000), new FluidStack(solderIndalloy, 40 * 144))
                 .duration(50 * 20)
                 .eut(RECIPE_UHV)
@@ -458,7 +458,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     new Object[] { OrePrefixes.circuit.get(Materials.Infinite), 2L },
                     ItemList.UHV_Coil.get(2L),
                     ItemList.Electric_Pump_UHV.get(1L))
-                .itemOutputs(ItemList.Hatch_Dynamo_UXV.get(1))
+                .itemOutputs(ItemList.Hatch_Dynamo_UHV.get(1))
                 .fluidInputs(new FluidStack(ic2coolant, 16000), new FluidStack(solderIndalloy, 40 * 144))
                 .duration(50 * 20)
                 .eut(RECIPE_UHV)

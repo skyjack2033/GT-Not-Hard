@@ -279,7 +279,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
 
     private boolean VoidFluidMode = false;
 
-    // 潜行左键切换多类型机器的类型
+    // 潜行左键切换虚空的类型
     @Override
     public void onLeftclick(IGregTechTileEntity aBaseMetaTileEntity, EntityPlayer aPlayer) {
         if (aPlayer.isSneaking() && getBaseMetaTileEntity().isServerSide()) {
@@ -444,5 +444,6 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         Random random = new Random();
         FluidStack recipeFluid = FluidRecipes.get(random.nextInt(FluidRecipes.size())+1).copy();
         recipeFluid.amount = getMaxParallel();
+        addOutput(recipeFluid);
     }
 }

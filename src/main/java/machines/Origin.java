@@ -15,15 +15,19 @@ import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_AR
 import static gregtech.api.enums.Textures.BlockIcons.casingTexturePages;
 import static gregtech.api.util.GTStructureUtility.buildHatchAdder;
 import static gregtech.api.util.GTUtility.validMTEList;
+import static gregtech.common.misc.WirelessNetworkManager.addEUToGlobalEnergyMap;
 import static gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.base.GTPPMultiBlockBase.GTPPHatchElement.TTDynamo;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.UUID;
 
 import javax.annotation.Nonnull;
 
 
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.util.ForgeDirection;
@@ -77,12 +81,14 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
     //保存NBT数据
     @Override
     public void saveNBTData(NBTTagCompound aNBT) {
+        aNBT.setBoolean("wireless_mode", wireless_mode);
         super.saveNBTData(aNBT);
     }
 
     //加载NBT数据
     @Override
     public void loadNBTData(NBTTagCompound aNBT) {
+        wireless_mode = aNBT.getBoolean("wireless_mode");
         super.saveNBTData(aNBT);
     }
 
@@ -236,6 +242,14 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
         }
     }
 
+    private UUID ownerUUID;
+
+    @Override
+    public void onFirstTick(IGregTechTileEntity aBaseMetaTileEntity) {
+        super.onFirstTick(aBaseMetaTileEntity);
+        this.ownerUUID = aBaseMetaTileEntity.getOwnerUuid();
+    }
+
     //检查配方表
     @Nonnull
     @Override
@@ -246,6 +260,11 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
             mMaxProgresstime = 20;
             lEUt = Long.MAX_VALUE;
             mEfficiency = 1;
+            if (wireless_mode) {
+                if (!addEUToGlobalEnergyMap(ownerUUID, lEUt * mMaxProgresstime)) {
+                    return CheckRecipeResultRegistry.insufficientPower(lEUt * mMaxProgresstime);
+                }
+            }
             return CheckRecipeResultRegistry.GENERATING;
         }
         if (slot != null && recipe == null && Efficiency == 0 && Voltage == 0) {
@@ -275,6 +294,11 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
                 mMaxProgresstime = generator.getProgresstime();
                 lEUt = (long) Voltage * getMaxParallelRecipes() * 10000;
                 mEfficiency = Efficiency;
+                if (wireless_mode) {
+                    if (!addEUToGlobalEnergyMap(ownerUUID, lEUt * mMaxProgresstime)) {
+                        return CheckRecipeResultRegistry.insufficientPower(lEUt * mMaxProgresstime);
+                    }
+                }
                 return CheckRecipeResultRegistry.GENERATING;
             } else {
                 recipe = null;
@@ -452,7 +476,6 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
         }
         if (!this.mAllDynamoHatches.isEmpty()) {
             return addEnergyOutputMultipleDynamos(aEU, true, 0);
-
         }
         return false;
     }
@@ -494,5 +517,33 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
             }
         }
         return injected > 0;
+    }
+
+    private boolean canUseWireless = false;
+    private boolean wireless_mode = false;
+
+    //开启无线电网条件
+    protected boolean canUseWireless() {
+        if (getControllerSlot().getItemDamage() == 11435){
+            return true;
+        } else if (getControllerSlot().stackSize >= 8) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    //开启无线电网模式
+    @Override
+    public void onLeftclick(IGregTechTileEntity aBaseMetaTileEntity, EntityPlayer aPlayer) {
+        if (canUseWireless() && aPlayer.isSneaking() && getBaseMetaTileEntity().isServerSide()) {
+            wireless_mode = !wireless_mode;
+            GTUtility.sendChatToPlayer(aPlayer, "mode: wireless_mode");
+        } else {
+            wireless_mode = false;
+            GTUtility.sendChatToPlayer(aPlayer, "Wireless mode cannot be enabled without at least 8 generators.");
+        }
+        super.onLeftclick(aBaseMetaTileEntity, aPlayer);
     }
 }
