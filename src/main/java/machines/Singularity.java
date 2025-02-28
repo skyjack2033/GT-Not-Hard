@@ -22,6 +22,8 @@ import static gregtech.common.UndergroundOil.undergroundOilReadInformation;
 import static util.SingularityFluidRecipes.addVoidFliudRecipes;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -32,6 +34,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 
+import gregtech.api.recipe.RecipeMap;
 import gregtech.api.util.GTLog;
 import gregtech.api.util.ValidationResult;
 import gregtech.api.util.ValidationType;
@@ -293,7 +296,11 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         super.onLeftclick(aBaseMetaTileEntity, aPlayer);
     }
 
-
+    @NotNull
+    @Override
+    public Collection<RecipeMap<?>> getAvailableRecipeMaps() {
+        return Arrays.asList(SingularityFluidRecipes.addVoidFluidRecipes);
+    }
 
     //机器运行逻辑
     @Nonnull
@@ -307,7 +314,9 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         if (VoidFluidMode){
             Map<Integer, FluidStack> FluidRecipes = SingularityFluidRecipes.VoidFliudRecipes.get(dim);
             if (FluidRecipes != null){
-                this.FluidOutPuts();
+                for (int mLoop = 0; mLoop < 32; mLoop++){
+                    this.FluidOutPuts();
+                }
                 return CheckRecipeResultRegistry.SUCCESSFUL;
             }
         } else {
@@ -442,7 +451,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     private void FluidOutPuts() {
         Map<Integer, FluidStack> FluidRecipes = SingularityFluidRecipes.VoidFliudRecipes.get(mLastDimensionOverride);
         Random random = new Random();
-        FluidStack recipeFluid = FluidRecipes.get(random.nextInt(FluidRecipes.size())+1).copy();
+        FluidStack recipeFluid = FluidRecipes.get(random.nextInt(FluidRecipes.size())).copy();
         recipeFluid.amount = getMaxParallel();
         addOutput(recipeFluid);
     }

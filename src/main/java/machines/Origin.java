@@ -81,15 +81,15 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
     //保存NBT数据
     @Override
     public void saveNBTData(NBTTagCompound aNBT) {
-        aNBT.setBoolean("wireless_mode", wireless_mode);
         super.saveNBTData(aNBT);
+        aNBT.setBoolean("wireless_mode", wireless_mode);
     }
 
     //加载NBT数据
     @Override
     public void loadNBTData(NBTTagCompound aNBT) {
-        wireless_mode = aNBT.getBoolean("wireless_mode");
         super.saveNBTData(aNBT);
+        wireless_mode = aNBT.getBoolean("wireless_mode");
     }
 
     private static final int mcasingIndex = Textures.BlockIcons.getTextureIndex(
@@ -261,8 +261,9 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
             lEUt = Long.MAX_VALUE;
             mEfficiency = 1;
             if (wireless_mode) {
-                if (!addEUToGlobalEnergyMap(ownerUUID, lEUt * mMaxProgresstime)) {
-                    return CheckRecipeResultRegistry.insufficientPower(lEUt * mMaxProgresstime);
+                BigInteger power = BigInteger.valueOf(lEUt).multiply(BigInteger.valueOf(mMaxProgresstime));
+                if (!addEUToGlobalEnergyMap(ownerUUID, power)) {
+                    return CheckRecipeResultRegistry.insufficientPower(power.longValue());
                 }
             }
             return CheckRecipeResultRegistry.GENERATING;
@@ -295,8 +296,9 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
                 lEUt = (long) Voltage * getMaxParallelRecipes() * 10000;
                 mEfficiency = Efficiency;
                 if (wireless_mode) {
-                    if (!addEUToGlobalEnergyMap(ownerUUID, lEUt * mMaxProgresstime)) {
-                        return CheckRecipeResultRegistry.insufficientPower(lEUt * mMaxProgresstime);
+                    BigInteger power = BigInteger.valueOf(lEUt).multiply(BigInteger.valueOf(mMaxProgresstime));
+                    if (!addEUToGlobalEnergyMap(ownerUUID, power)) {
+                        return CheckRecipeResultRegistry.insufficientPower(power.longValue());
                     }
                 }
                 return CheckRecipeResultRegistry.GENERATING;
@@ -519,7 +521,6 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
         return injected > 0;
     }
 
-    private boolean canUseWireless = false;
     private boolean wireless_mode = false;
 
     //开启无线电网条件
@@ -542,7 +543,7 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
             GTUtility.sendChatToPlayer(aPlayer, "mode: wireless_mode");
         } else {
             wireless_mode = false;
-            GTUtility.sendChatToPlayer(aPlayer, "Wireless mode cannot be enabled without at least 8 generators.");
+            GTUtility.sendChatToPlayer(aPlayer, "mode: nowireless_mode, Wireless mode cannot be enabled without at least 8 generators.");
         }
         super.onLeftclick(aBaseMetaTileEntity, aPlayer);
     }

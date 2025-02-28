@@ -76,7 +76,6 @@ public class MyMod {
         // ChaosRecipeLoader loadRecipes = new ChaosRecipeLoader();
         // loadRecipes.loadRecipes();
         SingularityFluidRecipes.addVoidFliudRecipes();
-
     }
 
     public static BiMap<Integer, String> dimMapping = HashBiMap.create();
