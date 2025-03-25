@@ -5,9 +5,9 @@ import static tectech.thing.CustomItemList.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import goodgenerator.api.recipe.GoodGeneratorRecipeMaps;
 import net.minecraft.item.ItemStack;
 
+import goodgenerator.api.recipe.GoodGeneratorRecipeMaps;
 import goodgenerator.util.ItemRefer;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.ItemList;
@@ -164,8 +164,9 @@ public class ChaosRecipeLoader {
         ChaosManager.addRecipeMapToChaos("basicmachine.wiremill", RecipeMaps.wiremillRecipes);
         ChaosManager.addSoundResourceToChaos("basicmachine.wiremill", SoundResource.IC2_MACHINES_RECYCLER_OP);
 
-        //Precise Auto-Assembler MT-3662
-        ChaosManager.addRecipeMapToChaos("Precise Auto-Assembler MT-3662", GoodGeneratorRecipeMaps.preciseAssemblerRecipes);
+        // Precise Auto-Assembler MT-3662
+        ChaosManager
+            .addRecipeMapToChaos("Precise Auto-Assembler MT-3662", GoodGeneratorRecipeMaps.preciseAssemblerRecipes);
         ChaosManager.addRecipeMapToChaos("Precise Auto-Assembler MT-3662", RecipeMaps.assemblerRecipes);
     }
 

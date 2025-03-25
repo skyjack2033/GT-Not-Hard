@@ -3,11 +3,6 @@ package machines;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.ofBlock;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.onElementPass;
 import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose;
-import static gregtech.api.enums.GTValues.debugDriller;
-import static gregtech.api.enums.HatchElement.Energy;
-import static gregtech.api.enums.HatchElement.ExoticEnergy;
-import static gregtech.api.enums.HatchElement.InputBus;
-import static gregtech.api.enums.HatchElement.InputHatch;
 import static gregtech.api.enums.HatchElement.Maintenance;
 import static gregtech.api.enums.HatchElement.OutputBus;
 import static gregtech.api.enums.HatchElement.OutputHatch;
@@ -17,11 +12,7 @@ import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_AR
 import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY_GLOW;
 import static gregtech.api.enums.Textures.BlockIcons.casingTexturePages;
 import static gregtech.api.util.GTStructureUtility.buildHatchAdder;
-import static gregtech.common.UndergroundOil.undergroundOil;
-import static gregtech.common.UndergroundOil.undergroundOilReadInformation;
-import static util.SingularityFluidRecipes.addVoidFliudRecipes;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -31,23 +22,17 @@ import java.util.Optional;
 import java.util.Random;
 import java.util.stream.Collectors;
 
-import javax.annotation.Nonnegative;
 import javax.annotation.Nonnull;
 
-import gregtech.api.recipe.RecipeMap;
-import gregtech.api.util.GTLog;
-import gregtech.api.util.ValidationResult;
-import gregtech.api.util.ValidationType;
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.StatCollector;
-import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.ChunkProviderServer;
-import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.fluids.FluidStack;
+
+import org.jetbrains.annotations.NotNull;
 
 import com.google.common.collect.ImmutableList;
 import com.gtnewhorizon.structurelib.alignment.constructable.ISurvivalConstructable;
@@ -61,7 +46,6 @@ import com.gtnewhorizons.modularui.common.widget.TextWidget;
 import com.mofoga.gtnothard.MyMod;
 
 import bwcrossmod.galacticgreg.VoidMinerUtility;
-import galacticgreg.registry.GalacticGregRegistry;
 import gregtech.api.GregTechAPI;
 import gregtech.api.enums.Textures;
 import gregtech.api.interfaces.IHatchElement;
@@ -69,24 +53,17 @@ import gregtech.api.interfaces.ITexture;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
 import gregtech.api.metatileentity.implementations.MTEExtendedPowerMultiBlockBase;
-import gregtech.api.metatileentity.implementations.MTEHatchInput;
-import gregtech.api.metatileentity.implementations.MTEHatchInputBus;
 import gregtech.api.objects.XSTR;
+import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.check.CheckRecipeResult;
 import gregtech.api.recipe.check.CheckRecipeResultRegistry;
 import gregtech.api.render.TextureFactory;
-import gregtech.api.util.GTRecipe;
 import gregtech.api.util.GTUtility;
 import gregtech.api.util.MultiblockTooltipBuilder;
-import gregtech.api.util.OverclockCalculator;
-import gregtech.api.util.ParallelHelper;
 import gregtech.api.util.shutdown.ShutDownReasonRegistry;
 import gtneioreplugin.plugin.block.ModBlocks;
 import gtneioreplugin.plugin.item.ItemDimensionDisplay;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.FluidRegistry;
-import org.jetbrains.annotations.NotNull;
+import util.SingularityDebugRecipes;
 import util.SingularityFluidRecipes;
 
 public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> implements ISurvivalConstructable {
@@ -104,7 +81,6 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     @Override
     public void saveNBTData(NBTTagCompound aNBT) {
         super.saveNBTData(aNBT);
-        aNBT.setBoolean("mBlacklist", this.mBlacklist);
         aNBT.setString("mLastDimensionOverride", this.mLastDimensionOverride);
         aNBT.setBoolean("mVoidFluidMode", VoidFluidMode);
     }
@@ -112,7 +88,6 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     @Override
     public void loadNBTData(NBTTagCompound aNBT) {
         super.saveNBTData(aNBT);
-        this.mBlacklist = aNBT.getBoolean("mBlacklist");
         this.mLastDimensionOverride = aNBT.getString("mLastDimensionOverride");
         this.VoidFluidMode = aNBT.getBoolean("mVoidFluidMode");
     }
@@ -129,8 +104,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
             transpose(new String[][] { { "hhh", "hhh", "hhh" }, { "h~h", "h h", "hhh" }, { "hhh", "hhh", "hhh" } }))
         .addElement(
             'h',
-            buildHatchAdder(Singularity.class)
-                .atLeast(OutputHatch, InputBus, OutputBus, Maintenance)
+            buildHatchAdder(Singularity.class).atLeast(OutputHatch, OutputBus, Maintenance)
                 .casingIndex(mcasingIndex)
                 .dot(1)
                 .buildAndChain(onElementPass(Singularity::onCasingAdded, ofBlock(GregTechAPI.sBlockCasings4, 2))))
@@ -183,12 +157,14 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
             .addInfo("Runs supplied machines as if placed in the world")
             .addInfo("Parallel quantity = 2^x")
             .addInfo("x = Number of machines in the controller")
-            .addInfo("If the machine within the controller contains multiple modes,")
-            .addInfo("sneak left click controller to switch machine mode")
+            .addInfo("You can only place 'GT NEI Ore Plugin' items in controller to get resources.")
+            .addInfo("This machine can get two types of resources: Ore and Fluid.")
+            .addInfo("Sneak left click controller to switch resources type.")
+            .addInfo("Add By: GT Not Hard")
             .addSeparator()
             .beginStructureBlock(3, 3, 3, true)
             .addController("Front center")
-            .addCasingInfoRange("Stable Titanium Machine Casing", 14, 24, false)
+            .addCasingInfoRange("Stable Titanium Machine Casing", 4, 24, false)
             .addEnergyHatch("Any casing", 1)
             .addMaintenanceHatch("Any casing", 1)
             .addInputBus("Any casing", 1)
@@ -217,7 +193,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     @Override
     public boolean checkMachine(IGregTechTileEntity aBaseMetaTileEntity, ItemStack aStack) {
         mCasingAmount = 0;
-        return checkPiece(STRUCTURE_PIECE_MAIN, 1, 1, 0) && mCasingAmount >= 14 && checkHatches();
+        return checkPiece(STRUCTURE_PIECE_MAIN, 1, 1, 0) && mCasingAmount >= 4 && checkHatches();
     }
 
     // 检查仓室
@@ -226,7 +202,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     }
 
     private List<IHatchElement<? super Singularity>> getAllowedHatches() {
-        return ImmutableList.of(OutputHatch, InputBus, OutputBus, Maintenance);
+        return ImmutableList.of(OutputHatch, OutputBus, Maintenance);
     }
 
     // 获取最大并行数
@@ -273,13 +249,6 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
 
     private boolean mBlacklist = false;
 
-    // 黑白名单配置
-    @Override
-    public void onScrewdriverRightClick(ForgeDirection side, EntityPlayer aPlayer, float aX, float aY, float aZ) {
-        this.mBlacklist = !this.mBlacklist;
-        GTUtility.sendChatToPlayer(aPlayer, "Mode: " + (this.mBlacklist ? "Blacklist" : "Whitelist"));
-    }
-
     private boolean VoidFluidMode = false;
 
     // 潜行左键切换虚空的类型
@@ -302,19 +271,31 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         return Arrays.asList(SingularityFluidRecipes.addVoidFluidRecipes);
     }
 
-    //机器运行逻辑
+    // 机器运行逻辑
     @Nonnull
     @Override
     public CheckRecipeResult checkProcessing() {
-        mMaxProgresstime = 20;
+        mMaxProgresstime = 60;
         String dim = Optional.ofNullable(this.mInventory[1])
             .filter(s -> s.getItem() instanceof ItemDimensionDisplay)
             .map(ItemDimensionDisplay::getDimension)
             .orElse("None");
-        if (VoidFluidMode){
+        ItemStack slot = getControllerSlot();
+        // debug LUV
+        if (slot != null && !VoidFluidMode) {
+            Map<Integer, ItemStack> ItemRecipes = SingularityDebugRecipes.VoidDebugRecipes
+                .get(getControllerSlot().getItemDamage());
+            if (ItemRecipes != null) {
+                for (int mLoop = 0; mLoop < 8; mLoop++) {
+                    this.DebugOutPuts();
+                }
+                return CheckRecipeResultRegistry.SUCCESSFUL;
+            }
+        }
+        if (VoidFluidMode) {
             Map<Integer, FluidStack> FluidRecipes = SingularityFluidRecipes.VoidFliudRecipes.get(dim);
-            if (FluidRecipes != null){
-                for (int mLoop = 0; mLoop < 32; mLoop++){
+            if (FluidRecipes != null) {
+                for (int mLoop = 0; mLoop < 32; mLoop++) {
                     this.FluidOutPuts();
                 }
                 return CheckRecipeResultRegistry.SUCCESSFUL;
@@ -328,7 +309,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
                 this.calculateDropMap();
             }
             if (this.totalWeight != 0.f) {
-                for (int mLoop = 0; mLoop < 256; mLoop++){
+                for (int mLoop = 0; mLoop < 256; mLoop++) {
                     this.handleOutputs();
                 }
                 return CheckRecipeResultRegistry.SUCCESSFUL;
@@ -338,7 +319,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         return CheckRecipeResultRegistry.NO_RECIPE;
     }
 
-    //获取主方块显示内容
+    // 获取主方块显示内容
     private String getDimensionNameText() {
         String ext = null;
         try {
@@ -348,7 +329,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         return "Dimension Override:" + (ext == null ? mLastDimensionOverride : ext);
     }
 
-    //主方块中显示信息
+    // 主方块中显示信息
     @Override
     protected void drawTexts(DynamicPositionedColumn screenElements, SlotWidget inventorySlot) {
         super.drawTexts(screenElements, inventorySlot);
@@ -359,7 +340,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
                 .setEnabled(true));
     }
 
-    //获取主方块中维度方块的的维度名称
+    // 获取主方块中维度方块的的维度名称
     private String getPluginDimensionName() {
         return Optional.ofNullable(this.mInventory[1])
             .filter(s -> s.getItem() instanceof ItemDimensionDisplay)
@@ -391,7 +372,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         }
     }
 
-    //处理额外添加的矿石
+    // 处理额外添加的矿石
     private void handleExtraDrops(int id) {
         id = MyMod.dimMapping.inverse()
             .getOrDefault(getPluginDimensionName(), id);
@@ -402,7 +383,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
 
     private int dim;
 
-    //获取指定维度的矿石列表
+    // 获取指定维度的矿石列表
     private void handleModDimDef(int id) {
         id = dim = MyMod.dimMapping.inverse()
             .getOrDefault(getPluginDimensionName(), id);
@@ -420,7 +401,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         }
     }
 
-    //计算矿石归一化的权重
+    // 计算矿石归一化的权重
     private void calculateDropMap() {
         this.dropMap = new VoidMinerUtility.DropMap();
         this.extraDropMap = new VoidMinerUtility.DropMap();
@@ -431,7 +412,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         this.totalWeight = dropMap.getTotalWeight() + extraDropMap.getTotalWeight();
     }
 
-    //虚空矿石输出
+    // 虚空矿石输出
     private void handleOutputs() {
         final List<ItemStack> inputOres = this.getStoredInputs()
             .stream()
@@ -442,17 +423,29 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         if (inputOres.isEmpty() || this.mBlacklist && inputOres.stream()
             .noneMatch(is -> GTUtility.areStacksEqual(is, output))
             || !this.mBlacklist && inputOres.stream()
-            .anyMatch(is -> GTUtility.areStacksEqual(is, output)))
+                .anyMatch(is -> GTUtility.areStacksEqual(is, output)))
             this.addOutput(output);
         this.updateSlots();
     }
 
-    //虚空流体输出
+    // 虚空流体输出
     private void FluidOutPuts() {
         Map<Integer, FluidStack> FluidRecipes = SingularityFluidRecipes.VoidFliudRecipes.get(mLastDimensionOverride);
         Random random = new Random();
-        FluidStack recipeFluid = FluidRecipes.get(random.nextInt(FluidRecipes.size())).copy();
+        FluidStack recipeFluid = FluidRecipes.get(random.nextInt(FluidRecipes.size()))
+            .copy();
         recipeFluid.amount = getMaxParallel();
         addOutput(recipeFluid);
+    }
+
+    // 虚空Debug输出
+    private void DebugOutPuts() {
+        Map<Integer, ItemStack> ItemRecipes = SingularityDebugRecipes.VoidDebugRecipes
+            .get(getControllerSlot().getItemDamage());
+        Random random = new Random();
+        ItemStack recipeItem = ItemRecipes.get(random.nextInt(ItemRecipes.size()))
+            .copy();
+        recipeItem.stackSize = getMaxParallel();
+        addOutput(recipeItem);
     }
 }

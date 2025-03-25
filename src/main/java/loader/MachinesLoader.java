@@ -1,10 +1,11 @@
 package loader;
 
+import net.minecraft.item.ItemStack;
+
 import machines.Chaos;
 import machines.Origin;
 import machines.Singularity;
-import net.minecraft.item.ItemStack;
-//import net.minecraft.item.ItemStack;
+// import net.minecraft.item.ItemStack;
 
 public class MachinesLoader {
 

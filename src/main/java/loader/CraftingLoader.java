@@ -8,8 +8,6 @@ import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GTModHandler;
-import machines.Origin;
-import util.SingularityFluidRecipes;
 
 public class CraftingLoader {
 

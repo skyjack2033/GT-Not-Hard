@@ -1,12 +1,14 @@
 package util;
 
-import gregtech.api.enums.SoundResource;
-import gregtech.api.recipe.RecipeMap;
-import net.minecraft.item.ItemStack;
-
 import java.util.HashMap;
 
+import net.minecraft.item.ItemStack;
+
+import gregtech.api.enums.SoundResource;
+import gregtech.api.recipe.RecipeMap;
+
 public class OriginManager {
+
     private static final HashMap<String, RecipeMap<?>> mRecipeSaves = new HashMap<>();
     private static final HashMap<String, SoundResource> machineSounds = new HashMap<>();
 
