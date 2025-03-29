@@ -503,7 +503,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             }
 
         }.setMaxParallelSupplier(this::getMaxParallel)
-            .setEuModifier(0.001F);
+            .setEuModifier(0.00001F);
     }
 
     @Override

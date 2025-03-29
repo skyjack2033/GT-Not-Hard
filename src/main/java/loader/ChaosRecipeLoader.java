@@ -5,6 +5,7 @@ import static tectech.thing.CustomItemList.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import gregtech.api.gui.modularui.GTUITextures;
 import net.minecraft.item.ItemStack;
 
 import goodgenerator.api.recipe.GoodGeneratorRecipeMaps;
@@ -180,6 +181,17 @@ public class ChaosRecipeLoader {
         .neiTransferRect(142, 26, 18, 18)
         // .neiHandlerInfo(builder -> builder.setDisplayStack(GTCMItemList.IndistinctTentacle.get(1)))
         .frontend(AssemblyLineFrontend::new)
+        .build();
+
+    // # Adv Circuit Assembly Line
+    public static final RecipeMap<RecipeMapBackend> advCircuitAssemblyLineRecipes = RecipeMapBuilder
+        .of("Chaos.CircuitAssemblyLine")
+        .maxIO(6, 1, 1, 0)
+        .minInputs(1, 1)
+        //.neiHandlerInfo(builder -> builder.setDisplayStack(GTCMItemList.AdvCircuitAssemblyLine.get(1)))
+        .progressBar(GTUITextures.PROGRESSBAR_CIRCUIT_ASSEMBLER)
+        .disableRegisterNEI()
+        .disableOptimize()
         .build();
 
     public ItemStack transToWildCircuit(ItemStack items) {

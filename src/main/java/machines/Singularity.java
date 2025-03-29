@@ -165,10 +165,8 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
             .beginStructureBlock(3, 3, 3, true)
             .addController("Front center")
             .addCasingInfoRange("Stable Titanium Machine Casing", 4, 24, false)
-            .addEnergyHatch("Any casing", 1)
             .addMaintenanceHatch("Any casing", 1)
-            .addInputBus("Any casing", 1)
-            .addInputHatch("Any casing", 1)
+            .addOutputBus("Any casing", 1)
             .addOutputHatch("Any casing", 1)
             .toolTipFinisher();
         return tt;
@@ -192,6 +190,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     // 检查机器结构
     @Override
     public boolean checkMachine(IGregTechTileEntity aBaseMetaTileEntity, ItemStack aStack) {
+        mOutputBusses.clear();
         mCasingAmount = 0;
         return checkPiece(STRUCTURE_PIECE_MAIN, 1, 1, 0) && mCasingAmount >= 4 && checkHatches();
     }
@@ -281,7 +280,6 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
             .map(ItemDimensionDisplay::getDimension)
             .orElse("None");
         ItemStack slot = getControllerSlot();
-        // debug LUV
         if (slot != null && !VoidFluidMode) {
             Map<Integer, ItemStack> ItemRecipes = SingularityDebugRecipes.VoidDebugRecipes
                 .get(getControllerSlot().getItemDamage());
@@ -289,6 +287,13 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
                 for (int mLoop = 0; mLoop < 8; mLoop++) {
                     this.DebugOutPuts();
                 }
+                /*
+                 * for (int mLoop = 0; mLoop < ItemRecipes.size(); mLoop++) {
+                 * ItemStack recipeItem = ItemRecipes.get(mLoop).copy();
+                 * recipeItem.stackSize = getMaxParallel();
+                 * addOutput(recipeItem);
+                 * }
+                 */
                 return CheckRecipeResultRegistry.SUCCESSFUL;
             }
         }
@@ -298,6 +303,13 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
                 for (int mLoop = 0; mLoop < 32; mLoop++) {
                     this.FluidOutPuts();
                 }
+                /*
+                 * for (int mLoop = 0; mLoop < FluidRecipes.size(); mLoop++) {
+                 * FluidStack recipeFluid = FluidRecipes.get(mLoop).copy();
+                 * recipeFluid.amount = getMaxParallel();
+                 * addOutput(recipeFluid);
+                 * }
+                 */
                 return CheckRecipeResultRegistry.SUCCESSFUL;
             }
         } else {

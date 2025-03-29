@@ -159,11 +159,9 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
             .beginStructureBlock(3, 3, 3, true)
             .addController("Front center")
             .addCasingInfoRange("Clean Stainless Steel Machine Casing", 4, 24, false)
-            .addEnergyHatch("Any casing", 1)
+            .addDynamoHatch("Any casing", 1)
             .addMaintenanceHatch("Any casing", 1)
-            .addInputBus("Any casing", 1)
             .addInputHatch("Any casing", 1)
-            .addOutputHatch("Any casing", 1)
             .toolTipFinisher();
         return tt;
     }
@@ -186,6 +184,7 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
     // 检查机器结构
     @Override
     public boolean checkMachine(IGregTechTileEntity aBaseMetaTileEntity, ItemStack aStack) {
+        mTecTechDynamoHatches.clear();
         mCasingAmount = 0;
         return checkPiece(STRUCTURE_PIECE_MAIN, 1, 1, 0) && mCasingAmount >= 4 && checkHatches();
     }
@@ -732,13 +731,7 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
             GTUtility.sendChatToPlayer(aPlayer, "mode: wireless_mode");
         } else {
             wireless_mode = false;
-            if (getControllerSlot().stackSize >= 8) {
-                GTUtility.sendChatToPlayer(aPlayer, "mode: nowireless_mode");
-            } else {
-                GTUtility.sendChatToPlayer(
-                    aPlayer,
-                    "mode: nowireless_mode, Wireless mode cannot be enabled without at least 8 generators.");
-            }
+            GTUtility.sendChatToPlayer(aPlayer, "mode: nowireless_mode");
         }
         super.onLeftclick(aBaseMetaTileEntity, aPlayer);
     }
