@@ -4,6 +4,7 @@ import static com.google.common.math.LongMath.pow;
 import static gregtech.api.enums.Mods.*;
 import static gregtech.api.enums.TierEU.*;
 import static gregtech.api.util.GTModHandler.getModItem;
+import static gregtech.api.util.GTRecipeBuilder.SECONDS;
 import static gtPlusPlus.core.material.MaterialMisc.MUTATED_LIVING_SOLDER;
 import static loader.ChaosRecipeLoader.AssemblyLineWithoutResearchRecipe;
 import static tectech.loader.recipe.BaseRecipeLoader.getItemContainer;
@@ -13,6 +14,7 @@ import static util.Utils.setStackSize;
 import java.util.ArrayList;
 import java.util.List;
 
+import gtPlusPlus.xmod.gregtech.api.enums.GregtechItemList;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -74,31 +76,55 @@ public class AssemblyLineWithoutResearchRecipePool {
     public void loadRecipes() {
 
         // skip these recipes
-        ItemStack[] skipRecipeOutputs = new ItemStack[] { ItemList.Circuit_Wetwaremainframe.get(1),
-            ItemList.Circuit_Biowaresupercomputer.get(1), ItemList.Circuit_Biomainframe.get(1),
-            ItemList.Circuit_OpticalAssembly.get(1), ItemList.Circuit_OpticalComputer.get(1),
-            ItemList.Circuit_OpticalMainframe.get(1), SpacetimeCompressionFieldGeneratorTier0.get(1),
-            SpacetimeCompressionFieldGeneratorTier1.get(1), SpacetimeCompressionFieldGeneratorTier2.get(1),
-            SpacetimeCompressionFieldGeneratorTier3.get(1), SpacetimeCompressionFieldGeneratorTier4.get(1),
-            SpacetimeCompressionFieldGeneratorTier5.get(1), SpacetimeCompressionFieldGeneratorTier6.get(1),
-            SpacetimeCompressionFieldGeneratorTier7.get(1), SpacetimeCompressionFieldGeneratorTier8.get(1),
-            TimeAccelerationFieldGeneratorTier0.get(1), TimeAccelerationFieldGeneratorTier1.get(1),
-            TimeAccelerationFieldGeneratorTier2.get(1), TimeAccelerationFieldGeneratorTier3.get(1),
-            TimeAccelerationFieldGeneratorTier4.get(1), TimeAccelerationFieldGeneratorTier5.get(1),
-            TimeAccelerationFieldGeneratorTier6.get(1), TimeAccelerationFieldGeneratorTier7.get(1),
-            TimeAccelerationFieldGeneratorTier8.get(1), StabilisationFieldGeneratorTier0.get(1),
-            StabilisationFieldGeneratorTier1.get(1), StabilisationFieldGeneratorTier2.get(1),
-            StabilisationFieldGeneratorTier3.get(1), StabilisationFieldGeneratorTier4.get(1),
-            StabilisationFieldGeneratorTier5.get(1), StabilisationFieldGeneratorTier6.get(1),
-            StabilisationFieldGeneratorTier7.get(1), StabilisationFieldGeneratorTier8.get(1),
-            ItemList.Hatch_Energy_LuV.get(1), ItemList.Hatch_Energy_ZPM.get(1), ItemList.Hatch_Energy_UV.get(1),
-            ItemList.Hatch_Energy_UHV.get(1), ItemList.Hatch_Dynamo_LuV.get(1), ItemList.Hatch_Dynamo_ZPM.get(1),
-            ItemList.Hatch_Dynamo_UV.get(1), ItemList.Hatch_Dynamo_UHV.get(1), ItemList.Casing_Dim_Injector.get(1),
-            ItemList.Casing_Dim_Trans.get(1), ItemRefer.Advanced_Radiation_Protection_Plate.get(1) };
+        ItemStack[] skipRecipeOutputs = new ItemStack[] {
+            ItemList.Circuit_Wetwaremainframe.get(1),
+            ItemList.Circuit_Biowaresupercomputer.get(1),
+            ItemList.Circuit_Biomainframe.get(1),
+            ItemList.Circuit_OpticalAssembly.get(1),
+            ItemList.Circuit_OpticalComputer.get(1),
+            ItemList.Circuit_OpticalMainframe.get(1),
+            SpacetimeCompressionFieldGeneratorTier0.get(1),
+            SpacetimeCompressionFieldGeneratorTier1.get(1),
+            SpacetimeCompressionFieldGeneratorTier2.get(1),
+            SpacetimeCompressionFieldGeneratorTier3.get(1),
+            SpacetimeCompressionFieldGeneratorTier4.get(1),
+            SpacetimeCompressionFieldGeneratorTier5.get(1),
+            SpacetimeCompressionFieldGeneratorTier6.get(1),
+            SpacetimeCompressionFieldGeneratorTier7.get(1),
+            SpacetimeCompressionFieldGeneratorTier8.get(1),
+            TimeAccelerationFieldGeneratorTier0.get(1),
+            TimeAccelerationFieldGeneratorTier1.get(1),
+            TimeAccelerationFieldGeneratorTier2.get(1),
+            TimeAccelerationFieldGeneratorTier3.get(1),
+            TimeAccelerationFieldGeneratorTier4.get(1),
+            TimeAccelerationFieldGeneratorTier5.get(1),
+            TimeAccelerationFieldGeneratorTier6.get(1),
+            TimeAccelerationFieldGeneratorTier7.get(1),
+            TimeAccelerationFieldGeneratorTier8.get(1),
+            StabilisationFieldGeneratorTier0.get(1),
+            StabilisationFieldGeneratorTier1.get(1),
+            StabilisationFieldGeneratorTier2.get(1),
+            StabilisationFieldGeneratorTier3.get(1),
+            StabilisationFieldGeneratorTier4.get(1),
+            StabilisationFieldGeneratorTier5.get(1),
+            StabilisationFieldGeneratorTier6.get(1),
+            StabilisationFieldGeneratorTier7.get(1),
+            StabilisationFieldGeneratorTier8.get(1),
+            ItemList.Hatch_Energy_LuV.get(1),
+            ItemList.Hatch_Energy_ZPM.get(1),
+            ItemList.Hatch_Energy_UV.get(1),
+            ItemList.Hatch_Energy_UHV.get(1),
+            ItemList.Hatch_Dynamo_LuV.get(1),
+            ItemList.Hatch_Dynamo_ZPM.get(1),
+            ItemList.Hatch_Dynamo_UV.get(1),
+            ItemList.Hatch_Dynamo_UHV.get(1),
+            ItemList.Casing_Dim_Injector.get(1),
+            ItemList.Casing_Dim_Trans.get(1),
+            ItemRefer.Advanced_Radiation_Protection_Plate.get(1)
+        };
 
         // start check assembly line recipes
         checkRecipe: for (var recipe : GTRecipe.RecipeAssemblyLine.sAssemblylineRecipes) {
-            // debugLogInfo("Recipe output: " + recipe.mOutput.getDisplayName());
 
             for (ItemStack skip : skipRecipeOutputs) {
                 // skip recipes need skip
@@ -137,7 +163,6 @@ public class AssemblyLineWithoutResearchRecipePool {
             }
 
             if (!hasCustomWildcardItemList) {
-                // debugLogInfo("Normal recipe generating.");
                 GTRecipeBuilder ra = GTValues.RA.stdBuilder();
                 ra.itemInputs(Utils.sortNoNullArray(inputItems))
                     .itemOutputs(recipe.mOutput);
@@ -150,7 +175,6 @@ public class AssemblyLineWithoutResearchRecipePool {
                     .addTo(AssemblyLineWithoutResearchRecipe);
 
             } else {
-                // debugLogInfo("Wildcard recipe generating.");
                 for (int i = 0; i < inputItems.length; i++) {
                     if (inputItems[i] == null) {
                         if (inputWildcards[i] != null && inputWildcards[i].length > 0) {
@@ -159,13 +183,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     }
                 }
                 List<ItemStack[]> inputCombine = generateAllItemInput(inputItems, inputWildcards);
-                // debugLogInfo("inputCombine.size " + inputCombine.size());
-                // int loopFlag = 1;
                 for (ItemStack[] inputs : inputCombine) {
-                    // debugLogInfo("generate " + loopFlag);
-                    // debugLogInfo("Input item list: " + Arrays.toString(inputs));
-                    // loopFlag++;
-
                     GTRecipeBuilder ra = GTValues.RA.stdBuilder();
                     ra.itemInputs(Utils.sortNoNullArray(inputs))
                         .itemOutputs(recipe.mOutput);
@@ -179,11 +197,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 }
             }
         }
-
         loadSpecialRecipes();
-        // debugLogInfo(
-        // "Mega Assembly Line Recipe List size: " + GTCMRecipe.AssemblyLineWithoutResearchRecipe.getAllRecipes()
-        // .size());
     }
 
     public void loadSpecialRecipes() {
@@ -193,6 +207,309 @@ public class AssemblyLineWithoutResearchRecipePool {
             : FluidRegistry.getFluid("molten.solderingalloy");
         final Fluid solderIndalloy = MaterialsAlloy.INDALLOY_140.getFluid();
         final Fluid ic2coolant = FluidRegistry.getFluid("ic2coolant");
+
+        //Circuit
+        {
+            //Wetware Mainframe
+            {
+                final ItemStack[] superConductor = new ItemStack[] {
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorZPM, 64L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUV, 32L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 16L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUEV, 8L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUIV, 4L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUMV, 2L)
+                };
+
+                for (int superConductor_Tier = 0; superConductor_Tier < 6; superConductor_Tier++) {
+                    GTValues.RA.stdBuilder()
+                        .itemInputs(
+                            GTUtility.getIntegratedCircuit(superConductor_Tier + 1),
+
+                            GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 2),
+                            ItemList.Circuit_Wetwaresupercomputer.get(2L),
+                            ItemList.Circuit_Parts_InductorASMD.get(16L),
+                            ItemList.Circuit_Parts_CapacitorASMD.get(16L),
+
+                            ItemList.Circuit_Parts_ResistorASMD.get(16L),
+                            ItemList.Circuit_Parts_TransistorASMD.get(16L),
+                            ItemList.Circuit_Parts_DiodeASMD.get(16L),
+                            ItemList.Circuit_Chip_Ram.get(48L),
+
+                            superConductor[superConductor_Tier],
+                            getModItem(GregTech.ID, "gt.metaitem.01", 64, 29471)
+                        )
+                        .fluidInputs(
+                            new FluidStack(solderIndalloy, 144 * 20),
+                            new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000 * 10),
+                            Materials.Radon.getGas(2500L)
+                        )
+                        .itemOutputs(ItemList.Circuit_Wetwaremainframe.get(1L))
+                        .eut(300_000)
+                        .duration(100 * SECONDS)
+                        .addTo(MASL);
+                }
+
+                for (int superConductor_Tier = 0; superConductor_Tier < 6; superConductor_Tier++) {
+                    GTValues.RA.stdBuilder()
+                        .itemInputs(
+                            GTUtility.getIntegratedCircuit(superConductor_Tier + 7),
+
+                            GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 2),
+                            ItemList.Circuit_Wetwaresupercomputer.get(2L),
+                            ItemList.Circuit_Parts_InductorXSMD.get(4L),
+                            ItemList.Circuit_Parts_CapacitorXSMD.get(4L),
+
+                            ItemList.Circuit_Parts_ResistorXSMD.get(4L),
+                            ItemList.Circuit_Parts_TransistorXSMD.get(4L),
+                            ItemList.Circuit_Parts_DiodeXSMD.get(4L),
+                            ItemList.Circuit_Chip_Ram.get(48L),
+
+                            superConductor[superConductor_Tier],
+                            getModItem(GregTech.ID, "gt.metaitem.01", 64, 29471)
+                        )
+                        .fluidInputs(
+                            new FluidStack(solderIndalloy, 144 * 20),
+                            new FluidStack(FluidRegistry.getFluid("ic2coolant"), 1000 * 10),
+                            Materials.Radon.getGas(2500L)
+                        )
+                        .itemOutputs(ItemList.Circuit_Wetwaremainframe.get(1L))
+                        .eut(300_000)
+                        .duration(100 * SECONDS)
+                        .addTo(MASL);
+                }
+            }
+
+            //Bioware SuperComputer
+            {
+                final ItemStack[] Transistor = new ItemStack[] {
+                    ItemList.Circuit_Parts_TransistorASMD.get(16L),
+                    ItemList.Circuit_Parts_TransistorXSMD.get(4L)
+                };
+
+                final ItemStack[] Resistor = new ItemStack[] {
+                    ItemList.Circuit_Parts_ResistorASMD.get(16L),
+                    ItemList.Circuit_Parts_ResistorXSMD.get(4L)
+                };
+
+                final ItemStack[] Capacitor = new ItemStack[] {
+                    ItemList.Circuit_Parts_CapacitorASMD.get(16L),
+                    ItemList.Circuit_Parts_CapacitorXSMD.get(4L)
+                };
+
+                final ItemStack[] Diode = new ItemStack[] {
+                    ItemList.Circuit_Parts_DiodeASMD.get(16L),
+                    ItemList.Circuit_Parts_DiodeXSMD.get(4L)
+                };
+
+                for (int Circuit_Parts_Tier = 0; Circuit_Parts_Tier < 2; Circuit_Parts_Tier++) {
+                    GTValues.RA.stdBuilder()
+                        .itemInputs(
+                            GTUtility.getIntegratedCircuit(Circuit_Parts_Tier + 1),
+
+                            ItemList.Circuit_Board_Bio_Ultra.get(2L),
+                            ItemList.Circuit_Biowarecomputer.get(2L),
+                            Transistor[Circuit_Parts_Tier],
+                            Resistor[Circuit_Parts_Tier],
+
+                            Capacitor[Circuit_Parts_Tier],
+                            Diode[Circuit_Parts_Tier],
+                            ItemList.Circuit_Chip_NOR.get(32L),
+                            ItemList.Circuit_Chip_Ram.get(64L),
+
+                            GTOreDictUnificator.get(OrePrefixes.wireFine, Materials.NiobiumTitanium, 32L),
+                            getModItem(GregTech.ID, "gt.metaitem.01", 64, 29471)
+                        )
+                        .fluidInputs(
+                            new FluidStack(solderUEV, 144 * 10),
+                            Materials.BioMediumSterilized.getFluid(144 * 10),
+                            Materials.SuperCoolant.getFluid(1000 * 10)
+                        )
+                        .itemOutputs(ItemList.Circuit_Biowaresupercomputer.get(1L))
+                        .eut(491_520)
+                        .duration(200 * SECONDS)
+                        .addTo(MASL);
+                }
+            }
+
+            //Bio Mainframe
+            {
+                final ItemStack[] superConductor = new ItemStack[] {
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 64L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUEV, 32L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUIV, 16L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUMV, 8L)
+                };
+
+                for (int superConductor_Tier = 0; superConductor_Tier < 4; superConductor_Tier++) {
+                    GTValues.RA.stdBuilder()
+                        .itemInputs(
+                            GTUtility.getIntegratedCircuit(superConductor_Tier + 1),
+
+                            GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 4L),
+                            ItemList.Circuit_Biowaresupercomputer.get(2L),
+                            ItemList.Circuit_Parts_InductorASMD.get(24L),
+                            ItemList.Circuit_Parts_TransistorASMD.get(24L),
+
+                            ItemList.Circuit_Parts_ResistorASMD.get(24L),
+                            ItemList.Circuit_Parts_CapacitorASMD.get(24L),
+                            ItemList.Circuit_Parts_DiodeASMD.get(24L),
+                            ItemList.Circuit_Chip_Ram.get(64L),
+
+                            superConductor[superConductor_Tier],
+                            getModItem(GregTech.ID, "gt.metaitem.01", 64, 29471),
+                            GTOreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64)
+                        )
+                        .fluidInputs(
+                            new FluidStack(solderUEV, 144 * 20),
+                            Materials.BioMediumSterilized.getFluid(144 * 20),
+                            Materials.SuperCoolant.getFluid(1000 * 20)
+                        )
+                        .itemOutputs(ItemList.Circuit_Biomainframe.get(1L))
+                        .eut(1_966_080)
+                        .duration(300 * SECONDS)
+                        .addTo(MASL);
+                }
+
+                for (int superConductor_Tier = 0; superConductor_Tier < 4; superConductor_Tier++) {
+                    GTValues.RA.stdBuilder()
+                        .itemInputs(
+                            GTUtility.getIntegratedCircuit(superConductor_Tier + 5),
+
+                            GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 4L),
+                            ItemList.Circuit_Biowaresupercomputer.get(2L),
+                            ItemList.Circuit_Parts_InductorXSMD.get(6L),
+                            ItemList.Circuit_Parts_TransistorXSMD.get(6L),
+
+                            ItemList.Circuit_Parts_ResistorXSMD.get(6L),
+                            ItemList.Circuit_Parts_CapacitorXSMD.get(6L),
+                            ItemList.Circuit_Parts_DiodeXSMD.get(6L),
+                            ItemList.Circuit_Chip_Ram.get(64L),
+
+                            superConductor[superConductor_Tier],
+                            getModItem(GregTech.ID, "gt.metaitem.01", 64, 29471),
+                            GTOreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64)
+                        )
+                        .fluidInputs(
+                            new FluidStack(solderUEV, 144 * 20),
+                            Materials.BioMediumSterilized.getFluid(144 * 20),
+                            Materials.SuperCoolant.getFluid(1000 * 20)
+                        )
+                        .itemOutputs(ItemList.Circuit_Biomainframe.get(1L))
+                        .eut(1_966_080)
+                        .duration(300 * SECONDS)
+                        .addTo(MASL);
+                }
+            }
+
+            //Optical Assembly
+            {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(1),
+
+                        ItemList.Circuit_Board_Optical.get(1L),
+                        ItemList.Circuit_OpticalProcessor.get(2L),
+                        ItemList.Circuit_Parts_InductorXSMD.get(16L),
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(20L),
+
+                        ItemList.Circuit_Parts_ResistorXSMD.get(20L),
+                        ItemList.Circuit_Chip_NOR.get(32L),
+                        ItemList.Circuit_Chip_Ram.get(64L),
+                        ItemList.Circuit_Chip_Ram.get(64L),
+
+                        new ItemStack(WerkstoffLoader.items.get(OrePrefixes.wireFine), 24, 10101),
+                        getModItem(GregTech.ID, "gt.metaitem.01", 64, 29471)
+                    )
+                    .fluidInputs(
+                        new FluidStack(solderUEV, 144 * 10),
+                        Materials.Radon.getPlasma(144 * 10),
+                        Materials.SuperCoolant.getFluid(1000 * 10),
+                        new FluidStack(FluidRegistry.getFluid("oganesson"), 500)
+                    )
+                    .itemOutputs(ItemList.Circuit_OpticalAssembly.get(1L))
+                    .eut(1_966_080)
+                    .duration(20 * SECONDS)
+                    .addTo(MASL);
+            }
+
+            // Optical Computer
+            {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(1),
+
+                        ItemList.Circuit_Board_Optical.get(2L),
+                        ItemList.Circuit_OpticalAssembly.get(2L),
+                        ItemList.Circuit_Parts_TransistorXSMD.get(24L),
+                        ItemList.Circuit_Parts_ResistorXSMD.get(24L),
+
+                        ItemList.Circuit_Parts_CapacitorXSMD.get(24L),
+                        ItemList.Circuit_Parts_DiodeXSMD.get(24L),
+                        ItemList.Circuit_Chip_NOR.get(64L),
+                        ItemList.Circuit_Chip_SoC2.get(32L),
+
+                        new ItemStack(WerkstoffLoader.items.get(OrePrefixes.wireFine), 32, 10101),
+                        getModItem(GregTech.ID, "gt.metaitem.01", 64, 29471),
+                        GTOreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64)
+                    )
+                    .fluidInputs(
+                        new FluidStack(solderUEV, 144 * 20),
+                        Materials.Radon.getPlasma(144 * 20),
+                        Materials.SuperCoolant.getFluid(1000 * 20),
+                        new FluidStack(FluidRegistry.getFluid("oganesson"), 1000)
+                    )
+                    .itemOutputs(ItemList.Circuit_OpticalComputer.get(1L))
+                    .eut(1_966_080)
+                    .duration(200 * SECONDS)
+                    .addTo(MASL);
+            }
+
+            //Optical Mainframe
+            {
+                final ItemStack[] superConductor = new ItemStack[] {
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUEV, 64L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUIV, 32L),
+                    GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUMV, 16L)
+                };
+
+                for (int superConductor_Tier = 0; superConductor_Tier < 3; superConductor_Tier++) {
+                    GTValues.RA.stdBuilder()
+                        .itemInputs(
+                            GTUtility.getIntegratedCircuit(superConductor_Tier + 1),
+
+                            GTOreDictUnificator.get(OrePrefixes.frameGt, Materials.Tritanium, 8),
+                            ItemList.Circuit_OpticalComputer.get(2L),
+                            ItemList.Circuit_Parts_InductorXSMD.get(32L),
+                            ItemList.Circuit_Parts_TransistorXSMD.get(32L),
+
+                            ItemList.Circuit_Parts_ResistorXSMD.get(32L),
+                            ItemList.Circuit_Parts_CapacitorXSMD.get(32L),
+                            ItemList.Circuit_Parts_DiodeXSMD.get(32L),
+                            ItemList.Circuit_Chip_SoC2.get(64L),
+
+                            superConductor[superConductor_Tier],
+                            getModItem(GregTech.ID, "gt.metaitem.01", 64, 29471),
+                            getModItem(GregTech.ID, "gt.metaitem.01", 64, 29471),
+                            GTOreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64),
+
+                            GTOreDictUnificator.get(OrePrefixes.foil, Materials.Polybenzimidazole, 64)
+                        )
+                        .fluidInputs(
+                            new FluidStack(solderUEV, 144 * 40),
+                            Materials.Radon.getPlasma(144 * 40),
+                            Materials.SuperCoolant.getFluid(1000 * 40),
+                            new FluidStack(FluidRegistry.getFluid("oganesson"), 1000 * 2)
+                        )
+                        .itemOutputs(ItemList.Circuit_OpticalMainframe.get(1L))
+                        .eut(7_864_320)
+                        .duration(300 * SECONDS)
+                        .addTo(MASL);
+                }
+            }
+        }
+
+
 
         {
             // adv radiation proof plate
@@ -302,7 +619,6 @@ public class AssemblyLineWithoutResearchRecipePool {
         }
 
         {
-
             // Dimensionally Injection Casing
             GTValues.RA.stdBuilder()
                 .itemInputs(
@@ -361,6 +677,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 .duration(20 * 20)
                 .eut(RECIPE_LuV)
                 .addTo(MASL);
+
             // ZPM energy hatch
             GTValues.RA.stdBuilder()
                 .itemInputs(
@@ -375,6 +692,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 .duration(30 * 20)
                 .eut(RECIPE_ZPM)
                 .addTo(MASL);
+
             // UV energy hatch
             GTValues.RA.stdBuilder()
                 .itemInputs(
@@ -389,6 +707,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 .duration(40 * 20)
                 .eut(RECIPE_UV)
                 .addTo(MASL);
+
             // UHV energy hatch
             GTValues.RA.stdBuilder()
                 .itemInputs(
@@ -421,6 +740,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 .duration(20 * 20)
                 .eut(RECIPE_LuV)
                 .addTo(MASL);
+
             // ZPM dynamo hatch
             GTValues.RA.stdBuilder()
                 .itemInputs(
@@ -435,6 +755,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 .duration(30 * 20)
                 .eut(RECIPE_ZPM)
                 .addTo(MASL);
+
             // UV dynamo hatch
             GTValues.RA.stdBuilder()
                 .itemInputs(
@@ -449,6 +770,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 .duration(40 * 20)
                 .eut(RECIPE_UV)
                 .addTo(MASL);
+
             // UHV dynamo hatch
             GTValues.RA.stdBuilder()
                 .itemInputs(
@@ -486,30 +808,93 @@ public class AssemblyLineWithoutResearchRecipePool {
                 GTOreDictUnificator
                     .get(OrePrefixes.bolt, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, 2),
                 GTOreDictUnificator
-                    .get(OrePrefixes.bolt, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, 8) };
+                    .get(OrePrefixes.bolt, MaterialsUEVplus.MagnetohydrodynamicallyConstrainedStarMatter, 8)
+            };
+
+            // EOH Spacetime Compression Field Generator.
+            {
+                final ItemStack baseCasing = tectech.thing.CustomItemList.EOH_Reinforced_Spatial_Casing.get(1);
+
+                final ItemStack[] yottankCell = new ItemStack[] {
+                    ItemRefer.YOTTank_Cell_T7.get(1),
+                    ItemRefer.YOTTank_Cell_T7.get(2),
+                    ItemRefer.YOTTank_Cell_T7.get(3),
+                    ItemRefer.YOTTank_Cell_T8.get(1),
+                    ItemRefer.YOTTank_Cell_T8.get(2),
+                    ItemRefer.YOTTank_Cell_T8.get(3),
+                    ItemRefer.YOTTank_Cell_T9.get(1),
+                    ItemRefer.YOTTank_Cell_T9.get(2),
+                    ItemRefer.YOTTank_Cell_T9.get(3)
+                };
+
+                final ItemStack[] manipulator = new ItemStack[] {
+                    GregtechItemList.CosmicFabricManipulator.get(1),
+                    GregtechItemList.CosmicFabricManipulator.get(2),
+                    GregtechItemList.CosmicFabricManipulator.get(3),
+                    GregtechItemList.InfinityInfusedManipulator.get(1),
+                    GregtechItemList.InfinityInfusedManipulator.get(2),
+                    GregtechItemList.InfinityInfusedManipulator.get(3),
+                    GregtechItemList.SpaceTimeContinuumRipper.get(1),
+                    GregtechItemList.SpaceTimeContinuumRipper.get(2),
+                    GregtechItemList.SpaceTimeContinuumRipper.get(3)
+                };
+
+                final ItemStack[] researchStuff = new ItemStack[] {
+                    baseCasing,
+                    SpacetimeCompressionFieldGeneratorTier0.get(1),
+                    SpacetimeCompressionFieldGeneratorTier1.get(1),
+                    SpacetimeCompressionFieldGeneratorTier2.get(1),
+                    SpacetimeCompressionFieldGeneratorTier3.get(1),
+                    SpacetimeCompressionFieldGeneratorTier4.get(1),
+                    SpacetimeCompressionFieldGeneratorTier5.get(1),
+                    SpacetimeCompressionFieldGeneratorTier6.get(1),
+                    SpacetimeCompressionFieldGeneratorTier7.get(1),
+                    SpacetimeCompressionFieldGeneratorTier8.get(1)
+                };
+
+                for (int absoluteTier = 0; absoluteTier < 9; absoluteTier++) {
+                    GTValues.RA.stdBuilder()
+                        .itemInputs(
+                            GTUtility.getIntegratedCircuit(absoluteTier + 1),
+
+                            baseCasing,
+                            yottankCell[absoluteTier],
+                            ItemList.Quantum_Tank_IV.get(4 * (absoluteTier + 1)),
+                            getModItem(AvaritiaAddons.ID, "InfinityChest", absoluteTier + 1),
+
+                            manipulator[absoluteTier],
+                            GTUtility.copyAmountUnsafe(absoluteTier + 1, ME_Singularity),
+                            boltList[absoluteTier],
+                            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, (absoluteTier / 3) + 1)
+                        )
+                        .fluidInputs(
+                            MUTATED_LIVING_SOLDER.getFluidStack((int) (2_880 * pow(2, absoluteTier))),
+                            MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
+                            MaterialsUEVplus.SpaceTime.getMolten(144 * 10)
+                        )
+                        .itemOutputs(researchStuff[absoluteTier + 1])
+                        .eut(RECIPE_UMV)
+                        .duration((absoluteTier + 1) * 4_000 * 20)
+                        .addTo(MASL);
+                }
+            }
 
             // EOH Time Dilation Field Generators.
             {
                 final ItemStack baseCasing = tectech.thing.CustomItemList.EOH_Reinforced_Temporal_Casing.get(1);
 
-                // T0 - Shirabon
-                // T1 - White Dwarf Matter
-                // T2 - White Dwarf Matter
-                // T3 - White Dwarf Matter
-                // T4 - Black Dwarf Matter
-                // T5 - Black Dwarf Matter
-                // T6 - Black Dwarf Matter
-                // T7 - Black Dwarf Matter
-                // T8 - MHDCSM.
-
-                final ItemStack[] fusionReactors = new ItemStack[] { ItemList.FusionComputer_ZPMV.get(1),
-                    ItemList.FusionComputer_ZPMV.get(2), ItemList.FusionComputer_ZPMV.get(3),
-                    ItemList.FusionComputer_UV.get(1), ItemList.FusionComputer_UV.get(2),
+                final ItemStack[] fusionReactors = new ItemStack[] {
+                    ItemList.FusionComputer_ZPMV.get(1),
+                    ItemList.FusionComputer_ZPMV.get(2),
+                    ItemList.FusionComputer_ZPMV.get(3),
+                    ItemList.FusionComputer_UV.get(1),
+                    ItemList.FusionComputer_UV.get(2),
                     ItemList.FusionComputer_UV.get(3),
                     // MK4 Fusion Computer.
                     getModItem(GregTech.ID, "gt.blockmachines", 1, 965),
                     getModItem(GregTech.ID, "gt.blockmachines", 2, 965),
-                    getModItem(GregTech.ID, "gt.blockmachines", 3, 965) };
+                    getModItem(GregTech.ID, "gt.blockmachines", 3, 965)
+                };
 
                 final ItemStack[] fusionCoils = new ItemStack[] {
                     getModItem(GoodGenerator.ID, "compactFusionCoil", 1, 1),
@@ -520,14 +905,21 @@ public class AssemblyLineWithoutResearchRecipePool {
                     getModItem(GoodGenerator.ID, "compactFusionCoil", 3, 2),
                     getModItem(GoodGenerator.ID, "compactFusionCoil", 1, 3),
                     getModItem(GoodGenerator.ID, "compactFusionCoil", 2, 3),
-                    getModItem(GoodGenerator.ID, "compactFusionCoil", 3, 3) };
+                    getModItem(GoodGenerator.ID, "compactFusionCoil", 3, 3)
+                };
 
-                final ItemStack[] researchStuff = new ItemStack[] { baseCasing,
-                    TimeAccelerationFieldGeneratorTier0.get(1), TimeAccelerationFieldGeneratorTier1.get(1),
-                    TimeAccelerationFieldGeneratorTier2.get(1), TimeAccelerationFieldGeneratorTier3.get(1),
-                    TimeAccelerationFieldGeneratorTier4.get(1), TimeAccelerationFieldGeneratorTier5.get(1),
-                    TimeAccelerationFieldGeneratorTier6.get(1), TimeAccelerationFieldGeneratorTier7.get(1),
-                    TimeAccelerationFieldGeneratorTier8.get(1) };
+                final ItemStack[] researchStuff = new ItemStack[] {
+                    baseCasing,
+                    TimeAccelerationFieldGeneratorTier0.get(1),
+                    TimeAccelerationFieldGeneratorTier1.get(1),
+                    TimeAccelerationFieldGeneratorTier2.get(1),
+                    TimeAccelerationFieldGeneratorTier3.get(1),
+                    TimeAccelerationFieldGeneratorTier4.get(1),
+                    TimeAccelerationFieldGeneratorTier5.get(1),
+                    TimeAccelerationFieldGeneratorTier6.get(1),
+                    TimeAccelerationFieldGeneratorTier7.get(1),
+                    TimeAccelerationFieldGeneratorTier8.get(1)
+                };
 
                 for (int absoluteTier = 0; absoluteTier < 9; absoluteTier++) {
                     GTValues.RA.stdBuilder()
@@ -551,51 +943,59 @@ public class AssemblyLineWithoutResearchRecipePool {
 
                             ItemList.Energy_Module.get(absoluteTier + 1),
                             GTOreDictUnificator
-                                .get(OrePrefixes.wireGt01, Materials.SuperconductorUMV, (absoluteTier + 1) * 4))
+                                .get(OrePrefixes.wireGt01, Materials.SuperconductorUMV, (absoluteTier + 1) * 4)
+                        )
                         .fluidInputs(
                             MUTATED_LIVING_SOLDER.getFluidStack((int) (2_880 * pow(2, absoluteTier))),
                             MaterialsUEVplus.Time.getMolten(1_440 * (absoluteTier + 1)),
-                            MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                            MaterialsUEVplus.SpaceTime.getMolten(144 * 10)
+                        )
                         .itemOutputs(researchStuff[absoluteTier + 1])
                         .eut(RECIPE_UMV)
                         .duration((absoluteTier + 1) * 4_000 * 20)
                         .addTo(MASL);
                 }
-
             }
 
+            // EOH Stabilisation Field Generator
             {
                 final ItemStack baseCasing = tectech.thing.CustomItemList.EOH_Infinite_Energy_Casing.get(1);
 
-                int baseCompPerSec = 16_384;
+                final ItemStack[] researchStuff = new ItemStack[] {
+                    baseCasing,
+                    StabilisationFieldGeneratorTier0.get(1),
+                    StabilisationFieldGeneratorTier1.get(1),
+                    StabilisationFieldGeneratorTier2.get(1),
+                    StabilisationFieldGeneratorTier3.get(1),
+                    StabilisationFieldGeneratorTier4.get(1),
+                    StabilisationFieldGeneratorTier5.get(1),
+                    StabilisationFieldGeneratorTier6.get(1),
+                    StabilisationFieldGeneratorTier7.get(1),
+                    StabilisationFieldGeneratorTier8.get(1) };
 
-                // T0 - Shirabon
-                // T1 - White Dwarf Matter
-                // T2 - White Dwarf Matter
-                // T3 - White Dwarf Matter
-                // T4 - Black Dwarf Matter
-                // T5 - Black Dwarf Matter
-                // T6 - Black Dwarf Matter
-                // T7 - Black Dwarf Matter
-                // T8 - MHDCSM.
+                final ItemStack[] timeCasings = new ItemStack[] {
+                    TimeAccelerationFieldGeneratorTier0.get(1),
+                    TimeAccelerationFieldGeneratorTier1.get(1),
+                    TimeAccelerationFieldGeneratorTier2.get(1),
+                    TimeAccelerationFieldGeneratorTier3.get(1),
+                    TimeAccelerationFieldGeneratorTier4.get(1),
+                    TimeAccelerationFieldGeneratorTier5.get(1),
+                    TimeAccelerationFieldGeneratorTier6.get(1),
+                    TimeAccelerationFieldGeneratorTier7.get(1),
+                    TimeAccelerationFieldGeneratorTier8.get(1)
+                };
 
-                final ItemStack[] researchStuff = new ItemStack[] { baseCasing, StabilisationFieldGeneratorTier0.get(1),
-                    StabilisationFieldGeneratorTier1.get(1), StabilisationFieldGeneratorTier2.get(1),
-                    StabilisationFieldGeneratorTier3.get(1), StabilisationFieldGeneratorTier4.get(1),
-                    StabilisationFieldGeneratorTier5.get(1), StabilisationFieldGeneratorTier6.get(1),
-                    StabilisationFieldGeneratorTier7.get(1), StabilisationFieldGeneratorTier8.get(1) };
-
-                final ItemStack[] timeCasings = new ItemStack[] { TimeAccelerationFieldGeneratorTier0.get(1),
-                    TimeAccelerationFieldGeneratorTier1.get(1), TimeAccelerationFieldGeneratorTier2.get(1),
-                    TimeAccelerationFieldGeneratorTier3.get(1), TimeAccelerationFieldGeneratorTier4.get(1),
-                    TimeAccelerationFieldGeneratorTier5.get(1), TimeAccelerationFieldGeneratorTier6.get(1),
-                    TimeAccelerationFieldGeneratorTier7.get(1), TimeAccelerationFieldGeneratorTier8.get(1) };
-
-                final ItemStack[] spatialCasings = new ItemStack[] { SpacetimeCompressionFieldGeneratorTier0.get(1),
-                    SpacetimeCompressionFieldGeneratorTier1.get(1), SpacetimeCompressionFieldGeneratorTier2.get(1),
-                    SpacetimeCompressionFieldGeneratorTier3.get(1), SpacetimeCompressionFieldGeneratorTier4.get(1),
-                    SpacetimeCompressionFieldGeneratorTier5.get(1), SpacetimeCompressionFieldGeneratorTier6.get(1),
-                    SpacetimeCompressionFieldGeneratorTier7.get(1), SpacetimeCompressionFieldGeneratorTier8.get(1) };
+                final ItemStack[] spatialCasings = new ItemStack[] {
+                    SpacetimeCompressionFieldGeneratorTier0.get(1),
+                    SpacetimeCompressionFieldGeneratorTier1.get(1),
+                    SpacetimeCompressionFieldGeneratorTier2.get(1),
+                    SpacetimeCompressionFieldGeneratorTier3.get(1),
+                    SpacetimeCompressionFieldGeneratorTier4.get(1),
+                    SpacetimeCompressionFieldGeneratorTier5.get(1),
+                    SpacetimeCompressionFieldGeneratorTier6.get(1),
+                    SpacetimeCompressionFieldGeneratorTier7.get(1),
+                    SpacetimeCompressionFieldGeneratorTier8.get(1)
+                };
 
                 for (int absoluteTier = 0; absoluteTier < 9; absoluteTier++) {
                     GTValues.RA.stdBuilder()
@@ -627,22 +1027,20 @@ public class AssemblyLineWithoutResearchRecipePool {
                             getItemContainer("QuantumCircuit").get(2 * (absoluteTier + 1)),
                             GTOreDictUnificator.get(OrePrefixes.gearGt, MaterialsUEVplus.SpaceTime, absoluteTier + 1),
                             GTOreDictUnificator
-                                .get(OrePrefixes.gearGtSmall, MaterialsUEVplus.SpaceTime, absoluteTier + 1))
+                                .get(OrePrefixes.gearGtSmall, MaterialsUEVplus.SpaceTime, absoluteTier + 1)
+                        )
                         .fluidInputs(
                             MUTATED_LIVING_SOLDER.getFluidStack((int) (2_880 * pow(2, absoluteTier))),
                             MaterialsUEVplus.Time.getMolten(1_440 * (absoluteTier + 1)),
                             MaterialsUEVplus.Space.getMolten(1_440 * (absoluteTier + 1)),
-                            MaterialsUEVplus.SpaceTime.getMolten(144 * 10))
+                            MaterialsUEVplus.SpaceTime.getMolten(144 * 10)
+                        )
                         .itemOutputs(researchStuff[absoluteTier + 1])
                         .eut(RECIPE_UMV)
                         .duration((absoluteTier + 1) * 4_000 * 20)
                         .addTo(MASL);
                 }
-
             }
-
         }
-
     }
-
 }

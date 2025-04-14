@@ -32,6 +32,7 @@ import galacticgreg.registry.GalacticGregRegistry;
 import gtneioreplugin.util.DimensionHelper;
 import loader.AssemblyLineWithoutResearchRecipePool;
 import loader.CraftingLoader;
+import util.ChaosCircuitAssemblerRecipes;
 import util.SingularityDebugRecipes;
 import util.SingularityFluidRecipes;
 
@@ -43,10 +44,12 @@ public class MyMod {
 
     @SidedProxy(clientSide = "com.mofoga.gtnothard.ClientProxy", serverSide = "com.mofoga.gtnothard.CommonProxy")
     public static CommonProxy proxy;
-
+/*
     static {
         setDebugEnabled(true);
     }
+
+ */
 
     @Mod.EventHandler
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
@@ -150,6 +153,7 @@ public class MyMod {
     public void completeInit(FMLLoadCompleteEvent event) {
         AssemblyLineWithoutResearchRecipePool assemblyLineWithoutResearchRecipePool = new AssemblyLineWithoutResearchRecipePool();
         assemblyLineWithoutResearchRecipePool.loadRecipes();
+        ChaosCircuitAssemblerRecipes.addChaosCircuitAssemblerRecipes();
     }
 
     @Mod.EventHandler

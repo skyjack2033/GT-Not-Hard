@@ -38,4 +38,5 @@ dependencies {
     implementation('com.github.GTNewHorizons:GTNH-Intergalactic:1.4.30:dev')
     implementation('com.github.GTNewHorizons:NewHorizonsCoreMod:2.6.88:dev')
     implementation('com.github.GTNewHorizons:Avaritia:1.56:dev')
+    implementation('com.github.GTNewHorizons:Avaritiaddons:1.8.4-GTNH:dev')
 }

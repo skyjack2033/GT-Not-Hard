@@ -183,17 +183,6 @@ public class ChaosRecipeLoader {
         .frontend(AssemblyLineFrontend::new)
         .build();
 
-    // # Adv Circuit Assembly Line
-    public static final RecipeMap<RecipeMapBackend> advCircuitAssemblyLineRecipes = RecipeMapBuilder
-        .of("Chaos.CircuitAssemblyLine")
-        .maxIO(6, 1, 1, 0)
-        .minInputs(1, 1)
-        //.neiHandlerInfo(builder -> builder.setDisplayStack(GTCMItemList.AdvCircuitAssemblyLine.get(1)))
-        .progressBar(GTUITextures.PROGRESSBAR_CIRCUIT_ASSEMBLER)
-        .disableRegisterNEI()
-        .disableOptimize()
-        .build();
-
     public ItemStack transToWildCircuit(ItemStack items) {
         ItemData tPrefixMaterial = GTOreDictUnificator.getAssociation(items);
 

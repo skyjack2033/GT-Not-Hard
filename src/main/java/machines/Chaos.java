@@ -73,6 +73,7 @@ import gregtech.common.blocks.ItemMachines;
 import gtPlusPlus.api.recipe.GTPPRecipeMaps;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
+import util.ChaosCircuitAssemblerRecipes;
 import util.ChaosManager;
 
 public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISurvivalConstructable {
@@ -327,7 +328,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
         RecipeMaps.neutroniumCompressorRecipes };
     // 电路装配线-12735
     private static final String[] Circuit_Assembly_Line_mod = { "Circuit Assembly Line", "Circuit Assembly" };
-    private static final RecipeMap<?>[] Circuit_Assembly_Line = { BartWorksRecipeMaps.circuitAssemblyLineRecipes,
+    private static final RecipeMap<?>[] Circuit_Assembly_Line = {ChaosCircuitAssemblerRecipes.addChaosCircuitAssemblerRecipes,
         RecipeMaps.circuitAssemblerRecipes };
     // 丹格特蒸馏厂-31021
     private static final String[] Dangote_Distillus_mod = { "Distillery", "distillation tower" };
