@@ -1,12 +1,5 @@
 package util;
 
-import gregtech.api.enums.GTValues;
-import gregtech.api.gui.modularui.GTUITextures;
-import gregtech.api.recipe.RecipeMap;
-import gregtech.api.recipe.RecipeMapBackend;
-import gregtech.api.recipe.RecipeMapBuilder;
-import net.minecraftforge.fluids.FluidRegistry;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GTPlusPlus;
 import static gregtech.api.enums.Mods.GregTech;
@@ -15,19 +8,27 @@ import static gregtech.api.enums.Mods.NewHorizonsCoreMod;
 import static gregtech.api.util.GTModHandler.getModItem;
 import static gregtech.api.util.GTRecipeBuilder.SECONDS;
 
+import net.minecraftforge.fluids.FluidRegistry;
+
+import gregtech.api.enums.GTValues;
+import gregtech.api.gui.modularui.GTUITextures;
+import gregtech.api.recipe.RecipeMap;
+import gregtech.api.recipe.RecipeMapBackend;
+import gregtech.api.recipe.RecipeMapBuilder;
+
 public class ChaosCircuitAssemblerRecipes {
 
     public static final RecipeMap<RecipeMapBackend> addChaosCircuitAssemblerRecipes = RecipeMapBuilder
-        .of("Chaos.CircuitAssemblyLine")
+        .of("Chaos of CircuitAssemblyLine")
         .maxIO(6, 1, 1, 0)
         .minInputs(1, 1)
         .progressBar(GTUITextures.PROGRESSBAR_CIRCUIT_ASSEMBLER)
-        //.disableRegisterNEI()
+        // .disableRegisterNEI()
         .disableOptimize()
         .build();
 
     public static void addChaosCircuitAssemblerRecipes() {
-        //Integrated Logic Circuit - 集成逻辑电路
+        // Integrated Logic Circuit - 集成逻辑电路
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32760),
@@ -42,7 +43,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(16)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Good Integrated Circuit - 不错的集成电路
+        // Good Integrated Circuit - 不错的集成电路
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32758),
@@ -57,7 +58,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(24)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Good Integrated Circuit - 不错的集成电路
+        // Good Integrated Circuit - 不错的集成电路
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32758),
@@ -72,7 +73,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(24)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Good Electronic Circuit - 优质电子电路板
+        // Good Electronic Circuit - 优质电子电路板
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32758),
@@ -85,7 +86,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(30)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Integrated Processor - 集成处理器
+        // Integrated Processor - 集成处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -100,7 +101,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(60)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Microprocessor - 微型处理器
+        // Microprocessor - 微型处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -115,7 +116,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(60)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Integrated Processor - 集成处理器
+        // Integrated Processor - 集成处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -130,7 +131,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(60)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Processor Assembly - 处理器集群
+        // Processor Assembly - 处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -145,7 +146,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(96)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //NAND Chip Array - NAND芯片阵列
+        // NAND Chip Array - NAND芯片阵列
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32758),
@@ -158,7 +159,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(120)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Workstation - 工作站
+        // Workstation - 工作站
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -173,7 +174,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(120)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //NAND Chip Array - NAND芯片阵列
+        // NAND Chip Array - NAND芯片阵列
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32758),
@@ -186,7 +187,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(120)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Processor Assembly - 处理器集群
+        // Processor Assembly - 处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -201,7 +202,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(120)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Workstation - 工作站
+        // Workstation - 工作站
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -216,7 +217,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(120)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //NAND Chip Array - NAND芯片阵列
+        // NAND Chip Array - NAND芯片阵列
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -229,7 +230,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(480)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //NAND Chip Array - NAND芯片阵列
+        // NAND Chip Array - NAND芯片阵列
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -242,7 +243,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(480)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Mainframe - 处理器主机
+        // Mainframe - 处理器主机
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(GregTech.ID, "gt.blockframes", 32L, 19),
@@ -257,7 +258,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(480)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Mainframe - 处理器主机
+        // Mainframe - 处理器主机
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(GregTech.ID, "gt.blockframes", 32L, 19),
@@ -272,7 +273,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(480)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Microprocessor - 微型处理器
+        // Microprocessor - 微型处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -285,7 +286,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Nanoprocessor - 纳米处理器
+        // Nanoprocessor - 纳米处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32756),
@@ -300,7 +301,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Nanoprocessor - 纳米处理器
+        // Nanoprocessor - 纳米处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32756),
@@ -315,7 +316,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Nanoprocessor Assembly - 纳米处理器集群
+        // Nanoprocessor Assembly - 纳米处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32756),
@@ -330,7 +331,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Elite Nanocomputer - 精英纳米电脑
+        // Elite Nanocomputer - 精英纳米电脑
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32756),
@@ -345,7 +346,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Nanoprocessor Assembly - 纳米处理器集群
+        // Nanoprocessor Assembly - 纳米处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32756),
@@ -360,7 +361,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Elite Nanocomputer - 精英纳米电脑
+        // Elite Nanocomputer - 精英纳米电脑
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32756),
@@ -375,7 +376,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //NAND Chip Array - NAND芯片阵列
+        // NAND Chip Array - NAND芯片阵列
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32756),
@@ -388,7 +389,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(1920)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //NAND Chip Array - NAND芯片阵列
+        // NAND Chip Array - NAND芯片阵列
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32756),
@@ -401,7 +402,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(1920)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Nanoprocessor Mainframe - 纳米处理器主机
+        // Nanoprocessor Mainframe - 纳米处理器主机
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(GregTech.ID, "gt.blockframes", 32L, 19),
@@ -416,7 +417,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(1920)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Nanoprocessor Mainframe - 纳米处理器主机
+        // Nanoprocessor Mainframe - 纳米处理器主机
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(GregTech.ID, "gt.blockframes", 32L, 19),
@@ -431,7 +432,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(1920)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Integrated Processor - 集成处理器
+        // Integrated Processor - 集成处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32748),
@@ -444,7 +445,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(2400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Quantumprocessor - 量子处理器
+        // Quantumprocessor - 量子处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
@@ -459,7 +460,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(2400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Quantumprocessor - 量子处理器
+        // Quantumprocessor - 量子处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
@@ -474,7 +475,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(2400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Quantumprocessor Assembly - 量子处理器集群
+        // Quantumprocessor Assembly - 量子处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
@@ -489,7 +490,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(2400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Master Quantumcomputer - 大型量子电脑
+        // Master Quantumcomputer - 大型量子电脑
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
@@ -504,7 +505,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(2400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Quantumprocessor Assembly - 量子处理器集群
+        // Quantumprocessor Assembly - 量子处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
@@ -519,7 +520,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(2400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Master Quantumcomputer - 大型量子电脑
+        // Master Quantumcomputer - 大型量子电脑
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
@@ -534,7 +535,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(2400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Quantumprocessor Mainframe - 量子处理器主机
+        // Quantumprocessor Mainframe - 量子处理器主机
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(GregTech.ID, "gt.blockframes", 32L, 19),
@@ -549,7 +550,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(7680)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Quantumprocessor Mainframe - 量子处理器主机
+        // Quantumprocessor Mainframe - 量子处理器主机
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(GregTech.ID, "gt.blockframes", 32L, 19),
@@ -564,7 +565,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(7680)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //High Energy Flow Circuit - 高能量流电路
+        // High Energy Flow Circuit - 高能量流电路
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
@@ -579,7 +580,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(7680)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //High Energy Flow Circuit - 高能量流电路
+        // High Energy Flow Circuit - 高能量流电路
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
@@ -594,7 +595,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(7680)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //High Energy Flow Circuit - 高能量流电路
+        // High Energy Flow Circuit - 高能量流电路
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
@@ -609,7 +610,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(7680)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //High Energy Flow Circuit - 高能量流电路
+        // High Energy Flow Circuit - 高能量流电路
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
@@ -624,7 +625,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(7680)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Nanoprocessor - 纳米处理器
+        // Nanoprocessor - 纳米处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32756),
@@ -637,7 +638,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(9600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Crystalprocessor - 晶体处理器
+        // Crystalprocessor - 晶体处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
@@ -652,7 +653,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(9600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Crystalprocessor Assembly - 晶体处理器集群
+        // Crystalprocessor Assembly - 晶体处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
@@ -667,7 +668,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(9600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Ultimate Crystalcomputer - 终极晶体电脑
+        // Ultimate Crystalcomputer - 终极晶体电脑
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
@@ -682,7 +683,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(9600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Quantumprocessor Mainframe - 量子处理器主机
+        // Quantumprocessor Mainframe - 量子处理器主机
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(GregTech.ID, "gt.blockframes", 32L, 19),
@@ -697,7 +698,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(30720)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Quantumprocessor - 量子处理器
+        // Quantumprocessor - 量子处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
@@ -710,7 +711,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(38400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Wetwareprocessor - 湿件处理器
+        // Wetwareprocessor - 湿件处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32715),
@@ -725,7 +726,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(38400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Wetwareprocessor Assembly - 湿件处理器集群
+        // Wetwareprocessor Assembly - 湿件处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32750),
@@ -740,7 +741,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(38400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Wetware Supercomputer - 湿件处理器超级电脑
+        // Wetware Supercomputer - 湿件处理器超级电脑
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32750),
@@ -755,7 +756,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(38400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Wetwareprocessor - 湿件处理器
+        // Wetwareprocessor - 湿件处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32715),
@@ -770,7 +771,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(153600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Wetwareprocessor Assembly - 湿件处理器集群
+        // Wetwareprocessor Assembly - 湿件处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32750),
@@ -785,7 +786,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(153600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Crystalprocessor - 晶体处理器
+        // Crystalprocessor - 晶体处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
@@ -798,7 +799,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(153600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Wetware Supercomputer - 湿件处理器超级电脑
+        // Wetware Supercomputer - 湿件处理器超级电脑
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32750),
@@ -813,7 +814,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(153600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Bioprocessor - 生物处理器
+        // Bioprocessor - 生物处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32714),
@@ -828,7 +829,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(153600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Biowareprocessor Assembly - 生物处理器集群
+        // Biowareprocessor Assembly - 生物处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32746),
@@ -843,7 +844,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(153600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Bioprocessor - 生物处理器
+        // Bioprocessor - 生物处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32714),
@@ -858,7 +859,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(153600)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Wetwareprocessor - 湿件处理器
+        // Wetwareprocessor - 湿件处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32750),
@@ -871,7 +872,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(614400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Biowareprocessor Assembly - 生物处理器集群
+        // Biowareprocessor Assembly - 生物处理器集群
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32746),
@@ -886,7 +887,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(614400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Optical Processor - 光学处理器
+        // Optical Processor - 光学处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32703),
@@ -901,7 +902,7 @@ public class ChaosCircuitAssemblerRecipes {
             .eut(614400)
             .addTo(addChaosCircuitAssemblerRecipes);
 
-        //Bioprocessor - 生物处理器
+        // Bioprocessor - 生物处理器
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32746),

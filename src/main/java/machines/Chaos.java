@@ -38,7 +38,6 @@ import com.gtnewhorizons.modularui.api.screen.UIBuildContext;
 import com.gtnewhorizons.modularui.common.widget.ButtonWidget;
 import com.gtnewhorizons.modularui.common.widget.FakeSyncWidget;
 
-import bartworks.API.recipe.BartWorksRecipeMaps;
 import goodgenerator.api.recipe.GoodGeneratorRecipeMaps;
 import gregtech.GTMod;
 import gregtech.api.GregTechAPI;
@@ -75,6 +74,8 @@ import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 import util.ChaosCircuitAssemblerRecipes;
 import util.ChaosManager;
+import util.ChaosXtremeCraftingRecipes;
+import util.ChaosZhuHaiRecipes;
 
 public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISurvivalConstructable {
 
@@ -185,6 +186,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             .addInfo("x = Number of machines in the controller")
             .addInfo("If the machine within the controller contains multiple modes,")
             .addInfo("sneak left click controller to switch machine mode")
+            .addInfo("Use Auto Workbench (LV) to crafting some Xtreme Crafting recipe")
             .addInfo("Add By: GT Not Hard")
             .addSeparator()
             .beginStructureBlock(3, 3, 3, true)
@@ -328,8 +330,8 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
         RecipeMaps.neutroniumCompressorRecipes };
     // 电路装配线-12735
     private static final String[] Circuit_Assembly_Line_mod = { "Circuit Assembly Line", "Circuit Assembly" };
-    private static final RecipeMap<?>[] Circuit_Assembly_Line = {ChaosCircuitAssemblerRecipes.addChaosCircuitAssemblerRecipes,
-        RecipeMaps.circuitAssemblerRecipes };
+    private static final RecipeMap<?>[] Circuit_Assembly_Line = {
+        ChaosCircuitAssemblerRecipes.addChaosCircuitAssemblerRecipes, RecipeMaps.circuitAssemblerRecipes };
     // 丹格特蒸馏厂-31021
     private static final String[] Dangote_Distillus_mod = { "Distillery", "distillation tower" };
     private static final RecipeMap<?>[] Dangote_Distillus = { RecipeMaps.distilleryRecipes,
@@ -407,6 +409,9 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             case 792 -> {
                 return Industrial_Material_Press[Math.min(mode, 1)];
             }
+            case 829 -> {
+                return ChaosZhuHaiRecipes.addChaosZhuHaiFisheryRecipes;
+            }
             case 850 -> {
                 return Ore_Washing_Plant[Math.min(mode, 2)];
             }
@@ -430,6 +435,9 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             }
             case 31021 -> {
                 return Dangote_Distillus[Math.min(mode, 1)];
+            }
+            case 31091 -> {
+                return ChaosXtremeCraftingRecipes.addChaosXtremeCraftingRecipes;
             }
             case 32018 -> {
                 return Precise_Auto_Assembler_MT_3662[Math.min(mode, 1)];

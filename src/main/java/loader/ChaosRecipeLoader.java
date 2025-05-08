@@ -5,7 +5,6 @@ import static tectech.thing.CustomItemList.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import gregtech.api.gui.modularui.GTUITextures;
 import net.minecraft.item.ItemStack;
 
 import goodgenerator.api.recipe.GoodGeneratorRecipeMaps;
@@ -172,7 +171,7 @@ public class ChaosRecipeLoader {
     }
 
     public static final RecipeMap<RecipeMapBackend> AssemblyLineWithoutResearchRecipe = RecipeMapBuilder
-        .of("Chaos.AssemblyLine", RecipeMapBackend::new)
+        .of("Chaos of AssemblyLine", RecipeMapBackend::new)
         .maxIO(16, 1, 4, 0)
         .minInputs(1, 0)
         .useSpecialSlot()

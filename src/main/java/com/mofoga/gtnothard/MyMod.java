@@ -1,6 +1,5 @@
 package com.mofoga.gtnothard;
 
-import static com.gtnewhorizon.structurelib.StructureLibAPI.setDebugEnabled;
 import static loader.MachinesLoader.loaderMachines;
 
 import java.util.Arrays;
@@ -33,6 +32,8 @@ import gtneioreplugin.util.DimensionHelper;
 import loader.AssemblyLineWithoutResearchRecipePool;
 import loader.CraftingLoader;
 import util.ChaosCircuitAssemblerRecipes;
+import util.ChaosXtremeCraftingRecipes;
+import util.ChaosZhuHaiRecipes;
 import util.SingularityDebugRecipes;
 import util.SingularityFluidRecipes;
 
@@ -44,12 +45,11 @@ public class MyMod {
 
     @SidedProxy(clientSide = "com.mofoga.gtnothard.ClientProxy", serverSide = "com.mofoga.gtnothard.CommonProxy")
     public static CommonProxy proxy;
-/*
-    static {
-        setDebugEnabled(true);
-    }
-
- */
+    /*
+     * static {
+     * setDebugEnabled(true);
+     * }
+     */
 
     @Mod.EventHandler
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
@@ -81,6 +81,8 @@ public class MyMod {
         // loadRecipes.loadRecipes();
         SingularityFluidRecipes.addVoidFliudRecipes();
         SingularityDebugRecipes.addVoidDebugRecipes();
+        ChaosZhuHaiRecipes.addChaosZhuHaiFisheryRecipes();
+        ChaosXtremeCraftingRecipes.addChaosXtremeCraftingRecipes();
     }
 
     public static BiMap<Integer, String> dimMapping = HashBiMap.create();
@@ -154,6 +156,7 @@ public class MyMod {
         AssemblyLineWithoutResearchRecipePool assemblyLineWithoutResearchRecipePool = new AssemblyLineWithoutResearchRecipePool();
         assemblyLineWithoutResearchRecipePool.loadRecipes();
         ChaosCircuitAssemblerRecipes.addChaosCircuitAssemblerRecipes();
+        // ChaosXtremeCraftingRecipes.addChaosXtremeCraftingRecipes();
     }
 
     @Mod.EventHandler

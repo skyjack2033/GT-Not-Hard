@@ -726,12 +726,13 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
     // 开启无线电网模式
     @Override
     public void onLeftclick(IGregTechTileEntity aBaseMetaTileEntity, EntityPlayer aPlayer) {
-        if (canUseWireless() && aPlayer.isSneaking() && getBaseMetaTileEntity().isServerSide()) {
+        if (aPlayer.isSneaking() && getBaseMetaTileEntity().isServerSide()) {
             wireless_mode = !wireless_mode;
-            GTUtility.sendChatToPlayer(aPlayer, "mode: wireless_mode");
-        } else {
-            wireless_mode = false;
-            GTUtility.sendChatToPlayer(aPlayer, "mode: nowireless_mode");
+            if (canUseWireless() && wireless_mode) {
+                GTUtility.sendChatToPlayer(aPlayer, "mode: wireless_mode");
+            } else {
+                GTUtility.sendChatToPlayer(aPlayer, "mode: nowireless_mode");
+            }
         }
         super.onLeftclick(aBaseMetaTileEntity, aPlayer);
     }
