@@ -5,6 +5,7 @@ import static gregtech.api.enums.Mods.AdvancedSolarPanel;
 import static gregtech.api.enums.Mods.AppliedEnergistics2;
 import static gregtech.api.enums.Mods.Avaritia;
 import static gregtech.api.enums.Mods.AvaritiaAddons;
+import static gregtech.api.enums.Mods.Computronics;
 import static gregtech.api.enums.Mods.DraconicEvolution;
 import static gregtech.api.enums.Mods.EnderIO;
 import static gregtech.api.enums.Mods.GTNHIntergalactic;
@@ -125,25 +126,25 @@ public class ChaosXtremeCraftingRecipes {
                 .duration(SECONDS)
                 .eut(RECIPE_LV)
                 .addTo(addChaosXtremeCraftingRecipes);
-            /*
-             * // 奇点合成存储器
-             * GTValues.RA.stdBuilder()
-             * .itemInputs(
-             * getModItem(AppliedEnergistics2.ID, "tile.BlockCreativeEnergyCell", 4L),
-             * getModItem(NewHorizonsCoreMod.ID, "item.PikoCircuit", 8L),
-             * getModItem(GregTech.ID, "gt.metaitem.01", 12L, 32045),
-             * getModItem(DraconicEvolution.ID, "reactorStabilizer", 8L),
-             * getModItem(GregTech.ID, "gt.metaitem.03", 4L, 4581),
-             * getModItem(AppliedEnergistics2.ID, "tile.BlockCraftingUnit", 4L, 0),
-             * getModItem(NewHorizonsCoreMod.ID, "item.ItemExtremeStorageCell.Singularity", 1L))
-             * .fluidInputs(
-             * FluidRegistry.getFluidStack("molten.infinity", 144 * 9 * 24),
-             * FluidRegistry.getFluidStack("molten.spacetime", 144 * 14))
-             * .itemOutputs(getModItem(AppliedEnergistics2.ID, "tile.BlockSingularityCraftingStorage", 1L, 0))
-             * .duration(SECONDS)
-             * .eut(RECIPE_LV)
-             * .addTo(addChaosXtremeCraftingRecipes);
-             */
+
+            // 奇点合成存储器
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(AppliedEnergistics2.ID, "tile.BlockCreativeEnergyCell", 4L),
+                    getModItem(NewHorizonsCoreMod.ID, "item.PikoCircuit", 8L),
+                    getModItem(GregTech.ID, "gt.metaitem.01", 12L, 32045),
+                    getModItem(DraconicEvolution.ID, "reactorStabilizer", 8L),
+                    getModItem(GregTech.ID, "gt.metaitem.03", 4L, 4581),
+                    getModItem(AppliedEnergistics2.ID, "tile.BlockCraftingUnit", 4L, 0),
+                    getModItem(AppliedEnergistics2.ID, "item.ItemExtremeStorageCell.Singularity", 1L))
+                .fluidInputs(
+                    FluidRegistry.getFluidStack("molten.infinity", 144 * 9 * 24),
+                    FluidRegistry.getFluidStack("molten.spacetime", 144 * 14))
+                .itemOutputs(getModItem(AppliedEnergistics2.ID, "tile.BlockSingularityCraftingStorage", 1L, 0))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
         }
 
         // AE2FluidCraft
@@ -199,45 +200,43 @@ public class ChaosXtremeCraftingRecipes {
                 .eut(RECIPE_LV)
                 .addTo(addChaosXtremeCraftingRecipes);
         }
-        /*
-         * // EnderIO
-         * {
-         * // 混沌电容库
-         * GTValues.RA.stdBuilder()
-         * .itemInputs(
-         * getModItem(EnderIO.ID, "BlockCapBank", 44L, 3),
-         * getModItem(EnderIO.ID, "itemMaterial", 16L, 6),
-         * getModItem(DraconicEvolution.ID, "draconiumFluxCapacitor", 4L, 0),
-         * getModItem(DraconicEvolution.ID, "chaoticCore", 1L))
-         * .fluidInputs(
-         * FluidRegistry.getFluidStack("molten.vibrantalloy", 144 * 4),
-         * FluidRegistry.getFluidStack("molten.neutronium", 144 * 12))
-         * .itemOutputs(getModItem(EnderIO.ID, "BlockCapBank", 1L, 0))
-         * .duration(SECONDS)
-         * .eut(RECIPE_LV)
-         * .addTo(addChaosXtremeCraftingRecipes);
-         * }
-         */
+
+        // EnderIO
+        {
+            // 混沌电容库
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(EnderIO.ID, "blockCapBank", 44L, 3),
+                    getModItem(EnderIO.ID, "itemMaterial", 16L, 6),
+                    getModItem(DraconicEvolution.ID, "draconiumFluxCapacitor", 4L, 0),
+                    getModItem(DraconicEvolution.ID, "chaoticCore", 1L))
+                .fluidInputs(
+                    FluidRegistry.getFluidStack("molten.vibrantalloy", 144 * 4),
+                    FluidRegistry.getFluidStack("molten.neutronium", 144 * 12))
+                .itemOutputs(getModItem(EnderIO.ID, "blockCapBank", 1L, 0))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+        }
+
         // OpenComputers
-        {/*
-          * // 创造模式内存
-          * GTValues.RA.stdBuilder()
-          * .itemInputs(
-          * getModItem(OpenComputers.ID, "item", 24L, 39),
-          * new Object[] { OrePrefixes.circuit.get(Materials.UEV), 6L },
-          * getModItem(GregTech.ID, "gt.metaitem.03", 20L, 32163),
-          * getModItem(Thaumcraft.ID, "ItemResource", 4L, 14),
-          * getModItem(OpenComputers.ID, "item", 2L, 103),
-          * getModItem(Avaritia.ID, "big_pearl", 1L))
-          * .fluidInputs(
-          * FluidRegistry.getFluidStack("molten.infinity", 144 * 2),
-          * FluidRegistry.getFluidStack("molten.neutronium", 144 * 25),
-          * FluidRegistry.getFluidStack("molten.electrumflux", 144 * 14))
-          * .itemOutputs(getModItem(OpenComputers.ID, "computronics.ocSpecialParts", 1L, 0))
-          * .duration(SECONDS)
-          * .eut(RECIPE_LV)
-          * .addTo(addChaosXtremeCraftingRecipes);
-          */
+        {
+            // 创造模式内存
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(OpenComputers.ID, "item", 24L, 39),
+                    new Object[] { OrePrefixes.circuit.get(Materials.UEV), 6L },
+                    getModItem(GregTech.ID, "gt.metaitem.03", 10L, 32163),
+                    getModItem(OpenComputers.ID, "item", 2L, 103))
+                .fluidInputs(
+                    FluidRegistry.getFluidStack("molten.infinity", 144 * 2),
+                    FluidRegistry.getFluidStack("molten.neutronium", 144 * 25),
+                    FluidRegistry.getFluidStack("molten.electrumflux", 144 * 14))
+                .itemOutputs(getModItem(Computronics.ID, "computronics.ocSpecialParts", 1L, 0))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
             // T3加速处理器(APU)
             GTValues.RA.stdBuilder()
                 .itemInputs(
@@ -353,20 +352,20 @@ public class ChaosXtremeCraftingRecipes {
                 .duration(SECONDS)
                 .eut(RECIPE_LV)
                 .addTo(addChaosXtremeCraftingRecipes);
-            /*
-             * // 反应堆稳定器转子总成
-             * GTValues.RA.stdBuilder()
-             * .itemInputs(
-             * getModItem(GregTech.ID, "gt.blockcasing4", 4L, 7),
-             * getModItem(DraconicEvolution.ID, "reactorCraftingPart", 10L, 1),
-             * getModItem(DraconicEvolution.ID, "reactorCraftingPart", 10L, 2),
-             * getModItem(DraconicEvolution.ID, "wyvernCore", 1L))
-             * .fluidInputs(FluidRegistry.getFluidStack("molten.draconium", 144 * 16))
-             * .itemOutputs(getModItem(DraconicEvolution.ID, "reactorCraftingPart", 1L, 3))
-             * .duration(SECONDS)
-             * .eut(RECIPE_LV)
-             * .addTo(addChaosXtremeCraftingRecipes);
-             */
+
+            // 反应堆稳定器转子总成
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(GregTech.ID, "gt.blockcasings4", 4L, 7),
+                    getModItem(DraconicEvolution.ID, "reactorCraftingPart", 10L, 1),
+                    getModItem(DraconicEvolution.ID, "reactorCraftingPart", 10L, 2),
+                    getModItem(DraconicEvolution.ID, "wyvernCore", 1L))
+                .fluidInputs(FluidRegistry.getFluidStack("molten.draconium", 144 * 16))
+                .itemOutputs(getModItem(DraconicEvolution.ID, "reactorCraftingPart", 1L, 3))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
             // 反应堆稳定器聚能环
             GTValues.RA.stdBuilder()
                 .itemInputs(

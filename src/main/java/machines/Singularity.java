@@ -190,6 +190,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     // 检查机器结构
     @Override
     public boolean checkMachine(IGregTechTileEntity aBaseMetaTileEntity, ItemStack aStack) {
+        mExoticEnergyHatches.clear();
         mOutputBusses.clear();
         mCasingAmount = 0;
         return checkPiece(STRUCTURE_PIECE_MAIN, 1, 1, 0) && mCasingAmount >= 4 && checkHatches();

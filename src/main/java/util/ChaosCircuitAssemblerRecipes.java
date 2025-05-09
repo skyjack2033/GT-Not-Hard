@@ -479,7 +479,7 @@ public class ChaosCircuitAssemblerRecipes {
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
-                getModItem(BartWorks.ID, "gt.metaitem.03", 32L, 32085),
+                getModItem(GregTech.ID, "gt.metaitem.03", 32L, 32085),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 3L, 32707),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 4L, 32737),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 4L, 32735),
@@ -489,12 +489,11 @@ public class ChaosCircuitAssemblerRecipes {
             .duration(120 * SECONDS)
             .eut(2400)
             .addTo(addChaosCircuitAssemblerRecipes);
-
         // Master Quantumcomputer - 大型量子电脑
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
-                getModItem(BartWorks.ID, "gt.metaitem.03", 32L, 32086),
+                getModItem(GregTech.ID, "gt.metaitem.03", 32L, 32086),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32739),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 4L, 32733),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 16L, 32735),
@@ -509,7 +508,7 @@ public class ChaosCircuitAssemblerRecipes {
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
-                getModItem(BartWorks.ID, "gt.metaitem.03", 32L, 32085),
+                getModItem(GregTech.ID, "gt.metaitem.03", 32L, 32085),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 12L, 32744),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 16L, 32741),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 4L, 32735),
@@ -524,7 +523,7 @@ public class ChaosCircuitAssemblerRecipes {
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32754),
-                getModItem(BartWorks.ID, "gt.metaitem.03", 32L, 32086),
+                getModItem(GregTech.ID, "gt.metaitem.03", 32L, 32086),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 8L, 32743),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 4L, 32733),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 16L, 32735),
@@ -569,7 +568,7 @@ public class ChaosCircuitAssemblerRecipes {
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
-                getModItem(BartWorks.ID, "gt.metaitem.03", 32L, 32088),
+                getModItem(GregTech.ID, "gt.metaitem.03", 32L, 32088),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 4L, 32726),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32719),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32720),
@@ -584,7 +583,7 @@ public class ChaosCircuitAssemblerRecipes {
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
-                getModItem(BartWorks.ID, "gt.metaitem.03", 32L, 32090),
+                getModItem(GregTech.ID, "gt.metaitem.03", 32L, 32090),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 4L, 32726),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32719),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32720),
@@ -599,7 +598,7 @@ public class ChaosCircuitAssemblerRecipes {
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
-                getModItem(BartWorks.ID, "gt.metaitem.03", 32L, 32093),
+                getModItem(GregTech.ID, "gt.metaitem.03", 32L, 32093),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 4L, 32726),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32719),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32720),
@@ -614,7 +613,7 @@ public class ChaosCircuitAssemblerRecipes {
         GTValues.RA.stdBuilder()
             .itemInputs(
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 1L, 32753),
-                getModItem(BartWorks.ID, "gt.metaitem.03", 32L, 32097),
+                getModItem(GregTech.ID, "gt.metaitem.03", 32L, 32097),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 4L, 32726),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32719),
                 getModItem(BartWorks.ID, "gt.bwMetaGeneratedItem0", 2L, 32720),
