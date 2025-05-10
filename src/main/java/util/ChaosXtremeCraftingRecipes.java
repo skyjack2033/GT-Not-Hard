@@ -25,16 +25,22 @@ import static gregtech.api.enums.Mods.Witchery;
 import static gregtech.api.enums.TierEU.RECIPE_LV;
 import static gregtech.api.util.GTModHandler.getModItem;
 import static gregtech.api.util.GTRecipeBuilder.SECONDS;
+import static util.Utils.setStackSize;
 
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 
 import gregtech.api.enums.GTValues;
+import gregtech.api.enums.ItemList;
 import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
 import gregtech.api.recipe.maps.AssemblyLineFrontend;
+import gregtech.api.util.GTOreDictUnificator;
+import gregtech.api.util.GTUtility;
+import tectech.thing.CustomItemList;
 
 public class ChaosXtremeCraftingRecipes {
 
@@ -771,6 +777,235 @@ public class ChaosXtremeCraftingRecipes {
                 .duration(SECONDS)
                 .eut(RECIPE_LV)
                 .addTo(addChaosXtremeCraftingRecipes);
+        }
+
+        // Wireless Energy Hatch 无线能源仓
+        {
+            final ItemStack[] Hatch_Energy_Tier = new ItemStack[] { ItemList.Hatch_Energy_ULV.get(1),
+                ItemList.Hatch_Energy_LV.get(1), ItemList.Hatch_Energy_MV.get(1), ItemList.Hatch_Energy_HV.get(1),
+                ItemList.Hatch_Energy_EV.get(1), ItemList.Hatch_Energy_IV.get(1), ItemList.Hatch_Energy_LuV.get(1),
+                ItemList.Hatch_Energy_ZPM.get(1), ItemList.Hatch_Energy_UV.get(1), ItemList.Hatch_Energy_UHV.get(1),
+                ItemList.Hatch_Energy_UEV.get(1), ItemList.Hatch_Energy_UIV.get(1), ItemList.Hatch_Energy_UMV.get(1),
+                ItemList.Hatch_Energy_UXV.get(1) };
+
+            final ItemStack[] Circuit_Tier = new ItemStack[] {
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.ULV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.LV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.MV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.HV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.EV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.IV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.LuV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.ZPM, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UHV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UEV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UIV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UMV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 1) };
+
+            final ItemStack[] Superconductor_Tier = new ItemStack[] {
+                GTOreDictUnificator.get(OrePrefixes.cableGt01, Materials.RedAlloy, 1),
+                GTOreDictUnificator.get(OrePrefixes.cableGt01, Materials.RedstoneAlloy, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorMV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorHV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorEV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorIV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorLuV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorZPM, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUEV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUIV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUMV, 1),
+                getModItem(GregTech.ID, "gt.blockmachines", 1L, 11430) };
+
+            // 1A Wireless Energy Hatch
+            final ItemStack[] Wireless_Energy_Hatch_Tier_1 = new ItemStack[] {
+                ItemList.Wireless_Hatch_Energy_ULV.get(1), ItemList.Wireless_Hatch_Energy_LV.get(1),
+                ItemList.Wireless_Hatch_Energy_MV.get(1), ItemList.Wireless_Hatch_Energy_HV.get(1),
+                ItemList.Wireless_Hatch_Energy_EV.get(1), ItemList.Wireless_Hatch_Energy_IV.get(1),
+                ItemList.Wireless_Hatch_Energy_LuV.get(1), ItemList.Wireless_Hatch_Energy_ZPM.get(1),
+                ItemList.Wireless_Hatch_Energy_UV.get(1), ItemList.Wireless_Hatch_Energy_UHV.get(1),
+                ItemList.Wireless_Hatch_Energy_UEV.get(1), ItemList.Wireless_Hatch_Energy_UIV.get(1),
+                ItemList.Wireless_Hatch_Energy_UMV.get(1), ItemList.Wireless_Hatch_Energy_UXV.get(1) };
+
+            for (int Hatch_Tier = 0; Hatch_Tier < 14; Hatch_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(1),
+
+                        setStackSize(Hatch_Energy_Tier[Hatch_Tier], 1),
+                        setStackSize(Circuit_Tier[Hatch_Tier], 1),
+                        setStackSize(Superconductor_Tier[Hatch_Tier], 1))
+                    .fluidInputs(FluidRegistry.getFluidStack("lubricant", 1000))
+                    .itemOutputs(Wireless_Energy_Hatch_Tier_1[Hatch_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+
+            // 4A Wireless Energy Hatch
+            final ItemStack[] Wireless_Energy_Hatch_Tier_4 = new ItemStack[] {
+                CustomItemList.eM_energyWirelessMulti4_EV.get(1), CustomItemList.eM_energyWirelessMulti4_IV.get(1),
+                CustomItemList.eM_energyWirelessMulti4_LuV.get(1), CustomItemList.eM_energyWirelessMulti4_ZPM.get(1),
+                CustomItemList.eM_energyWirelessMulti4_UV.get(1), CustomItemList.eM_energyWirelessMulti4_UHV.get(1),
+                CustomItemList.eM_energyWirelessMulti4_UEV.get(1), CustomItemList.eM_energyWirelessMulti4_UIV.get(1),
+                CustomItemList.eM_energyWirelessMulti4_UMV.get(1), CustomItemList.eM_energyWirelessMulti4_UXV.get(1) };
+
+            for (int Hatch_Tier = 0; Hatch_Tier < 10; Hatch_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(2),
+
+                        setStackSize(Hatch_Energy_Tier[Hatch_Tier + 4], 2),
+                        setStackSize(Circuit_Tier[Hatch_Tier + 4], 2),
+                        setStackSize(Superconductor_Tier[Hatch_Tier + 4], 2))
+                    .fluidInputs(FluidRegistry.getFluidStack("lubricant", 1_000 * 2))
+                    .itemOutputs(Wireless_Energy_Hatch_Tier_4[Hatch_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+
+            // 16A Wireless Energy Hatch
+            final ItemStack[] Wireless_Energy_Hatch_Tier_16 = new ItemStack[] {
+                CustomItemList.eM_energyWirelessMulti16_EV.get(1), CustomItemList.eM_energyWirelessMulti16_IV.get(1),
+                CustomItemList.eM_energyWirelessMulti16_LuV.get(1), CustomItemList.eM_energyWirelessMulti16_ZPM.get(1),
+                CustomItemList.eM_energyWirelessMulti16_UV.get(1), CustomItemList.eM_energyWirelessMulti16_UHV.get(1),
+                CustomItemList.eM_energyWirelessMulti16_UEV.get(1), CustomItemList.eM_energyWirelessMulti16_UIV.get(1),
+                CustomItemList.eM_energyWirelessMulti16_UMV.get(1),
+                CustomItemList.eM_energyWirelessMulti16_UXV.get(1) };
+
+            for (int Hatch_Tier = 0; Hatch_Tier < 10; Hatch_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(3),
+
+                        setStackSize(Hatch_Energy_Tier[Hatch_Tier + 4], 4),
+                        setStackSize(Circuit_Tier[Hatch_Tier + 4], 4),
+                        setStackSize(Superconductor_Tier[Hatch_Tier + 4], 4))
+                    .fluidInputs(FluidRegistry.getFluidStack("lubricant", 1_000 * 4))
+                    .itemOutputs(Wireless_Energy_Hatch_Tier_16[Hatch_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+
+            // 64A Wireless Energy Hatch
+            final ItemStack[] Wireless_Energy_Hatch_Tier_64 = new ItemStack[] {
+                CustomItemList.eM_energyWirelessMulti64_EV.get(1), CustomItemList.eM_energyWirelessMulti64_IV.get(1),
+                CustomItemList.eM_energyWirelessMulti64_LuV.get(1), CustomItemList.eM_energyWirelessMulti64_ZPM.get(1),
+                CustomItemList.eM_energyWirelessMulti64_UV.get(1), CustomItemList.eM_energyWirelessMulti64_UHV.get(1),
+                CustomItemList.eM_energyWirelessMulti64_UEV.get(1), CustomItemList.eM_energyWirelessMulti64_UIV.get(1),
+                CustomItemList.eM_energyWirelessMulti64_UMV.get(1),
+                CustomItemList.eM_energyWirelessMulti64_UXV.get(1) };
+
+            for (int Hatch_Tier = 0; Hatch_Tier < 10; Hatch_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(4),
+
+                        setStackSize(Hatch_Energy_Tier[Hatch_Tier + 4], 8),
+                        setStackSize(Circuit_Tier[Hatch_Tier + 4], 8),
+                        setStackSize(Superconductor_Tier[Hatch_Tier + 4], 8))
+                    .fluidInputs(FluidRegistry.getFluidStack("lubricant", 1_000 * 8))
+                    .itemOutputs(Wireless_Energy_Hatch_Tier_64[Hatch_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+
+            // UXV High Ampere Wireless Energy Hatch
+            final ItemStack[] Wireless_Energy_Hatch_Tier_UXV = new ItemStack[] {
+                CustomItemList.eM_energyWirelessTunnel1_UXV.get(1), CustomItemList.eM_energyWirelessTunnel2_UXV.get(1),
+                CustomItemList.eM_energyWirelessTunnel3_UXV.get(1), CustomItemList.eM_energyWirelessTunnel4_UXV.get(1),
+                CustomItemList.eM_energyWirelessTunnel5_UXV.get(1), CustomItemList.eM_energyWirelessTunnel6_UXV.get(1),
+                CustomItemList.eM_energyWirelessTunnel7_UXV.get(1), CustomItemList.eM_energyWirelessTunnel8_UXV.get(1),
+                CustomItemList.eM_energyWirelessTunnel9_UXV.get(1) };
+
+            for (int Hatch_Tier = 0; Hatch_Tier < 9; Hatch_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(Hatch_Tier + 5),
+
+                        setStackSize(ItemList.Hatch_Energy_UXV.get(1), (Hatch_Tier + 5) * 2),
+                        setStackSize(
+                            GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 1),
+                            (Hatch_Tier + 5) * 2),
+                        setStackSize(getModItem(GregTech.ID, "gt.blockmachines", 1L, 11430), (Hatch_Tier + 5) * 2))
+                    .fluidInputs(FluidRegistry.getFluidStack("lubricant", 1_000 * (Hatch_Tier + 5) * 2))
+                    .itemOutputs(Wireless_Energy_Hatch_Tier_UXV[Hatch_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+        }
+
+        // Wireless Energy Dynamo 无线动力仓
+        {
+            final ItemStack[] Hatch_Dynamo_Tier = new ItemStack[] { ItemList.Hatch_Dynamo_ULV.get(1),
+                ItemList.Hatch_Dynamo_LV.get(1), ItemList.Hatch_Dynamo_MV.get(1), ItemList.Hatch_Dynamo_HV.get(1),
+                ItemList.Hatch_Dynamo_EV.get(1), ItemList.Hatch_Dynamo_IV.get(1), ItemList.Hatch_Dynamo_LuV.get(1),
+                ItemList.Hatch_Dynamo_ZPM.get(1), ItemList.Hatch_Dynamo_UV.get(1), ItemList.Hatch_Dynamo_UHV.get(1),
+                ItemList.Hatch_Dynamo_UEV.get(1), ItemList.Hatch_Dynamo_UIV.get(1), ItemList.Hatch_Dynamo_UMV.get(1),
+                ItemList.Hatch_Dynamo_UXV.get(1) };
+
+            final ItemStack[] Circuit_Tier = new ItemStack[] {
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.ULV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.LV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.MV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.HV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.EV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.IV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.LuV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.ZPM, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UHV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UEV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UIV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UMV, 1),
+                GTOreDictUnificator.get(OrePrefixes.circuit, Materials.UXV, 1) };
+
+            final ItemStack[] Superconductor_Tier = new ItemStack[] {
+                GTOreDictUnificator.get(OrePrefixes.cableGt01, Materials.RedAlloy, 1),
+                GTOreDictUnificator.get(OrePrefixes.cableGt01, Materials.RedstoneAlloy, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorMV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorHV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorEV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorIV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorLuV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorZPM, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUHV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUEV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUIV, 1),
+                GTOreDictUnificator.get(OrePrefixes.wireGt01, Materials.SuperconductorUMV, 1),
+                getModItem(GregTech.ID, "gt.blockmachines", 1L, 11430) };
+
+            final ItemStack[] Wireless_Energy_Dynamo_Tier = new ItemStack[] {
+                ItemList.Wireless_Dynamo_Energy_ULV.get(1), ItemList.Wireless_Dynamo_Energy_LV.get(1),
+                ItemList.Wireless_Dynamo_Energy_MV.get(1), ItemList.Wireless_Dynamo_Energy_HV.get(1),
+                ItemList.Wireless_Dynamo_Energy_EV.get(1), ItemList.Wireless_Dynamo_Energy_IV.get(1),
+                ItemList.Wireless_Dynamo_Energy_LuV.get(1), ItemList.Wireless_Dynamo_Energy_ZPM.get(1),
+                ItemList.Wireless_Dynamo_Energy_UV.get(1), ItemList.Wireless_Dynamo_Energy_UHV.get(1),
+                ItemList.Wireless_Dynamo_Energy_UEV.get(1), ItemList.Wireless_Dynamo_Energy_UIV.get(1),
+                ItemList.Wireless_Dynamo_Energy_UMV.get(1), ItemList.Wireless_Dynamo_Energy_UXV.get(1) };
+
+            for (int Hatch_Tier = 0; Hatch_Tier < 14; Hatch_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(1),
+
+                        setStackSize(Hatch_Dynamo_Tier[Hatch_Tier], 1),
+                        setStackSize(Circuit_Tier[Hatch_Tier], 1),
+                        setStackSize(Superconductor_Tier[Hatch_Tier], 1))
+                    .fluidInputs(FluidRegistry.getFluidStack("lubricant", 1000))
+                    .itemOutputs(Wireless_Energy_Dynamo_Tier[Hatch_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
         }
     }
 }

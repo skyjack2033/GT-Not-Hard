@@ -87,7 +87,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
 
     @Override
     public void loadNBTData(NBTTagCompound aNBT) {
-        super.saveNBTData(aNBT);
+        super.loadNBTData(aNBT);
         this.mLastDimensionOverride = aNBT.getString("mLastDimensionOverride");
         this.VoidFluidMode = aNBT.getBoolean("mVoidFluidMode");
     }
@@ -190,8 +190,9 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     // 检查机器结构
     @Override
     public boolean checkMachine(IGregTechTileEntity aBaseMetaTileEntity, ItemStack aStack) {
-        mExoticEnergyHatches.clear();
-        mOutputBusses.clear();
+        this.mMaintenanceHatches.clear();
+        this.mOutputBusses.clear();
+        this.mOutputHatches.clear();
         mCasingAmount = 0;
         return checkPiece(STRUCTURE_PIECE_MAIN, 1, 1, 0) && mCasingAmount >= 4 && checkHatches();
     }

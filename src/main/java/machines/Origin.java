@@ -83,7 +83,7 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
     // 加载NBT数据
     @Override
     public void loadNBTData(NBTTagCompound aNBT) {
-        super.saveNBTData(aNBT);
+        super.loadNBTData(aNBT);
         wireless_mode = aNBT.getBoolean("wireless_mode");
     }
 
@@ -184,8 +184,10 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
     // 检查机器结构
     @Override
     public boolean checkMachine(IGregTechTileEntity aBaseMetaTileEntity, ItemStack aStack) {
-        mExoticEnergyHatches.clear();
-        mTecTechDynamoHatches.clear();
+        this.mMaintenanceHatches.clear();
+        this.mInputHatches.clear();
+        this.mDynamoHatches.clear();
+        this.mTecTechDynamoHatches.clear();
         mCasingAmount = 0;
         return checkPiece(STRUCTURE_PIECE_MAIN, 1, 1, 0) && mCasingAmount >= 4 && checkHatches();
     }
@@ -245,7 +247,7 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
         lEUt = 0;
         ItemStack slot = getControllerSlot();
         mMaxProgresstime = 0;
-        // debug LUV
+        // debug ULV
         if (slot != null && slot.getItemDamage() == 2006) {
             mMaxProgresstime = 20;
             lEUt = (long) 8 * getMaxParallelRecipes();
