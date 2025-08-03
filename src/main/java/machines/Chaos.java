@@ -495,9 +495,11 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
                     && !isValidForLowGravity(recipe, getBaseMetaTileEntity().getWorld().provider.dimensionId)) {
                     return SimpleCheckRecipeResult.ofFailure("high_gravity");
                 }
-                if (recipe.mEUt > availableVoltage) {
-                    return CheckRecipeResultRegistry.insufficientPower(recipe.mEUt);
-                }
+                /*
+                 * if (recipe.mEUt > availableVoltage) {
+                 * return CheckRecipeResultRegistry.insufficientPower(recipe.mEUt);
+                 * }
+                 */
                 return CheckRecipeResultRegistry.SUCCESSFUL;
             }
 
@@ -527,7 +529,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             (isMultiBlock ? getAverageInputVoltage() : GTValues.V[tTier])
                 * (mLastRecipeMap != null ? mLastRecipeMap.getAmperage() : 1));
         logic.setAvailableAmperage(getMaxParallel());
-        logic.setAmperageOC(false);
+        logic.setAmperageOC(true);
     }
 
     // 运行时电压等级与无损降频

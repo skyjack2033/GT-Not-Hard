@@ -1,5 +1,6 @@
 package util;
 
+import static com.google.common.math.IntMath.pow;
 import static gregtech.api.enums.Mods.AE2FluidCraft;
 import static gregtech.api.enums.Mods.AdvancedSolarPanel;
 import static gregtech.api.enums.Mods.AppliedEnergistics2;
@@ -7,6 +8,7 @@ import static gregtech.api.enums.Mods.Avaritia;
 import static gregtech.api.enums.Mods.AvaritiaAddons;
 import static gregtech.api.enums.Mods.Computronics;
 import static gregtech.api.enums.Mods.DraconicEvolution;
+import static gregtech.api.enums.Mods.ElectroMagicTools;
 import static gregtech.api.enums.Mods.EnderIO;
 import static gregtech.api.enums.Mods.GTNHIntergalactic;
 import static gregtech.api.enums.Mods.GalacticraftAmunRa;
@@ -20,6 +22,7 @@ import static gregtech.api.enums.Mods.ProjectRedFabrication;
 import static gregtech.api.enums.Mods.SGCraft;
 import static gregtech.api.enums.Mods.SuperSolarPanels;
 import static gregtech.api.enums.Mods.TecTech;
+import static gregtech.api.enums.Mods.Thaumcraft;
 import static gregtech.api.enums.Mods.ThaumicEnergistics;
 import static gregtech.api.enums.Mods.Witchery;
 import static gregtech.api.enums.TierEU.RECIPE_LV;
@@ -53,7 +56,6 @@ public class ChaosXtremeCraftingRecipes {
         .neiTransferRect(124, 8, 18, 72)
         .neiTransferRect(142, 26, 18, 18)
         .frontend(AssemblyLineFrontend::new)
-        // .disableOptimize()
         .build();
 
     public static void addChaosXtremeCraftingRecipes() {
@@ -1002,6 +1004,279 @@ public class ChaosXtremeCraftingRecipes {
                         setStackSize(Superconductor_Tier[Hatch_Tier], 1))
                     .fluidInputs(FluidRegistry.getFluidStack("lubricant", 1000))
                     .itemOutputs(Wireless_Energy_Dynamo_Tier[Hatch_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+        }
+
+        // Electro-Magic Tools Solar-Base
+        {
+            // 压缩太阳能(1级)
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(IndustrialCraft2.ID, "blockGenerator", 8L, 3),
+                    getModItem(NewHorizonsCoreMod.ID, "item.ReinforcedAluminiumIronPlate", 1L))
+                .itemOutputs(getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 0))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
+            // 压缩太阳能(2级)
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(ElectroMagicTools.ID, "EMTSolars", 8L, 0),
+                    getModItem(NewHorizonsCoreMod.ID, "item.IrradiantReinforcedTitaniumPlate", 1L))
+                .itemOutputs(getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 1))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
+            // 压缩太阳能(3级)
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(ElectroMagicTools.ID, "EMTSolars", 8L, 1),
+                    getModItem(NewHorizonsCoreMod.ID, "item.IrradiantReinforcedTungstenSteelPlate", 1L))
+                .itemOutputs(getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 2))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
+            // 压缩太阳能(4级)
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(ElectroMagicTools.ID, "EMTSolars", 8L, 2),
+                    getModItem(NewHorizonsCoreMod.ID, "item.IrradiantReinforcedChromePlate", 1L))
+                .itemOutputs(getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 0))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
+            // 压缩太阳能(5级)
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(ElectroMagicTools.ID, "EMTSolars3", 8L, 0),
+                    getModItem(AdvancedSolarPanel.ID, "asp_crafting_items", 1L, 8))
+                .itemOutputs(getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 7))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
+            // 压缩太阳能(6级)
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(ElectroMagicTools.ID, "EMTSolars3", 8L, 7),
+                    getModItem(NewHorizonsCoreMod.ID, "item.IrradiantReinforcedNaquadriaPlate", 1L))
+                .itemOutputs(getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 14))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
+            // 压缩太阳能(7级)
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(ElectroMagicTools.ID, "EMTSolars3", 8L, 14),
+                    getModItem(NewHorizonsCoreMod.ID, "item.IrradiantReinforcedNeutroniumPlate", 1L))
+                .itemOutputs(getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 5))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
+            // 压缩太阳能(8级)
+            GTValues.RA.stdBuilder()
+                .itemInputs(
+                    getModItem(ElectroMagicTools.ID, "EMTSolars4", 8L, 5),
+                    getModItem(AdvancedSolarPanel.ID, "asp_crafting_items", 1L, 13))
+                .itemOutputs(getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 12))
+                .duration(SECONDS)
+                .eut(RECIPE_LV)
+                .addTo(addChaosXtremeCraftingRecipes);
+
+            // 压缩太阳能-单步
+            {
+                final ItemStack[] Plate_Tier = new ItemStack[] {
+                    getModItem(NewHorizonsCoreMod.ID, "item.ReinforcedAluminiumIronPlate", 1L),
+                    getModItem(NewHorizonsCoreMod.ID, "item.IrradiantReinforcedTitaniumPlate", 1L),
+                    getModItem(NewHorizonsCoreMod.ID, "item.IrradiantReinforcedTungstenSteelPlate", 1L),
+                    getModItem(NewHorizonsCoreMod.ID, "item.IrradiantReinforcedChromePlate", 1L),
+                    getModItem(AdvancedSolarPanel.ID, "asp_crafting_items", 1L, 8),
+                    getModItem(NewHorizonsCoreMod.ID, "item.IrradiantReinforcedNaquadriaPlate", 1L),
+                    getModItem(NewHorizonsCoreMod.ID, "item.IrradiantReinforcedNeutroniumPlate", 1L),
+                    getModItem(AdvancedSolarPanel.ID, "asp_crafting_items", 1L, 13) };
+
+                final ItemStack[] Solar_Result_Tier = new ItemStack[] {
+                    getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 0),
+                    getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 1),
+                    getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 2),
+                    getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 0),
+                    getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 7),
+                    getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 14),
+                    getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 5),
+                    getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 12) };
+
+                for (int Solar_Tier = 0; Solar_Tier < 8; Solar_Tier++) {
+                    GTValues.RA.stdBuilder()
+                        .itemInputs(
+                            GTUtility.getIntegratedCircuit(Solar_Tier + 1),
+
+                            setStackSize(getModItem(GregTech.ID, "gt.metaitem.01", 1L, 32750), pow(8, Solar_Tier + 1)),
+                            setStackSize(Plate_Tier[Solar_Tier], 8))
+                        .fluidInputs(FluidRegistry.getFluidStack("molten.solderingalloy", 36 * pow(8, Solar_Tier + 1)))
+                        .itemOutputs(Solar_Result_Tier[Solar_Tier])
+                        .duration(SECONDS)
+                        .eut(RECIPE_LV)
+                        .addTo(addChaosXtremeCraftingRecipes);
+                }
+            }
+        }
+
+        // Electro-Magic Tools Solar-Aspect
+        {
+            final ItemStack[] Solar_Base_Tier = new ItemStack[] { getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 0),
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 1),
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 2),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 0),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 7),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 14),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 5),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 12) };
+
+            // 地注魔太阳能
+            final ItemStack[] Solar_Terra_Tier = new ItemStack[] {
+                getModItem(ElectroMagicTools.ID, "EMTSolars2", 1L, 2),
+                getModItem(ElectroMagicTools.ID, "EMTSolars2", 1L, 3),
+                getModItem(ElectroMagicTools.ID, "EMTSolars2", 1L, 4),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 4),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 11),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 2),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 9),
+                getModItem(ElectroMagicTools.ID, "EMTSolars5", 1L, 0) };
+
+            for (int Solar_Tier = 0; Solar_Tier < 8; Solar_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(Solar_Tier + 1),
+
+                        setStackSize(getModItem(Thaumcraft.ID, "ItemShard", 1L, 3), 8 * (Solar_Tier + 1)),
+                        setStackSize(Solar_Base_Tier[Solar_Tier], 1))
+                    .itemOutputs(Solar_Terra_Tier[Solar_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+
+            // 水注魔太阳能
+            final ItemStack[] Solar_Aqua_Tier = new ItemStack[] { getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 3),
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 4),
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 5),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 5),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 12),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 3),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 10),
+                getModItem(ElectroMagicTools.ID, "EMTSolars5", 1L, 1) };
+
+            for (int Solar_Tier = 0; Solar_Tier < 8; Solar_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(Solar_Tier + 1),
+
+                        setStackSize(getModItem(Thaumcraft.ID, "ItemShard", 1L, 2), 8 * (Solar_Tier + 1)),
+                        setStackSize(Solar_Base_Tier[Solar_Tier], 1))
+                    .itemOutputs(Solar_Aqua_Tier[Solar_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+
+            // 火注魔太阳能
+            final ItemStack[] Solar_Ignis_Tier = new ItemStack[] {
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 12),
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 13),
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 14),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 6),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 13),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 4),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 11),
+                getModItem(ElectroMagicTools.ID, "EMTSolars5", 1L, 2) };
+
+            for (int Solar_Tier = 0; Solar_Tier < 8; Solar_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(Solar_Tier + 1),
+
+                        setStackSize(getModItem(Thaumcraft.ID, "ItemShard", 1L, 1), 8 * (Solar_Tier + 1)),
+                        setStackSize(Solar_Base_Tier[Solar_Tier], 1))
+                    .itemOutputs(Solar_Ignis_Tier[Solar_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+
+            // 风注魔太阳能
+            final ItemStack[] Solar_Aer_Tier = new ItemStack[] { getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 15),
+                getModItem(ElectroMagicTools.ID, "EMTSolars2", 1L, 0),
+                getModItem(ElectroMagicTools.ID, "EMTSolars2", 1L, 1),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 3),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 10),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 1),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 8),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 15) };
+
+            for (int Solar_Tier = 0; Solar_Tier < 8; Solar_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(Solar_Tier + 1),
+
+                        setStackSize(getModItem(Thaumcraft.ID, "ItemShard", 1L, 0), 8 * (Solar_Tier + 1)),
+                        setStackSize(Solar_Base_Tier[Solar_Tier], 1))
+                    .itemOutputs(Solar_Aer_Tier[Solar_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+
+            // 秩序注魔太阳能
+            final ItemStack[] Solar_Ordo_Tier = new ItemStack[] { getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 9),
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 10),
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 11),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 1),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 8),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 15),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 6),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 13) };
+
+            for (int Solar_Tier = 0; Solar_Tier < 8; Solar_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(Solar_Tier + 1),
+
+                        setStackSize(getModItem(Thaumcraft.ID, "ItemShard", 1L, 4), 8 * (Solar_Tier + 1)),
+                        setStackSize(Solar_Base_Tier[Solar_Tier], 1))
+                    .itemOutputs(Solar_Ordo_Tier[Solar_Tier])
+                    .duration(SECONDS)
+                    .eut(RECIPE_LV)
+                    .addTo(addChaosXtremeCraftingRecipes);
+            }
+
+            // 混沌注魔太阳能
+            final ItemStack[] Solar_Perditio_Tier = new ItemStack[] {
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 6),
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 7),
+                getModItem(ElectroMagicTools.ID, "EMTSolars", 1L, 8),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 2),
+                getModItem(ElectroMagicTools.ID, "EMTSolars3", 1L, 9),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 0),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 7),
+                getModItem(ElectroMagicTools.ID, "EMTSolars4", 1L, 14) };
+
+            for (int Solar_Tier = 0; Solar_Tier < 8; Solar_Tier++) {
+                GTValues.RA.stdBuilder()
+                    .itemInputs(
+                        GTUtility.getIntegratedCircuit(Solar_Tier + 1),
+
+                        setStackSize(getModItem(Thaumcraft.ID, "ItemShard", 1L, 5), 8 * (Solar_Tier + 1)),
+                        setStackSize(Solar_Base_Tier[Solar_Tier], 1))
+                    .itemOutputs(Solar_Perditio_Tier[Solar_Tier])
                     .duration(SECONDS)
                     .eut(RECIPE_LV)
                     .addTo(addChaosXtremeCraftingRecipes);

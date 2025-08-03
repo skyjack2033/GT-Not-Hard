@@ -36,6 +36,7 @@ import util.ChaosXtremeCraftingRecipes;
 import util.ChaosZhuHaiRecipes;
 import util.SingularityDebugRecipes;
 import util.SingularityFluidRecipes;
+import util.SingularityOreRecipes;
 
 @Mod(modid = MyMod.MODID, version = Tags.VERSION, name = "GT Not Hard", acceptedMinecraftVersions = "[1.7.10]")
 public class MyMod {
@@ -81,6 +82,7 @@ public class MyMod {
         // loadRecipes.loadRecipes();
         SingularityFluidRecipes.addVoidFliudRecipes();
         SingularityDebugRecipes.addVoidDebugRecipes();
+        SingularityOreRecipes.addVoidOreRecipes();
         ChaosZhuHaiRecipes.addChaosZhuHaiFisheryRecipes();
         ChaosXtremeCraftingRecipes.addChaosXtremeCraftingRecipes();
     }

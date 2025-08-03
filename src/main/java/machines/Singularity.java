@@ -13,58 +13,40 @@ import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_AR
 import static gregtech.api.enums.Textures.BlockIcons.casingTexturePages;
 import static gregtech.api.util.GTStructureUtility.buildHatchAdder;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Random;
-import java.util.stream.Collectors;
 
 import javax.annotation.Nonnull;
 
-import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.gen.ChunkProviderServer;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.FluidStack;
 
-import org.jetbrains.annotations.NotNull;
-
-import com.google.common.collect.ImmutableList;
 import com.gtnewhorizon.structurelib.alignment.constructable.ISurvivalConstructable;
 import com.gtnewhorizon.structurelib.structure.IStructureDefinition;
 import com.gtnewhorizon.structurelib.structure.ISurvivalBuildEnvironment;
 import com.gtnewhorizon.structurelib.structure.StructureDefinition;
-import com.gtnewhorizons.modularui.api.math.Alignment;
-import com.gtnewhorizons.modularui.common.widget.DynamicPositionedColumn;
-import com.gtnewhorizons.modularui.common.widget.SlotWidget;
-import com.gtnewhorizons.modularui.common.widget.TextWidget;
-import com.mofoga.gtnothard.MyMod;
 
-import bwcrossmod.galacticgreg.VoidMinerUtility;
 import gregtech.api.GregTechAPI;
 import gregtech.api.enums.Textures;
-import gregtech.api.interfaces.IHatchElement;
 import gregtech.api.interfaces.ITexture;
 import gregtech.api.interfaces.metatileentity.IMetaTileEntity;
 import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
 import gregtech.api.metatileentity.implementations.MTEExtendedPowerMultiBlockBase;
-import gregtech.api.objects.XSTR;
-import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.check.CheckRecipeResult;
 import gregtech.api.recipe.check.CheckRecipeResultRegistry;
 import gregtech.api.render.TextureFactory;
 import gregtech.api.util.GTUtility;
 import gregtech.api.util.MultiblockTooltipBuilder;
 import gregtech.api.util.shutdown.ShutDownReasonRegistry;
-import gtneioreplugin.plugin.block.ModBlocks;
 import gtneioreplugin.plugin.item.ItemDimensionDisplay;
 import util.SingularityDebugRecipes;
 import util.SingularityFluidRecipes;
+import util.SingularityOreRecipes;
 
 public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> implements ISurvivalConstructable {
 
@@ -202,10 +184,6 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         return mMaintenanceHatches.size() == 1;
     }
 
-    private List<IHatchElement<? super Singularity>> getAllowedHatches() {
-        return ImmutableList.of(OutputHatch, OutputBus, Maintenance);
-    }
-
     // 获取最大并行数
     private int getMaxParallel() {
         if (getControllerSlot() == null) {
@@ -248,8 +226,6 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         super.onPostTick(aBaseMetaTileEntity, aTick);
     }
 
-    private boolean mBlacklist = false;
-
     private boolean VoidFluidMode = false;
 
     // 潜行左键切换虚空的类型
@@ -264,12 +240,6 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
             }
         }
         super.onLeftclick(aBaseMetaTileEntity, aPlayer);
-    }
-
-    @NotNull
-    @Override
-    public Collection<RecipeMap<?>> getAvailableRecipeMaps() {
-        return Arrays.asList(SingularityFluidRecipes.addVoidFluidRecipes);
     }
 
     // 机器运行逻辑
@@ -291,7 +261,8 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
                 }
                 /*
                  * for (int mLoop = 0; mLoop < ItemRecipes.size(); mLoop++) {
-                 * ItemStack recipeItem = ItemRecipes.get(mLoop).copy();
+                 * ItemStack recipeItem = ItemRecipes.get(mLoop)
+                 * .copy();
                  * recipeItem.stackSize = getMaxParallel();
                  * addOutput(recipeItem);
                  * }
@@ -302,12 +273,16 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         if (VoidFluidMode) {
             Map<Integer, FluidStack> FluidRecipes = SingularityFluidRecipes.VoidFliudRecipes.get(dim);
             if (FluidRecipes != null) {
+                if (!Objects.equals(dim, mLastDimensionOverride)) {
+                    mLastDimensionOverride = dim;
+                }
                 for (int mLoop = 0; mLoop < 32; mLoop++) {
                     this.FluidOutPuts();
                 }
                 /*
                  * for (int mLoop = 0; mLoop < FluidRecipes.size(); mLoop++) {
-                 * FluidStack recipeFluid = FluidRecipes.get(mLoop).copy();
+                 * FluidStack recipeFluid = FluidRecipes.get(mLoop)
+                 * .copy();
                  * recipeFluid.amount = getMaxParallel();
                  * addOutput(recipeFluid);
                  * }
@@ -317,15 +292,21 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         } else {
             if (!Objects.equals(dim, mLastDimensionOverride)) {
                 mLastDimensionOverride = dim;
-                totalWeight = 0;
             }
-            if (this.dropMap == null || this.totalWeight == 0) {
-                this.calculateDropMap();
-            }
-            if (this.totalWeight != 0.f) {
+            Map<Integer, ItemStack> OreRecipes = SingularityOreRecipes.VoidOreRecipes.get(dim);
+            if (OreRecipes != null) {
                 for (int mLoop = 0; mLoop < 256; mLoop++) {
-                    this.handleOutputs();
+                    this.OreOutPuts();
                 }
+                /*
+                 * for (int mLoop = 0; mLoop < OreRecipes.size(); mLoop++) {
+                 * ItemStack recipeOre = OreRecipes.get(mLoop)
+                 * .copy();
+                 * // System.out.println(recipeOre.getItem());
+                 * recipeOre.stackSize = getMaxParallel();
+                 * addOutput(recipeOre);
+                 * }
+                 */
                 return CheckRecipeResultRegistry.SUCCESSFUL;
             }
         }
@@ -333,113 +314,14 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         return CheckRecipeResultRegistry.NO_RECIPE;
     }
 
-    // 获取主方块显示内容
-    private String getDimensionNameText() {
-        String ext = null;
-        try {
-            Block block = ModBlocks.getBlock(mLastDimensionOverride);
-            ext = new ItemStack(block).getDisplayName();
-        } catch (Exception ignored) {}
-        return "Dimension Override:" + (ext == null ? mLastDimensionOverride : ext);
-    }
-
-    // 主方块中显示信息
-    @Override
-    protected void drawTexts(DynamicPositionedColumn screenElements, SlotWidget inventorySlot) {
-        super.drawTexts(screenElements, inventorySlot);
-        screenElements.widget(
-            TextWidget.dynamicString(this::getDimensionNameText)
-                .setSynced(true)
-                .setTextAlignment(Alignment.CenterLeft)
-                .setEnabled(true));
-    }
-
-    // 获取主方块中维度方块的的维度名称
-    private String getPluginDimensionName() {
-        return Optional.ofNullable(this.mInventory[1])
-            .filter(s -> s.getItem() instanceof ItemDimensionDisplay)
-            .map(ItemDimensionDisplay::getDimension)
-            .orElse("None");
-    }
-
-    private VoidMinerUtility.DropMap dropMap = null;
-    private VoidMinerUtility.DropMap extraDropMap = null;
-    private float totalWeight;
-
-    // 下一次产出矿石
-    private ItemStack nextOre() {
-        float currentWeight = 0.f;
-        while (true) {
-            float randomNumber = XSTR.XSTR_INSTANCE.nextFloat() * this.totalWeight;
-            for (Map.Entry<GTUtility.ItemId, Float> entry : this.dropMap.getInternalMap()
-                .entrySet()) {
-                currentWeight += entry.getValue();
-                if (randomNumber < currentWeight) return entry.getKey()
-                    .getItemStack();
-            }
-            for (Map.Entry<GTUtility.ItemId, Float> entry : this.extraDropMap.getInternalMap()
-                .entrySet()) {
-                currentWeight += entry.getValue();
-                if (randomNumber < currentWeight) return entry.getKey()
-                    .getItemStack();
-            }
-        }
-    }
-
-    // 处理额外添加的矿石
-    private void handleExtraDrops(int id) {
-        id = MyMod.dimMapping.inverse()
-            .getOrDefault(getPluginDimensionName(), id);
-        if (VoidMinerUtility.extraDropsDimMap.containsKey(id)) {
-            extraDropMap = VoidMinerUtility.extraDropsDimMap.get(id);
-        }
-    }
-
-    private int dim;
-
-    // 获取指定维度的矿石列表
-    private void handleModDimDef(int id) {
-        id = dim = MyMod.dimMapping.inverse()
-            .getOrDefault(getPluginDimensionName(), id);
-        if (VoidMinerUtility.dropMapsByDimId.containsKey(id)) {
-            this.dropMap = VoidMinerUtility.dropMapsByDimId.get(id);
-        } else {
-            String chunkProviderName = ((ChunkProviderServer) this.getBaseMetaTileEntity()
-                .getWorld()
-                .getChunkProvider()).currentChunkProvider.getClass()
-                    .getName();
-            chunkProviderName = MyMod.cahce.getOrDefault(dim, chunkProviderName);
-            if (VoidMinerUtility.dropMapsByChunkProviderName.containsKey(chunkProviderName)) {
-                this.dropMap = VoidMinerUtility.dropMapsByChunkProviderName.get(chunkProviderName);
-            }
-        }
-    }
-
-    // 计算矿石归一化的权重
-    private void calculateDropMap() {
-        this.dropMap = new VoidMinerUtility.DropMap();
-        this.extraDropMap = new VoidMinerUtility.DropMap();
-        int id = this.getBaseMetaTileEntity()
-            .getWorld().provider.dimensionId;
-        this.handleModDimDef(id);
-        this.handleExtraDrops(id);
-        this.totalWeight = dropMap.getTotalWeight() + extraDropMap.getTotalWeight();
-    }
-
     // 虚空矿石输出
-    private void handleOutputs() {
-        final List<ItemStack> inputOres = this.getStoredInputs()
-            .stream()
-            .filter(GTUtility::isOre)
-            .collect(Collectors.toList());
-        final ItemStack output = this.nextOre();
-        output.stackSize = getMaxParallel();
-        if (inputOres.isEmpty() || this.mBlacklist && inputOres.stream()
-            .noneMatch(is -> GTUtility.areStacksEqual(is, output))
-            || !this.mBlacklist && inputOres.stream()
-                .anyMatch(is -> GTUtility.areStacksEqual(is, output)))
-            this.addOutput(output);
-        this.updateSlots();
+    private void OreOutPuts() {
+        Map<Integer, ItemStack> OreRecipes = SingularityOreRecipes.VoidOreRecipes.get(mLastDimensionOverride);
+        Random random = new Random();
+        ItemStack recipeOre = OreRecipes.get(random.nextInt(OreRecipes.size()))
+            .copy();
+        recipeOre.stackSize = getMaxParallel();
+        addOutput(recipeOre);
     }
 
     // 虚空流体输出
