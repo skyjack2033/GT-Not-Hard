@@ -8,15 +8,11 @@ import static gregtech.api.enums.GTValues.V;
 import static gregtech.api.enums.HatchElement.Dynamo;
 import static gregtech.api.enums.HatchElement.InputHatch;
 import static gregtech.api.enums.HatchElement.Maintenance;
-import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY;
-import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY_ACTIVE;
-import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY_ACTIVE_GLOW;
-import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY_GLOW;
+// OVERLAY_FRONT_PROCESSING_ARRAY* constants were removed/renamed in newer GTNH; use casing texture as temporary placeholder
 import static gregtech.api.enums.Textures.BlockIcons.casingTexturePages;
 import static gregtech.api.util.GTStructureUtility.buildHatchAdder;
 import static gregtech.api.util.GTUtility.validMTEList;
 import static gregtech.common.misc.WirelessNetworkManager.addEUToGlobalEnergyMap;
-import static gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.base.GTPPMultiBlockBase.GTPPHatchElement.TTDynamo;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -97,11 +93,11 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
             STRUCTURE_PIECE_MAIN,
             transpose(new String[][] { { "hhh", "hhh", "hhh" }, { "h~h", "h-h", "hhh" }, { "hhh", "hhh", "hhh" } }))
         .addElement(
-            'h',
-            buildHatchAdder(Origin.class).atLeast(InputHatch, Maintenance, Dynamo.or(TTDynamo))
-                .casingIndex(mcasingIndex)
-                .dot(1)
-                .buildAndChain(onElementPass(Origin::onCasingAdded, ofBlock(GregTechAPI.sBlockCasings4, 1))))
+                    'h',
+                    buildHatchAdder(Origin.class).atLeast(InputHatch, Maintenance, Dynamo)
+                        .casingIndex(mcasingIndex)
+                        .dot(1)
+                        .buildAndChain(onElementPass(Origin::onCasingAdded, ofBlock(GregTechAPI.sBlockCasings4, 1))))
         .build();
 
     private int mCasingAmount;
@@ -119,26 +115,8 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
     public ITexture[] getTexture(IGregTechTileEntity aBaseMetaTileEntity, ForgeDirection side, ForgeDirection aFacing,
         int colorIndex, boolean aActive, boolean redstoneLevel) {
         if (side == aFacing) {
-            if (aActive) {
-                return new ITexture[] { casingTexturePages[0][mcasingIndex], TextureFactory.builder()
-                    .addIcon(OVERLAY_FRONT_PROCESSING_ARRAY_ACTIVE)
-                    .extFacing()
-                    .build(),
-                    TextureFactory.builder()
-                        .addIcon(OVERLAY_FRONT_PROCESSING_ARRAY_ACTIVE_GLOW)
-                        .extFacing()
-                        .glow()
-                        .build() };
-            }
-            return new ITexture[] { casingTexturePages[0][mcasingIndex], TextureFactory.builder()
-                .addIcon(OVERLAY_FRONT_PROCESSING_ARRAY)
-                .extFacing()
-                .build(),
-                TextureFactory.builder()
-                    .addIcon(OVERLAY_FRONT_PROCESSING_ARRAY_GLOW)
-                    .extFacing()
-                    .glow()
-                    .build() };
+            // Overlay constants were removed in GTNH 2.8; return the base casing texture as a placeholder
+            return new ITexture[] { casingTexturePages[0][mcasingIndex] };
         }
         return new ITexture[] { casingTexturePages[0][mcasingIndex] };
     }

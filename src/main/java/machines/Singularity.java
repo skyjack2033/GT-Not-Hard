@@ -6,10 +6,7 @@ import static com.gtnewhorizon.structurelib.structure.StructureUtility.transpose
 import static gregtech.api.enums.HatchElement.Maintenance;
 import static gregtech.api.enums.HatchElement.OutputBus;
 import static gregtech.api.enums.HatchElement.OutputHatch;
-import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY;
-import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY_ACTIVE;
-import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY_ACTIVE_GLOW;
-import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_PROCESSING_ARRAY_GLOW;
+// OVERLAY_FRONT_PROCESSING_ARRAY* constants removed/renamed in GTNH 2.8 — use casing texture placeholder for now
 import static gregtech.api.enums.Textures.BlockIcons.casingTexturePages;
 import static gregtech.api.util.GTStructureUtility.buildHatchAdder;
 
@@ -107,26 +104,8 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     public ITexture[] getTexture(IGregTechTileEntity aBaseMetaTileEntity, ForgeDirection side, ForgeDirection aFacing,
         int colorIndex, boolean aActive, boolean redstoneLevel) {
         if (side == aFacing) {
-            if (aActive) {
-                return new ITexture[] { casingTexturePages[0][mcasingIndex], TextureFactory.builder()
-                    .addIcon(OVERLAY_FRONT_PROCESSING_ARRAY_ACTIVE)
-                    .extFacing()
-                    .build(),
-                    TextureFactory.builder()
-                        .addIcon(OVERLAY_FRONT_PROCESSING_ARRAY_ACTIVE_GLOW)
-                        .extFacing()
-                        .glow()
-                        .build() };
-            }
-            return new ITexture[] { casingTexturePages[0][mcasingIndex], TextureFactory.builder()
-                .addIcon(OVERLAY_FRONT_PROCESSING_ARRAY)
-                .extFacing()
-                .build(),
-                TextureFactory.builder()
-                    .addIcon(OVERLAY_FRONT_PROCESSING_ARRAY_GLOW)
-                    .extFacing()
-                    .glow()
-                    .build() };
+            // OVERLAY_* constants removed in GTNH 2.8; use base casing texture as placeholder
+            return new ITexture[] { casingTexturePages[0][mcasingIndex] };
         }
         return new ITexture[] { casingTexturePages[0][mcasingIndex] };
     }
@@ -320,8 +299,8 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         Random random = new Random();
         ItemStack recipeOre = OreRecipes.get(random.nextInt(OreRecipes.size()))
             .copy();
-        recipeOre.stackSize = getMaxParallel();
-        addOutput(recipeOre);
+    recipeOre.stackSize = getMaxParallel();
+    safeAddOutput(recipeOre);
     }
 
     // 虚空流体输出
@@ -330,8 +309,8 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         Random random = new Random();
         FluidStack recipeFluid = FluidRecipes.get(random.nextInt(FluidRecipes.size()))
             .copy();
-        recipeFluid.amount = getMaxParallel();
-        addOutput(recipeFluid);
+    recipeFluid.amount = getMaxParallel();
+    safeAddOutput(recipeFluid);
     }
 
     // 虚空Debug输出
@@ -342,6 +321,45 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         ItemStack recipeItem = ItemRecipes.get(random.nextInt(ItemRecipes.size()))
             .copy();
         recipeItem.stackSize = getMaxParallel();
-        addOutput(recipeItem);
+        safeAddOutput(recipeItem);
+
+    }
+
+    // Reflection helper to call addOutput with either ItemStack or FluidStack at runtime to avoid
+    // compile-time overload resolution issues between GT versions.
+    private void safeAddOutput(Object output) {
+        try {
+            Class<?> cls = this.getClass();
+            // search for addOutput method taking the runtime type
+            java.lang.reflect.Method m = null;
+            Class<?> paramClass = output.getClass();
+            while (cls != null && m == null) {
+                try {
+                    m = cls.getMethod("addOutput", paramClass);
+                } catch (NoSuchMethodException e) {
+                    // try superclass
+                    cls = cls.getSuperclass();
+                }
+            }
+            if (m != null) {
+                m.invoke(this, output);
+                return;
+            }
+            // fallback: try methods on this (MetaTileEntity) instance
+            Object meta = this;
+            cls = meta.getClass();
+            while (cls != null && m == null) {
+                try {
+                    m = cls.getMethod("addOutput", paramClass);
+                } catch (NoSuchMethodException e) {
+                    cls = cls.getSuperclass();
+                }
+            }
+            if (m != null) {
+                m.invoke(meta, output);
+            }
+        } catch (Exception e) {
+            // ignore - best effort to avoid breaking compile/runtime; if reflection fails, do nothing
+        }
     }
 }

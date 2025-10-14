@@ -21,11 +21,10 @@ public class ChaosCircuitAssemblerRecipes {
     public static final RecipeMap<RecipeMapBackend> addChaosCircuitAssemblerRecipes = RecipeMapBuilder
         .of("Chaos of CircuitAssemblyLine")
         .maxIO(6, 1, 1, 0)
-        .minInputs(1, 1)
-        .progressBar(GTUITextures.PROGRESSBAR_CIRCUIT_ASSEMBLER)
-        // .disableRegisterNEI()
-        .disableOptimize()
-        .build();
+    .minInputs(1, 1)
+    .progressBar(GTUITextures.PROGRESSBAR_CIRCUIT_ASSEMBLER)
+    // .disableRegisterNEI()
+    .build();
 
     public static void addChaosCircuitAssemblerRecipes() {
         // Integrated Logic Circuit - 集成逻辑电路

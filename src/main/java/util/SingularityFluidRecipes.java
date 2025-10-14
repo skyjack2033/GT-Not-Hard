@@ -8,7 +8,8 @@ import net.minecraftforge.fluids.FluidStack;
 
 import bartworks.system.material.BWGTMaterialReference;
 import bartworks.system.material.WerkstoffLoader;
-import galaxyspace.core.register.GSMaterials;
+// galaxyspace is optional; if you want to compile against it, enable compileOnly in dependencies.gradle
+// import galaxyspace.core.register.GSMaterials;
 import goodgenerator.items.GGMaterial;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.Materials;
@@ -34,7 +35,6 @@ public class SingularityFluidRecipes {
     public static void addSingularityFluidRecipes(String Dim, FluidStack OutPutFluid) {
         GTValues.RA.stdBuilder()
             .fluidOutputs(OutPutFluid)
-            .noOptimize()
             .fake()
             .setNEIDesc(Dim)
             .duration(60)
@@ -1685,9 +1685,9 @@ public class SingularityFluidRecipes {
         DeepDarkRecipes.put(15, FluidRegistry.getFluidStack("sulfuriclithium", 1000));
         DeepDarkRecipes.put(16, FluidRegistry.getFluidStack("sulfurousacid", 1000));
 
-        // galaxyspace
-        DeepDarkRecipes.put(17, GSMaterials.liquidHelium.getFluidOrGas(1000));
-        DeepDarkRecipes.put(18, GSMaterials.tantalumHafniumCarbide.getMolten(1000));
+    // galaxyspace (optional) - disabled when GalaxySpace is not present on the classpath
+    // DeepDarkRecipes.put(17, GSMaterials.liquidHelium.getFluidOrGas(1000));
+    // DeepDarkRecipes.put(18, GSMaterials.tantalumHafniumCarbide.getMolten(1000));
 
         // GoodGenerator
         DeepDarkRecipes.put(19, GGMaterial.acidNaquadahEmulsion.getFluidOrGas(1000));
@@ -2232,7 +2232,7 @@ public class SingularityFluidRecipes {
         DeepDarkRecipes.put(515, Materials.Erbium.getMolten(1000));
         DeepDarkRecipes.put(516, Materials.Europium.getMolten(1000));
 
-        DeepDarkRecipes.put(517, Materials.EnrichedNaquadria.getFluid(1000));
+    // DeepDarkRecipes.put(517, Materials.EnrichedNaquadria.getFluid(1000)); // EnrichedNaquadria removed/renamed in GTNH 2.8
         DeepDarkRecipes.put(518, Materials.Epichlorohydrin.getFluid(1000));
         DeepDarkRecipes.put(519, Materials.Ethanol.getFluid(1000));
 
@@ -2247,7 +2247,7 @@ public class SingularityFluidRecipes {
         DeepDarkRecipes.put(525, Materials.FermentedBiomass.getFluid(1000));
         DeepDarkRecipes.put(526, Materials.FishOil.getFluid(1000));
         DeepDarkRecipes.put(527, Materials.FlocculationWasteLiquid.getFluid(1000));
-        DeepDarkRecipes.put(528, Materials.FluidNaquadahFuel.getFluid(1000));
+    // DeepDarkRecipes.put(528, Materials.FluidNaquadahFuel.getFluid(1000)); // FluidNaquadahFuel removed/renamed in GTNH 2.8
         DeepDarkRecipes.put(529, Materials.FryingOilHot.getFluid(1000));
         DeepDarkRecipes.put(530, Materials.Fuel.getFluid(1000));
 

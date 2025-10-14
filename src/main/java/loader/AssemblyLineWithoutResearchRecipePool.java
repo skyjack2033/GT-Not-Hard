@@ -144,8 +144,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                 if (recipe.mFluidInputs != null) {
                     ra.fluidInputs(Utils.sortNoNullArray(recipe.mFluidInputs));
                 }
-                ra.noOptimize()
-                    .eut(recipe.mEUt)
+                ra.eut(recipe.mEUt)
                     .duration(recipe.mDuration)
                     .addTo(AssemblyLineWithoutResearchRecipe);
 
@@ -165,8 +164,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     if (recipe.mFluidInputs != null) {
                         ra.fluidInputs(Utils.sortNoNullArray(recipe.mFluidInputs));
                     }
-                    ra.noOptimize()
-                        .eut(recipe.mEUt)
+                    ra.eut(recipe.mEUt)
                         .duration(recipe.mDuration)
                         .addTo(AssemblyLineWithoutResearchRecipe);
                 }
@@ -465,7 +463,7 @@ public class AssemblyLineWithoutResearchRecipePool {
                     Materials.Neutronium.getNanite(1),
                     setStackSize(Materials.Lanthanum.getPlates(1), 4096),
                     setStackSize(Materials.NaquadahAlloy.getPlates(1), 6144),
-                    ItemUtils.simpleMetaStack(ModItems.itemStandarParticleBase, 0, 1))
+                    new ItemStack(ModItems.itemStandarParticleBase, 1))
                 .fluidInputs(
                     new FluidStack(solderUEV, 144 * 1024),
                     Materials.Lead.getMolten(144 * 16 * 1024),

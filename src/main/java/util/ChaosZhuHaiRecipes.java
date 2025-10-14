@@ -18,8 +18,7 @@ public class ChaosZhuHaiRecipes {
     public static final RecipeMap<RecipeMapBackend> addChaosZhuHaiFisheryRecipes = RecipeMapBuilder
         .of("Chaos of ZhuHai Fishery")
         .maxIO(1, 1, 0, 0)
-        .minInputs(1, 0)
-        .disableOptimize()
+    .minInputs(1, 0)
         .build();
 
     public static void addChaosZhuHaiFisheryRecipes() {
