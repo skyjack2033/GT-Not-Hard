@@ -64,7 +64,7 @@ import loader.CraftingLoader;
     version = Tags.VERSION,
     name = "GT Not Hard",
     acceptedMinecraftVersions = "[1.7.10]",
-    dependencies = "required-after:gregtech@[5.09.54.133,);required-after:gtnhlib@[0.11.46,)")
+    dependencies = "required-after:gregtech@[5.09.54.183,);required-after:gtnhlib@[0.11.51,)")
 public class MyMod {
 
     public static final String MODID = "gtnothard";
