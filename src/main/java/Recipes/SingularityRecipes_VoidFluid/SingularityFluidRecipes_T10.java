@@ -4,7 +4,7 @@ import static gregtech.api.enums.Mods.NEIOrePlugin;
 import static gregtech.api.util.GTModHandler.getModItem;
 import static gregtech.api.util.GTRecipeBuilder.SECONDS;
 import static util.AggregateFluidStackArray.addSplitAggregateArray;
-import static util.AggregateFluidStackArray.checkFluidStack;
+import static util.AggregateFluidStackArray.addCompressAggregateArray;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,13 +22,13 @@ public class SingularityFluidRecipes_T10 {
 
     public static final Map<String, FluidStack[]> VoidFluidRecipes_T10 = new HashMap<>();
 
-    public static int NEI_ItemOutput_Size = 90;
+    public static int NEI_ItemOutput_Size = util.RecipesFrontend.ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
 
     public static final RecipeMap<RecipeMapBackend> addFakeVoidFluidRecipes_T10 = RecipeMapBuilder
         .of("Singularity of T10 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -4669,7 +4669,7 @@ public class SingularityFluidRecipes_T10 {
         // tcetieisfucusserratusfluid
         FluidRegistry.getFluidStack("tcetieisfucusserratusfluid", 1) };
 
-    public static final FluidStack[] T10_Fluid_Result = checkFluidStack(T10_Fluid);
+    public static final FluidStack[] T10_Fluid_Result = addCompressAggregateArray(T10_Fluid);
 
     public static void addVoidFluidRecipes_T10() {
         VoidFluidRecipes_T10.put("DD", T10_Fluid_Result);

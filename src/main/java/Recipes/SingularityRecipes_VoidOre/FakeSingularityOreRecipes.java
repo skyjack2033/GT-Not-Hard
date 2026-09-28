@@ -17,13 +17,13 @@ import util.RecipesFrontend.OneToManyItemsFrontend_Large;
 
 public class FakeSingularityOreRecipes {
 
-    public static int NEI_ItemOutput_Size = 90;
+    public static int NEI_ItemOutput_Size = util.RecipesFrontend.ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
 
     public static final RecipeMap<RecipeMapBackend> addFakeVoidOreRecipes_T0 = RecipeMapBuilder
         .of("Singularity of T0 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -32,7 +32,7 @@ public class FakeSingularityOreRecipes {
         .of("Singularity of T1 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -41,7 +41,7 @@ public class FakeSingularityOreRecipes {
         .of("Singularity of T2 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -50,7 +50,7 @@ public class FakeSingularityOreRecipes {
         .of("Singularity of T3 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -59,7 +59,7 @@ public class FakeSingularityOreRecipes {
         .of("Singularity of T4 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -68,7 +68,7 @@ public class FakeSingularityOreRecipes {
         .of("Singularity of T5 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -77,7 +77,7 @@ public class FakeSingularityOreRecipes {
         .of("Singularity of T6 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -86,7 +86,7 @@ public class FakeSingularityOreRecipes {
         .of("Singularity of T7 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -95,7 +95,7 @@ public class FakeSingularityOreRecipes {
         .of("Singularity of T8 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -104,7 +104,7 @@ public class FakeSingularityOreRecipes {
         .of("Singularity of T9 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -113,7 +113,7 @@ public class FakeSingularityOreRecipes {
         .of("Singularity of T10 Ore")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();

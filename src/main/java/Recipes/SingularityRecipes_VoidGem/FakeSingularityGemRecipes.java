@@ -24,7 +24,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T0 Gem")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(165))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -33,7 +33,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T1 Gem")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(165))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -42,7 +42,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T2 Gem")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(165))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -51,7 +51,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T3 Gem")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(165))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -60,7 +60,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T4 Gem")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(165))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -69,7 +69,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T5 Gem")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(165))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -78,7 +78,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T6 Gem")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(165))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -87,7 +87,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T7 Gem")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(165))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -96,7 +96,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T8 Gem")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(165))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -105,7 +105,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T9 Gem")
         .maxIO(1, NEI_ItemOutput_Size, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(165))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -114,7 +114,7 @@ public class FakeSingularityGemRecipes {
         .of("Singularity of T10 Gem")
         .maxIO(1, 90, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();

@@ -46,9 +46,52 @@
 
 # mod版本与GTNH版本对应关系
 1.0.x~1.1.x对应GTNH 2.7.0  
-1.2.x对应GTNH 2.8.0 
+1.2.x对应GTNH 2.8.0
 
-## 临时适配版本
+`dev-290`分支对应GTNH 2.9.0-beta-3。
+
+## GTNH 2.9.0 Beta 3
+本分支按官方 `2.9.0-beta-3` manifest 固定直接依赖：
+
+| 模组 | 版本 |
+| --- | --- |
+| GT5-Unofficial | 5.09.54.133 |
+| GTNHLib | 0.11.46 |
+| Galacticraft | 3.4.33-GTNH |
+| NewHorizonsCoreMod | 2.9.61 |
+| Avaritia | 1.99 |
+
+适配包括：
+
+- 将 GT++ 配方表引用更新到 `gregtech.api.recipe.RecipeMaps`。
+- 保留 Chaos、Origin 的无线开关，兼容已移除的 `KTUITextures`。
+- 修复装罐机、电弧炉和切割机配方表合并后，旧模式索引导致的数组越界。
+- 使用模组自身的日志接口，移除对旧 `GT_FML_LOGGER` 字段的依赖。
+- 更新 87 处 CoreMod 物品/方块注册名，修复坠落之塔等配方加载时的空物品崩溃。
+- 移除 Beta 3 中不存在的三种农业废料燃料，以及 AE2Stuff、HarvestTheNether 的 NEI 展示入口。
+- 生态资源按模组是否安装加载 HarvestTheNether，T10 流体目录忽略已移除的流体，不再用石头或水填充这些缺失项。
+
+机器 ID 和已有 NBT 字段保持不变。仅面向 GTNH 2.9.0-beta-3，不兼容旧版 GTNH 的依赖组合。
+
+### 中文本地化
+已内置简体中文 `src/main/resources/assets/gtnothard/lang/zh_CN.lang` 和英文回退 `en_US.lang`。
+覆盖三台机器的名称、说明、结构提示、无线模式按钮、模式切换消息、Waila 状态，以及全部 97 个自定义配方分类。
+在游戏中选择简体中文即可使用，无需额外汉化资源包。模式切换消息由接收方客户端翻译，联机时不依赖服务器语言。
+翻译只影响显示内容，不修改机器注册名、配方表标识或旧存档中的模式值。
+
+### 构建
+当前 Gradle 插件需要 **JDK 25**，请先配置 `JAVA_HOME`，然后执行：
+
+```powershell
+.\gradlew.bat assemble test
+```
+
+Linux/macOS 使用 `./gradlew assemble test`。构建产物位于 `build/libs/`，安装时使用普通模组 JAR，不使用 `-dev` 或 `-sources` JAR。此构建面向完整的 GTNH 2.9.0-beta-3 整合包。
+
+`build` 还会运行全仓库的代码规范检查。当前分支有历史遗留的 Spotless 格式问题，本次适配不批量重排无关配方和物品列表。
+
+如需网络代理，请在个人的 `~/.gradle/gradle.properties` 中配置，不要将本机代理地址提交到项目中。
+
+## 历史临时适配版本
 2.9.0.Beta1下载链接：https://pan.ustc.edu.cn/seafile/seafhttp/files/19e39dcd-22fe-4998-b007-1e221dd37bfb/GT-Not-Hard-1.2.4-290-beta1.jar  
 提供者：Torch1230
-

@@ -2067,7 +2067,7 @@ public class Ecosystem_Food {
         getModItem(PamsHarvestCraft.ID, "gooseberryjuiceItem", 1L) };
 
     // PamsHarvestTheNether
-    public static final ItemStack[] PamsHarvestTheNether_Food = new ItemStack[] {
+    public static final ItemStack[] PamsHarvestTheNether_Food = PamsHarvestTheNether.isModLoaded() ? new ItemStack[] {
         // "Ignis Fruit"
         getModItem(PamsHarvestTheNether.ID, "ignisfruitItem", 1L),
         // "Blood Leaf"
@@ -2075,7 +2075,7 @@ public class Ecosystem_Food {
         // "Flesh Root"
         getModItem(PamsHarvestTheNether.ID, "fleshrootItem", 1L),
         // "Marrow Berry"
-        getModItem(PamsHarvestTheNether.ID, "marrowberryItem", 1L) };
+        getModItem(PamsHarvestTheNether.ID, "marrowberryItem", 1L) } : new ItemStack[0];
 
     // GTPlusPlus
     public static final ItemStack[] GTPlusPlus_Food = new ItemStack[] {

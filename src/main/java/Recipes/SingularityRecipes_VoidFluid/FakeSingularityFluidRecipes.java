@@ -16,13 +16,13 @@ import util.RecipesFrontend.OneToManyFluidsFrontend_Large;
 
 public class FakeSingularityFluidRecipes {
 
-    public static int NEI_ItemOutput_Size = 90;
+    public static int NEI_ItemOutput_Size = util.RecipesFrontend.ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
 
     public static final RecipeMap<RecipeMapBackend> addFakeVoidFluidRecipes_T0 = RecipeMapBuilder
         .of("Singularity of T0 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -31,7 +31,7 @@ public class FakeSingularityFluidRecipes {
         .of("Singularity of T1 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -40,7 +40,7 @@ public class FakeSingularityFluidRecipes {
         .of("Singularity of T2 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -49,7 +49,7 @@ public class FakeSingularityFluidRecipes {
         .of("Singularity of T3 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -58,7 +58,7 @@ public class FakeSingularityFluidRecipes {
         .of("Singularity of T4 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -67,7 +67,7 @@ public class FakeSingularityFluidRecipes {
         .of("Singularity of T5 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -76,7 +76,7 @@ public class FakeSingularityFluidRecipes {
         .of("Singularity of T6 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -85,7 +85,7 @@ public class FakeSingularityFluidRecipes {
         .of("Singularity of T7 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -94,7 +94,7 @@ public class FakeSingularityFluidRecipes {
         .of("Singularity of T8 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -103,7 +103,7 @@ public class FakeSingularityFluidRecipes {
         .of("Singularity of T9 Fluid")
         .maxIO(1, 0, 0, NEI_ItemOutput_Size)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(335))
+        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();

@@ -19,6 +19,8 @@ import static gregtech.api.util.GTStructureUtility.buildHatchAdder;
 import static gregtech.api.util.GTUtility.validMTEList;
 import static gregtech.common.misc.WirelessNetworkManager.addEUToGlobalEnergyMap;
 import static gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.base.GTPPMultiBlockBase.GTPPHatchElement.TTDynamo;
+import static net.minecraft.util.StatCollector.translateToLocal;
+import static net.minecraft.util.StatCollector.translateToLocalFormatted;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -42,7 +44,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -89,9 +90,9 @@ import gregtech.api.util.GTUtility;
 import gregtech.api.util.MultiblockTooltipBuilder;
 import gregtech.api.util.shutdown.ShutDownReasonRegistry;
 import gtPlusPlus.xmod.gregtech.api.metatileentity.implementations.base.GTPPMultiBlockBase;
-import kekztech.client.gui.KTUITextures;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
+import util.GTNotHardUITextures;
 
 public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConstructable, ISecondaryDescribable {
 
@@ -383,24 +384,24 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
     @Override
     protected MultiblockTooltipBuilder createTooltip() {
         final MultiblockTooltipBuilder tt = new MultiblockTooltipBuilder();
-        tt.addMachineType("Origin")
-            .addInfo("Runs supplied machines as if placed in the world")
-            .addInfo("Parallel quantity = 2^x")
-            .addInfo("x = Number of machines in the controller")
-            .addInfo("----------------------------------------------------------------")
-            .addInfo("If x > 8 can use wireless mode with sneak left click controller")
-            .addInfo("Energy will consume in wireless network rather than dynamo hatch")
-            .addInfo("----------------------------------------------------------------")
-            .addInfo("Add By: GT Not Hard")
+        tt.addMachineType(translateToLocal("gt.blockmachines.origin.name"))
+            .addInfo(translateToLocal("gtnothard.tooltip.runs_machines"))
+            .addInfo(translateToLocal("gtnothard.tooltip.parallel"))
+            .addInfo(translateToLocal("gtnothard.tooltip.machine_count"))
+            .addSeparator()
+            .addInfo(translateToLocal("gtnothard.tooltip.origin.wireless_button"))
+            .addInfo(translateToLocal("gtnothard.tooltip.origin.wireless_energy"))
+            .addSeparator()
+            .addInfo(translateToLocal("gtnothard.tooltip.added_by"))
             .beginStructureBlock(3, 3, 3, true)
-            .addController("Front center")
-            .addCasingInfoRange("Clean Stainless Steel Machine Casing", 4, 24, false)
-            .addDynamoHatch("Any casing", 1)
-            .addMaintenanceHatch("Any casing", 1)
-            .addInputHatch("Any casing", 1)
-            .addInputBus("Any casing", 1)
-            .addOutputHatch("Any casing", 1)
-            .addOutputBus("Any casing", 1)
+            .addController(translateToLocal("gtnothard.structure.front_center"))
+            .addCasingInfoRange(translateToLocal("gtnothard.structure.stainless_steel"), 4, 24, false)
+            .addDynamoHatch(translateToLocal("gtnothard.structure.any_casing"), 1)
+            .addMaintenanceHatch(translateToLocal("gtnothard.structure.any_casing"), 1)
+            .addInputHatch(translateToLocal("gtnothard.structure.any_casing"), 1)
+            .addInputBus(translateToLocal("gtnothard.structure.any_casing"), 1)
+            .addOutputHatch(translateToLocal("gtnothard.structure.any_casing"), 1)
+            .addOutputBus(translateToLocal("gtnothard.structure.any_casing"), 1)
             .toolTipFinisher();
         return tt;
     }
@@ -1296,15 +1297,15 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
                 .setBackground(() -> {
                     if (wireless_mode) {
                         return new IDrawable[] { GTUITextures.BUTTON_STANDARD_PRESSED,
-                            KTUITextures.OVERLAY_BUTTON_WIRELESS_ON };
+                            GTNotHardUITextures.OVERLAY_BUTTON_WIRELESS_ON };
                     } else {
                         return new IDrawable[] { GTUITextures.BUTTON_STANDARD,
-                            KTUITextures.OVERLAY_BUTTON_WIRELESS_OFF };
+                            GTNotHardUITextures.OVERLAY_BUTTON_WIRELESS_OFF };
                     }
                 })
                 .setPos(80, 91)
                 .setSize(16, 16)
-                .addTooltip(StatCollector.translateToLocal("Wireless Mode"))
+                .addTooltip(translateToLocal("gtnothard.gui.wireless_mode"))
                 .setTooltipShowUpDelay(TOOLTIP_DELAY))
             .widget(new FakeSyncWidget.BooleanSyncer(() -> wireless_mode, val -> wireless_mode = val));
     }
@@ -1336,15 +1337,30 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
             super.getWailaBody(itemStack, currentTip, accessor, config);
             final NBTTagCompound tag = accessor.getNBTData();
             if (tag.hasKey("Machine")) {
-                currentTip.add("Machine: " + EnumChatFormatting.YELLOW + tag.getString("Machine"));
+                currentTip.add(
+                    translateToLocalFormatted(
+                        "gtnothard.waila.machine",
+                        EnumChatFormatting.YELLOW + tag.getString("Machine")));
                 if (tag.hasKey("EnergyGenerate")) {
-                    currentTip.add("WirelessMode: " + EnumChatFormatting.GREEN + "True");
-                    currentTip.add("Energy Generate: " + EnumChatFormatting.YELLOW + tag.getString("EnergyGenerate"));
+                    currentTip.add(
+                        translateToLocalFormatted(
+                            "gtnothard.waila.wireless",
+                            EnumChatFormatting.GREEN + translateToLocal("gtnothard.state.enabled")));
+                    currentTip.add(
+                        translateToLocalFormatted(
+                            "gtnothard.waila.energy_generated",
+                            EnumChatFormatting.YELLOW + tag.getString("EnergyGenerate")));
                 } else {
-                    currentTip.add("WirelessMode: " + EnumChatFormatting.RED + "False");
+                    currentTip.add(
+                        translateToLocalFormatted(
+                            "gtnothard.waila.wireless",
+                            EnumChatFormatting.RED + translateToLocal("gtnothard.state.disabled")));
                 }
             } else {
-                currentTip.add("Machine: " + EnumChatFormatting.YELLOW + "None");
+                currentTip.add(
+                    translateToLocalFormatted(
+                        "gtnothard.waila.machine",
+                        EnumChatFormatting.YELLOW + translateToLocal("gtnothard.state.none")));
             }
         } catch (Exception e) {
             handleException("Origin", "getWailaBody", e);
