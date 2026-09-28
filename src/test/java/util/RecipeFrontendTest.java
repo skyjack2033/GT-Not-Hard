@@ -26,7 +26,7 @@ import util.RecipesFrontend.ResourceCatalogFrontend;
 public class RecipeFrontendTest {
 
     @Test
-    public void allCustomFrontendsOverrideTheBeta3ProgressBarHook() throws Exception {
+    public void allCustomFrontendsOverrideTheTargetProgressBarHook() throws Exception {
         int checked = 0;
         try (Stream<Path> sources = Files.list(Paths.get("src/main/java/util/RecipesFrontend"))) {
             Iterator<Path> files = sources.filter(
