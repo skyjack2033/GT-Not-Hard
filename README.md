@@ -48,20 +48,20 @@
 1.0.x~1.1.x对应GTNH 2.7.0  
 1.2.x对应GTNH 2.8.0
 
-`dev-290`分支对应GTNH 2.9.0-beta-3。
+`dev-290`分支对应GTNH 2.9.0-RC-1。
 
-## GTNH 2.9.0 Beta 3
-本分支按官方 `2.9.0-beta-3` manifest 固定直接依赖：
+## GTNH 2.9.0 RC1
+本分支按官方 `2.9.0-RC-1` manifest 固定直接依赖：
 
 | 模组 | 版本 |
 | --- | --- |
-| GT5-Unofficial | 5.09.54.133 |
-| GTNHLib | 0.11.46 |
-| Galacticraft | 3.4.33-GTNH |
-| NewHorizonsCoreMod | 2.9.61 |
+| GT5-Unofficial | 5.09.54.183 |
+| GTNHLib | 0.11.51 |
+| Galacticraft | 3.4.34-GTNH |
+| NewHorizonsCoreMod | 2.9.76 |
 | Avaritia | 1.99 |
 
-适配包括：
+在 Beta 3 适配基础上更新至 RC1，保留以下修复：
 
 - 将 GT++ 配方表引用更新到 `gregtech.api.recipe.RecipeMaps`。
 - 保留 Chaos、Origin 的无线开关，兼容已移除的 `KTUITextures`。
@@ -71,7 +71,8 @@
 - 移除 Beta 3 中不存在的三种农业废料燃料，以及 AE2Stuff、HarvestTheNether 的 NEI 展示入口。
 - 生态资源按模组是否安装加载 HarvestTheNether，T10 流体目录忽略已移除的流体，不再用石头或水填充这些缺失项。
 
-机器 ID 和已有 NBT 字段保持不变。仅面向 GTNH 2.9.0-beta-3，不兼容旧版 GTNH 的依赖组合。
+机器 ID 和已有 NBT 字段保持不变。仅面向 GTNH 2.9.0-RC-1，不兼容旧版 GTNH 的依赖组合。
+Forge 最低版本要求同步为 GregTech `5.09.54.183` 和 GTNHLib `0.11.51`，避免在旧依赖上加载。
 
 ### 中文本地化
 已内置简体中文 `src/main/resources/assets/gtnothard/lang/zh_CN.lang` 和英文回退 `en_US.lang`。
@@ -83,14 +84,20 @@
 当前 Gradle 插件需要 **JDK 25**，请先配置 `JAVA_HOME`，然后执行：
 
 ```powershell
-.\gradlew.bat assemble test
+.\gradlew.bat assemble test checkstyleMain checkstyleTest
 ```
 
-Linux/macOS 使用 `./gradlew assemble test`。构建产物位于 `build/libs/`，安装时使用普通模组 JAR，不使用 `-dev` 或 `-sources` JAR。此构建面向完整的 GTNH 2.9.0-beta-3 整合包。
+Linux/macOS 使用 `./gradlew assemble test checkstyleMain checkstyleTest`。构建产物位于 `build/libs/`，安装时使用普通模组 JAR，不使用 `-dev` 或 `-sources` JAR。此构建面向完整的 GTNH 2.9.0-RC-1 整合包。
 
 `build` 还会运行全仓库的代码规范检查。当前分支有历史遗留的 Spotless 格式问题，本次适配不批量重排无关配方和物品列表。
 
 如需网络代理，请在个人的 `~/.gradle/gradle.properties` 中配置，不要将本机代理地址提交到项目中。
+
+### 验证范围
+20 项自动化测试覆盖实际解析的 RC1 核心依赖版本、Forge 最低版本声明、机器模式索引、无线按钮纹理、
+CoreMod 注册名、语言资源与 NEI 布局。测试报告位于 `build/reports/tests/test/index.html`。
+
+本次 RC1 更新已通过编译、打包、单元测试和 Checkstyle。游戏内行为仍需另行验证，编译及单元测试通过不代表已完成实机测试。
 
 ## 历史临时适配版本
 2.9.0.Beta1下载链接：https://pan.ustc.edu.cn/seafile/seafhttp/files/19e39dcd-22fe-4998-b007-1e221dd37bfb/GT-Not-Hard-1.2.4-290-beta1.jar  
