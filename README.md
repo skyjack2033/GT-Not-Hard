@@ -81,15 +81,17 @@ Forge 最低版本要求同步为 GregTech `5.09.54.183` 和 GTNHLib `0.11.51`�
 翻译只影响显示内容，不修改机器注册名、配方表标识或旧存档中的模式值。
 
 ### 构建
-当前 Gradle 插件需要 **JDK 25**，请先配置 `JAVA_HOME`，然后执行：
+当前 Gradle 插件需要 **JDK 25**。`gradle/gradle-daemon-jvm.properties` 固定 Gradle 守护进程使用 Java 25，
+GTNH 共用 CI 工作流也会读取该版本并安装对应 JDK。本地请先安装 JDK 25，建议将 `JAVA_HOME` 指向它，然后执行：
 
 ```powershell
-.\gradlew.bat assemble test checkstyleMain checkstyleTest
+.\gradlew.bat build
 ```
 
-Linux/macOS 使用 `./gradlew assemble test checkstyleMain checkstyleTest`。构建产物位于 `build/libs/`，安装时使用普通模组 JAR，不使用 `-dev` 或 `-sources` JAR。此构建面向完整的 GTNH 2.9.0-RC-1 整合包。
+Linux/macOS 使用 `./gradlew build`。构建产物位于 `build/libs/`，安装时使用普通模组 JAR，不使用 `-dev` 或 `-sources` JAR。此构建面向完整的 GTNH 2.9.0-RC-1 整合包。
 
-`build` 还会运行全仓库的代码规范检查。当前分支有历史遗留的 Spotless 格式问题，本次适配不批量重排无关配方和物品列表。
+`build` 会执行编译、打包、单元测试、Spotless 和 Checkstyle。历史格式问题已修复，所有检查保持启用。
+JDK 25 仅用于运行构建工具，模组仍输出 Java 8 字节码。
 
 如需网络代理，请在个人的 `~/.gradle/gradle.properties` 中配置，不要将本机代理地址提交到项目中。
 
@@ -97,4 +99,5 @@ Linux/macOS 使用 `./gradlew assemble test checkstyleMain checkstyleTest`。构
 20 项自动化测试覆盖实际解析的 RC1 核心依赖版本、Forge 最低版本声明、机器模式索引、无线按钮纹理、
 CoreMod 注册名、语言资源与 NEI 布局。测试报告位于 `build/reports/tests/test/index.html`。
 
-本次 RC1 更新已通过编译、打包、单元测试和 Checkstyle。游戏内行为仍需另行验证，编译及单元测试通过不代表已完成实机测试。
+本次 RC1 更新已通过完整 `build`，包括编译、打包、单元测试、Spotless 和 Checkstyle。
+游戏内行为仍需另行验证，编译及单元测试通过不代表已完成实机测试。
