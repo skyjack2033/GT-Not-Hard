@@ -1,29 +1,86 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GTPlusPlus;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.enums.Mods.IndustrialCraft2;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class DensePlateList {
+
     public static final ItemStack Dense_Obsidian_Plate = getModItem(IndustrialCraft2.ID, "itemDensePlates", 1L, 7);
-    public static final ItemStack Dense_Rhodium_Plated_Palladium_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 88);
-    public static final ItemStack Dense_Ruridit_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 90);
-    public static final ItemStack Dense_High_Durability_Compound_Steel_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 92);
-    public static final ItemStack Dense_Ademic_Steel_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 96);
-    public static final ItemStack Dense_Atomic_Separation_Catalyst_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 10022);
-    public static final ItemStack Dense_Extremely_Unstable_Naquadah_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 10024);
-    public static final ItemStack Dense_Adamantium_Alloy_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 10085);
-    public static final ItemStack Dense_MAR_M200_Steel_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 10096);
-    public static final ItemStack Dense_MAR_Ce_M200_Steel_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 10097);
-    public static final ItemStack Dense_Precious_Metals_Alloy_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 10109);
-    public static final ItemStack Dense_Enriched_Naquadah_Alloy_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 10110);
-    public static final ItemStack Dense_Metastable_Oganesson_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 10111);
-    public static final ItemStack Dense_Shirabon_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 10112);
-    public static final ItemStack Dense_Mu_metal_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateDense", 1L, 11351);
+    public static final ItemStack Dense_Rhodium_Plated_Palladium_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        88);
+    public static final ItemStack Dense_Ruridit_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        90);
+    public static final ItemStack Dense_High_Durability_Compound_Steel_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        92);
+    public static final ItemStack Dense_Ademic_Steel_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        96);
+    public static final ItemStack Dense_Atomic_Separation_Catalyst_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        10022);
+    public static final ItemStack Dense_Extremely_Unstable_Naquadah_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        10024);
+    public static final ItemStack Dense_Adamantium_Alloy_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        10085);
+    public static final ItemStack Dense_MAR_M200_Steel_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        10096);
+    public static final ItemStack Dense_MAR_Ce_M200_Steel_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        10097);
+    public static final ItemStack Dense_Precious_Metals_Alloy_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        10109);
+    public static final ItemStack Dense_Enriched_Naquadah_Alloy_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        10110);
+    public static final ItemStack Dense_Metastable_Oganesson_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        10111);
+    public static final ItemStack Dense_Shirabon_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        10112);
+    public static final ItemStack Dense_Mu_metal_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateDense",
+        1L,
+        11351);
     public static final ItemStack Dense_Lithium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22006);
     public static final ItemStack Dense_Beryllium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22008);
     public static final ItemStack Dense_Carbon_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22010);
@@ -89,19 +146,43 @@ public class DensePlateList {
     public static final ItemStack Dense_Attuned_Tengam_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22112);
     public static final ItemStack Dense_Hellish_Metal_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22125);
     public static final ItemStack Dense_Neutronium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22129);
-    public static final ItemStack Dense_Superconductor_Base_UIV_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22131);
+    public static final ItemStack Dense_Superconductor_Base_UIV_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22131);
     public static final ItemStack Dense_Netherite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22132);
-    public static final ItemStack Dense_Superconductor_Base_UMV_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22134);
+    public static final ItemStack Dense_Superconductor_Base_UMV_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22134);
     public static final ItemStack Dense_Universium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22139);
     public static final ItemStack Dense_Eternity_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22141);
     public static final ItemStack Dense_Magmatter_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22143);
     public static final ItemStack Dense_Six_Phased_Copper_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22147);
     public static final ItemStack Dense_Mellion_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22148);
     public static final ItemStack Dense_Creon_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22149);
-    public static final ItemStack Dense_Hot_Proto_Halkonite_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22153);
-    public static final ItemStack Dense_Proto_Halkonite_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22154);
-    public static final ItemStack Dense_Hot_Exo_Halkonite_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22156);
-    public static final ItemStack Dense_Exo_Halkonite_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22157);
+    public static final ItemStack Dense_Hot_Proto_Halkonite_Steel_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22153);
+    public static final ItemStack Dense_Proto_Halkonite_Steel_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22154);
+    public static final ItemStack Dense_Hot_Exo_Halkonite_Steel_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22156);
+    public static final ItemStack Dense_Exo_Halkonite_Steel_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22157);
     public static final ItemStack Dense_Prismatic_Naquadah_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22163);
     public static final ItemStack Dense_Hexanite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22174);
     public static final ItemStack Dense_Shijima_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22189);
@@ -165,7 +246,11 @@ public class DensePlateList {
     public static final ItemStack Dense_Magnetic_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22355);
     public static final ItemStack Dense_Magnetic_Neodymium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22356);
     public static final ItemStack Dense_Vanadium_Gallium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22357);
-    public static final ItemStack Dense_Yttrium_Barium_Cuprate_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22358);
+    public static final ItemStack Dense_Yttrium_Barium_Cuprate_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22358);
     public static final ItemStack Dense_Niobium_Nitride_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22359);
     public static final ItemStack Dense_Niobium_Titanium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22360);
     public static final ItemStack Dense_Chromium_Dioxide_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22361);
@@ -189,7 +274,11 @@ public class DensePlateList {
     public static final ItemStack Dense_Ardite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22382);
     public static final ItemStack Dense_Reinforced_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22383);
     public static final ItemStack Dense_Galgadorian_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22384);
-    public static final ItemStack Dense_Enhanced_Galgadorian_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22385);
+    public static final ItemStack Dense_Enhanced_Galgadorian_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22385);
     public static final ItemStack Dense_Manyullyn_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22386);
     public static final ItemStack Dense_Mytryl_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22387);
     public static final ItemStack Dense_Black_Plutonium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22388);
@@ -209,13 +298,25 @@ public class DensePlateList {
     public static final ItemStack Dense_Crystalline_Alloy_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22403);
     public static final ItemStack Dense_Melodic_Alloy_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22404);
     public static final ItemStack Dense_Stellar_Alloy_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22405);
-    public static final ItemStack Dense_Crystalline_Pink_Slime_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22406);
+    public static final ItemStack Dense_Crystalline_Pink_Slime_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22406);
     public static final ItemStack Dense_Energetic_Silver_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22407);
     public static final ItemStack Dense_Vivid_Alloy_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22408);
     public static final ItemStack Dense_Epoxid_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22470);
     public static final ItemStack Dense_Silicone_Rubber_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22471);
-    public static final ItemStack Dense_Polycaprolactam_PCL_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22472);
-    public static final ItemStack Dense_Polytetrafluoroethylene_PTFE_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22473);
+    public static final ItemStack Dense_Polycaprolactam_PCL_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22472);
+    public static final ItemStack Dense_Polytetrafluoroethylene_PTFE_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22473);
     public static final ItemStack Dense_Alduorite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22485);
     public static final ItemStack Dense_Rubracium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22488);
     public static final ItemStack Dense_Vulcanite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22489);
@@ -224,22 +325,54 @@ public class DensePlateList {
     public static final ItemStack Dense_TPV_Alloy_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22576);
     public static final ItemStack Dense_Transcendent_Metal_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22581);
     public static final ItemStack Dense_Enriched_Holmium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22582);
-    public static final ItemStack Dense_Magnetohydrodynamically_Constrained_Star_Matter_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22583);
+    public static final ItemStack Dense_Magnetohydrodynamically_Constrained_Star_Matter_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22583);
     public static final ItemStack Dense_White_Dwarf_Matter_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22585);
     public static final ItemStack Dense_Black_Dwarf_Matter_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22586);
     public static final ItemStack Dense_SpaceTime_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22588);
-    public static final ItemStack Dense_Polybenzimidazole_PBI_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22599);
-    public static final ItemStack Dense_Fiber_Reinforced_Epoxy_Resin_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22610);
-    public static final ItemStack Dense_Nickel_Zinc_Ferrite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22613);
-    public static final ItemStack Dense_Polyphenylene_Sulfide_PPS_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22631);
-    public static final ItemStack Dense_Styrene_Butadiene_Rubber_SBR_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22635);
+    public static final ItemStack Dense_Polybenzimidazole_PBI_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22599);
+    public static final ItemStack Dense_Fiber_Reinforced_Epoxy_Resin_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22610);
+    public static final ItemStack Dense_Nickel_Zinc_Ferrite_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22613);
+    public static final ItemStack Dense_Polyphenylene_Sulfide_PPS_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22631);
+    public static final ItemStack Dense_Styrene_Butadiene_Rubber_SBR_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22635);
     public static final ItemStack Dense_Polystyrene_PS_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22636);
-    public static final ItemStack Dense_Polyvinyl_Chloride_PVC_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22649);
+    public static final ItemStack Dense_Polyvinyl_Chloride_PVC_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22649);
     public static final ItemStack Dense_Kevlar_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22765);
     public static final ItemStack Dense_Endium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22770);
     public static final ItemStack Dense_Nickel_Aluminide_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22772);
     public static final ItemStack Dense_Deep_Iron_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22829);
-    public static final ItemStack Dense_Silicon_Solar_Grade_Poly_SI_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22856);
+    public static final ItemStack Dense_Silicon_Solar_Grade_Poly_SI_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22856);
     public static final ItemStack Dense_Trinium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22868);
     public static final ItemStack Dense_Polyethylene_PE_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22874);
     public static final ItemStack Dense_Rubber_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22880);
@@ -251,41 +384,108 @@ public class DensePlateList {
     public static final ItemStack Dense_Tartarite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22956);
     public static final ItemStack Dense_Orichalcum_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22966);
     public static final ItemStack Dense_Void_Metal_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22970);
-    public static final ItemStack Dense_Superconductor_Base_UEV_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22974);
+    public static final ItemStack Dense_Superconductor_Base_UEV_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22974);
     public static final ItemStack Dense_Draconium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22975);
     public static final ItemStack Dense_Awakened_Draconium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22976);
     public static final ItemStack Dense_Blood_Infused_Iron_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22977);
     public static final ItemStack Dense_Ichorium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22978);
     public static final ItemStack Dense_Radox_Polymer_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22979);
     public static final ItemStack Dense_Gallium_Arsenide_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22980);
-    public static final ItemStack Dense_Indium_Gallium_Phosphide_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22981);
+    public static final ItemStack Dense_Indium_Gallium_Phosphide_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22981);
     public static final ItemStack Dense_Cosmic_Neutronium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22982);
     public static final ItemStack Dense_Flerovium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22984);
-    public static final ItemStack Dense_Superconductor_Base_UHV_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22985);
-    public static final ItemStack Dense_Superconductor_Base_UV_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22986);
-    public static final ItemStack Dense_Superconductor_Base_MV_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22987);
-    public static final ItemStack Dense_Superconductor_Base_HV_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22988);
-    public static final ItemStack Dense_Superconductor_Base_EV_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22989);
-    public static final ItemStack Dense_Superconductor_Base_IV_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22990);
-    public static final ItemStack Dense_Superconductor_Base_LuV_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22991);
-    public static final ItemStack Dense_Superconductor_Base_ZPM_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 22992);
+    public static final ItemStack Dense_Superconductor_Base_UHV_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22985);
+    public static final ItemStack Dense_Superconductor_Base_UV_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22986);
+    public static final ItemStack Dense_Superconductor_Base_MV_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22987);
+    public static final ItemStack Dense_Superconductor_Base_HV_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22988);
+    public static final ItemStack Dense_Superconductor_Base_EV_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22989);
+    public static final ItemStack Dense_Superconductor_Base_IV_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22990);
+    public static final ItemStack Dense_Superconductor_Base_LuV_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22991);
+    public static final ItemStack Dense_Superconductor_Base_ZPM_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        22992);
     public static final ItemStack Dense_Selenium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseSelenium", 1L);
     public static final ItemStack Dense_Iodine_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseIodine", 1L);
     public static final ItemStack Dense_Rhenium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseRhenium", 1L);
     public static final ItemStack Dense_Thallium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseThallium", 1L);
     public static final ItemStack Dense_Germanium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseGermanium", 1L);
-    public static final ItemStack Dense_Astral_Titanium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseAstralTitanium", 1L);
-    public static final ItemStack Dense_Celestial_Tungsten_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseCelestialTungsten", 1L);
+    public static final ItemStack Dense_Astral_Titanium_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseAstralTitanium",
+        1L);
+    public static final ItemStack Dense_Celestial_Tungsten_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseCelestialTungsten",
+        1L);
     public static final ItemStack Dense_Hypogen_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseHypogen", 1L);
-    public static final ItemStack Dense_Chromatic_Glass_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseChromaticGlass", 1L);
+    public static final ItemStack Dense_Chromatic_Glass_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseChromaticGlass",
+        1L);
     public static final ItemStack Dense_Black_Metal_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseBlackMetal", 1L);
     public static final ItemStack Dense_Dragonblood_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseDragonblood", 1L);
-    public static final ItemStack Dense_Silicon_Carbide_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseSiliconCarbide", 1L);
-    public static final ItemStack Dense_Zirconium_Carbide_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseZirconiumCarbide", 1L);
-    public static final ItemStack Dense_Tantalum_Carbide_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseTantalumCarbide", 1L);
-    public static final ItemStack Dense_Niobium_Carbide_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseNiobiumCarbide", 1L);
-    public static final ItemStack Dense_Tungsten_Titanium_Carbide_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseTungstenTitaniumCarbide", 1L);
-    public static final ItemStack Dense_Energy_Crystal_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseEnergyCrystal", 1L);
+    public static final ItemStack Dense_Silicon_Carbide_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseSiliconCarbide",
+        1L);
+    public static final ItemStack Dense_Zirconium_Carbide_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseZirconiumCarbide",
+        1L);
+    public static final ItemStack Dense_Tantalum_Carbide_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseTantalumCarbide",
+        1L);
+    public static final ItemStack Dense_Niobium_Carbide_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseNiobiumCarbide",
+        1L);
+    public static final ItemStack Dense_Tungsten_Titanium_Carbide_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseTungstenTitaniumCarbide",
+        1L);
+    public static final ItemStack Dense_Energy_Crystal_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseEnergyCrystal",
+        1L);
     public static final ItemStack Dense_Blood_Steel_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseBloodSteel", 1L);
     public static final ItemStack Dense_Zeron_100_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseZeron100", 1L);
     public static final ItemStack Dense_Tumbaga_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseTumbaga", 1L);
@@ -297,29 +497,68 @@ public class DensePlateList {
     public static final ItemStack Dense_Inconel_690_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseInconel690", 1L);
     public static final ItemStack Dense_Inconel_792_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseInconel792", 1L);
     public static final ItemStack Dense_Eglin_Steel_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseEglinSteel", 1L);
-    public static final ItemStack Dense_Maraging_Steel_250_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseMaragingSteel250", 1L);
-    public static final ItemStack Dense_Maraging_Steel_300_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseMaragingSteel300", 1L);
-    public static final ItemStack Dense_Maraging_Steel_350_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseMaragingSteel350", 1L);
-    public static final ItemStack Dense_Watertight_Steel_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseWatertightSteel", 1L);
+    public static final ItemStack Dense_Maraging_Steel_250_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseMaragingSteel250",
+        1L);
+    public static final ItemStack Dense_Maraging_Steel_300_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseMaragingSteel300",
+        1L);
+    public static final ItemStack Dense_Maraging_Steel_350_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseMaragingSteel350",
+        1L);
+    public static final ItemStack Dense_Watertight_Steel_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseWatertightSteel",
+        1L);
     public static final ItemStack Dense_Nitinol_60_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseNitinol60", 1L);
     public static final ItemStack Dense_Stellite_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseStellite", 1L);
     public static final ItemStack Dense_Talonite_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseTalonite", 1L);
     public static final ItemStack Dense_Hastelloy_W_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseHastelloyW", 1L);
     public static final ItemStack Dense_Hastelloy_X_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseHastelloyX", 1L);
-    public static final ItemStack Dense_Hastelloy_C276_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseHastelloyC276", 1L);
+    public static final ItemStack Dense_Hastelloy_C276_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseHastelloyC276",
+        1L);
     public static final ItemStack Dense_Hastelloy_N_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseHastelloyN", 1L);
     public static final ItemStack Dense_Incoloy_020_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseIncoloy020", 1L);
     public static final ItemStack Dense_Incoloy_DS_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseIncoloyDS", 1L);
-    public static final ItemStack Dense_Incoloy_MA956_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseIncoloyMA956", 1L);
+    public static final ItemStack Dense_Incoloy_MA956_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseIncoloyMA956",
+        1L);
     public static final ItemStack Dense_Grisium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseGrisium", 1L);
-    public static final ItemStack Dense_Trinium_Titanium_Alloy_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseTriniumTitaniumAlloy", 1L);
-    public static final ItemStack Dense_Trinium_Naquadah_Carbonite_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseTriniumNaquadahCarbonite", 1L);
-    public static final ItemStack Dense_Arceus_Alloy_2B_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseArceusAlloy2B", 1L);
+    public static final ItemStack Dense_Trinium_Titanium_Alloy_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseTriniumTitaniumAlloy",
+        1L);
+    public static final ItemStack Dense_Trinium_Naquadah_Carbonite_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseTriniumNaquadahCarbonite",
+        1L);
+    public static final ItemStack Dense_Arceus_Alloy_2B_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseArceusAlloy2B",
+        1L);
     public static final ItemStack Dense_HeLiCoPtEr_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseHeLiCoPtEr", 1L);
-    public static final ItemStack Dense_Lafium_Compound_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseLafiumCompound", 1L);
-    public static final ItemStack Dense_Cinobite_A243_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseCinobiteA243", 1L);
-    public static final ItemStack Dense_Pikyonium_64B_Plate = getModItem(GTPlusPlus.ID, "itemPlateDensePikyonium64B", 1L);
-    public static final ItemStack Dense_Abyssal_Alloy_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseAbyssalAlloy", 1L);
+    public static final ItemStack Dense_Lafium_Compound_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseLafiumCompound",
+        1L);
+    public static final ItemStack Dense_Cinobite_A243_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseCinobiteA243",
+        1L);
+    public static final ItemStack Dense_Pikyonium_64B_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDensePikyonium64B",
+        1L);
+    public static final ItemStack Dense_Abyssal_Alloy_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateDenseAbyssalAlloy",
+        1L);
     public static final ItemStack Dense_Laurenium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseLaurenium", 1L);
     public static final ItemStack Dense_Botmium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseBotmium", 1L);
     public static final ItemStack Dense_HS188_A_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseHS188A", 1L);

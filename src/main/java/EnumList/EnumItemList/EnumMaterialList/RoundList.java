@@ -1,11 +1,12 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class RoundList {
+
     public static final ItemStack Lithium_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25006);
     public static final ItemStack Beryllium_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25008);
     public static final ItemStack Carbon_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25010);
@@ -80,7 +81,11 @@ public class RoundList {
     public static final ItemStack Six_Phased_Copper_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25147);
     public static final ItemStack Mellion_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25148);
     public static final ItemStack Creon_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25149);
-    public static final ItemStack Hot_Proto_Halkonite_Steel_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25153);
+    public static final ItemStack Hot_Proto_Halkonite_Steel_Round = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        25153);
     public static final ItemStack Proto_Halkonite_Steel_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25154);
     public static final ItemStack Hot_Exo_Halkonite_Steel_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25156);
     public static final ItemStack Exo_Halkonite_Steel_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25157);
@@ -199,7 +204,11 @@ public class RoundList {
     public static final ItemStack Epoxid_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25470);
     public static final ItemStack Silicone_Rubber_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25471);
     public static final ItemStack Polycaprolactam_PCL_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25472);
-    public static final ItemStack Polytetrafluoroethylene_PTFE_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25473);
+    public static final ItemStack Polytetrafluoroethylene_PTFE_Round = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        25473);
     public static final ItemStack Alduorite_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25485);
     public static final ItemStack Rubracium_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25488);
     public static final ItemStack Vulcanite_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25489);
@@ -208,16 +217,32 @@ public class RoundList {
     public static final ItemStack TPV_Alloy_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25576);
     public static final ItemStack Transcendent_Metal_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25581);
     public static final ItemStack Enriched_Holmium_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25582);
-    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25583);
+    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Round = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        25583);
     public static final ItemStack White_Dwarf_Matter_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25585);
     public static final ItemStack Black_Dwarf_Matter_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25586);
     public static final ItemStack SpaceTime_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25588);
     public static final ItemStack Polybenzimidazole_PBI_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25599);
-    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25610);
+    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Round = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        25610);
     public static final ItemStack Borosilicate_Glass_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25611);
     public static final ItemStack Nickel_Zinc_Ferrite_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25613);
-    public static final ItemStack Polyphenylene_Sulfide_PPS_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25631);
-    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25635);
+    public static final ItemStack Polyphenylene_Sulfide_PPS_Round = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        25631);
+    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Round = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        25635);
     public static final ItemStack Polystyrene_PS_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25636);
     public static final ItemStack Polyvinyl_Chloride_PVC_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25649);
     public static final ItemStack Kevlar_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25765);
@@ -226,7 +251,11 @@ public class RoundList {
     public static final ItemStack Obsidian_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25804);
     public static final ItemStack Wood_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25809);
     public static final ItemStack Deep_Iron_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25829);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Round = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        25856);
     public static final ItemStack Trinium_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25868);
     public static final ItemStack Polyethylene_PE_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25874);
     public static final ItemStack Rubber_Round = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 25880);

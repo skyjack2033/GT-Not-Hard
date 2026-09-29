@@ -1,13 +1,18 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class QuintuplePlateList {
-    public static final ItemStack Quintuple_Shirabon_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateQuintuple", 1L, 10112);
+
+    public static final ItemStack Quintuple_Shirabon_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateQuintuple",
+        1L,
+        10112);
     public static final ItemStack Quintuple_Magnesium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21018);
     public static final ItemStack Quintuple_Aluminium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21019);
     public static final ItemStack Quintuple_Titanium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21028);
@@ -31,7 +36,11 @@ public class QuintuplePlateList {
     public static final ItemStack Quintuple_Churitsu_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21190);
     public static final ItemStack Quintuple_Bronze_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21300);
     public static final ItemStack Quintuple_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21305);
-    public static final ItemStack Quintuple_Stainless_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21306);
+    public static final ItemStack Quintuple_Stainless_Steel_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        21306);
     public static final ItemStack Quintuple_Tungstensteel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21316);
     public static final ItemStack Quintuple_Osmiridium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21317);
     public static final ItemStack Quintuple_Sunnarium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21318);
@@ -46,24 +55,60 @@ public class QuintuplePlateList {
     public static final ItemStack Quintuple_HSSG_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21372);
     public static final ItemStack Quintuple_HSSS_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21374);
     public static final ItemStack Quintuple_Mytryl_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21387);
-    public static final ItemStack Quintuple_Black_Plutonium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21388);
+    public static final ItemStack Quintuple_Black_Plutonium_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        21388);
     public static final ItemStack Quintuple_Callisto_Ice_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21389);
     public static final ItemStack Quintuple_Ledox_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21390);
     public static final ItemStack Quintuple_Quantium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21391);
     public static final ItemStack Quintuple_Duralumin_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21392);
     public static final ItemStack Quintuple_Oriharukon_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21393);
-    public static final ItemStack Quintuple_Infinity_Catalyst_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21394);
+    public static final ItemStack Quintuple_Infinity_Catalyst_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        21394);
     public static final ItemStack Quintuple_Infinity_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21397);
-    public static final ItemStack Quintuple_Mysterious_Crystal_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21398);
+    public static final ItemStack Quintuple_Mysterious_Crystal_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        21398);
     public static final ItemStack Quintuple_Melodic_Alloy_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21404);
-    public static final ItemStack Quintuple_Crystalline_Pink_Slime_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21406);
-    public static final ItemStack Quintuple_Polycaprolactam_PCL_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21472);
-    public static final ItemStack Quintuple_Polytetrafluoroethylene_PTFE_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21473);
-    public static final ItemStack Quintuple_Polybenzimidazole_PBI_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21599);
+    public static final ItemStack Quintuple_Crystalline_Pink_Slime_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        21406);
+    public static final ItemStack Quintuple_Polycaprolactam_PCL_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        21472);
+    public static final ItemStack Quintuple_Polytetrafluoroethylene_PTFE_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        21473);
+    public static final ItemStack Quintuple_Polybenzimidazole_PBI_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        21599);
     public static final ItemStack Quintuple_Kevlar_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21765);
-    public static final ItemStack Quintuple_Silicon_Solar_Grade_Poly_SI_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21856);
+    public static final ItemStack Quintuple_Silicon_Solar_Grade_Poly_SI_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        21856);
     public static final ItemStack Quintuple_Trinium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21868);
     public static final ItemStack Quintuple_Desh_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21884);
-    public static final ItemStack Quintuple_Cosmic_Neutronium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 21982);
+    public static final ItemStack Quintuple_Cosmic_Neutronium_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        21982);
 
 }

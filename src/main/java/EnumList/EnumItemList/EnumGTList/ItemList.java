@@ -1,12 +1,13 @@
 package EnumList.EnumItemList.EnumGTList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.GoodGenerator;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class ItemList {
+
     // Coil
     public static final ItemStack Ultra_Low_Voltage_Coil = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32140);
     public static final ItemStack Low_Voltage_Coil = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32141);
@@ -18,10 +19,18 @@ public class ItemList {
     public static final ItemStack ZPM_Voltage_Coil = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32147);
     public static final ItemStack Ultimate_Voltage_Coil = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32148);
     public static final ItemStack Highly_Ultimate_Voltage_Coil = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32149);
-    public static final ItemStack Extremely_Ultimate_Voltage_Coil = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32259);
+    public static final ItemStack Extremely_Ultimate_Voltage_Coil = getModItem(
+        GregTech.ID,
+        "gt.metaitem.03",
+        1L,
+        32259);
     public static final ItemStack Insanely_Ultimate_Voltage_Coil = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32260);
     public static final ItemStack Mega_Ultimate_Voltage_Coil = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32261);
-    public static final ItemStack Extended_Mega_Ultimate_Voltage_Coil = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32262);
+    public static final ItemStack Extended_Mega_Ultimate_Voltage_Coil = getModItem(
+        GregTech.ID,
+        "gt.metaitem.03",
+        1L,
+        32262);
     public static final ItemStack Maximum_Voltage_Coil = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32263);
 
     // Conveyor Module

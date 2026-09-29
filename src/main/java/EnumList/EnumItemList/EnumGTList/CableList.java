@@ -1,11 +1,12 @@
 package EnumList.EnumItemList.EnumGTList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class CableList {
+
     public static final ItemStack Cobalt_Cable_1x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1206);
     public static final ItemStack Lead_Cable_1x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1226);
     public static final ItemStack Tin_Cable_1x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1246);
@@ -33,7 +34,11 @@ public class CableList {
     public static final ItemStack HSSG_Cable_1x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1706);
     public static final ItemStack Niobium_Titanium_Cable_1x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1726);
     public static final ItemStack Vanadium_Gallium_Cable_1x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1746);
-    public static final ItemStack Yttrium_Barium_Cuprate_Cable_1x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1766);
+    public static final ItemStack Yttrium_Barium_Cuprate_Cable_1x = getModItem(
+        GregTech.ID,
+        "gt.blockmachines",
+        1L,
+        1766);
     public static final ItemStack Naquadah_Cable_1x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1786);
     public static final ItemStack Naquadah_Alloy_Cable_1x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1806);
     public static final ItemStack Duranium_Cable_1x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1826);
@@ -84,7 +89,11 @@ public class CableList {
     public static final ItemStack HSSG_Cable_2x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1707);
     public static final ItemStack Niobium_Titanium_Cable_2x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1727);
     public static final ItemStack Vanadium_Gallium_Cable_2x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1747);
-    public static final ItemStack Yttrium_Barium_Cuprate_Cable_2x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1767);
+    public static final ItemStack Yttrium_Barium_Cuprate_Cable_2x = getModItem(
+        GregTech.ID,
+        "gt.blockmachines",
+        1L,
+        1767);
     public static final ItemStack Naquadah_Cable_2x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1787);
     public static final ItemStack Naquadah_Alloy_Cable_2x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1807);
     public static final ItemStack Duranium_Cable_2x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1827);
@@ -135,7 +144,11 @@ public class CableList {
     public static final ItemStack HSSG_Cable_4x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1708);
     public static final ItemStack Niobium_Titanium_Cable_4x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1728);
     public static final ItemStack Vanadium_Gallium_Cable_4x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1748);
-    public static final ItemStack Yttrium_Barium_Cuprate_Cable_4x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1768);
+    public static final ItemStack Yttrium_Barium_Cuprate_Cable_4x = getModItem(
+        GregTech.ID,
+        "gt.blockmachines",
+        1L,
+        1768);
     public static final ItemStack Naquadah_Cable_4x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1788);
     public static final ItemStack Naquadah_Alloy_Cable_4x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1808);
     public static final ItemStack Duranium_Cable_4x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1828);
@@ -186,7 +199,11 @@ public class CableList {
     public static final ItemStack HSSG_Cable_8x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1709);
     public static final ItemStack Niobium_Titanium_Cable_8x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1729);
     public static final ItemStack Vanadium_Gallium_Cable_8x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1749);
-    public static final ItemStack Yttrium_Barium_Cuprate_Cable_8x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1769);
+    public static final ItemStack Yttrium_Barium_Cuprate_Cable_8x = getModItem(
+        GregTech.ID,
+        "gt.blockmachines",
+        1L,
+        1769);
     public static final ItemStack Naquadah_Cable_8x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1789);
     public static final ItemStack Naquadah_Alloy_Cable_8x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1809);
     public static final ItemStack Duranium_Cable_8x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1829);
@@ -237,7 +254,11 @@ public class CableList {
     public static final ItemStack HSSG_Cable_12x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1710);
     public static final ItemStack Niobium_Titanium_Cable_12x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1730);
     public static final ItemStack Vanadium_Gallium_Cable_12x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1750);
-    public static final ItemStack Yttrium_Barium_Cuprate_Cable_12x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1770);
+    public static final ItemStack Yttrium_Barium_Cuprate_Cable_12x = getModItem(
+        GregTech.ID,
+        "gt.blockmachines",
+        1L,
+        1770);
     public static final ItemStack Naquadah_Cable_12x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1790);
     public static final ItemStack Naquadah_Alloy_Cable_12x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1810);
     public static final ItemStack Duranium_Cable_12x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1830);
@@ -288,7 +309,11 @@ public class CableList {
     public static final ItemStack HSSG_Cable_16x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1711);
     public static final ItemStack Niobium_Titanium_Cable_16x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1731);
     public static final ItemStack Vanadium_Gallium_Cable_16x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1751);
-    public static final ItemStack Yttrium_Barium_Cuprate_Cable_16x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1771);
+    public static final ItemStack Yttrium_Barium_Cuprate_Cable_16x = getModItem(
+        GregTech.ID,
+        "gt.blockmachines",
+        1L,
+        1771);
     public static final ItemStack Naquadah_Cable_16x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1791);
     public static final ItemStack Naquadah_Alloy_Cable_16x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1811);
     public static final ItemStack Duranium_Cable_16x = getModItem(GregTech.ID, "gt.blockmachines", 1L, 1831);

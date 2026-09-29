@@ -1,38 +1,83 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GTPlusPlus;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class SpringList {
+
     public static final ItemStack Ruthenium_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 64);
     public static final ItemStack Rhodium_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 78);
-    public static final ItemStack Rhodium_Plated_Palladium_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 88);
+    public static final ItemStack Rhodium_Plated_Palladium_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        88);
     public static final ItemStack Tiberium_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 89);
     public static final ItemStack Ruridit_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 90);
-    public static final ItemStack High_Durability_Compound_Steel_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 92);
+    public static final ItemStack High_Durability_Compound_Steel_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        92);
     public static final ItemStack Ademic_Steel_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 96);
-    public static final ItemStack Atomic_Separation_Catalyst_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10022);
-    public static final ItemStack Extremely_Unstable_Naquadah_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10024);
+    public static final ItemStack Atomic_Separation_Catalyst_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        10022);
+    public static final ItemStack Extremely_Unstable_Naquadah_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        10024);
     public static final ItemStack Zircaloy_4_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10082);
     public static final ItemStack Zircaloy_2_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10083);
     public static final ItemStack Incoloy_903_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10084);
-    public static final ItemStack Adamantium_Alloy_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10085);
-    public static final ItemStack MAR_M200_Steel_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10096);
-    public static final ItemStack MAR_Ce_M200_Steel_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10097);
+    public static final ItemStack Adamantium_Alloy_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        10085);
+    public static final ItemStack MAR_M200_Steel_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        10096);
+    public static final ItemStack MAR_Ce_M200_Steel_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        10097);
     public static final ItemStack Signalium_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10099);
     public static final ItemStack Lumiium_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10101);
     public static final ItemStack Artherium_Sn_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10102);
-    public static final ItemStack Tanmolyium_Beta_C_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10103);
+    public static final ItemStack Tanmolyium_Beta_C_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        10103);
     public static final ItemStack Dalisenite_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10104);
     public static final ItemStack Hikarium_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10105);
     public static final ItemStack Tairitsu_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10106);
-    public static final ItemStack Precious_Metals_Alloy_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10109);
-    public static final ItemStack Enriched_Naquadah_Alloy_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10110);
-    public static final ItemStack Metastable_Oganesson_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10111);
+    public static final ItemStack Precious_Metals_Alloy_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        10109);
+    public static final ItemStack Enriched_Naquadah_Alloy_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        10110);
+    public static final ItemStack Metastable_Oganesson_Spring = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedspring",
+        1L,
+        10111);
     public static final ItemStack Shirabon_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 10112);
     public static final ItemStack Mu_metal_Spring = getModItem(BartWorks.ID, "gt.bwMetaGeneratedspring", 1L, 11351);
     public static final ItemStack Lithium_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24006);
@@ -220,7 +265,11 @@ public class SpringList {
     public static final ItemStack Epoxid_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24470);
     public static final ItemStack Silicone_Rubber_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24471);
     public static final ItemStack Polycaprolactam_PCL_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24472);
-    public static final ItemStack Polytetrafluoroethylene_PTFE_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24473);
+    public static final ItemStack Polytetrafluoroethylene_PTFE_Spring = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        24473);
     public static final ItemStack Alduorite_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24485);
     public static final ItemStack Rubracium_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24488);
     public static final ItemStack Vulcanite_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24489);
@@ -229,22 +278,42 @@ public class SpringList {
     public static final ItemStack TPV_Alloy_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24576);
     public static final ItemStack Transcendent_Metal_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24581);
     public static final ItemStack Enriched_Holmium_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24582);
-    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24583);
+    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Spring = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        24583);
     public static final ItemStack White_Dwarf_Matter_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24585);
     public static final ItemStack Black_Dwarf_Matter_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24586);
     public static final ItemStack SpaceTime_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24588);
     public static final ItemStack Polybenzimidazole_PBI_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24599);
-    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24610);
+    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Spring = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        24610);
     public static final ItemStack Nickel_Zinc_Ferrite_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24613);
-    public static final ItemStack Polyphenylene_Sulfide_PPS_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24631);
-    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24635);
+    public static final ItemStack Polyphenylene_Sulfide_PPS_Spring = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        24631);
+    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Spring = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        24635);
     public static final ItemStack Polystyrene_PS_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24636);
     public static final ItemStack Polyvinyl_Chloride_PVC_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24649);
     public static final ItemStack Kevlar_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24765);
     public static final ItemStack Endium_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24770);
     public static final ItemStack Nickel_Aluminide_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24772);
     public static final ItemStack Deep_Iron_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24829);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Spring = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        24856);
     public static final ItemStack Trinium_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24868);
     public static final ItemStack Polyethylene_PE_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24874);
     public static final ItemStack Rubber_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24880);
@@ -263,7 +332,11 @@ public class SpringList {
     public static final ItemStack Ichorium_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24978);
     public static final ItemStack Radox_Polymer_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24979);
     public static final ItemStack Gallium_Arsenide_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24980);
-    public static final ItemStack Indium_Gallium_Phosphide_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24981);
+    public static final ItemStack Indium_Gallium_Phosphide_Spring = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        24981);
     public static final ItemStack Cosmic_Neutronium_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24982);
     public static final ItemStack Flerovium_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24984);
     public static final ItemStack Superconductor_Base_UHV_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24985);
@@ -274,7 +347,10 @@ public class SpringList {
     public static final ItemStack Superconductor_Base_IV_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24990);
     public static final ItemStack Superconductor_Base_LuV_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24991);
     public static final ItemStack Superconductor_Base_ZPM_Spring = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 24992);
-    public static final ItemStack Celestial_Tungsten_Spring = getModItem(GTPlusPlus.ID, "itemSpringCelestialTungsten", 1L);
+    public static final ItemStack Celestial_Tungsten_Spring = getModItem(
+        GTPlusPlus.ID,
+        "itemSpringCelestialTungsten",
+        1L);
     public static final ItemStack Nitinol_60_Spring = getModItem(GTPlusPlus.ID, "itemSpringNitinol60", 1L);
     public static final ItemStack Watertight_Steel_Spring = getModItem(GTPlusPlus.ID, "itemSpringWatertightSteel", 1L);
     public static final ItemStack Eglin_Steel_Spring = getModItem(GTPlusPlus.ID, "itemSpringEglinSteel", 1L);

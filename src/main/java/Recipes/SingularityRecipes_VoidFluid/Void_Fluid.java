@@ -18,7 +18,7 @@ public class Void_Fluid {
         //
         Materials.OilMedium.getFluid(1),
         //
-        //Materials.NatruralGas.getGas(1)
+        // Materials.NatruralGas.getGas(1)
     };
 
     // Nether VoidFluid
@@ -31,7 +31,7 @@ public class Void_Fluid {
         //
         Materials.SaltWater.getFluid(1),
         //
-        //Materials.Helium_3.getGas(1)
+        // Materials.Helium_3.getGas(1)
     };
 
     // Mars VoidFluid
@@ -64,7 +64,7 @@ public class Void_Fluid {
         //
         FluidRegistry.getFluidStack("ic2distilledwater", 1),
         //
-        //Materials.NatruralGas.getGas(1)
+        // Materials.NatruralGas.getGas(1)
     };
 
     // Io VoidFluid
@@ -115,7 +115,7 @@ public class Void_Fluid {
         //
         Materials.SaltWater.getFluid(1),
         //
-        //Materials.Helium_3.getGas(1)
+        // Materials.Helium_3.getGas(1)
     };
 
     // Proteus VoidFluid

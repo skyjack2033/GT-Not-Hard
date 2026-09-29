@@ -1,38 +1,75 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GTPlusPlus;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class BoltList {
+
     public static final ItemStack Ruthenium_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 64);
     public static final ItemStack Rhodium_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 78);
-    public static final ItemStack Rhodium_Plated_Palladium_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 88);
+    public static final ItemStack Rhodium_Plated_Palladium_Bolt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedbolt",
+        1L,
+        88);
     public static final ItemStack Tiberium_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 89);
     public static final ItemStack Ruridit_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 90);
-    public static final ItemStack High_Durability_Compound_Steel_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 92);
+    public static final ItemStack High_Durability_Compound_Steel_Bolt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedbolt",
+        1L,
+        92);
     public static final ItemStack Ademic_Steel_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 96);
-    public static final ItemStack Atomic_Separation_Catalyst_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10022);
-    public static final ItemStack Extremely_Unstable_Naquadah_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10024);
+    public static final ItemStack Atomic_Separation_Catalyst_Bolt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedbolt",
+        1L,
+        10022);
+    public static final ItemStack Extremely_Unstable_Naquadah_Bolt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedbolt",
+        1L,
+        10024);
     public static final ItemStack Zircaloy_4_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10082);
     public static final ItemStack Zircaloy_2_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10083);
     public static final ItemStack Incoloy_903_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10084);
     public static final ItemStack Adamantium_Alloy_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10085);
     public static final ItemStack MAR_M200_Steel_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10096);
-    public static final ItemStack MAR_Ce_M200_Steel_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10097);
+    public static final ItemStack MAR_Ce_M200_Steel_Bolt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedbolt",
+        1L,
+        10097);
     public static final ItemStack Signalium_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10099);
     public static final ItemStack Lumiium_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10101);
     public static final ItemStack Artherium_Sn_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10102);
-    public static final ItemStack Tanmolyium_Beta_C_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10103);
+    public static final ItemStack Tanmolyium_Beta_C_Bolt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedbolt",
+        1L,
+        10103);
     public static final ItemStack Dalisenite_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10104);
     public static final ItemStack Hikarium_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10105);
     public static final ItemStack Tairitsu_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10106);
-    public static final ItemStack Precious_Metals_Alloy_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10109);
-    public static final ItemStack Enriched_Naquadah_Alloy_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10110);
-    public static final ItemStack Metastable_Oganesson_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10111);
+    public static final ItemStack Precious_Metals_Alloy_Bolt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedbolt",
+        1L,
+        10109);
+    public static final ItemStack Enriched_Naquadah_Alloy_Bolt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedbolt",
+        1L,
+        10110);
+    public static final ItemStack Metastable_Oganesson_Bolt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedbolt",
+        1L,
+        10111);
     public static final ItemStack Shirabon_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 10112);
     public static final ItemStack Mu_metal_Bolt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedbolt", 1L, 11351);
     public static final ItemStack Lithium_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26006);
@@ -231,7 +268,11 @@ public class BoltList {
     public static final ItemStack Epoxid_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26470);
     public static final ItemStack Silicone_Rubber_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26471);
     public static final ItemStack Polycaprolactam_PCL_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26472);
-    public static final ItemStack Polytetrafluoroethylene_PTFE_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26473);
+    public static final ItemStack Polytetrafluoroethylene_PTFE_Bolt = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        26473);
     public static final ItemStack Alduorite_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26485);
     public static final ItemStack Rubracium_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26488);
     public static final ItemStack Vulcanite_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26489);
@@ -282,16 +323,28 @@ public class BoltList {
     public static final ItemStack TPV_Alloy_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26576);
     public static final ItemStack Transcendent_Metal_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26581);
     public static final ItemStack Enriched_Holmium_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26582);
-    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26583);
+    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Bolt = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        26583);
     public static final ItemStack White_Dwarf_Matter_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26585);
     public static final ItemStack Black_Dwarf_Matter_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26586);
     public static final ItemStack SpaceTime_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26588);
     public static final ItemStack Polybenzimidazole_PBI_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26599);
-    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26610);
+    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Bolt = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        26610);
     public static final ItemStack Borosilicate_Glass_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26611);
     public static final ItemStack Nickel_Zinc_Ferrite_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26613);
     public static final ItemStack Polyphenylene_Sulfide_PPS_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26631);
-    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26635);
+    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Bolt = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        26635);
     public static final ItemStack Polystyrene_PS_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26636);
     public static final ItemStack Polyvinyl_Chloride_PVC_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26649);
     public static final ItemStack Kevlar_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26765);
@@ -300,7 +353,11 @@ public class BoltList {
     public static final ItemStack Obsidian_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26804);
     public static final ItemStack Short_Wood_Stick = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26809);
     public static final ItemStack Deep_Iron_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26829);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Bolt = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        26856);
     public static final ItemStack Trinium_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26868);
     public static final ItemStack Polyethylene_PE_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26874);
     public static final ItemStack Rubber_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26880);
@@ -347,7 +404,10 @@ public class BoltList {
     public static final ItemStack Zirconium_Carbide_Bolt = getModItem(GTPlusPlus.ID, "itemBoltZirconiumCarbide", 1L);
     public static final ItemStack Tantalum_Carbide_Bolt = getModItem(GTPlusPlus.ID, "itemBoltTantalumCarbide", 1L);
     public static final ItemStack Niobium_Carbide_Bolt = getModItem(GTPlusPlus.ID, "itemBoltNiobiumCarbide", 1L);
-    public static final ItemStack Tungsten_Titanium_Carbide_Bolt = getModItem(GTPlusPlus.ID, "itemBoltTungstenTitaniumCarbide", 1L);
+    public static final ItemStack Tungsten_Titanium_Carbide_Bolt = getModItem(
+        GTPlusPlus.ID,
+        "itemBoltTungstenTitaniumCarbide",
+        1L);
     public static final ItemStack Energy_Crystal_Bolt = getModItem(GTPlusPlus.ID, "itemBoltEnergyCrystal", 1L);
     public static final ItemStack Blood_Steel_Bolt = getModItem(GTPlusPlus.ID, "itemBoltBloodSteel", 1L);
     public static final ItemStack Zeron_100_Bolt = getModItem(GTPlusPlus.ID, "itemBoltZeron100", 1L);
@@ -375,8 +435,14 @@ public class BoltList {
     public static final ItemStack Incoloy_DS_Bolt = getModItem(GTPlusPlus.ID, "itemBoltIncoloyDS", 1L);
     public static final ItemStack Incoloy_MA956_Bolt = getModItem(GTPlusPlus.ID, "itemBoltIncoloyMA956", 1L);
     public static final ItemStack Grisium_Bolt = getModItem(GTPlusPlus.ID, "itemBoltGrisium", 1L);
-    public static final ItemStack Trinium_Titanium_Alloy_Bolt = getModItem(GTPlusPlus.ID, "itemBoltTriniumTitaniumAlloy", 1L);
-    public static final ItemStack Trinium_Naquadah_Carbonite_Bolt = getModItem(GTPlusPlus.ID, "itemBoltTriniumNaquadahCarbonite", 1L);
+    public static final ItemStack Trinium_Titanium_Alloy_Bolt = getModItem(
+        GTPlusPlus.ID,
+        "itemBoltTriniumTitaniumAlloy",
+        1L);
+    public static final ItemStack Trinium_Naquadah_Carbonite_Bolt = getModItem(
+        GTPlusPlus.ID,
+        "itemBoltTriniumNaquadahCarbonite",
+        1L);
     public static final ItemStack Arceus_Alloy_2B_Bolt = getModItem(GTPlusPlus.ID, "itemBoltArceusAlloy2B", 1L);
     public static final ItemStack HeLiCoPtEr_Bolt = getModItem(GTPlusPlus.ID, "itemBoltHeLiCoPtEr", 1L);
     public static final ItemStack Lafium_Compound_Bolt = getModItem(GTPlusPlus.ID, "itemBoltLafiumCompound", 1L);

@@ -1,11 +1,12 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class CasingList {
+
     public static final ItemStack Lithium_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18006);
     public static final ItemStack Beryllium_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18008);
     public static final ItemStack Carbon_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18010);
@@ -197,7 +198,11 @@ public class CasingList {
     public static final ItemStack Epoxid_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18470);
     public static final ItemStack Silicone_Rubber_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18471);
     public static final ItemStack Polycaprolactam_PCL_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18472);
-    public static final ItemStack Polytetrafluoroethylene_PTFE_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18473);
+    public static final ItemStack Polytetrafluoroethylene_PTFE_Casing = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        18473);
     public static final ItemStack Alduorite_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18485);
     public static final ItemStack Rubracium_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18488);
     public static final ItemStack Vulcanite_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18489);
@@ -248,16 +253,32 @@ public class CasingList {
     public static final ItemStack TPV_Alloy_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18576);
     public static final ItemStack Transcendent_Metal_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18581);
     public static final ItemStack Enriched_Holmium_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18582);
-    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18583);
+    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Casing = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        18583);
     public static final ItemStack White_Dwarf_Matter_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18585);
     public static final ItemStack Black_Dwarf_Matter_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18586);
     public static final ItemStack SpaceTime_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18588);
     public static final ItemStack Polybenzimidazole_PBI_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18599);
-    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18610);
+    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Casing = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        18610);
     public static final ItemStack Borosilicate_Glass_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18611);
     public static final ItemStack Nickel_Zinc_Ferrite_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18613);
-    public static final ItemStack Polyphenylene_Sulfide_PPS_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18631);
-    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18635);
+    public static final ItemStack Polyphenylene_Sulfide_PPS_Casing = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        18631);
+    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Casing = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        18635);
     public static final ItemStack Polystyrene_PS_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18636);
     public static final ItemStack Polyvinyl_Chloride_PVC_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18649);
     public static final ItemStack Kevlar_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18765);
@@ -266,7 +287,11 @@ public class CasingList {
     public static final ItemStack Obsidian_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18804);
     public static final ItemStack Wood_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18809);
     public static final ItemStack Deep_Iron_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18829);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Casing = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        18856);
     public static final ItemStack Trinium_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18868);
     public static final ItemStack Polyethylene_PE_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18874);
     public static final ItemStack Rubber_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18880);
@@ -287,7 +312,11 @@ public class CasingList {
     public static final ItemStack Ichorium_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18978);
     public static final ItemStack Radox_Polymer_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18979);
     public static final ItemStack Gallium_Arsenide_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18980);
-    public static final ItemStack Indium_Gallium_Phosphide_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18981);
+    public static final ItemStack Indium_Gallium_Phosphide_Casing = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        18981);
     public static final ItemStack Cosmic_Neutronium_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18982);
     public static final ItemStack Flerovium_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18984);
     public static final ItemStack Superconductor_Base_UHV_Casing = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 18985);

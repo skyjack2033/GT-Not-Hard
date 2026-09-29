@@ -1,51 +1,172 @@
 package EnumList.EnumItemList.EnumOreProductList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.*;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class CrushedOreList {
+
     public static final ItemStack Crushed_Bismutite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 1);
-    public static final ItemStack Crushed_Bismuthinite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 2);
-    public static final ItemStack Crushed_Fluor_Buergerite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 5);
-    public static final ItemStack Crushed_Chromo_Alumino_Povondraite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 7);
-    public static final ItemStack Crushed_Vanadio_Oxy_Dravite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 8);
+    public static final ItemStack Crushed_Bismuthinite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        2);
+    public static final ItemStack Crushed_Fluor_Buergerite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        5);
+    public static final ItemStack Crushed_Chromo_Alumino_Povondraite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        7);
+    public static final ItemStack Crushed_Vanadio_Oxy_Dravite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        8);
     public static final ItemStack Crushed_Olenite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 9);
-    public static final ItemStack Crushed_Arsenopyrite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 10);
+    public static final ItemStack Crushed_Arsenopyrite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        10);
     public static final ItemStack Crushed_Ferberite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 11);
-    public static final ItemStack Crushed_Loellingite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 12);
+    public static final ItemStack Crushed_Loellingite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        12);
     public static final ItemStack Crushed_Roquesite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 13);
     public static final ItemStack Crushed_Bornite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 14);
-    public static final ItemStack Crushed_Wittichenite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 15);
+    public static final ItemStack Crushed_Wittichenite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        15);
     public static final ItemStack Crushed_Djurleite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 16);
-    public static final ItemStack Crushed_Huebnerite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 17);
-    public static final ItemStack Crushed_Thorianite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 18);
-    public static final ItemStack Crushed_Red_Zircon_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 19);
+    public static final ItemStack Crushed_Huebnerite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        17);
+    public static final ItemStack Crushed_Thorianite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        18);
+    public static final ItemStack Crushed_Red_Zircon_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        19);
     public static final ItemStack Crushed_Fayalite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 23);
-    public static final ItemStack Crushed_Forsterite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 24);
-    public static final ItemStack Crushed_Hedenbergite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 25);
-    public static final ItemStack Crushed_Red_Descloizite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 26);
-    public static final ItemStack Crushed_Orange_Descloizite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 27);
-    public static final ItemStack Crushed_Green_Fuchsite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 28);
-    public static final ItemStack Crushed_Red_Fuchsite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 29);
-    public static final ItemStack Crushed_Prasiolite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 35);
-    public static final ItemStack Crushed_BArTiMaEuSNeK_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 43);
-    public static final ItemStack Crushed_Platinum_Metallic_Powder_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 47);
-    public static final ItemStack Crushed_Palladium_Metallic_Powder_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 53);
-    public static final ItemStack Crushed_Leach_Residue_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 60);
-    public static final ItemStack Crushed_Rarest_Metal_Residue_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 69);
-    public static final ItemStack Crushed_Iridium_Metal_Residue_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 70);
-    public static final ItemStack Crushed_Crude_Rhodium_Metal_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 79);
+    public static final ItemStack Crushed_Forsterite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        24);
+    public static final ItemStack Crushed_Hedenbergite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        25);
+    public static final ItemStack Crushed_Red_Descloizite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        26);
+    public static final ItemStack Crushed_Orange_Descloizite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        27);
+    public static final ItemStack Crushed_Green_Fuchsite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        28);
+    public static final ItemStack Crushed_Red_Fuchsite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        29);
+    public static final ItemStack Crushed_Prasiolite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        35);
+    public static final ItemStack Crushed_BArTiMaEuSNeK_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        43);
+    public static final ItemStack Crushed_Platinum_Metallic_Powder_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        47);
+    public static final ItemStack Crushed_Palladium_Metallic_Powder_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        53);
+    public static final ItemStack Crushed_Leach_Residue_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        60);
+    public static final ItemStack Crushed_Rarest_Metal_Residue_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        69);
+    public static final ItemStack Crushed_Iridium_Metal_Residue_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        70);
+    public static final ItemStack Crushed_Crude_Rhodium_Metal_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        79);
     public static final ItemStack Crushed_Tiberium_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 89);
     public static final ItemStack Crushed_Fluorspar_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 91);
     public static final ItemStack Crushed_Atheneite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 93);
-    public static final ItemStack Crushed_Temagamite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 94);
-    public static final ItemStack Crushed_Terlinguaite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 95);
-    public static final ItemStack Crushed_Orundum_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 10023);
-    public static final ItemStack Crushed_Naquadah_Oxide_Mixture_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 10054);
-    public static final ItemStack Crushed_Enriched_Naquadah_Oxide_Mixture = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 10067);
-    public static final ItemStack Crushed_Naquadria_Oxide_Mixture_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedcrushed", 1L, 10072);
+    public static final ItemStack Crushed_Temagamite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        94);
+    public static final ItemStack Crushed_Terlinguaite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        95);
+    public static final ItemStack Crushed_Orundum_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        10023);
+    public static final ItemStack Crushed_Naquadah_Oxide_Mixture_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        10054);
+    public static final ItemStack Crushed_Enriched_Naquadah_Oxide_Mixture = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        10067);
+    public static final ItemStack Crushed_Naquadria_Oxide_Mixture_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedcrushed",
+        1L,
+        10072);
 
     public static final ItemStack Crushed_Lithium_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5006);
     public static final ItemStack Crushed_Beryllium_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5008);
@@ -157,7 +278,11 @@ public class CrushedOreList {
     public static final ItemStack Crushed_Amber_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5514);
     public static final ItemStack Crushed_Dilithium_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5515);
     public static final ItemStack Crushed_Certus_Quartz_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5516);
-    public static final ItemStack Crushed_Charged_Certus_Quartz_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5517);
+    public static final ItemStack Crushed_Charged_Certus_Quartz_Ore = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        5517);
     public static final ItemStack Crushed_Forcicium_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5518);
     public static final ItemStack Crushed_Forcillium_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5519);
     public static final ItemStack Crushed_Monazite_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5520);
@@ -172,7 +297,11 @@ public class CrushedOreList {
     public static final ItemStack Crushed_Vinteum_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5529);
     public static final ItemStack Crushed_Apatite_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5530);
     public static final ItemStack Crushed_Niter_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5531);
-    public static final ItemStack Crushed_Tricalcium_Phosphate_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5534);
+    public static final ItemStack Crushed_Tricalcium_Phosphate_Ore = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        5534);
     public static final ItemStack Crushed_Coal_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5535);
     public static final ItemStack Crushed_Jade_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5537);
     public static final ItemStack Crushed_Lignite_Coal_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5538);
@@ -212,7 +341,11 @@ public class CrushedOreList {
     public static final ItemStack Crushed_Tungstate_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5841);
     public static final ItemStack Crushed_Uvarovite_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5842);
     public static final ItemStack Crushed_Chalcopyrite_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5855);
-    public static final ItemStack Crushed_Silicon_Solar_Grade_Poly_SI_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5856);
+    public static final ItemStack Crushed_Silicon_Solar_Grade_Poly_SI_Ore = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        5856);
     public static final ItemStack Crushed_Emery_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5861);
     public static final ItemStack Crushed_Graphite_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5865);
     public static final ItemStack Crushed_Trinium_Ore = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 5868);

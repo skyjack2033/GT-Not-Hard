@@ -1,13 +1,18 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class TriplePlateList {
-    public static final ItemStack Triple_Shirabon_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplateTriple", 1L, 10112);
+
+    public static final ItemStack Triple_Shirabon_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplateTriple",
+        1L,
+        10112);
     public static final ItemStack Triple_Magnesium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19018);
     public static final ItemStack Triple_Aluminium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19019);
     public static final ItemStack Triple_Titanium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19028);
@@ -54,14 +59,38 @@ public class TriplePlateList {
     public static final ItemStack Triple_Oriharukon_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19393);
     public static final ItemStack Triple_Infinity_Catalyst_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19394);
     public static final ItemStack Triple_Infinity_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19397);
-    public static final ItemStack Triple_Mysterious_Crystal_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19398);
+    public static final ItemStack Triple_Mysterious_Crystal_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        19398);
     public static final ItemStack Triple_Melodic_Alloy_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19404);
-    public static final ItemStack Triple_Crystalline_Pink_Slime_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19406);
-    public static final ItemStack Triple_Polycaprolactam_PCL_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19472);
-    public static final ItemStack Triple_Polytetrafluoroethylene_PTFE_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19473);
-    public static final ItemStack Triple_Polybenzimidazole_PBI_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19599);
+    public static final ItemStack Triple_Crystalline_Pink_Slime_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        19406);
+    public static final ItemStack Triple_Polycaprolactam_PCL_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        19472);
+    public static final ItemStack Triple_Polytetrafluoroethylene_PTFE_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        19473);
+    public static final ItemStack Triple_Polybenzimidazole_PBI_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        19599);
     public static final ItemStack Triple_Kevlar_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19765);
-    public static final ItemStack Triple_Silicon_Solar_Grade_Poly_SI_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19856);
+    public static final ItemStack Triple_Silicon_Solar_Grade_Poly_SI_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        19856);
     public static final ItemStack Triple_Trinium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19868);
     public static final ItemStack Triple_Desh_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19884);
     public static final ItemStack Triple_Cosmic_Neutronium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 19982);

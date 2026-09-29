@@ -3,9 +3,6 @@ package Recipes.ChaosRecipes;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidStack;
 
-import gregtech.api.recipe.RecipeMap;
-import gregtech.api.util.GTRecipe;
-
 public class Chaos_RecipeBuilder {
 
     public static Chaos_RecipeBuilder builder() {
@@ -79,26 +76,23 @@ public class Chaos_RecipeBuilder {
     public Chaos_RecipeBuilder noOptimize() {
         return this;
     }
-/*
-    public Chaos_RecipeBuilder addTo(RecipeMap<?> recipeMap) {
-        GTRecipe tempRecipe = new GTRecipe(
-            false,
-            inputItems,
-            outputItems,
-            null,
-            outputChance,
-            inputFluids,
-            outputFluids,
-            duration,
-            eut,
-            specialValue);
-
-        tempRecipe.mInputs = inputItems.clone();
-        tempRecipe.mOutputs = outputItems.clone();
-
-        recipeMap.add(tempRecipe);
-        return this;
-    }
-
- */
+    /*
+     * public Chaos_RecipeBuilder addTo(RecipeMap<?> recipeMap) {
+     * GTRecipe tempRecipe = new GTRecipe(
+     * false,
+     * inputItems,
+     * outputItems,
+     * null,
+     * outputChance,
+     * inputFluids,
+     * outputFluids,
+     * duration,
+     * eut,
+     * specialValue);
+     * tempRecipe.mInputs = inputItems.clone();
+     * tempRecipe.mOutputs = outputItems.clone();
+     * recipeMap.add(tempRecipe);
+     * return this;
+     * }
+     */
 }

@@ -1,20 +1,37 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GTPlusPlus;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.enums.Mods.NewHorizonsCoreMod;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class LongRodList {
+
     public static final ItemStack Long_Bismutite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 1);
     public static final ItemStack Long_Zirconium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 3);
-    public static final ItemStack Long_Cubic_Zirconia_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 4);
-    public static final ItemStack Long_Fluor_Buergerite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 5);
-    public static final ItemStack Long_Chromo_Alumino_Povondraite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 7);
-    public static final ItemStack Long_Vanadio_Oxy_Dravite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 8);
+    public static final ItemStack Long_Cubic_Zirconia_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        4);
+    public static final ItemStack Long_Fluor_Buergerite_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        5);
+    public static final ItemStack Long_Chromo_Alumino_Povondraite_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        7);
+    public static final ItemStack Long_Vanadio_Oxy_Dravite_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        8);
     public static final ItemStack Long_Olenite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 9);
     public static final ItemStack Long_Red_Zircon_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 19);
     public static final ItemStack Long_Salt_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 20);
@@ -22,52 +39,196 @@ public class LongRodList {
     public static final ItemStack Long_Rock_Salt_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 22);
     public static final ItemStack Long_Fayalite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 23);
     public static final ItemStack Long_Forsterite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 24);
-    public static final ItemStack Long_Hedenbergite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 25);
-    public static final ItemStack Long_Thorium_232_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 30);
+    public static final ItemStack Long_Hedenbergite_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        25);
+    public static final ItemStack Long_Thorium_232_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        30);
     public static final ItemStack Long_Prasiolite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 35);
-    public static final ItemStack Long_Magneto_Resonatic_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 36);
-    public static final ItemStack Long_Californium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 39);
+    public static final ItemStack Long_Magneto_Resonatic_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        36);
+    public static final ItemStack Long_Californium_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        39);
     public static final ItemStack Long_Calcium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 40);
-    public static final ItemStack Long_BArTiMaEuSNeK_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 43);
+    public static final ItemStack Long_BArTiMaEuSNeK_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        43);
     public static final ItemStack Long_Ruthenium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 64);
     public static final ItemStack Long_Rhodium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 78);
-    public static final ItemStack Long_Rhodium_Plated_Palladium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 88);
+    public static final ItemStack Long_Rhodium_Plated_Palladium_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        88);
     public static final ItemStack Long_Tiberium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 89);
     public static final ItemStack Long_Ruridit_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 90);
     public static final ItemStack Long_Fluorspar_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 91);
-    public static final ItemStack Long_High_Durability_Compound_Steel_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 92);
-    public static final ItemStack Long_Ademic_Steel_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 96);
-    public static final ItemStack Long_Fluorophlogopite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 104);
-    public static final ItemStack Long_Tantalum_Hafnium_Carbide_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 11503);
-    public static final ItemStack Long_Magnesia_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 32237);
+    public static final ItemStack Long_High_Durability_Compound_Steel_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        92);
+    public static final ItemStack Long_Ademic_Steel_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        96);
+    public static final ItemStack Long_Fluorophlogopite_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        104);
+    public static final ItemStack Long_Tantalum_Hafnium_Carbide_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        11503);
+    public static final ItemStack Long_Magnesia_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        32237);
     public static final ItemStack Long_Orundum_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10023);
-    public static final ItemStack Long_Atomic_Separation_Catalyst_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10022);
-    public static final ItemStack Long_Extremely_Unstable_Naquadah_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10024);
-    public static final ItemStack Long_Zn_Th_Alloy_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10053);
-    public static final ItemStack Long_Zircaloy_4_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10082);
-    public static final ItemStack Long_Zircaloy_2_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10083);
-    public static final ItemStack Long_Incoloy_903_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10084);
-    public static final ItemStack Long_Adamantium_Alloy_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10085);
-    public static final ItemStack Long_MAR_M200_Steel_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10096);
-    public static final ItemStack Long_MAR_Ce_M200_Steel_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10097);
-    public static final ItemStack Long_Lithium_Chloride_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10098);
-    public static final ItemStack Long_Signalium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10099);
+    public static final ItemStack Long_Atomic_Separation_Catalyst_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10022);
+    public static final ItemStack Long_Extremely_Unstable_Naquadah_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10024);
+    public static final ItemStack Long_Zn_Th_Alloy_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10053);
+    public static final ItemStack Long_Zircaloy_4_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10082);
+    public static final ItemStack Long_Zircaloy_2_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10083);
+    public static final ItemStack Long_Incoloy_903_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10084);
+    public static final ItemStack Long_Adamantium_Alloy_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10085);
+    public static final ItemStack Long_MAR_M200_Steel_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10096);
+    public static final ItemStack Long_MAR_Ce_M200_Steel_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10097);
+    public static final ItemStack Long_Lithium_Chloride_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10098);
+    public static final ItemStack Long_Signalium_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10099);
     public static final ItemStack Long_Lumiium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10101);
-    public static final ItemStack Long_Artherium_Sn_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10102);
-    public static final ItemStack Long_Tanmolyium_Beta_C_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10103);
-    public static final ItemStack Long_Dalisenite_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10104);
-    public static final ItemStack Long_Hikarium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10105);
-    public static final ItemStack Long_Tairitsu_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10106);
-    public static final ItemStack Long_Precious_Metals_Alloy_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10109);
-    public static final ItemStack Long_Enriched_Naquadah_Alloy_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10110);
-    public static final ItemStack Long_Metastable_Oganesson_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10111);
-    public static final ItemStack Long_Shirabon_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 10112);
+    public static final ItemStack Long_Artherium_Sn_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10102);
+    public static final ItemStack Long_Tanmolyium_Beta_C_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10103);
+    public static final ItemStack Long_Dalisenite_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10104);
+    public static final ItemStack Long_Hikarium_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10105);
+    public static final ItemStack Long_Tairitsu_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10106);
+    public static final ItemStack Long_Precious_Metals_Alloy_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10109);
+    public static final ItemStack Long_Enriched_Naquadah_Alloy_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10110);
+    public static final ItemStack Long_Metastable_Oganesson_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10111);
+    public static final ItemStack Long_Shirabon_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        10112);
     public static final ItemStack Long_Hafnium_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 11000);
-    public static final ItemStack Long_Cerium_doped_Lutetium_Aluminium_Garnet_Ce_LuAG_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 11499);
-    public static final ItemStack Long_Permalloy_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 11350);
-    public static final ItemStack Long_Mu_metal_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 11351);
-    public static final ItemStack Long_Silicon_Nitride_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 11353);
-    public static final ItemStack Long_Lanthanum_Hexaboride_Rod = getModItem(BartWorks.ID, "gt.bwMetaGeneratedstickLong", 1L, 11358);
+    public static final ItemStack Long_Cerium_doped_Lutetium_Aluminium_Garnet_Ce_LuAG_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        11499);
+    public static final ItemStack Long_Permalloy_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        11350);
+    public static final ItemStack Long_Mu_metal_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        11351);
+    public static final ItemStack Long_Silicon_Nitride_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        11353);
+    public static final ItemStack Long_Lanthanum_Hexaboride_Rod = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedstickLong",
+        1L,
+        11358);
     public static final ItemStack Long_Obsidian_Rod = getModItem(NewHorizonsCoreMod.ID, "LongObsidianRod", 1L);
     public static final ItemStack Long_Stone_Rod = getModItem(NewHorizonsCoreMod.ID, "LongStoneRod", 1L);
     public static final ItemStack Superconductor_Base_UHV_Rod = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 23985);
@@ -137,18 +298,34 @@ public class LongRodList {
     public static final ItemStack Long_Attuned_Tengam_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22112);
     public static final ItemStack Long_Hellish_Metal_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22125);
     public static final ItemStack Long_Neutronium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22129);
-    public static final ItemStack Long_Superconductor_Base_UIV_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22131);
+    public static final ItemStack Long_Superconductor_Base_UIV_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22131);
     public static final ItemStack Long_Netherite_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22132);
-    public static final ItemStack Long_Superconductor_Base_UMV_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22134);
+    public static final ItemStack Long_Superconductor_Base_UMV_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22134);
     public static final ItemStack Long_Universium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22139);
     public static final ItemStack Long_Eternity_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22141);
     public static final ItemStack Long_Magmatter_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22143);
     public static final ItemStack Long_Six_Phased_Copper_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22147);
     public static final ItemStack Long_Mellion_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22148);
     public static final ItemStack Long_Creon_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22149);
-    public static final ItemStack Long_Hot_Proto_Halkonite_Steel_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22153);
+    public static final ItemStack Long_Hot_Proto_Halkonite_Steel_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22153);
     public static final ItemStack Long_Proto_Halkonite_Steel_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22154);
-    public static final ItemStack Long_Hot_Exo_Halkonite_Steel_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22156);
+    public static final ItemStack Long_Hot_Exo_Halkonite_Steel_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22156);
     public static final ItemStack Long_Exo_Halkonite_Steel_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22157);
     public static final ItemStack Long_Prismatic_Naquadah_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22163);
     public static final ItemStack Long_Hexanite_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22174);
@@ -218,7 +395,11 @@ public class LongRodList {
     public static final ItemStack Long_Magnetic_Steel_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22355);
     public static final ItemStack Long_Magnetic_Neodymium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22356);
     public static final ItemStack Long_Vanadium_Gallium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22357);
-    public static final ItemStack Long_Yttrium_Barium_Cuprate_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22358);
+    public static final ItemStack Long_Yttrium_Barium_Cuprate_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22358);
     public static final ItemStack Long_Niobium_Nitride_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22359);
     public static final ItemStack Long_Niobium_Titanium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22360);
     public static final ItemStack Long_Chromium_Dioxide_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22361);
@@ -262,13 +443,21 @@ public class LongRodList {
     public static final ItemStack Long_Crystalline_Alloy_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22403);
     public static final ItemStack Long_Melodic_Alloy_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22404);
     public static final ItemStack Long_Stellar_Alloy_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22405);
-    public static final ItemStack Long_Crystalline_Pink_Slime_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22406);
+    public static final ItemStack Long_Crystalline_Pink_Slime_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22406);
     public static final ItemStack Long_Energetic_Silver_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22407);
     public static final ItemStack Long_Vivid_Alloy_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22408);
     public static final ItemStack Long_Epoxid_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22470);
     public static final ItemStack Long_Silicone_Rubber_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22471);
     public static final ItemStack Long_Polycaprolactam_PCL_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22472);
-    public static final ItemStack Long_Polytetrafluoroethylene_PTFE_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22473);
+    public static final ItemStack Long_Polytetrafluoroethylene_PTFE_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22473);
     public static final ItemStack Long_Alduorite_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22485);
     public static final ItemStack Long_Rubracium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22488);
     public static final ItemStack Long_Vulcanite_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22489);
@@ -319,24 +508,48 @@ public class LongRodList {
     public static final ItemStack Long_TPV_Alloy_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22576);
     public static final ItemStack Long_Transcendent_Metal_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22581);
     public static final ItemStack Long_Enriched_Holmium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22582);
-    public static final ItemStack Long_Magnetohydrodynamically_Constrained_Star_Matter_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22583);
+    public static final ItemStack Long_Magnetohydrodynamically_Constrained_Star_Matter_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22583);
     public static final ItemStack Long_White_Dwarf_Matter_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22585);
     public static final ItemStack Long_Black_Dwarf_Matter_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22586);
     public static final ItemStack Long_SpaceTime_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22588);
     public static final ItemStack Long_Polybenzimidazole_PBI_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22599);
-    public static final ItemStack Long_Fiber_Reinforced_Epoxy_Resin_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22610);
+    public static final ItemStack Long_Fiber_Reinforced_Epoxy_Resin_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22610);
     public static final ItemStack Long_Borosilicate_Glass_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22611);
     public static final ItemStack Long_Nickel_Zinc_Ferrite_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22613);
-    public static final ItemStack Long_Polyphenylene_Sulfide_PPS_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22631);
-    public static final ItemStack Long_Styrene_Butadiene_Rubber_SBR_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22635);
+    public static final ItemStack Long_Polyphenylene_Sulfide_PPS_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22631);
+    public static final ItemStack Long_Styrene_Butadiene_Rubber_SBR_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22635);
     public static final ItemStack Long_Polystyrene_PS_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22636);
-    public static final ItemStack Long_Polyvinyl_Chloride_PVC_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22649);
+    public static final ItemStack Long_Polyvinyl_Chloride_PVC_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22649);
     public static final ItemStack Long_Kevlar_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22765);
     public static final ItemStack Long_Endium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22770);
     public static final ItemStack Long_Nickel_Aluminide_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22772);
     public static final ItemStack Long_Blaze_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22801);
     public static final ItemStack Long_Deep_Iron_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22829);
-    public static final ItemStack Long_Silicon_Solar_Grade_Poly_SI_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22856);
+    public static final ItemStack Long_Silicon_Solar_Grade_Poly_SI_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22856);
     public static final ItemStack Long_Trinium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22868);
     public static final ItemStack Long_Polyethylene_PE_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22874);
     public static final ItemStack Long_Rubber_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22880);
@@ -349,24 +562,64 @@ public class LongRodList {
     public static final ItemStack Long_Tartarite_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22956);
     public static final ItemStack Long_Orichalcum_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22966);
     public static final ItemStack Long_Void_Metal_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22970);
-    public static final ItemStack Long_Superconductor_Base_UEV_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22974);
+    public static final ItemStack Long_Superconductor_Base_UEV_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22974);
     public static final ItemStack Long_Draconium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22975);
     public static final ItemStack Long_Awakened_Draconium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22976);
     public static final ItemStack Long_Blood_Infused_Iron_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22977);
     public static final ItemStack Long_Ichorium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22978);
     public static final ItemStack Long_Radox_Polymer_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22979);
     public static final ItemStack Long_Gallium_Arsenide_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22980);
-    public static final ItemStack Long_Indium_Gallium_Phosphide_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22981);
+    public static final ItemStack Long_Indium_Gallium_Phosphide_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22981);
     public static final ItemStack Long_Cosmic_Neutronium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22982);
     public static final ItemStack Long_Flerovium_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22984);
-    public static final ItemStack Long_Superconductor_Base_UHV_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22985);
-    public static final ItemStack Long_Superconductor_Base_UV_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22986);
-    public static final ItemStack Long_Superconductor_Base_MV_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22987);
-    public static final ItemStack Long_Superconductor_Base_HV_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22988);
-    public static final ItemStack Long_Superconductor_Base_EV_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22989);
-    public static final ItemStack Long_Superconductor_Base_IV_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22990);
-    public static final ItemStack Long_Superconductor_Base_LuV_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22991);
-    public static final ItemStack Long_Superconductor_Base_ZPM_Rod = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 22992);
+    public static final ItemStack Long_Superconductor_Base_UHV_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22985);
+    public static final ItemStack Long_Superconductor_Base_UV_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22986);
+    public static final ItemStack Long_Superconductor_Base_MV_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22987);
+    public static final ItemStack Long_Superconductor_Base_HV_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22988);
+    public static final ItemStack Long_Superconductor_Base_EV_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22989);
+    public static final ItemStack Long_Superconductor_Base_IV_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22990);
+    public static final ItemStack Long_Superconductor_Base_LuV_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22991);
+    public static final ItemStack Long_Superconductor_Base_ZPM_Rod = getModItem(
+        GregTech.ID,
+        "gt.metaitem.02",
+        1L,
+        22992);
     public static final ItemStack Long_Selenium_Rod = getModItem(GTPlusPlus.ID, "itemRodLongSelenium", 1L);
     public static final ItemStack Long_Iodine_Rod = getModItem(GTPlusPlus.ID, "itemRodLongIodine", 1L);
     public static final ItemStack Long_Rhenium_Rod = getModItem(GTPlusPlus.ID, "itemRodLongRhenium", 1L);
@@ -383,28 +636,76 @@ public class LongRodList {
     public static final ItemStack Long_Uranium_233_Rod = getModItem(GTPlusPlus.ID, "itemRodLongUranium233", 1L);
     public static final ItemStack Long_Plutonium_238_Rod = getModItem(GTPlusPlus.ID, "itemRodLongPlutonium238", 1L);
     public static final ItemStack Long_Astral_Titanium_Rod = getModItem(GTPlusPlus.ID, "itemRodLongAstralTitanium", 1L);
-    public static final ItemStack Long_Celestial_Tungsten_Rod = getModItem(GTPlusPlus.ID, "itemRodLongCelestialTungsten", 1L);
+    public static final ItemStack Long_Celestial_Tungsten_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongCelestialTungsten",
+        1L);
     public static final ItemStack Long_Hypogen_Rod = getModItem(GTPlusPlus.ID, "itemRodLongHypogen", 1L);
     public static final ItemStack Long_Chromatic_Glass_Rod = getModItem(GTPlusPlus.ID, "itemRodLongChromaticGlass", 1L);
     public static final ItemStack Long_Black_Metal_Rod = getModItem(GTPlusPlus.ID, "itemRodLongBlackMetal", 1L);
     public static final ItemStack Long_Dragonblood_Rod = getModItem(GTPlusPlus.ID, "itemRodLongDragonblood", 1L);
     public static final ItemStack Long_Silicon_Carbide_Rod = getModItem(GTPlusPlus.ID, "itemRodLongSiliconCarbide", 1L);
-    public static final ItemStack Long_Zirconium_Carbide_Rod = getModItem(GTPlusPlus.ID, "itemRodLongZirconiumCarbide", 1L);
-    public static final ItemStack Long_Tantalum_Carbide_Rod = getModItem(GTPlusPlus.ID, "itemRodLongTantalumCarbide", 1L);
+    public static final ItemStack Long_Zirconium_Carbide_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongZirconiumCarbide",
+        1L);
+    public static final ItemStack Long_Tantalum_Carbide_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongTantalumCarbide",
+        1L);
     public static final ItemStack Long_Niobium_Carbide_Rod = getModItem(GTPlusPlus.ID, "itemRodLongNiobiumCarbide", 1L);
-    public static final ItemStack Long_Tungsten_Titanium_Carbide_Rod = getModItem(GTPlusPlus.ID, "itemRodLongTungstenTitaniumCarbide", 1L);
-    public static final ItemStack Long_Ammonium_Bifluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongAmmoniumBifluoride", 1L);
-    public static final ItemStack Long_Beryllium_Hydroxide_Rod = getModItem(GTPlusPlus.ID, "itemRodLongBerylliumHydroxide", 1L);
-    public static final ItemStack Long_Beryllium_Fluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongBerylliumFluoride", 1L);
-    public static final ItemStack Long_Lithium_Fluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongLithiumFluoride", 1L);
-    public static final ItemStack Long_Thorium_Tetrafluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongThoriumTetrafluoride", 1L);
-    public static final ItemStack Long_Thorium_Hexafluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongThoriumHexafluoride", 1L);
-    public static final ItemStack Long_Uranium_Tetrafluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongUraniumTetrafluoride", 1L);
-    public static final ItemStack Long_Uranium_Hexafluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongUraniumHexafluoride", 1L);
-    public static final ItemStack Long_Zirconium_Tetrafluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongZirconiumTetrafluoride", 1L);
-    public static final ItemStack Long_Neptunium_Hexafluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongNeptuniumHexafluoride", 1L);
-    public static final ItemStack Long_Technetium_Hexafluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongTechnetiumHexafluoride", 1L);
-    public static final ItemStack Long_Selenium_Hexafluoride_Rod = getModItem(GTPlusPlus.ID, "itemRodLongSeleniumHexafluoride", 1L);
+    public static final ItemStack Long_Tungsten_Titanium_Carbide_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongTungstenTitaniumCarbide",
+        1L);
+    public static final ItemStack Long_Ammonium_Bifluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongAmmoniumBifluoride",
+        1L);
+    public static final ItemStack Long_Beryllium_Hydroxide_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongBerylliumHydroxide",
+        1L);
+    public static final ItemStack Long_Beryllium_Fluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongBerylliumFluoride",
+        1L);
+    public static final ItemStack Long_Lithium_Fluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongLithiumFluoride",
+        1L);
+    public static final ItemStack Long_Thorium_Tetrafluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongThoriumTetrafluoride",
+        1L);
+    public static final ItemStack Long_Thorium_Hexafluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongThoriumHexafluoride",
+        1L);
+    public static final ItemStack Long_Uranium_Tetrafluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongUraniumTetrafluoride",
+        1L);
+    public static final ItemStack Long_Uranium_Hexafluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongUraniumHexafluoride",
+        1L);
+    public static final ItemStack Long_Zirconium_Tetrafluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongZirconiumTetrafluoride",
+        1L);
+    public static final ItemStack Long_Neptunium_Hexafluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongNeptuniumHexafluoride",
+        1L);
+    public static final ItemStack Long_Technetium_Hexafluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongTechnetiumHexafluoride",
+        1L);
+    public static final ItemStack Long_Selenium_Hexafluoride_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongSeleniumHexafluoride",
+        1L);
     public static final ItemStack Long_LFTR_Fuel_1_Rod = getModItem(GTPlusPlus.ID, "itemRodLongLFTRFuel1", 1L);
     public static final ItemStack Long_LFTR_Fuel_2_Rod = getModItem(GTPlusPlus.ID, "itemRodLongLFTRFuel2", 1L);
     public static final ItemStack Long_LFTR_Fuel_3_Rod = getModItem(GTPlusPlus.ID, "itemRodLongLFTRFuel3", 1L);
@@ -420,10 +721,22 @@ public class LongRodList {
     public static final ItemStack Long_Inconel_690_Rod = getModItem(GTPlusPlus.ID, "itemRodLongInconel690", 1L);
     public static final ItemStack Long_Inconel_792_Rod = getModItem(GTPlusPlus.ID, "itemRodLongInconel792", 1L);
     public static final ItemStack Long_Eglin_Steel_Rod = getModItem(GTPlusPlus.ID, "itemRodLongEglinSteel", 1L);
-    public static final ItemStack Long_Maraging_Steel_250_Rod = getModItem(GTPlusPlus.ID, "itemRodLongMaragingSteel250", 1L);
-    public static final ItemStack Long_Maraging_Steel_300_Rod = getModItem(GTPlusPlus.ID, "itemRodLongMaragingSteel300", 1L);
-    public static final ItemStack Long_Maraging_Steel_350_Rod = getModItem(GTPlusPlus.ID, "itemRodLongMaragingSteel350", 1L);
-    public static final ItemStack Long_Watertight_Steel_Rod = getModItem(GTPlusPlus.ID, "itemRodLongWatertightSteel", 1L);
+    public static final ItemStack Long_Maraging_Steel_250_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongMaragingSteel250",
+        1L);
+    public static final ItemStack Long_Maraging_Steel_300_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongMaragingSteel300",
+        1L);
+    public static final ItemStack Long_Maraging_Steel_350_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongMaragingSteel350",
+        1L);
+    public static final ItemStack Long_Watertight_Steel_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongWatertightSteel",
+        1L);
     public static final ItemStack Long_Nitinol_60_Rod = getModItem(GTPlusPlus.ID, "itemRodLongNitinol60", 1L);
     public static final ItemStack Long_Stellite_Rod = getModItem(GTPlusPlus.ID, "itemRodLongStellite", 1L);
     public static final ItemStack Long_Talonite_Rod = getModItem(GTPlusPlus.ID, "itemRodLongTalonite", 1L);
@@ -435,8 +748,14 @@ public class LongRodList {
     public static final ItemStack Long_Incoloy_DS_Rod = getModItem(GTPlusPlus.ID, "itemRodLongIncoloyDS", 1L);
     public static final ItemStack Long_Incoloy_MA956_Rod = getModItem(GTPlusPlus.ID, "itemRodLongIncoloyMA956", 1L);
     public static final ItemStack Long_Grisium_Rod = getModItem(GTPlusPlus.ID, "itemRodLongGrisium", 1L);
-    public static final ItemStack Long_Trinium_Titanium_Alloy_Rod = getModItem(GTPlusPlus.ID, "itemRodLongTriniumTitaniumAlloy", 1L);
-    public static final ItemStack Long_Trinium_Naquadah_Carbonite_Rod = getModItem(GTPlusPlus.ID, "itemRodLongTriniumNaquadahCarbonite", 1L);
+    public static final ItemStack Long_Trinium_Titanium_Alloy_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongTriniumTitaniumAlloy",
+        1L);
+    public static final ItemStack Long_Trinium_Naquadah_Carbonite_Rod = getModItem(
+        GTPlusPlus.ID,
+        "itemRodLongTriniumNaquadahCarbonite",
+        1L);
     public static final ItemStack Long_Arceus_Alloy_2B_Rod = getModItem(GTPlusPlus.ID, "itemRodLongArceusAlloy2B", 1L);
     public static final ItemStack Long_HeLiCoPtEr_Rod = getModItem(GTPlusPlus.ID, "itemRodLongHeLiCoPtEr", 1L);
     public static final ItemStack Long_Lafium_Compound_Rod = getModItem(GTPlusPlus.ID, "itemRodLongLafiumCompound", 1L);
@@ -450,7 +769,13 @@ public class LongRodList {
     public static final ItemStack Long_Arcanite_Rod = getModItem(GTPlusPlus.ID, "itemRodLongArcanite", 1L);
     public static final ItemStack Long_Octiron_Rod = getModItem(GTPlusPlus.ID, "itemRodLongOctiron", 1L);
     public static final ItemStack Long_Quantum_Rod = getModItem(GTPlusPlus.ID, "itemRodLongQuantum", 1L);
-    public static final ItemStack Long_Radioactive_Mineral_Mix_Rod = getModItem(GTPlusPlus.ID, "item.itemRodLongRadioactiveMineralMix", 1L);
-    public static final ItemStack Long_Lithium_Tetrafluoroberyllate_LFTB_Rod = getModItem(GTPlusPlus.ID, "item.itemRodLongLithiumTetrafluoroberyllateLFTB", 1L);
+    public static final ItemStack Long_Radioactive_Mineral_Mix_Rod = getModItem(
+        GTPlusPlus.ID,
+        "item.itemRodLongRadioactiveMineralMix",
+        1L);
+    public static final ItemStack Long_Lithium_Tetrafluoroberyllate_LFTB_Rod = getModItem(
+        GTPlusPlus.ID,
+        "item.itemRodLongLithiumTetrafluoroberyllateLFTB",
+        1L);
 
 }

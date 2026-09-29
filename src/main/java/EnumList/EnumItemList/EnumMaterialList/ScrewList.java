@@ -1,38 +1,79 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GTPlusPlus;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class ScrewList {
+
     public static final ItemStack Ruthenium_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 64);
     public static final ItemStack Rhodium_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 78);
-    public static final ItemStack Rhodium_Plated_Palladium_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 88);
+    public static final ItemStack Rhodium_Plated_Palladium_Screw = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedscrew",
+        1L,
+        88);
     public static final ItemStack Tiberium_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 89);
     public static final ItemStack Ruridit_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 90);
-    public static final ItemStack High_Durability_Compound_Steel_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 92);
+    public static final ItemStack High_Durability_Compound_Steel_Screw = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedscrew",
+        1L,
+        92);
     public static final ItemStack Ademic_Steel_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 96);
-    public static final ItemStack Atomic_Separation_Catalyst_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10022);
-    public static final ItemStack Extremely_Unstable_Naquadah_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10024);
+    public static final ItemStack Atomic_Separation_Catalyst_Screw = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedscrew",
+        1L,
+        10022);
+    public static final ItemStack Extremely_Unstable_Naquadah_Screw = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedscrew",
+        1L,
+        10024);
     public static final ItemStack Zircaloy_4_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10082);
     public static final ItemStack Zircaloy_2_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10083);
     public static final ItemStack Incoloy_903_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10084);
-    public static final ItemStack Adamantium_Alloy_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10085);
+    public static final ItemStack Adamantium_Alloy_Screw = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedscrew",
+        1L,
+        10085);
     public static final ItemStack MAR_M200_Steel_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10096);
-    public static final ItemStack MAR_Ce_M200_Steel_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10097);
+    public static final ItemStack MAR_Ce_M200_Steel_Screw = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedscrew",
+        1L,
+        10097);
     public static final ItemStack Signalium_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10099);
     public static final ItemStack Lumiium_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10101);
     public static final ItemStack Artherium_Sn_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10102);
-    public static final ItemStack Tanmolyium_Beta_C_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10103);
+    public static final ItemStack Tanmolyium_Beta_C_Screw = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedscrew",
+        1L,
+        10103);
     public static final ItemStack Dalisenite_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10104);
     public static final ItemStack Hikarium_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10105);
     public static final ItemStack Tairitsu_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10106);
-    public static final ItemStack Precious_Metals_Alloy_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10109);
-    public static final ItemStack Enriched_Naquadah_Alloy_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10110);
-    public static final ItemStack Metastable_Oganesson_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10111);
+    public static final ItemStack Precious_Metals_Alloy_Screw = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedscrew",
+        1L,
+        10109);
+    public static final ItemStack Enriched_Naquadah_Alloy_Screw = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedscrew",
+        1L,
+        10110);
+    public static final ItemStack Metastable_Oganesson_Screw = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedscrew",
+        1L,
+        10111);
     public static final ItemStack Shirabon_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 10112);
     public static final ItemStack Mu_metal_Screw = getModItem(BartWorks.ID, "gt.bwMetaGeneratedscrew", 1L, 11351);
     public static final ItemStack Lithium_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27006);
@@ -109,7 +150,11 @@ public class ScrewList {
     public static final ItemStack Six_Phased_Copper_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27147);
     public static final ItemStack Mellion_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27148);
     public static final ItemStack Creon_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27149);
-    public static final ItemStack Hot_Proto_Halkonite_Steel_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27153);
+    public static final ItemStack Hot_Proto_Halkonite_Steel_Screw = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        27153);
     public static final ItemStack Proto_Halkonite_Steel_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27154);
     public static final ItemStack Hot_Exo_Halkonite_Steel_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27156);
     public static final ItemStack Exo_Halkonite_Steel_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27157);
@@ -231,7 +276,11 @@ public class ScrewList {
     public static final ItemStack Epoxid_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27470);
     public static final ItemStack Silicone_Rubber_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27471);
     public static final ItemStack Polycaprolactam_PCL_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27472);
-    public static final ItemStack Polytetrafluoroethylene_PTFE_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27473);
+    public static final ItemStack Polytetrafluoroethylene_PTFE_Screw = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        27473);
     public static final ItemStack Alduorite_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27485);
     public static final ItemStack Rubracium_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27488);
     public static final ItemStack Vulcanite_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27489);
@@ -282,16 +331,32 @@ public class ScrewList {
     public static final ItemStack TPV_Alloy_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27576);
     public static final ItemStack Transcendent_Metal_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27581);
     public static final ItemStack Enriched_Holmium_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27582);
-    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27583);
+    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Screw = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        27583);
     public static final ItemStack White_Dwarf_Matter_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27585);
     public static final ItemStack Black_Dwarf_Matter_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27586);
     public static final ItemStack SpaceTime_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27588);
     public static final ItemStack Polybenzimidazole_PBI_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27599);
-    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27610);
+    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Screw = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        27610);
     public static final ItemStack Borosilicate_Glass_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27611);
     public static final ItemStack Nickel_Zinc_Ferrite_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27613);
-    public static final ItemStack Polyphenylene_Sulfide_PPS_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27631);
-    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27635);
+    public static final ItemStack Polyphenylene_Sulfide_PPS_Screw = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        27631);
+    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Screw = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        27635);
     public static final ItemStack Polystyrene_PS_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27636);
     public static final ItemStack Polyvinyl_Chloride_PVC_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27649);
     public static final ItemStack Kevlar_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27765);
@@ -300,7 +365,11 @@ public class ScrewList {
     public static final ItemStack Obsidian_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27804);
     public static final ItemStack Wood_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27809);
     public static final ItemStack Deep_Iron_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27829);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Screw = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        27856);
     public static final ItemStack Trinium_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27868);
     public static final ItemStack Polyethylene_PE_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27874);
     public static final ItemStack Rubber_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27880);
@@ -338,7 +407,10 @@ public class ScrewList {
     public static final ItemStack Thallium_Screw = getModItem(GTPlusPlus.ID, "itemScrewThallium", 1L);
     public static final ItemStack Germanium_Screw = getModItem(GTPlusPlus.ID, "itemScrewGermanium", 1L);
     public static final ItemStack Astral_Titanium_Screw = getModItem(GTPlusPlus.ID, "itemScrewAstralTitanium", 1L);
-    public static final ItemStack Celestial_Tungsten_Screw = getModItem(GTPlusPlus.ID, "itemScrewCelestialTungsten", 1L);
+    public static final ItemStack Celestial_Tungsten_Screw = getModItem(
+        GTPlusPlus.ID,
+        "itemScrewCelestialTungsten",
+        1L);
     public static final ItemStack Hypogen_Screw = getModItem(GTPlusPlus.ID, "itemScrewHypogen", 1L);
     public static final ItemStack Chromatic_Glass_Screw = getModItem(GTPlusPlus.ID, "itemScrewChromaticGlass", 1L);
     public static final ItemStack Black_Metal_Screw = getModItem(GTPlusPlus.ID, "itemScrewBlackMetal", 1L);
@@ -347,7 +419,10 @@ public class ScrewList {
     public static final ItemStack Zirconium_Carbide_Screw = getModItem(GTPlusPlus.ID, "itemScrewZirconiumCarbide", 1L);
     public static final ItemStack Tantalum_Carbide_Screw = getModItem(GTPlusPlus.ID, "itemScrewTantalumCarbide", 1L);
     public static final ItemStack Niobium_Carbide_Screw = getModItem(GTPlusPlus.ID, "itemScrewNiobiumCarbide", 1L);
-    public static final ItemStack Tungsten_Titanium_Carbide_Screw = getModItem(GTPlusPlus.ID, "itemScrewTungstenTitaniumCarbide", 1L);
+    public static final ItemStack Tungsten_Titanium_Carbide_Screw = getModItem(
+        GTPlusPlus.ID,
+        "itemScrewTungstenTitaniumCarbide",
+        1L);
     public static final ItemStack Energy_Crystal_Screw = getModItem(GTPlusPlus.ID, "itemScrewEnergyCrystal", 1L);
     public static final ItemStack Blood_Steel_Screw = getModItem(GTPlusPlus.ID, "itemScrewBloodSteel", 1L);
     public static final ItemStack Zeron_100_Screw = getModItem(GTPlusPlus.ID, "itemScrewZeron100", 1L);
@@ -375,8 +450,14 @@ public class ScrewList {
     public static final ItemStack Incoloy_DS_Screw = getModItem(GTPlusPlus.ID, "itemScrewIncoloyDS", 1L);
     public static final ItemStack Incoloy_MA956_Screw = getModItem(GTPlusPlus.ID, "itemScrewIncoloyMA956", 1L);
     public static final ItemStack Grisium_Screw = getModItem(GTPlusPlus.ID, "itemScrewGrisium", 1L);
-    public static final ItemStack Trinium_Titanium_Alloy_Screw = getModItem(GTPlusPlus.ID, "itemScrewTriniumTitaniumAlloy", 1L);
-    public static final ItemStack Trinium_Naquadah_Carbonite_Screw = getModItem(GTPlusPlus.ID, "itemScrewTriniumNaquadahCarbonite", 1L);
+    public static final ItemStack Trinium_Titanium_Alloy_Screw = getModItem(
+        GTPlusPlus.ID,
+        "itemScrewTriniumTitaniumAlloy",
+        1L);
+    public static final ItemStack Trinium_Naquadah_Carbonite_Screw = getModItem(
+        GTPlusPlus.ID,
+        "itemScrewTriniumNaquadahCarbonite",
+        1L);
     public static final ItemStack Arceus_Alloy_2B_Screw = getModItem(GTPlusPlus.ID, "itemScrewArceusAlloy2B", 1L);
     public static final ItemStack HeLiCoPtEr_Screw = getModItem(GTPlusPlus.ID, "itemScrewHeLiCoPtEr", 1L);
     public static final ItemStack Lafium_Compound_Screw = getModItem(GTPlusPlus.ID, "itemScrewLafiumCompound", 1L);

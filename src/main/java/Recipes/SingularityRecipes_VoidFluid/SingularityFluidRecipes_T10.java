@@ -3,8 +3,8 @@ package Recipes.SingularityRecipes_VoidFluid;
 import static gregtech.api.enums.Mods.NEIOrePlugin;
 import static gregtech.api.util.GTModHandler.getModItem;
 import static gregtech.api.util.GTRecipeBuilder.SECONDS;
-import static util.AggregateFluidStackArray.addSplitAggregateArray;
 import static util.AggregateFluidStackArray.addCompressAggregateArray;
+import static util.AggregateFluidStackArray.addSplitAggregateArray;
 
 import java.util.HashMap;
 import java.util.Map;

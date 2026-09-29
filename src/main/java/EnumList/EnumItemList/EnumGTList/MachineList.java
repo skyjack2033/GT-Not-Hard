@@ -1,11 +1,12 @@
 package EnumList.EnumItemList.EnumGTList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class MachineList {
+
     // Alloy Smelter
     public static final ItemStack Alloy_Smelter_LV = getModItem(GregTech.ID, "gt.blockmachines", 1L, 201);
     public static final ItemStack Alloy_Smelter_MV = getModItem(GregTech.ID, "gt.blockmachines", 1L, 202);

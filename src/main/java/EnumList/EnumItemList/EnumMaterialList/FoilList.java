@@ -1,19 +1,24 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GTPlusPlus;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.enums.Mods.NewHorizonsCoreMod;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class FoilList {
+
     public static final ItemStack Bismutite_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 1);
     public static final ItemStack Zirconium_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 3);
     public static final ItemStack Cubic_Zirconia_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 4);
     public static final ItemStack Fluor_Buergerite_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 5);
-    public static final ItemStack Chromo_Alumino_Povondraite_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 7);
+    public static final ItemStack Chromo_Alumino_Povondraite_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        7);
     public static final ItemStack Vanadio_Oxy_Dravite_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 8);
     public static final ItemStack Olenite_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 9);
     public static final ItemStack Red_Zircon_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 19);
@@ -31,43 +36,91 @@ public class FoilList {
     public static final ItemStack BArTiMaEuSNeK_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 43);
     public static final ItemStack Ruthenium_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 64);
     public static final ItemStack Rhodium_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 78);
-    public static final ItemStack Rhodium_Plated_Palladium_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 88);
+    public static final ItemStack Rhodium_Plated_Palladium_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        88);
     public static final ItemStack Tiberium_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 89);
     public static final ItemStack Ruridit_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 90);
     public static final ItemStack Fluorspar_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 91);
-    public static final ItemStack High_Durability_Compound_Steel_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 92);
+    public static final ItemStack High_Durability_Compound_Steel_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        92);
     public static final ItemStack Ademic_Steel_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 96);
     public static final ItemStack Fluorophlogopite_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 104);
-    public static final ItemStack Tantalum_Hafnium_Carbide_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 11503);
+    public static final ItemStack Tantalum_Hafnium_Carbide_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        11503);
     public static final ItemStack Magnesia_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 32237);
     public static final ItemStack Orundum_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10023);
-    public static final ItemStack Atomic_Separation_Catalyst_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10022);
-    public static final ItemStack Extremely_Unstable_Naquadah_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10024);
+    public static final ItemStack Atomic_Separation_Catalyst_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        10022);
+    public static final ItemStack Extremely_Unstable_Naquadah_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        10024);
     public static final ItemStack Zn_Th_Alloy_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10053);
     public static final ItemStack Zircaloy_4_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10082);
     public static final ItemStack Zircaloy_2_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10083);
     public static final ItemStack Incoloy_903_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10084);
     public static final ItemStack Adamantium_Alloy_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10085);
     public static final ItemStack MAR_M200_Steel_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10096);
-    public static final ItemStack MAR_Ce_M200_Steel_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10097);
+    public static final ItemStack MAR_Ce_M200_Steel_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        10097);
     public static final ItemStack Lithium_Chloride_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10098);
     public static final ItemStack Signalium_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10099);
     public static final ItemStack Lumiium_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10101);
     public static final ItemStack Artherium_Sn_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10102);
-    public static final ItemStack Tanmolyium_Beta_C_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10103);
+    public static final ItemStack Tanmolyium_Beta_C_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        10103);
     public static final ItemStack Dalisenite_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10104);
     public static final ItemStack Hikarium_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10105);
     public static final ItemStack Tairitsu_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10106);
-    public static final ItemStack Precious_Metals_Alloy_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10109);
-    public static final ItemStack Enriched_Naquadah_Alloy_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10110);
-    public static final ItemStack Metastable_Oganesson_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10111);
+    public static final ItemStack Precious_Metals_Alloy_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        10109);
+    public static final ItemStack Enriched_Naquadah_Alloy_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        10110);
+    public static final ItemStack Metastable_Oganesson_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        10111);
     public static final ItemStack Shirabon_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 10112);
     public static final ItemStack Hafnium_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 11000);
-    public static final ItemStack Cerium_doped_Lutetium_Aluminium_Garnet_Ce_LuAG_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 11499);
+    public static final ItemStack Cerium_doped_Lutetium_Aluminium_Garnet_Ce_LuAG_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        11499);
     public static final ItemStack Permalloy_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 11350);
     public static final ItemStack Mu_metal_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 11351);
     public static final ItemStack Silicon_Nitride_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 11353);
-    public static final ItemStack Lanthanum_Hexaboride_Foil = getModItem(BartWorks.ID, "gt.bwMetaGeneratedfoil", 1L, 11358);
+    public static final ItemStack Lanthanum_Hexaboride_Foil = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedfoil",
+        1L,
+        11358);
     public static final ItemStack Lithium_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29006);
     public static final ItemStack Beryllium_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29008);
     public static final ItemStack Carbon_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29010);
@@ -261,7 +314,11 @@ public class FoilList {
     public static final ItemStack Thin_Epoxid_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29470);
     public static final ItemStack Thin_Silicone_Rubber_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29471);
     public static final ItemStack Thin_Polycaprolactam_PCL_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29472);
-    public static final ItemStack Thin_Polytetrafluoroethylene_PTFE_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29473);
+    public static final ItemStack Thin_Polytetrafluoroethylene_PTFE_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        29473);
     public static final ItemStack Alduorite_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29485);
     public static final ItemStack Rubracium_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29488);
     public static final ItemStack Vulcanite_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29489);
@@ -270,25 +327,53 @@ public class FoilList {
     public static final ItemStack TPV_Alloy_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29576);
     public static final ItemStack Transcendent_Metal_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29581);
     public static final ItemStack Enriched_Holmium_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29582);
-    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29583);
+    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Foil = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        29583);
     public static final ItemStack White_Dwarf_Matter_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29585);
     public static final ItemStack Black_Dwarf_Matter_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29586);
     public static final ItemStack SpaceTime_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29588);
-    public static final ItemStack Thin_Polybenzimidazole_PBI_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29599);
-    public static final ItemStack Thin_Fiber_Reinforced_Epoxy_Resin_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29610);
+    public static final ItemStack Thin_Polybenzimidazole_PBI_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        29599);
+    public static final ItemStack Thin_Fiber_Reinforced_Epoxy_Resin_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        29610);
     public static final ItemStack Borosilicate_Glass_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29611);
     public static final ItemStack Nickel_Zinc_Ferrite_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29613);
-    public static final ItemStack Thin_Polyphenylene_Sulfide_PPS_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29631);
-    public static final ItemStack Thin_Styrene_Butadiene_Rubber_SBR_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29635);
+    public static final ItemStack Thin_Polyphenylene_Sulfide_PPS_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        29631);
+    public static final ItemStack Thin_Styrene_Butadiene_Rubber_SBR_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        29635);
     public static final ItemStack Thin_Polystyrene_PS_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29636);
-    public static final ItemStack Thin_Polyvinyl_Chloride_PVC_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29649);
+    public static final ItemStack Thin_Polyvinyl_Chloride_PVC_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        29649);
     public static final ItemStack Kevlar_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29765);
     public static final ItemStack Endium_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29770);
     public static final ItemStack Nickel_Aluminide_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29772);
     public static final ItemStack Obsidian_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29804);
     public static final ItemStack Wood_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29809);
     public static final ItemStack Deep_Iron_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29829);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Foil = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        29856);
     public static final ItemStack Trinium_Foil = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29868);
     public static final ItemStack Thin_Polyethylene_PE_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29874);
     public static final ItemStack Thin_Rubber_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 29880);

@@ -1,7 +1,5 @@
 package EnumList.EnumItemList.EnumOreProductList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.AppliedEnergistics2;
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.BiomesOPlenty;
@@ -23,14 +21,20 @@ import static gregtech.api.enums.Mods.ProjectRedCore;
 import static gregtech.api.enums.Mods.Railcraft;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class DustList {
+
     public static final ItemStack Gunpowder = getModItem(Minecraft.ID, "gunpowder", 1L);
     public static final ItemStack Redstone_Dust = getModItem(Minecraft.ID, "redstone", 1L);
     public static final ItemStack Glowstone_Dust = getModItem(Minecraft.ID, "glowstone_dust", 1L);
     public static final ItemStack Sugar = getModItem(Minecraft.ID, "sugar", 1L);
     public static final ItemStack Blaze_Powder = getModItem(Minecraft.ID, "blaze_powder", 1L);
     public static final ItemStack Pixie_Dust = getModItem(BiomesOPlenty.ID, "misc", 1L, 11);
-    public static final ItemStack Blood_Infused_Glowstone_Dust = getModItem(BloodArsenal.ID, "blood_infused_glowstone_dust", 1L);
+    public static final ItemStack Blood_Infused_Glowstone_Dust = getModItem(
+        BloodArsenal.ID,
+        "blood_infused_glowstone_dust",
+        1L);
     public static final ItemStack Draconium_Dust = getModItem(DraconicEvolution.ID, "draconiumDust", 1L);
     public static final ItemStack Withering_Dust = getModItem(EnderZoo.ID, "witheringDust", 1L);
     public static final ItemStack Confusing_Powder = getModItem(EnderZoo.ID, "confusingDust", 1L);
@@ -55,7 +59,11 @@ public class DustList {
     public static final ItemStack Cubic_Zirconia_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 4);
     public static final ItemStack Fluor_Buergerite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 5);
     public static final ItemStack Yttrium_Oxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 6);
-    public static final ItemStack Chromo_Alumino_Povondraite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 7);
+    public static final ItemStack Chromo_Alumino_Povondraite_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        7);
     public static final ItemStack Vanadio_Oxy_Dravite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 8);
     public static final ItemStack Olenite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 9);
     public static final ItemStack Arsenopyrite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10);
@@ -78,18 +86,42 @@ public class DustList {
     public static final ItemStack Thorium_232_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 30);
     public static final ItemStack Bismuth_Telluride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 31);
     public static final ItemStack Dibismuthhydroborat_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 33);
-    public static final ItemStack Circuit_Compound_MK3_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 34);
+    public static final ItemStack Circuit_Compound_MK3_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        34);
     public static final ItemStack Prasiolite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 35);
     public static final ItemStack Magneto_Resonatic_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 36);
     public static final ItemStack Californium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 39);
     public static final ItemStack BArTiMaEuSNeK_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 43);
     public static final ItemStack Platinum_Salt_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 45);
-    public static final ItemStack Refined_Platinum_Salt_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 46);
-    public static final ItemStack Platinum_Metallic_Powder_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 47);
+    public static final ItemStack Refined_Platinum_Salt_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        46);
+    public static final ItemStack Platinum_Metallic_Powder_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        47);
     public static final ItemStack Platinum_Residue_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 49);
-    public static final ItemStack Reprecipitated_Platinum_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 51);
-    public static final ItemStack Palladium_Metallic_Powder_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 53);
-    public static final ItemStack Reprecipitated_Palladium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 54);
+    public static final ItemStack Reprecipitated_Platinum_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        51);
+    public static final ItemStack Palladium_Metallic_Powder_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        53);
+    public static final ItemStack Reprecipitated_Palladium_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        54);
     public static final ItemStack Palladium_Salt_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 55);
     public static final ItemStack Sodium_Sulfate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 57);
     public static final ItemStack Potassium_Disulfate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 59);
@@ -98,175 +130,555 @@ public class DustList {
     public static final ItemStack Ruthenium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 64);
     public static final ItemStack Sodium_Ruthenate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 65);
     public static final ItemStack Ruthenium_Tetroxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 66);
-    public static final ItemStack Rarest_Metal_Residue_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 69);
-    public static final ItemStack Iridium_Metal_Residue_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 70);
+    public static final ItemStack Rarest_Metal_Residue_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        69);
+    public static final ItemStack Iridium_Metal_Residue_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        70);
     public static final ItemStack Sludge_Dust_Residue_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 71);
     public static final ItemStack Iridium_Dioxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 73);
     public static final ItemStack Iridium_Chloride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 76);
-    public static final ItemStack Metallic_Sludge_Dust_Residue_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 77);
+    public static final ItemStack Metallic_Sludge_Dust_Residue_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        77);
     public static final ItemStack Rhodium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 78);
     public static final ItemStack Crude_Rhodium_Metal_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 79);
     public static final ItemStack Rhodium_Salt_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 80);
     public static final ItemStack Rhodium_Nitrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 83);
     public static final ItemStack Zinc_Sulfate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 84);
     public static final ItemStack Rhodium_Filter_Cake_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 85);
-    public static final ItemStack Reprecipitated_Rhodium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 87);
-    public static final ItemStack Rhodium_Plated_Palladium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 88);
+    public static final ItemStack Reprecipitated_Rhodium_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        87);
+    public static final ItemStack Rhodium_Plated_Palladium_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        88);
     public static final ItemStack Tiberium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 89);
     public static final ItemStack Ruridit_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 90);
     public static final ItemStack Fluorspar_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 91);
-    public static final ItemStack High_Durability_Compound_Steel_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 92);
+    public static final ItemStack High_Durability_Compound_Steel_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        92);
     public static final ItemStack Atheneite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 93);
     public static final ItemStack Temagamite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 94);
     public static final ItemStack Terlinguaite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 95);
     public static final ItemStack Ademic_Steel_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 96);
     public static final ItemStack Raw_Ademic_Steel_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 97);
-    public static final ItemStack Potassiumfluorosilicate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 99);
-    public static final ItemStack Potassium_Carbonate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 101);
-    public static final ItemStack Raw_Fluorophlogopite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 102);
+    public static final ItemStack Potassiumfluorosilicate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        99);
+    public static final ItemStack Potassium_Carbonate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        101);
+    public static final ItemStack Raw_Fluorophlogopite_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        102);
     public static final ItemStack Fluorophlogopite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 104);
     public static final ItemStack Hafnium_Carbide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11501);
-    public static final ItemStack Tantalum_Carbide_Hafnium_Carbide_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11502);
-    public static final ItemStack Tantalum_Hafnium_Carbide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11503);
-    public static final ItemStack Graphite_Uranium_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10001);
-    public static final ItemStack Uranium_Carbide_Thorium_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10005);
-    public static final ItemStack Plutonium_Oxide_Uranium_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10009);
-    public static final ItemStack Vanadium_Pentoxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10014);
+    public static final ItemStack Tantalum_Carbide_Hafnium_Carbide_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11502);
+    public static final ItemStack Tantalum_Hafnium_Carbide_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11503);
+    public static final ItemStack Graphite_Uranium_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10001);
+    public static final ItemStack Uranium_Carbide_Thorium_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10005);
+    public static final ItemStack Plutonium_Oxide_Uranium_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10009);
+    public static final ItemStack Vanadium_Pentoxide_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10014);
     public static final ItemStack Thorium_Oxalate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10016);
-    public static final ItemStack Thorium_Hydroxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10017);
+    public static final ItemStack Thorium_Hydroxide_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10017);
     public static final ItemStack Sodium_Oxalate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10018);
     public static final ItemStack Orundum_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10023);
-    public static final ItemStack Atomic_Separation_Catalyst_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10022);
-    public static final ItemStack Extremely_Unstable_Naquadah_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10024);
-    public static final ItemStack Radioactive_Sludge_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10035);
+    public static final ItemStack Atomic_Separation_Catalyst_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10022);
+    public static final ItemStack Extremely_Unstable_Naquadah_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10024);
+    public static final ItemStack Radioactive_Sludge_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10035);
     public static final ItemStack Zinc_Chloride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10052);
     public static final ItemStack Zn_Th_Alloy_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10053);
-    public static final ItemStack Naquadah_Oxide_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10054);
-    public static final ItemStack Titanium_Trifluoride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10055);
-    public static final ItemStack Gallium_Hydroxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10057);
+    public static final ItemStack Naquadah_Oxide_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10054);
+    public static final ItemStack Titanium_Trifluoride_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10055);
+    public static final ItemStack Gallium_Hydroxide_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10057);
     public static final ItemStack Naquadahine_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10063);
     public static final ItemStack Adamantine_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10066);
-    public static final ItemStack Enriched_Naquadah_Oxide_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10067);
+    public static final ItemStack Enriched_Naquadah_Oxide_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10067);
     public static final ItemStack Trinium_Sulphate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10068);
-    public static final ItemStack Concentrated_Enriched_Naquadah_Sludge_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10070);
-    public static final ItemStack Enriched_Naquadah_Sulphate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10071);
-    public static final ItemStack Naquadria_Oxide_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10072);
+    public static final ItemStack Concentrated_Enriched_Naquadah_Sludge_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10070);
+    public static final ItemStack Enriched_Naquadah_Sulphate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10071);
+    public static final ItemStack Naquadria_Oxide_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10072);
     public static final ItemStack Indium_Phosphate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10073);
-    public static final ItemStack Low_Quality_Naquadria_Phosphate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10074);
-    public static final ItemStack Low_Quality_Naquadria_Sulphate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10076);
-    public static final ItemStack Naquadria_Sulphate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10078);
+    public static final ItemStack Low_Quality_Naquadria_Phosphate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10074);
+    public static final ItemStack Low_Quality_Naquadria_Sulphate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10076);
+    public static final ItemStack Naquadria_Sulphate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10078);
     public static final ItemStack Zircaloy_4_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10082);
     public static final ItemStack Zircaloy_2_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10083);
     public static final ItemStack Incoloy_903_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10084);
     public static final ItemStack Adamantium_Alloy_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10085);
     public static final ItemStack Ferrocene_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10093);
     public static final ItemStack MAR_M200_Steel_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10096);
-    public static final ItemStack MAR_Ce_M200_Steel_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10097);
+    public static final ItemStack MAR_Ce_M200_Steel_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10097);
     public static final ItemStack Lithium_Chloride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10098);
     public static final ItemStack Signalium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10099);
     public static final ItemStack Lumiinessence_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10100);
     public static final ItemStack Lumiium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10101);
     public static final ItemStack Artherium_Sn_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10102);
-    public static final ItemStack Tanmolyium_Beta_C_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10103);
+    public static final ItemStack Tanmolyium_Beta_C_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10103);
     public static final ItemStack Dalisenite_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10104);
     public static final ItemStack Hikarium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10105);
     public static final ItemStack Tairitsu_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10106);
-    public static final ItemStack Magnesium_Sulphate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10108);
-    public static final ItemStack Precious_Metals_Alloy_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10109);
-    public static final ItemStack Enriched_Naquadah_Alloy_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10110);
-    public static final ItemStack Metastable_Oganesson_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10111);
+    public static final ItemStack Magnesium_Sulphate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10108);
+    public static final ItemStack Precious_Metals_Alloy_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10109);
+    public static final ItemStack Enriched_Naquadah_Alloy_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10110);
+    public static final ItemStack Metastable_Oganesson_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10111);
     public static final ItemStack Shirabon_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10112);
     public static final ItemStack Inert_Naquadah_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10113);
-    public static final ItemStack Inert_Enriched_Naquadah_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10114);
+    public static final ItemStack Inert_Enriched_Naquadah_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        10114);
     public static final ItemStack Inert_Naquadria_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 10115);
     public static final ItemStack Hafnium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11000);
-    public static final ItemStack Low_Purity_Hafnium_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11001);
+    public static final ItemStack Low_Purity_Hafnium_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11001);
     public static final ItemStack Hafnia_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11002);
-    public static final ItemStack Hafnium_Tetrachloride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11003);
+    public static final ItemStack Hafnium_Tetrachloride_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11003);
     public static final ItemStack Hafnium_Iodide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11005);
     public static final ItemStack Hafnium_Runoff_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11006);
     public static final ItemStack Zirconia_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11008);
-    public static final ItemStack Zirconium_Tetrachloride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11009);
-    public static final ItemStack Hafnia_Zirconia_Blend_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11011);
+    public static final ItemStack Zirconium_Tetrachloride_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11009);
+    public static final ItemStack Hafnia_Zirconia_Blend_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11011);
     public static final ItemStack Iodine_Dust_BartWorks = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11012);
     public static final ItemStack Monazite_Sulfate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11019);
-    public static final ItemStack Acidic_Monazite_Powder_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11020);
-    public static final ItemStack Monazite_Rare_Earth_Filtrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11021);
-    public static final ItemStack Neutralized_Monazite_Rare_Earth_Filtrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11022);
-    public static final ItemStack Monazite_Rare_Earth_Hydroxide_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11023);
-    public static final ItemStack Dried_Monazite_Rare_Earth_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11024);
+    public static final ItemStack Acidic_Monazite_Powder_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11020);
+    public static final ItemStack Monazite_Rare_Earth_Filtrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11021);
+    public static final ItemStack Neutralized_Monazite_Rare_Earth_Filtrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11022);
+    public static final ItemStack Monazite_Rare_Earth_Hydroxide_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11023);
+    public static final ItemStack Dried_Monazite_Rare_Earth_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11024);
     public static final ItemStack Cerium_Dioxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11025);
     public static final ItemStack Cerium_Chloride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11026);
     public static final ItemStack Cerium_Oxalate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11027);
     public static final ItemStack Cerium_III_Oxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11028);
-    public static final ItemStack Cerium_Rich_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11029);
-    public static final ItemStack Cooled_Monazite_Rare_Earth_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11030);
-    public static final ItemStack Monazite_Rarer_Earth_Sediment_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11031);
-    public static final ItemStack Heterogenous_Halogenic_Monazite_Rare_Earth_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11032);
-    public static final ItemStack Saturated_Monazite_Rare_Earth_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11033);
+    public static final ItemStack Cerium_Rich_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11029);
+    public static final ItemStack Cooled_Monazite_Rare_Earth_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11030);
+    public static final ItemStack Monazite_Rarer_Earth_Sediment_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11031);
+    public static final ItemStack Heterogenous_Halogenic_Monazite_Rare_Earth_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11032);
+    public static final ItemStack Saturated_Monazite_Rare_Earth_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11033);
     public static final ItemStack Samaric_Residue_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11034);
-    public static final ItemStack Thorium_Phosphate_Cake_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11037);
-    public static final ItemStack Thorium_Phosphate_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11038);
+    public static final ItemStack Thorium_Phosphate_Cake_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11037);
+    public static final ItemStack Thorium_Phosphate_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11038);
     public static final ItemStack Uranium_Filtrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11039);
-    public static final ItemStack Neutralized_Uranium_Filtrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11040);
+    public static final ItemStack Neutralized_Uranium_Filtrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11040);
     public static final ItemStack Seaweed_Ash_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11041);
-    public static final ItemStack Potassium_Permanganate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11043);
+    public static final ItemStack Potassium_Permanganate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11043);
     public static final ItemStack Europium_Oxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11047);
     public static final ItemStack Europium_Sulfide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11048);
     public static final ItemStack Unknown_Blend_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11049);
-    public static final ItemStack Europium_III_Oxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11050);
-    public static final ItemStack Bastnasite_Rare_Earth_Oxides_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11107);
-    public static final ItemStack Acid_Leached_Bastnasite_Rare_Earth_Oxides_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11108);
+    public static final ItemStack Europium_III_Oxide_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11050);
+    public static final ItemStack Bastnasite_Rare_Earth_Oxides_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11107);
+    public static final ItemStack Acid_Leached_Bastnasite_Rare_Earth_Oxides_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11108);
     public static final ItemStack Gangue_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11109);
-    public static final ItemStack Roasted_Rare_Earth_Oxides_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11110);
-    public static final ItemStack Wet_Rare_Earth_Oxides_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11111);
-    public static final ItemStack Cerium_Oxidised_Rare_Earth_Oxides_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11112);
-    public static final ItemStack Bastnasite_Rarer_Earth_Oxides_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11113);
-    public static final ItemStack Samaric_Rare_Earth_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11116);
-    public static final ItemStack Neodymium_Rare_Earth_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11117);
-    public static final ItemStack Lanthanium_Chloride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11121);
+    public static final ItemStack Roasted_Rare_Earth_Oxides_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11110);
+    public static final ItemStack Wet_Rare_Earth_Oxides_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11111);
+    public static final ItemStack Cerium_Oxidised_Rare_Earth_Oxides_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11112);
+    public static final ItemStack Bastnasite_Rarer_Earth_Oxides_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11113);
+    public static final ItemStack Samaric_Rare_Earth_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11116);
+    public static final ItemStack Neodymium_Rare_Earth_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11117);
+    public static final ItemStack Lanthanium_Chloride_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11121);
     public static final ItemStack Neodymium_Oxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11122);
-    public static final ItemStack Fluorinated_Samaric_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11123);
+    public static final ItemStack Fluorinated_Samaric_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11123);
     public static final ItemStack Calcium_Fluoride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11124);
-    public static final ItemStack Samarium_Terbium_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11125);
-    public static final ItemStack Nitrogenated_Samarium_Terbium_Mixture_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11126);
+    public static final ItemStack Samarium_Terbium_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11125);
+    public static final ItemStack Nitrogenated_Samarium_Terbium_Mixture_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11126);
     public static final ItemStack Terbium_Nitrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11127);
-    public static final ItemStack Samarium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11128);
-    public static final ItemStack Dephosphated_Samarium_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11129);
-    public static final ItemStack Tellurium_Molybdenum_Oxide_Catalyst_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11303);
-    public static final ItemStack Tellurium_IV_Oxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11304);
-    public static final ItemStack Molybdenum_IV_Oxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11305);
-    public static final ItemStack Potassium_Chlorate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11314);
-    public static final ItemStack Molybdenum_Trioxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11317);
-    public static final ItemStack SamariumIII_Oxalate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11464);
-    public static final ItemStack SamariumIII_Chloride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11465);
-    public static final ItemStack Samarium_Chloride_Sodium_Chloride_Blend_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11466);
-    public static final ItemStack Impure_Lanthanum_Chloride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11467);
+    public static final ItemStack Samarium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11128);
+    public static final ItemStack Dephosphated_Samarium_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11129);
+    public static final ItemStack Tellurium_Molybdenum_Oxide_Catalyst_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11303);
+    public static final ItemStack Tellurium_IV_Oxide_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11304);
+    public static final ItemStack Molybdenum_IV_Oxide_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11305);
+    public static final ItemStack Potassium_Chlorate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11314);
+    public static final ItemStack Molybdenum_Trioxide_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11317);
+    public static final ItemStack SamariumIII_Oxalate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11464);
+    public static final ItemStack SamariumIII_Chloride_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11465);
+    public static final ItemStack Samarium_Chloride_Sodium_Chloride_Blend_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11466);
+    public static final ItemStack Impure_Lanthanum_Chloride_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11467);
     public static final ItemStack Samarium_Oxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11468);
-    public static final ItemStack Rarest_Earth_Residue_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11472);
-    public static final ItemStack Lanthanum_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11446);
-    public static final ItemStack Praseodymium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11447);
-    public static final ItemStack Neodymium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11449);
-    public static final ItemStack Promethium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11450);
-    public static final ItemStack Europium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11451);
-    public static final ItemStack Gadolinium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11452);
-    public static final ItemStack Terbium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11453);
-    public static final ItemStack Dysprosium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11454);
-    public static final ItemStack Holmium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11455);
-    public static final ItemStack Erbium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11456);
-    public static final ItemStack Thulium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11457);
-    public static final ItemStack Ytterbium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11458);
-    public static final ItemStack Lutetium_Ore_Concentrate_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11459);
-    public static final ItemStack Cerium_doped_Lutetium_Aluminium_Oxygen_Blend_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11498);
+    public static final ItemStack Rarest_Earth_Residue_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11472);
+    public static final ItemStack Lanthanum_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11446);
+    public static final ItemStack Praseodymium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11447);
+    public static final ItemStack Neodymium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11449);
+    public static final ItemStack Promethium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11450);
+    public static final ItemStack Europium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11451);
+    public static final ItemStack Gadolinium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11452);
+    public static final ItemStack Terbium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11453);
+    public static final ItemStack Dysprosium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11454);
+    public static final ItemStack Holmium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11455);
+    public static final ItemStack Erbium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11456);
+    public static final ItemStack Thulium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11457);
+    public static final ItemStack Ytterbium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11458);
+    public static final ItemStack Lutetium_Ore_Concentrate_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11459);
+    public static final ItemStack Cerium_doped_Lutetium_Aluminium_Oxygen_Blend_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11498);
     public static final ItemStack Permalloy_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11350);
     public static final ItemStack Mu_metal_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11351);
     public static final ItemStack Thorium_234_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11352);
     public static final ItemStack Silicon_Nitride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11353);
     public static final ItemStack Boron_Trioxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11356);
-    public static final ItemStack Lanthanum_Hexaboride_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11358);
+    public static final ItemStack Lanthanum_Hexaboride_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        11358);
     public static final ItemStack Lanthanum_Oxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 11359);
     public static final ItemStack Tungstic_Acid_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 29900);
-    public static final ItemStack Tungsten_Trioxide_Dust = getModItem(BartWorks.ID, "gt.bwMetaGenerateddust", 1L, 29901);
+    public static final ItemStack Tungsten_Trioxide_Dust = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGenerateddust",
+        1L,
+        29901);
     public static final ItemStack Lithium_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2006);
     public static final ItemStack Beryllium_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2008);
     public static final ItemStack Boron_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2009);
@@ -354,7 +766,11 @@ public class DustList {
     public static final ItemStack Staurolite_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2168);
     public static final ItemStack Cordierite_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2169);
     public static final ItemStack Datolite_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2170);
-    public static final ItemStack Metamorphic_Mineral_Mixture_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2171);
+    public static final ItemStack Metamorphic_Mineral_Mixture_Dust = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        2171);
     public static final ItemStack Plagioclase_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2172);
     public static final ItemStack Francium_Hydroxide_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2177);
     public static final ItemStack Shijima_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2189);
@@ -484,7 +900,11 @@ public class DustList {
     public static final ItemStack Epoxid_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2470);
     public static final ItemStack Silicone_Rubber_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2471);
     public static final ItemStack Polycaprolactam_PCL_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2472);
-    public static final ItemStack Polytetrafluoroethylene_PTFE_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2473);
+    public static final ItemStack Polytetrafluoroethylene_PTFE_Pulp = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        2473);
     public static final ItemStack Alduorite_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2485);
     public static final ItemStack Rubracium_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2488);
     public static final ItemStack Vulcanite_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2489);
@@ -554,7 +974,11 @@ public class DustList {
     public static final ItemStack Potassium_Dichromate_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2594);
     public static final ItemStack Polybenzimidazole_PBI_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2599);
     public static final ItemStack Pyrochlore_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2607);
-    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2610);
+    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Pulp = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        2610);
     public static final ItemStack Borosilicate_Glass_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2611);
     public static final ItemStack Ferrite_Mixture_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2612);
     public static final ItemStack Nickel_Zinc_Ferrite_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2613);
@@ -574,8 +998,16 @@ public class DustList {
     public static final ItemStack Sodium_Bisulfate_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2630);
     public static final ItemStack Polyphenylene_Sulfide_PPS_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2631);
     public static final ItemStack Polydimethylsiloxane_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2633);
-    public static final ItemStack Raw_Styrene_Butadiene_Rubber_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2634);
-    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2635);
+    public static final ItemStack Raw_Styrene_Butadiene_Rubber_Dust = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        2634);
+    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Pulp = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        2635);
     public static final ItemStack Polystyrene_PS_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2636);
     public static final ItemStack Polyvinyl_Chloride_PVC_Pulp = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2649);
     public static final ItemStack Phosphorous_Pentoxide_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2665);
@@ -612,7 +1044,11 @@ public class DustList {
     public static final ItemStack Terephthaloyl_Chloride_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2782);
     public static final ItemStack Pentaerythritol_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2785);
     public static final ItemStack Polyurethane_Catalyst_A_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2790);
-    public static final ItemStack Diphenylmethane_Diisocyanate_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2796);
+    public static final ItemStack Diphenylmethane_Diisocyanate_Dust = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        2796);
     public static final ItemStack Calcium_Hydride_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2797);
     public static final ItemStack Flint_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2802);
     public static final ItemStack Obsidian_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2804);
@@ -663,7 +1099,11 @@ public class DustList {
     public static final ItemStack Cobalt_Hexahydrate_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2853);
     public static final ItemStack Construction_Foam_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2854);
     public static final ItemStack Chalcopyrite_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2855);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Dust = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        2856);
     public static final ItemStack Crude_Oil_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2858);
     public static final ItemStack Emery_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2861);
     public static final ItemStack Epidote_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2862);
@@ -798,28 +1238,67 @@ public class DustList {
     public static final ItemStack Dragonblood_Dust = getModItem(GTPlusPlus.ID, "itemDustDragonblood", 1L);
     public static final ItemStack Sodium_Nitrate_Dust = getModItem(GTPlusPlus.ID, "itemDustSodiumNitrate", 1L);
     public static final ItemStack Strontium_Oxide_Dust = getModItem(GTPlusPlus.ID, "itemDustStrontiumOxide", 1L);
-    public static final ItemStack Strontium_Hydroxide_Dust = getModItem(GTPlusPlus.ID, "itemDustStrontiumHydroxide", 1L);
+    public static final ItemStack Strontium_Hydroxide_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustStrontiumHydroxide",
+        1L);
     public static final ItemStack Cyanoacetic_Acid_Dust = getModItem(GTPlusPlus.ID, "itemDustCyanoaceticAcid", 1L);
     public static final ItemStack Sodium_Cyanide_Dust = getModItem(GTPlusPlus.ID, "itemDustSodiumCyanide", 1L);
     public static final ItemStack CopperII_Sulfate_Dust = getModItem(GTPlusPlus.ID, "itemDustCopperIISulfate", 1L);
-    public static final ItemStack CopperII_Sulfate_Pentahydrate_Dust = getModItem(GTPlusPlus.ID, "itemDustCopperIISulfatePentahydrate", 1L);
+    public static final ItemStack CopperII_Sulfate_Pentahydrate_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustCopperIISulfatePentahydrate",
+        1L);
     public static final ItemStack Silicon_Carbide_Dust = getModItem(GTPlusPlus.ID, "itemDustSiliconCarbide", 1L);
     public static final ItemStack Zirconium_Carbide_Dust = getModItem(GTPlusPlus.ID, "itemDustZirconiumCarbide", 1L);
     public static final ItemStack Tantalum_Carbide_Dust = getModItem(GTPlusPlus.ID, "itemDustTantalumCarbide", 1L);
     public static final ItemStack Niobium_Carbide_Dust = getModItem(GTPlusPlus.ID, "itemDustNiobiumCarbide", 1L);
-    public static final ItemStack Tungsten_Titanium_Carbide_Dust = getModItem(GTPlusPlus.ID, "itemDustTungstenTitaniumCarbide", 1L);
-    public static final ItemStack Ammonium_Bifluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustAmmoniumBifluoride", 1L);
-    public static final ItemStack Beryllium_Hydroxide_Dust = getModItem(GTPlusPlus.ID, "itemDustBerylliumHydroxide", 1L);
+    public static final ItemStack Tungsten_Titanium_Carbide_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustTungstenTitaniumCarbide",
+        1L);
+    public static final ItemStack Ammonium_Bifluoride_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustAmmoniumBifluoride",
+        1L);
+    public static final ItemStack Beryllium_Hydroxide_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustBerylliumHydroxide",
+        1L);
     public static final ItemStack Beryllium_Fluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustBerylliumFluoride", 1L);
     public static final ItemStack Lithium_Fluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustLithiumFluoride", 1L);
-    public static final ItemStack Thorium_Tetrafluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustThoriumTetrafluoride", 1L);
-    public static final ItemStack Thorium_Hexafluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustThoriumHexafluoride", 1L);
-    public static final ItemStack Uranium_Tetrafluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustUraniumTetrafluoride", 1L);
-    public static final ItemStack Uranium_Hexafluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustUraniumHexafluoride", 1L);
-    public static final ItemStack Zirconium_Tetrafluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustZirconiumTetrafluoride", 1L);
-    public static final ItemStack Neptunium_Hexafluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustNeptuniumHexafluoride", 1L);
-    public static final ItemStack Technetium_Hexafluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustTechnetiumHexafluoride", 1L);
-    public static final ItemStack Selenium_Hexafluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustSeleniumHexafluoride", 1L);
+    public static final ItemStack Thorium_Tetrafluoride_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustThoriumTetrafluoride",
+        1L);
+    public static final ItemStack Thorium_Hexafluoride_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustThoriumHexafluoride",
+        1L);
+    public static final ItemStack Uranium_Tetrafluoride_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustUraniumTetrafluoride",
+        1L);
+    public static final ItemStack Uranium_Hexafluoride_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustUraniumHexafluoride",
+        1L);
+    public static final ItemStack Zirconium_Tetrafluoride_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustZirconiumTetrafluoride",
+        1L);
+    public static final ItemStack Neptunium_Hexafluoride_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustNeptuniumHexafluoride",
+        1L);
+    public static final ItemStack Technetium_Hexafluoride_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustTechnetiumHexafluoride",
+        1L);
+    public static final ItemStack Selenium_Hexafluoride_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustSeleniumHexafluoride",
+        1L);
     public static final ItemStack LFTR_Fuel_1_Dust = getModItem(GTPlusPlus.ID, "itemDustLFTRFuel1", 1L);
     public static final ItemStack LFTR_Fuel_2_Dust = getModItem(GTPlusPlus.ID, "itemDustLFTRFuel2", 1L);
     public static final ItemStack LFTR_Fuel_3_Dust = getModItem(GTPlusPlus.ID, "itemDustLFTRFuel3", 1L);
@@ -834,7 +1313,10 @@ public class DustList {
     public static final ItemStack Inconel_625_Dust = getModItem(GTPlusPlus.ID, "itemDustInconel625", 1L);
     public static final ItemStack Inconel_690_Dust = getModItem(GTPlusPlus.ID, "itemDustInconel690", 1L);
     public static final ItemStack Inconel_792_Dust = getModItem(GTPlusPlus.ID, "itemDustInconel792", 1L);
-    public static final ItemStack Eglin_Steel_Base_Compound_Dust = getModItem(GTPlusPlus.ID, "itemDustEglinSteelBaseCompound", 1L);
+    public static final ItemStack Eglin_Steel_Base_Compound_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustEglinSteelBaseCompound",
+        1L);
     public static final ItemStack Eglin_Steel_Dust = getModItem(GTPlusPlus.ID, "itemDustEglinSteel", 1L);
     public static final ItemStack Maraging_Steel_250_Dust = getModItem(GTPlusPlus.ID, "itemDustMaragingSteel250", 1L);
     public static final ItemStack Maraging_Steel_300_Dust = getModItem(GTPlusPlus.ID, "itemDustMaragingSteel300", 1L);
@@ -852,9 +1334,18 @@ public class DustList {
     public static final ItemStack Incoloy_MA956_Dust = getModItem(GTPlusPlus.ID, "itemDustIncoloyMA956", 1L);
     public static final ItemStack Grisium_Dust = getModItem(GTPlusPlus.ID, "itemDustGrisium", 1L);
     public static final ItemStack HG_1223_Dust = getModItem(GTPlusPlus.ID, "itemDustHG1223", 1L);
-    public static final ItemStack Trinium_Titanium_Alloy_Dust = getModItem(GTPlusPlus.ID, "itemDustTriniumTitaniumAlloy", 1L);
-    public static final ItemStack Trinium_Naquadah_Alloy_Dust = getModItem(GTPlusPlus.ID, "itemDustTriniumNaquadahAlloy", 1L);
-    public static final ItemStack Trinium_Naquadah_Carbonite_Dust = getModItem(GTPlusPlus.ID, "itemDustTriniumNaquadahCarbonite", 1L);
+    public static final ItemStack Trinium_Titanium_Alloy_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustTriniumTitaniumAlloy",
+        1L);
+    public static final ItemStack Trinium_Naquadah_Alloy_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustTriniumNaquadahAlloy",
+        1L);
+    public static final ItemStack Trinium_Naquadah_Carbonite_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustTriniumNaquadahCarbonite",
+        1L);
     public static final ItemStack Arceus_Alloy_2B_Dust = getModItem(GTPlusPlus.ID, "itemDustArceusAlloy2B", 1L);
     public static final ItemStack HeLiCoPtEr_Dust = getModItem(GTPlusPlus.ID, "itemDustHeLiCoPtEr", 1L);
     public static final ItemStack Lafium_Compound_Dust = getModItem(GTPlusPlus.ID, "itemDustLafiumCompound", 1L);
@@ -917,7 +1408,10 @@ public class DustList {
     public static final ItemStack Irarsite_Dust = getModItem(GTPlusPlus.ID, "itemDustIrarsite", 1L);
     public static final ItemStack Greenockite_Dust = getModItem(GTPlusPlus.ID, "itemDustGreenockite", 1L);
     public static final ItemStack Barite_Ra_Dust = getModItem(GTPlusPlus.ID, "itemDustBariteRa", 1L);
-    public static final ItemStack Radioactive_Mineral_Mix_Dust = getModItem(GTPlusPlus.ID, "itemDustRadioactiveMineralMix", 1L);
+    public static final ItemStack Radioactive_Mineral_Mix_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustRadioactiveMineralMix",
+        1L);
     public static final ItemStack Rare_Earth_I_Dust = getModItem(GTPlusPlus.ID, "itemDustRareEarthI", 1L);
     public static final ItemStack Rare_Earth_II_Dust = getModItem(GTPlusPlus.ID, "itemDustRareEarthII", 1L);
     public static final ItemStack Rare_Earth_III_Dust = getModItem(GTPlusPlus.ID, "itemDustRareEarthIII", 1L);
@@ -934,24 +1428,42 @@ public class DustList {
     public static final ItemStack Calcium_Sulfate_Gypsum_Dust = getModItem(GTPlusPlus.ID, "itemDustGypsum", 1L);
     public static final ItemStack Li2CO3_CaO2H2_Compound_Dust = getModItem(GTPlusPlus.ID, "itemDustLi2CO3CaOH2", 1L);
     public static final ItemStack Sodium_Fluoride_Dust = getModItem(GTPlusPlus.ID, "itemDustSodiumFluoride", 1L);
-    public static final ItemStack Lithium_Tetrafluoroberyllate_Fuel_Compound_Dust = getModItem(GTPlusPlus.ID, "itemDustLi2BeF4", 1L);
+    public static final ItemStack Lithium_Tetrafluoroberyllate_Fuel_Compound_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustLi2BeF4",
+        1L);
     public static final ItemStack Phthalic_Anhydride_Dust = getModItem(GTPlusPlus.ID, "itemDustPhthalicAnhydride", 1L);
-    public static final ItemStack Lithium_Hydroperoxide_Dust = getModItem(GTPlusPlus.ID, "itemDustLithiumHydroperoxide", 1L);
-    public static final ItemStack Formaldehyde_Catalyst_Dust = getModItem(GTPlusPlus.ID, "itemDustFormaldehydeCatalyst", 1L);
+    public static final ItemStack Lithium_Hydroperoxide_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustLithiumHydroperoxide",
+        1L);
+    public static final ItemStack Formaldehyde_Catalyst_Dust = getModItem(
+        GTPlusPlus.ID,
+        "itemDustFormaldehydeCatalyst",
+        1L);
     public static final ItemStack Ammonium_Nitrate_Dust = getModItem(GTPlusPlus.ID, "itemDustAmmoniumNitrate", 1L);
     public static final ItemStack ZrCl4_Dust = getModItem(GTPlusPlus.ID, "itemDustZrCl4", 1L);
     public static final ItemStack Cooked_ZrCl4_Dust = getModItem(GTPlusPlus.ID, "itemDustCookedZrCl4", 1L);
     public static final ItemStack Decayed_Radium_226_Dust = getModItem(GTPlusPlus.ID, "itemDustDecayedRadium226", 1L);
     public static final ItemStack Selenium_Dioxide_Dust = getModItem(GTPlusPlus.ID, "itemDustSeleniumDioxide", 1L);
-    public static final ItemStack Advanced_Coke_Oven_Brick_Dust = getModItem(NewHorizonsCoreMod.ID, "AdvancedCokeOvenBrickDust", 1L);
+    public static final ItemStack Advanced_Coke_Oven_Brick_Dust = getModItem(
+        NewHorizonsCoreMod.ID,
+        "AdvancedCokeOvenBrickDust",
+        1L);
     public static final ItemStack Asteroid_Stone_Dust = getModItem(NewHorizonsCoreMod.ID, "AsteroidsStoneDust", 1L);
     public static final ItemStack Barnarda_E_Stone_Dust = getModItem(NewHorizonsCoreMod.ID, "BarnardaEStoneDust", 1L);
     public static final ItemStack Barnarda_F_Stone_Dust = getModItem(NewHorizonsCoreMod.ID, "BarnardaFStoneDust", 1L);
     public static final ItemStack Callisto_Stone_Dust = getModItem(NewHorizonsCoreMod.ID, "CallistoStoneDust", 1L);
-    public static final ItemStack Centauri_Bb_Surface_Dust = getModItem(NewHorizonsCoreMod.ID, "CentauriASurfaceDust", 1L);
+    public static final ItemStack Centauri_Bb_Surface_Dust = getModItem(
+        NewHorizonsCoreMod.ID,
+        "CentauriASurfaceDust",
+        1L);
     public static final ItemStack Centauri_Bb_Stone_Dust = getModItem(NewHorizonsCoreMod.ID, "CentauriAStoneDust", 1L);
     public static final ItemStack Ceres_Stone_Dust = getModItem(NewHorizonsCoreMod.ID, "CeresStoneDust", 1L);
-    public static final ItemStack Charged_Certus_Quartz_Dust = getModItem(NewHorizonsCoreMod.ID, "ChargedCertusQuartzDust", 1L);
+    public static final ItemStack Charged_Certus_Quartz_Dust = getModItem(
+        NewHorizonsCoreMod.ID,
+        "ChargedCertusQuartzDust",
+        1L);
     public static final ItemStack Coke_Oven_Brick_Dust = getModItem(NewHorizonsCoreMod.ID, "CokeOvenBrickDust", 1L);
     public static final ItemStack Deimos_Stone_Dust = getModItem(NewHorizonsCoreMod.ID, "DeimosStoneDust", 1L);
     public static final ItemStack Enceladus_Slush_Dust = getModItem(NewHorizonsCoreMod.ID, "EnceladusIceDust", 1L);
@@ -983,7 +1495,10 @@ public class DustList {
     public static final ItemStack Triton_Stone_Dust = getModItem(NewHorizonsCoreMod.ID, "TritonStoneDust", 1L);
     public static final ItemStack Vega_B_Stone_Dust = getModItem(NewHorizonsCoreMod.ID, "VegaBStoneDust", 1L);
     public static final ItemStack Venus_Stone_Dust = getModItem(NewHorizonsCoreMod.ID, "VenusStoneDust", 1L);
-    public static final ItemStack Stargate_Crystal_Dust_of_the_Ancients = getModItem(NewHorizonsCoreMod.ID, "StargateDustAncients", 1L);
+    public static final ItemStack Stargate_Crystal_Dust_of_the_Ancients = getModItem(
+        NewHorizonsCoreMod.ID,
+        "StargateDustAncients",
+        1L);
     public static final ItemStack Cocoa_Powder = getModItem(PamsHarvestCraft.ID, "cocoapowderItem", 1L);
     public static final ItemStack YSZ_Ceramic_Dust = getModItem(KekzTech.ID, "kekztech_crafting_item", 1L, 9);
     public static final ItemStack GDC_Ceramic_Dust = getModItem(KekzTech.ID, "kekztech_crafting_item", 1L, 10);
@@ -995,8 +1510,20 @@ public class DustList {
     public static final ItemStack Protactinium_233_Dust = getModItem(GTPlusPlus.ID, "dustProtactinium233", 1L);
     public static final ItemStack Alginic_Acid = getModItem(GTPlusPlus.ID, "item.BasicAgrichemItem", 1L, 15);
     public static final ItemStack Sodium_Ethoxide_Dust = getModItem(GTPlusPlus.ID, "item.BasicGenericChemItem", 1L, 9);
-    public static final ItemStack Sodium_Ethyl_Xanthate_Dust = getModItem(GTPlusPlus.ID, "item.BasicGenericChemItem", 1L, 10);
-    public static final ItemStack Potassium_Ethyl_Xanthate_Dust = getModItem(GTPlusPlus.ID, "item.BasicGenericChemItem", 1L, 11);
-    public static final ItemStack Potassium_Hydroxide_Dust_GTPP = getModItem(GTPlusPlus.ID, "item.BasicGenericChemItem", 1L, 12);
+    public static final ItemStack Sodium_Ethyl_Xanthate_Dust = getModItem(
+        GTPlusPlus.ID,
+        "item.BasicGenericChemItem",
+        1L,
+        10);
+    public static final ItemStack Potassium_Ethyl_Xanthate_Dust = getModItem(
+        GTPlusPlus.ID,
+        "item.BasicGenericChemItem",
+        1L,
+        11);
+    public static final ItemStack Potassium_Hydroxide_Dust_GTPP = getModItem(
+        GTPlusPlus.ID,
+        "item.BasicGenericChemItem",
+        1L,
+        12);
 
 }
