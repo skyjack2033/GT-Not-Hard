@@ -98,7 +98,3 @@ Linux/macOS 使用 `./gradlew assemble test checkstyleMain checkstyleTest`。构
 CoreMod 注册名、语言资源与 NEI 布局。测试报告位于 `build/reports/tests/test/index.html`。
 
 本次 RC1 更新已通过编译、打包、单元测试和 Checkstyle。游戏内行为仍需另行验证，编译及单元测试通过不代表已完成实机测试。
-
-## 历史临时适配版本
-2.9.0.Beta1下载链接：https://pan.ustc.edu.cn/seafile/seafhttp/files/19e39dcd-22fe-4998-b007-1e221dd37bfb/GT-Not-Hard-1.2.4-290-beta1.jar  
-提供者：Torch1230
