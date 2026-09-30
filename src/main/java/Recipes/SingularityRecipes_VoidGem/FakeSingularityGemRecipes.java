@@ -6,6 +6,7 @@ import static gregtech.api.util.GTRecipeBuilder.SECONDS;
 import static util.AggregateItemStackArray.addCompressAggregateArray;
 import static util.AggregateItemStackArray.addSplitAggregateArray;
 import static util.AggregateItemStackArray.checkItemStack;
+import static util.RecipesFrontend.ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
 
 import net.minecraft.item.ItemStack;
 
@@ -112,7 +113,7 @@ public class FakeSingularityGemRecipes {
 
     public static final RecipeMap<RecipeMapBackend> addFakeVoidGemRecipes_T10 = RecipeMapBuilder
         .of("Singularity of T10 Gem")
-        .maxIO(1, 90, 0, 0)
+        .maxIO(1, OUTPUTS_PER_PAGE, 0, 0)
         .minInputs(1, 0)
         .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
@@ -1051,7 +1052,7 @@ public class FakeSingularityGemRecipes {
     public static void addFakeVoidGemRecipes_T10() {
         // T10 - DeepDark - DD
         ItemStack[] Fake_T10_Gem_Checked = checkItemStack(Vein_Gem.T10_Gem);
-        ItemStack[][] Fake_T10_DeepDark_Gem_Split = addSplitAggregateArray(Fake_T10_Gem_Checked, 90);
+        ItemStack[][] Fake_T10_DeepDark_Gem_Split = addSplitAggregateArray(Fake_T10_Gem_Checked, OUTPUTS_PER_PAGE);
         for (ItemStack[] tempItemStacks : Fake_T10_DeepDark_Gem_Split) {
             GTValues.RA.stdBuilder()
                 .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_DD", 1L))
