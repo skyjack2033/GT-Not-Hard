@@ -1087,6 +1087,12 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
     }
 
     @Override
+    protected boolean useMui2() {
+        // GTNH 2.9.0-beta-3 defaults to MUI2; keep the MUI1 wireless and down-tier controls below.
+        return false;
+    }
+
+    @Override
     public void addUIWidgets(ModularWindow.Builder builder, UIBuildContext buildContext) {
         super.addUIWidgets(builder, buildContext);
 

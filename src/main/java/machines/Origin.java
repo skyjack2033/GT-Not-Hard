@@ -1288,6 +1288,12 @@ public class Origin extends GTPPMultiBlockBase<Origin> implements ISurvivalConst
     private boolean wireless_mode = false;
 
     @Override
+    protected boolean useMui2() {
+        // GTNH 2.9.0-beta-3 defaults to MUI2; keep the MUI1 wireless control below.
+        return false;
+    }
+
+    @Override
     public void addUIWidgets(ModularWindow.Builder builder, UIBuildContext buildContext) {
         super.addUIWidgets(builder, buildContext);
 
