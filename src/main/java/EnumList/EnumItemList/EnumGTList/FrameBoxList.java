@@ -1,12 +1,13 @@
 package EnumList.EnumItemList.EnumGTList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.GTPlusPlus;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class FrameBoxList {
+
     public static final ItemStack Lithium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 6);
     public static final ItemStack Beryllium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 8);
     public static final ItemStack Carbon_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 10);
@@ -72,18 +73,34 @@ public class FrameBoxList {
     public static final ItemStack Attuned_Tengam_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 112);
     public static final ItemStack Hellish_Metal_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 125);
     public static final ItemStack Neutronium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 129);
-    public static final ItemStack Superconductor_Base_UIV_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 131);
+    public static final ItemStack Superconductor_Base_UIV_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        131);
     public static final ItemStack Netherite_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 132);
-    public static final ItemStack Superconductor_Base_UMV_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 134);
+    public static final ItemStack Superconductor_Base_UMV_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        134);
     public static final ItemStack Universium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 139);
     public static final ItemStack Eternity_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 141);
     public static final ItemStack Magmatter_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 143);
     public static final ItemStack Six_Phased_Copper_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 147);
     public static final ItemStack Mellion_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 148);
     public static final ItemStack Creon_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 149);
-    public static final ItemStack Hot_Proto_Halkonite_Steel_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 153);
+    public static final ItemStack Hot_Proto_Halkonite_Steel_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        153);
     public static final ItemStack Proto_Halkonite_Steel_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 154);
-    public static final ItemStack Hot_Exo_Halkonite_Steel_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 156);
+    public static final ItemStack Hot_Exo_Halkonite_Steel_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        156);
     public static final ItemStack Exo_Halkonite_Steel_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 157);
     public static final ItemStack Prismatic_Naquadah_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 163);
     public static final ItemStack Hexanite_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 174);
@@ -200,7 +217,11 @@ public class FrameBoxList {
     public static final ItemStack Epoxid_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 470);
     public static final ItemStack Silicone_Rubber_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 471);
     public static final ItemStack Polycaprolactam_PCL_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 472);
-    public static final ItemStack Polytetrafluoroethylene_PTFE_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 473);
+    public static final ItemStack Polytetrafluoroethylene_PTFE_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        473);
     public static final ItemStack Alduorite_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 485);
     public static final ItemStack Rubracium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 488);
     public static final ItemStack Vulcanite_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 489);
@@ -209,16 +230,32 @@ public class FrameBoxList {
     public static final ItemStack TPV_Alloy_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 576);
     public static final ItemStack Transcendent_Metal_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 581);
     public static final ItemStack Enriched_Holmium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 582);
-    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 583);
+    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        583);
     public static final ItemStack White_Dwarf_Matter_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 585);
     public static final ItemStack Black_Dwarf_Matter_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 586);
     public static final ItemStack SpaceTime_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 588);
     public static final ItemStack Polybenzimidazole_PBI_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 599);
-    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 610);
+    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        610);
     public static final ItemStack Borosilicate_Glass_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 611);
     public static final ItemStack Nickel_Zinc_Ferrite_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 613);
-    public static final ItemStack Polyphenylene_Sulfide_PPS_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 631);
-    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 635);
+    public static final ItemStack Polyphenylene_Sulfide_PPS_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        631);
+    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        635);
     public static final ItemStack Polystyrene_PS_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 636);
     public static final ItemStack Polyvinyl_Chloride_PVC_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 649);
     public static final ItemStack Kevlar_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 765);
@@ -227,7 +264,11 @@ public class FrameBoxList {
     public static final ItemStack Obsidian_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 804);
     public static final ItemStack Wood_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 809);
     public static final ItemStack Deep_Iron_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 829);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        856);
     public static final ItemStack Trinium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 868);
     public static final ItemStack Polyethylene_PE_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 874);
     public static final ItemStack Rubber_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 880);
@@ -240,24 +281,44 @@ public class FrameBoxList {
     public static final ItemStack Tartarite_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 956);
     public static final ItemStack Orichalcum_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 966);
     public static final ItemStack Void_Metal_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 970);
-    public static final ItemStack Superconductor_Base_UEV_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 974);
+    public static final ItemStack Superconductor_Base_UEV_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        974);
     public static final ItemStack Draconium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 975);
     public static final ItemStack Awakened_Draconium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 976);
     public static final ItemStack Blood_Infused_Iron_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 977);
     public static final ItemStack Ichorium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 978);
     public static final ItemStack Radox_Polymer_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 979);
     public static final ItemStack Gallium_Arsenide_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 980);
-    public static final ItemStack Indium_Gallium_Phosphide_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 981);
+    public static final ItemStack Indium_Gallium_Phosphide_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        981);
     public static final ItemStack Cosmic_Neutronium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 982);
     public static final ItemStack Flerovium_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 984);
-    public static final ItemStack Superconductor_Base_UHV_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 985);
+    public static final ItemStack Superconductor_Base_UHV_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        985);
     public static final ItemStack Superconductor_Base_UV_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 986);
     public static final ItemStack Superconductor_Base_MV_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 987);
     public static final ItemStack Superconductor_Base_HV_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 988);
     public static final ItemStack Superconductor_Base_EV_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 989);
     public static final ItemStack Superconductor_Base_IV_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 990);
-    public static final ItemStack Superconductor_Base_LuV_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 991);
-    public static final ItemStack Superconductor_Base_ZPM_Frame_Box = getModItem(GregTech.ID, "gt.blockframes", 1L, 992);
+    public static final ItemStack Superconductor_Base_LuV_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        991);
+    public static final ItemStack Superconductor_Base_ZPM_Frame_Box = getModItem(
+        GregTech.ID,
+        "gt.blockframes",
+        1L,
+        992);
     public static final ItemStack Ruthenium = getModItem(GregTech.ID, "bw.frames", 1L, 64);
     public static final ItemStack Rhodium = getModItem(GregTech.ID, "bw.frames", 1L, 78);
     public static final ItemStack Rhodium_Plated_Palladium = getModItem(GregTech.ID, "bw.frames", 1L, 88);
@@ -290,17 +351,41 @@ public class FrameBoxList {
     public static final ItemStack Rhenium_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtRhenium", 1L);
     public static final ItemStack Thallium_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtThallium", 1L);
     public static final ItemStack Germanium_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtGermanium", 1L);
-    public static final ItemStack Astral_Titanium_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtAstralTitanium", 1L);
-    public static final ItemStack Celestial_Tungsten_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtCelestialTungsten", 1L);
+    public static final ItemStack Astral_Titanium_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtAstralTitanium",
+        1L);
+    public static final ItemStack Celestial_Tungsten_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtCelestialTungsten",
+        1L);
     public static final ItemStack Hypogen_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtHypogen", 1L);
-    public static final ItemStack Chromatic_Glass_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtChromaticGlass", 1L);
+    public static final ItemStack Chromatic_Glass_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtChromaticGlass",
+        1L);
     public static final ItemStack Black_Metal_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtBlackMetal", 1L);
     public static final ItemStack Dragonblood_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtDragonblood", 1L);
-    public static final ItemStack Silicon_Carbide_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtSiliconCarbide", 1L);
-    public static final ItemStack Zirconium_Carbide_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtZirconiumCarbide", 1L);
-    public static final ItemStack Tantalum_Carbide_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtTantalumCarbide", 1L);
-    public static final ItemStack Niobium_Carbide_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtNiobiumCarbide", 1L);
-    public static final ItemStack Tungsten_Titanium_Carbide_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtTungstenTitaniumCarbide", 1L);
+    public static final ItemStack Silicon_Carbide_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtSiliconCarbide",
+        1L);
+    public static final ItemStack Zirconium_Carbide_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtZirconiumCarbide",
+        1L);
+    public static final ItemStack Tantalum_Carbide_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtTantalumCarbide",
+        1L);
+    public static final ItemStack Niobium_Carbide_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtNiobiumCarbide",
+        1L);
+    public static final ItemStack Tungsten_Titanium_Carbide_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtTungstenTitaniumCarbide",
+        1L);
     public static final ItemStack Energy_Crystal_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtEnergyCrystal", 1L);
     public static final ItemStack Blood_Steel_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtBloodSteel", 1L);
     public static final ItemStack Zeron_100_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtZeron100", 1L);
@@ -313,10 +398,22 @@ public class FrameBoxList {
     public static final ItemStack Inconel_690_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtInconel690", 1L);
     public static final ItemStack Inconel_792_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtInconel792", 1L);
     public static final ItemStack Eglin_Steel_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtEglinSteel", 1L);
-    public static final ItemStack Maraging_Steel_250_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtMaragingSteel250", 1L);
-    public static final ItemStack Maraging_Steel_300_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtMaragingSteel300", 1L);
-    public static final ItemStack Maraging_Steel_350_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtMaragingSteel350", 1L);
-    public static final ItemStack Watertight_Steel_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtWatertightSteel", 1L);
+    public static final ItemStack Maraging_Steel_250_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtMaragingSteel250",
+        1L);
+    public static final ItemStack Maraging_Steel_300_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtMaragingSteel300",
+        1L);
+    public static final ItemStack Maraging_Steel_350_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtMaragingSteel350",
+        1L);
+    public static final ItemStack Watertight_Steel_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtWatertightSteel",
+        1L);
     public static final ItemStack Nitinol_60_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtNitinol60", 1L);
     public static final ItemStack Stellite_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtStellite", 1L);
     public static final ItemStack Talonite_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtTalonite", 1L);
@@ -328,11 +425,23 @@ public class FrameBoxList {
     public static final ItemStack Incoloy_DS_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtIncoloyDS", 1L);
     public static final ItemStack Incoloy_MA956_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtIncoloyMA956", 1L);
     public static final ItemStack Grisium_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtGrisium", 1L);
-    public static final ItemStack Trinium_Titanium_Alloy_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtTriniumTitaniumAlloy", 1L);
-    public static final ItemStack Trinium_Naquadah_Carbonite_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtTriniumNaquadahCarbonite", 1L);
-    public static final ItemStack Arceus_Alloy_2B_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtArceusAlloy2B", 1L);
+    public static final ItemStack Trinium_Titanium_Alloy_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtTriniumTitaniumAlloy",
+        1L);
+    public static final ItemStack Trinium_Naquadah_Carbonite_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtTriniumNaquadahCarbonite",
+        1L);
+    public static final ItemStack Arceus_Alloy_2B_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtArceusAlloy2B",
+        1L);
     public static final ItemStack HeLiCoPtEr_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtHeLiCoPtEr", 1L);
-    public static final ItemStack Lafium_Compound_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtLafiumCompound", 1L);
+    public static final ItemStack Lafium_Compound_Frame_Box = getModItem(
+        GTPlusPlus.ID,
+        "blockFrameGtLafiumCompound",
+        1L);
     public static final ItemStack Cinobite_A243_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtCinobiteA243", 1L);
     public static final ItemStack Pikyonium_64B_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtPikyonium64B", 1L);
     public static final ItemStack Abyssal_Alloy_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtAbyssalAlloy", 1L);

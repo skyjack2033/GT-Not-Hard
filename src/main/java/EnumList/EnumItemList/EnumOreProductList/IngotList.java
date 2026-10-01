@@ -1,7 +1,5 @@
 package EnumList.EnumItemList.EnumOreProductList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.Avaritia;
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.Botania;
@@ -26,7 +24,10 @@ import static gregtech.api.enums.Mods.TwilightForest;
 import static gregtech.api.enums.Mods.Witchery;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class IngotList {
+
     public static final ItemStack Iron_Ingot = getModItem(Minecraft.ID, "iron_ingot", 1L);
     public static final ItemStack Gold_Ingot = getModItem(Minecraft.ID, "gold_ingot", 1L);
     public static final ItemStack Brick = getModItem(Minecraft.ID, "brick", 1L);
@@ -57,7 +58,11 @@ public class IngotList {
     public static final ItemStack Unstable_Ingot = getModItem(ExtraUtilities.ID, "unstableingot", 1L);
     public static final ItemStack Mobius_ = getModItem(ExtraUtilities.ID, "unstableingot", 1L, 2);
     public static final ItemStack Endium_Ingot = getModItem(HardcoreEnderExpansion.ID, "endium_ingot", 1L);
-    public static final ItemStack Electrotine_Alloy_Ingot = getModItem(ProjectRedCore.ID, "projectred.core.part", 1L, 55);
+    public static final ItemStack Electrotine_Alloy_Ingot = getModItem(
+        ProjectRedCore.ID,
+        "projectred.core.part",
+        1L,
+        55);
     public static final ItemStack Seared_Brick = getModItem(TinkerConstruct.ID, "materials", 1L, 2);
     public static final ItemStack Aluminum_Brass_Ingot = getModItem(TinkerConstruct.ID, "materials", 1L, 14);
     public static final ItemStack Pig_Iron_Ingot_TC = getModItem(TinkerConstruct.ID, "materials", 1L, 34);
@@ -75,38 +80,90 @@ public class IngotList {
     public static final ItemStack BArTiMaEuSNeK_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 43);
     public static final ItemStack Ruthenium_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 64);
     public static final ItemStack Rhodium_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 78);
-    public static final ItemStack Rhodium_Plated_Palladium_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 88);
+    public static final ItemStack Rhodium_Plated_Palladium_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        88);
     public static final ItemStack Ruridit_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 90);
-    public static final ItemStack High_Durability_Compound_Steel_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 92);
+    public static final ItemStack High_Durability_Compound_Steel_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        92);
     public static final ItemStack Ademic_Steel_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 96);
     public static final ItemStack Fluorophlogopite_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 104);
-    public static final ItemStack Tantalum_Hafnium_Carbide_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 11503);
+    public static final ItemStack Tantalum_Hafnium_Carbide_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        11503);
     public static final ItemStack Magnesia_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 32237);
-    public static final ItemStack Atomic_Separation_Catalyst_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10022);
-    public static final ItemStack Extremely_Unstable_Naquadah_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10024);
+    public static final ItemStack Atomic_Separation_Catalyst_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        10022);
+    public static final ItemStack Extremely_Unstable_Naquadah_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        10024);
     public static final ItemStack Zn_Th_Alloy_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10053);
     public static final ItemStack Zircaloy_4_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10082);
     public static final ItemStack Zircaloy_2_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10083);
     public static final ItemStack Incoloy_903_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10084);
-    public static final ItemStack Adamantium_Alloy_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10085);
+    public static final ItemStack Adamantium_Alloy_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        10085);
     public static final ItemStack MAR_M200_Steel_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10096);
-    public static final ItemStack MAR_Ce_M200_Steel_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10097);
-    public static final ItemStack Lithium_Chloride_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10098);
+    public static final ItemStack MAR_Ce_M200_Steel_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        10097);
+    public static final ItemStack Lithium_Chloride_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        10098);
     public static final ItemStack Signalium_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10099);
     public static final ItemStack Lumiium_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10101);
     public static final ItemStack Artherium_Sn_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10102);
-    public static final ItemStack Tanmolyium_Beta_C_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10103);
+    public static final ItemStack Tanmolyium_Beta_C_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        10103);
     public static final ItemStack Dalisenite_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10104);
     public static final ItemStack Hikarium_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10105);
     public static final ItemStack Tairitsu_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10106);
-    public static final ItemStack Precious_Metals_Alloy_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10109);
-    public static final ItemStack Enriched_Naquadah_Alloy_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10110);
-    public static final ItemStack Metastable_Oganesson_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10111);
+    public static final ItemStack Precious_Metals_Alloy_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        10109);
+    public static final ItemStack Enriched_Naquadah_Alloy_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        10110);
+    public static final ItemStack Metastable_Oganesson_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        10111);
     public static final ItemStack Shirabon_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 10112);
     public static final ItemStack Hafnium_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 11000);
     public static final ItemStack Permalloy_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 11350);
     public static final ItemStack Mu_metal_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 11351);
-    public static final ItemStack Silicon_Nitride_Ingot = getModItem(BartWorks.ID, "gt.bwMetaGeneratedingot", 1L, 11353);
+    public static final ItemStack Silicon_Nitride_Ingot = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedingot",
+        1L,
+        11353);
     public static final ItemStack Coke_Oven_Brick = getModItem(NewHorizonsCoreMod.ID, "CokeOvenBrick", 1L);
     public static final ItemStack Quartz_Ingot = getModItem(Fether.ID, "quartz_ingot", 1L);
     public static final ItemStack Lithium_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11006);
@@ -287,7 +344,11 @@ public class IngotList {
     public static final ItemStack Epoxid_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11470);
     public static final ItemStack Silicone_Rubber_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11471);
     public static final ItemStack Polycaprolactam_PCL_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11472);
-    public static final ItemStack Polytetrafluoroethylene_PTFE_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11473);
+    public static final ItemStack Polytetrafluoroethylene_PTFE_Bar = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        11473);
     public static final ItemStack Alduorite_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11485);
     public static final ItemStack Rubracium_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11488);
     public static final ItemStack Vulcanite_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11489);
@@ -296,23 +357,39 @@ public class IngotList {
     public static final ItemStack TPV_Alloy_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11576);
     public static final ItemStack Transcendent_Metal_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11581);
     public static final ItemStack Enriched_Holmium_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11582);
-    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11583);
+    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Ingot = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        11583);
     public static final ItemStack White_Dwarf_Matter_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11585);
     public static final ItemStack Black_Dwarf_Matter_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11586);
     public static final ItemStack SpaceTime_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11588);
     public static final ItemStack Polybenzimidazole_PBI_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11599);
-    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11610);
+    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Bar = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        11610);
     public static final ItemStack Borosilicate_Glass_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11611);
     public static final ItemStack Nickel_Zinc_Ferrite_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11613);
     public static final ItemStack Polyphenylene_Sulfide_PPS_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11631);
-    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11635);
+    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Bar = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        11635);
     public static final ItemStack Polystyrene_PS_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11636);
     public static final ItemStack Polyvinyl_Chloride_PVC_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11649);
     public static final ItemStack Kevlar_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11765);
     public static final ItemStack Nickel_Aluminide_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11772);
     public static final ItemStack Obsidian_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11804);
     public static final ItemStack Deep_Iron_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11829);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Ingot = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        11856);
     public static final ItemStack Trinium_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11868);
     public static final ItemStack Polyethylene_PE_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11874);
     public static final ItemStack Desh_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11884);
@@ -358,7 +435,10 @@ public class IngotList {
     public static final ItemStack Plutonium_238_Ingot = getModItem(GTPlusPlus.ID, "itemIngotPlutonium238", 1L);
     public static final ItemStack Advanced_Nitinol_Ingot = getModItem(GTPlusPlus.ID, "itemIngotAdvancedNitinol", 1L);
     public static final ItemStack Astral_Titanium_Ingot = getModItem(GTPlusPlus.ID, "itemIngotAstralTitanium", 1L);
-    public static final ItemStack Celestial_Tungsten_Ingot = getModItem(GTPlusPlus.ID, "itemIngotCelestialTungsten", 1L);
+    public static final ItemStack Celestial_Tungsten_Ingot = getModItem(
+        GTPlusPlus.ID,
+        "itemIngotCelestialTungsten",
+        1L);
     public static final ItemStack Hypogen_Ingot = getModItem(GTPlusPlus.ID, "itemIngotHypogen", 1L);
     public static final ItemStack Chromatic_Glass_Ingot = getModItem(GTPlusPlus.ID, "itemIngotChromaticGlass", 1L);
     public static final ItemStack Black_Metal_Ingot = getModItem(GTPlusPlus.ID, "itemIngotBlackMetal", 1L);
@@ -369,7 +449,10 @@ public class IngotList {
     public static final ItemStack Zirconium_Carbide_Ingot = getModItem(GTPlusPlus.ID, "itemIngotZirconiumCarbide", 1L);
     public static final ItemStack Tantalum_Carbide_Ingot = getModItem(GTPlusPlus.ID, "itemIngotTantalumCarbide", 1L);
     public static final ItemStack Niobium_Carbide_Ingot = getModItem(GTPlusPlus.ID, "itemIngotNiobiumCarbide", 1L);
-    public static final ItemStack Tungsten_Titanium_Carbide_Ingot = getModItem(GTPlusPlus.ID, "itemIngotTungstenTitaniumCarbide", 1L);
+    public static final ItemStack Tungsten_Titanium_Carbide_Ingot = getModItem(
+        GTPlusPlus.ID,
+        "itemIngotTungstenTitaniumCarbide",
+        1L);
     public static final ItemStack Energy_Crystal_Ingot = getModItem(GTPlusPlus.ID, "itemIngotEnergyCrystal", 1L);
     public static final ItemStack Blood_Steel_Ingot = getModItem(GTPlusPlus.ID, "itemIngotBloodSteel", 1L);
     public static final ItemStack Zeron_100_Ingot = getModItem(GTPlusPlus.ID, "itemIngotZeron100", 1L);
@@ -398,9 +481,18 @@ public class IngotList {
     public static final ItemStack Incoloy_MA956_Ingot = getModItem(GTPlusPlus.ID, "itemIngotIncoloyMA956", 1L);
     public static final ItemStack Grisium_Ingot = getModItem(GTPlusPlus.ID, "itemIngotGrisium", 1L);
     public static final ItemStack HG_1223_Ingot = getModItem(GTPlusPlus.ID, "itemIngotHG1223", 1L);
-    public static final ItemStack Trinium_Titanium_Alloy_Ingot = getModItem(GTPlusPlus.ID, "itemIngotTriniumTitaniumAlloy", 1L);
-    public static final ItemStack Trinium_Naquadah_Alloy_Ingot = getModItem(GTPlusPlus.ID, "itemIngotTriniumNaquadahAlloy", 1L);
-    public static final ItemStack Trinium_Naquadah_Carbonite_Ingot = getModItem(GTPlusPlus.ID, "itemIngotTriniumNaquadahCarbonite", 1L);
+    public static final ItemStack Trinium_Titanium_Alloy_Ingot = getModItem(
+        GTPlusPlus.ID,
+        "itemIngotTriniumTitaniumAlloy",
+        1L);
+    public static final ItemStack Trinium_Naquadah_Alloy_Ingot = getModItem(
+        GTPlusPlus.ID,
+        "itemIngotTriniumNaquadahAlloy",
+        1L);
+    public static final ItemStack Trinium_Naquadah_Carbonite_Ingot = getModItem(
+        GTPlusPlus.ID,
+        "itemIngotTriniumNaquadahCarbonite",
+        1L);
     public static final ItemStack Arceus_Alloy_2B_Ingot = getModItem(GTPlusPlus.ID, "itemIngotArceusAlloy2B", 1L);
     public static final ItemStack HeLiCoPtEr_Ingot = getModItem(GTPlusPlus.ID, "itemIngotHeLiCoPtEr", 1L);
     public static final ItemStack Lafium_Compound_Ingot = getModItem(GTPlusPlus.ID, "itemIngotLafiumCompound", 1L);
@@ -424,12 +516,30 @@ public class IngotList {
     public static final ItemStack Wrapped_Thorium_Ingot = getModItem(GoodGenerator.ID, "wrappedThoriumIngot", 1L);
     public static final ItemStack Wrapped_Plutonium_Ingot = getModItem(GoodGenerator.ID, "wrappedPlutoniumIngot", 1L);
     public static final ItemStack Mixed_Metal_Ingot = getModItem(IndustrialCraft2.ID, "itemIngot", 1L, 4);
-    public static final ItemStack Heavy_Duty_Alloy_Ingot_T4 = getModItem(NewHorizonsCoreMod.ID, "HeavyDutyAlloyIngotT4", 1L);
-    public static final ItemStack Heavy_Duty_Alloy_Ingot_T5 = getModItem(NewHorizonsCoreMod.ID, "HeavyDutyAlloyIngotT5", 1L);
-    public static final ItemStack Heavy_Duty_Alloy_Ingot_T6 = getModItem(NewHorizonsCoreMod.ID, "HeavyDutyAlloyIngotT6", 1L);
-    public static final ItemStack Heavy_Duty_Alloy_Ingot_T7 = getModItem(NewHorizonsCoreMod.ID, "HeavyDutyAlloyIngotT7", 1L);
-    public static final ItemStack Heavy_Duty_Alloy_Ingot_T8 = getModItem(NewHorizonsCoreMod.ID, "HeavyDutyAlloyIngotT8", 1L);
-    public static final ItemStack Lightweight_Alloy_Ingot = getModItem(NewHorizonsCoreMod.ID, "HeavyDutyAlloyIngotT9", 1L);
+    public static final ItemStack Heavy_Duty_Alloy_Ingot_T4 = getModItem(
+        NewHorizonsCoreMod.ID,
+        "HeavyDutyAlloyIngotT4",
+        1L);
+    public static final ItemStack Heavy_Duty_Alloy_Ingot_T5 = getModItem(
+        NewHorizonsCoreMod.ID,
+        "HeavyDutyAlloyIngotT5",
+        1L);
+    public static final ItemStack Heavy_Duty_Alloy_Ingot_T6 = getModItem(
+        NewHorizonsCoreMod.ID,
+        "HeavyDutyAlloyIngotT6",
+        1L);
+    public static final ItemStack Heavy_Duty_Alloy_Ingot_T7 = getModItem(
+        NewHorizonsCoreMod.ID,
+        "HeavyDutyAlloyIngotT7",
+        1L);
+    public static final ItemStack Heavy_Duty_Alloy_Ingot_T8 = getModItem(
+        NewHorizonsCoreMod.ID,
+        "HeavyDutyAlloyIngotT8",
+        1L);
+    public static final ItemStack Lightweight_Alloy_Ingot = getModItem(
+        NewHorizonsCoreMod.ID,
+        "HeavyDutyAlloyIngotT9",
+        1L);
     public static final ItemStack Rubber_Bar = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11880);
     public static final ItemStack Heavy_Duty_Alloy_Ingot_T1 = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 32462);
     public static final ItemStack Heavy_Duty_Alloy_Ingot_T2 = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 32463);

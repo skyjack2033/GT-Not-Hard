@@ -34,18 +34,29 @@
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
-    // https://github.com/GTNewHorizons/DreamAssemblerXXL/tree/master/releases/manifests
-    api('com.github.GTNewHorizons:GT5-Unofficial:5.09.52.594:dev')
-    implementation('com.github.GTNewHorizons:GTNHLib:0.11.9:dev')
-    implementation('com.github.GTNewHorizons:Galacticraft:3.4.29-GTNH:dev')
-    implementation('com.github.GTNewHorizons:NewHorizonsCoreMod:2.8.279:dev')
-    implementation('com.github.GTNewHorizons:Avaritia:1.97:dev')
-    /*
-    api('com.github.GTNewHorizons:GT5-Unofficial:5.09.51.470:dev')
-    implementation('com.github.GTNewHorizons:GTNHLib:0.6.40:dev')
-    implementation('com.github.GTNewHorizons:Galacticraft:3.3.12-GTNH:dev')
-    implementation('com.github.GTNewHorizons:NewHorizonsCoreMod:2.7.260:dev')
-    implementation('com.github.GTNewHorizons:Avaritia:1.75:dev')
-     */
+    // GTNH 2.9.0-beta-3:
+    // https://github.com/GTNewHorizons/DreamAssemblerXXL/blob/master/releases/manifests/2.9.0-beta-3.json
+    api('com.github.GTNewHorizons:GT5-Unofficial:5.09.54.133:dev') {
+        version { strictly '5.09.54.133' }
+    }
+    implementation('com.github.GTNewHorizons:GTNHLib:0.11.46:dev') {
+        version { strictly '0.11.46' }
+    }
+    implementation('com.github.GTNewHorizons:Galacticraft:3.4.33-GTNH:dev')
+    implementation('com.github.GTNewHorizons:NewHorizonsCoreMod:2.9.61:dev')
+    implementation('com.github.GTNewHorizons:Avaritia:1.99:dev')
+    implementation('com.github.GTNewHorizons:NotEnoughItems:2.8.130-GTNH:dev') {
+        version { strictly '2.8.130-GTNH' }
+    }
+
+    testImplementation('junit:junit:4.13.2')
+    // Supplied by the pack at runtime; required here to instantiate real GT/ModularUI recipe templates.
+    testRuntimeOnly('it.unimi.dsi:fastutil:8.5.18')
+    testRuntimeOnly('org.joml:joml:1.10.8')
 }
 
+// GTNHGradle 2.0.34 adds a newer GTNHLib floor for its development runs.
+// Compile and test this pack-specific branch against the library actually shipped in Beta 3.
+configurations.configureEach {
+    resolutionStrategy.force 'com.github.GTNewHorizons:GTNHLib:0.11.46'
+}

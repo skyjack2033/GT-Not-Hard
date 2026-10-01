@@ -1,19 +1,28 @@
 package EnumList.EnumItemList.EnumMaterialList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GTPlusPlus;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class PlateList {
+
     public static final ItemStack Bismutite_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 1);
     public static final ItemStack Zirconium_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 3);
     public static final ItemStack Cubic_Zirconia_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 4);
     public static final ItemStack Fluor_Buergerite_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 5);
-    public static final ItemStack Chromo_Alumino_Povondraite_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 7);
-    public static final ItemStack Vanadio_Oxy_Dravite_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 8);
+    public static final ItemStack Chromo_Alumino_Povondraite_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        7);
+    public static final ItemStack Vanadio_Oxy_Dravite_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        8);
     public static final ItemStack Olenite_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 9);
     public static final ItemStack Red_Zircon_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 19);
     public static final ItemStack Salt_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 20);
@@ -30,43 +39,103 @@ public class PlateList {
     public static final ItemStack BArTiMaEuSNeK_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 43);
     public static final ItemStack Ruthenium_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 64);
     public static final ItemStack Rhodium_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 78);
-    public static final ItemStack Rhodium_Plated_Palladium_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 88);
+    public static final ItemStack Rhodium_Plated_Palladium_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        88);
     public static final ItemStack Tiberium_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 89);
     public static final ItemStack Ruridit_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 90);
     public static final ItemStack Fluorspar_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 91);
-    public static final ItemStack High_Durability_Compound_Steel_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 92);
+    public static final ItemStack High_Durability_Compound_Steel_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        92);
     public static final ItemStack Ademic_Steel_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 96);
     public static final ItemStack Fluorophlogopite_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 104);
-    public static final ItemStack Tantalum_Hafnium_Carbide_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 11503);
+    public static final ItemStack Tantalum_Hafnium_Carbide_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        11503);
     public static final ItemStack Magnesia_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 32237);
     public static final ItemStack Orundum_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10023);
-    public static final ItemStack Atomic_Separation_Catalyst_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10022);
-    public static final ItemStack Extremely_Unstable_Naquadah_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10024);
+    public static final ItemStack Atomic_Separation_Catalyst_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        10022);
+    public static final ItemStack Extremely_Unstable_Naquadah_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        10024);
     public static final ItemStack Zn_Th_Alloy_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10053);
     public static final ItemStack Zircaloy_4_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10082);
     public static final ItemStack Zircaloy_2_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10083);
     public static final ItemStack Incoloy_903_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10084);
-    public static final ItemStack Adamantium_Alloy_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10085);
+    public static final ItemStack Adamantium_Alloy_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        10085);
     public static final ItemStack MAR_M200_Steel_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10096);
-    public static final ItemStack MAR_Ce_M200_Steel_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10097);
-    public static final ItemStack Lithium_Chloride_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10098);
+    public static final ItemStack MAR_Ce_M200_Steel_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        10097);
+    public static final ItemStack Lithium_Chloride_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        10098);
     public static final ItemStack Signalium_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10099);
     public static final ItemStack Lumiium_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10101);
     public static final ItemStack Artherium_Sn_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10102);
-    public static final ItemStack Tanmolyium_Beta_C_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10103);
+    public static final ItemStack Tanmolyium_Beta_C_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        10103);
     public static final ItemStack Dalisenite_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10104);
     public static final ItemStack Hikarium_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10105);
     public static final ItemStack Tairitsu_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10106);
-    public static final ItemStack Precious_Metals_Alloy_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10109);
-    public static final ItemStack Enriched_Naquadah_Alloy_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10110);
-    public static final ItemStack Metastable_Oganesson_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10111);
+    public static final ItemStack Precious_Metals_Alloy_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        10109);
+    public static final ItemStack Enriched_Naquadah_Alloy_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        10110);
+    public static final ItemStack Metastable_Oganesson_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        10111);
     public static final ItemStack Shirabon_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 10112);
     public static final ItemStack Hafnium_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 11000);
-    public static final ItemStack Cerium_doped_Lutetium_Aluminium_Garnet_Ce_LuAG_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 11499);
+    public static final ItemStack Cerium_doped_Lutetium_Aluminium_Garnet_Ce_LuAG_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        11499);
     public static final ItemStack Permalloy_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 11350);
     public static final ItemStack Mu_metal_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 11351);
-    public static final ItemStack Silicon_Nitride_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 11353);
-    public static final ItemStack Lanthanum_Hexaboride_Plate = getModItem(BartWorks.ID, "gt.bwMetaGeneratedplate", 1L, 11358);
+    public static final ItemStack Silicon_Nitride_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        11353);
+    public static final ItemStack Lanthanum_Hexaboride_Plate = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedplate",
+        1L,
+        11358);
     public static final ItemStack Lithium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17006);
     public static final ItemStack Beryllium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17008);
     public static final ItemStack Carbon_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17010);
@@ -141,7 +210,11 @@ public class PlateList {
     public static final ItemStack Six_Phased_Copper_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17147);
     public static final ItemStack Mellion_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17148);
     public static final ItemStack Creon_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17149);
-    public static final ItemStack Hot_Proto_Halkonite_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17153);
+    public static final ItemStack Hot_Proto_Halkonite_Steel_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        17153);
     public static final ItemStack Proto_Halkonite_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17154);
     public static final ItemStack Hot_Exo_Halkonite_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17156);
     public static final ItemStack Exo_Halkonite_Steel_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17157);
@@ -264,7 +337,11 @@ public class PlateList {
     public static final ItemStack Epoxid_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17470);
     public static final ItemStack Silicone_Rubber_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17471);
     public static final ItemStack Polycaprolactam_PCL_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17472);
-    public static final ItemStack Polytetrafluoroethylene_PTFE_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17473);
+    public static final ItemStack Polytetrafluoroethylene_PTFE_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        17473);
     public static final ItemStack Alduorite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17485);
     public static final ItemStack Rubracium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17488);
     public static final ItemStack Vulcanite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17489);
@@ -315,16 +392,32 @@ public class PlateList {
     public static final ItemStack TPV_Alloy_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17576);
     public static final ItemStack Transcendent_Metal_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17581);
     public static final ItemStack Enriched_Holmium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17582);
-    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17583);
+    public static final ItemStack Magnetohydrodynamically_Constrained_Star_Matter_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        17583);
     public static final ItemStack White_Dwarf_Matter_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17585);
     public static final ItemStack Black_Dwarf_Matter_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17586);
     public static final ItemStack SpaceTime_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17588);
     public static final ItemStack Polybenzimidazole_PBI_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17599);
-    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17610);
+    public static final ItemStack Fiber_Reinforced_Epoxy_Resin_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        17610);
     public static final ItemStack Borosilicate_Glass_Pane = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17611);
     public static final ItemStack Nickel_Zinc_Ferrite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17613);
-    public static final ItemStack Polyphenylene_Sulfide_PPS_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17631);
-    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17635);
+    public static final ItemStack Polyphenylene_Sulfide_PPS_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        17631);
+    public static final ItemStack Styrene_Butadiene_Rubber_SBR_Sheet = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        17635);
     public static final ItemStack Polystyrene_PS_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17636);
     public static final ItemStack Polyvinyl_Chloride_PVC_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17649);
     public static final ItemStack Kevlar_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17765);
@@ -340,7 +433,11 @@ public class PlateList {
     public static final ItemStack Marble_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17845);
     public static final ItemStack Black_Granite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17849);
     public static final ItemStack Red_Granite_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17850);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Plate = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        17856);
     public static final ItemStack Trinium_Plate = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17868);
     public static final ItemStack Polyethylene_PE_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17874);
     public static final ItemStack Rubber_Sheet = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 17880);
@@ -386,7 +483,10 @@ public class PlateList {
     public static final ItemStack Uranium_233_Plate = getModItem(GTPlusPlus.ID, "itemPlateUranium233", 1L);
     public static final ItemStack Advanced_Nitinol_Plate = getModItem(GTPlusPlus.ID, "itemPlateAdvancedNitinol", 1L);
     public static final ItemStack Astral_Titanium_Plate = getModItem(GTPlusPlus.ID, "itemPlateAstralTitanium", 1L);
-    public static final ItemStack Celestial_Tungsten_Plate = getModItem(GTPlusPlus.ID, "itemPlateCelestialTungsten", 1L);
+    public static final ItemStack Celestial_Tungsten_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateCelestialTungsten",
+        1L);
     public static final ItemStack Hypogen_Plate = getModItem(GTPlusPlus.ID, "itemPlateHypogen", 1L);
     public static final ItemStack Chromatic_Glass_Plate = getModItem(GTPlusPlus.ID, "itemPlateChromaticGlass", 1L);
     public static final ItemStack Black_Metal_Plate = getModItem(GTPlusPlus.ID, "itemPlateBlackMetal", 1L);
@@ -397,7 +497,10 @@ public class PlateList {
     public static final ItemStack Zirconium_Carbide_Plate = getModItem(GTPlusPlus.ID, "itemPlateZirconiumCarbide", 1L);
     public static final ItemStack Tantalum_Carbide_Plate = getModItem(GTPlusPlus.ID, "itemPlateTantalumCarbide", 1L);
     public static final ItemStack Niobium_Carbide_Plate = getModItem(GTPlusPlus.ID, "itemPlateNiobiumCarbide", 1L);
-    public static final ItemStack Tungsten_Titanium_Carbide_Plate = getModItem(GTPlusPlus.ID, "itemPlateTungstenTitaniumCarbide", 1L);
+    public static final ItemStack Tungsten_Titanium_Carbide_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateTungstenTitaniumCarbide",
+        1L);
     public static final ItemStack Energy_Crystal_Plate = getModItem(GTPlusPlus.ID, "itemPlateEnergyCrystal", 1L);
     public static final ItemStack Blood_Steel_Plate = getModItem(GTPlusPlus.ID, "itemPlateBloodSteel", 1L);
     public static final ItemStack Zeron_100_Plate = getModItem(GTPlusPlus.ID, "itemPlateZeron100", 1L);
@@ -426,9 +529,18 @@ public class PlateList {
     public static final ItemStack Incoloy_MA956_Plate = getModItem(GTPlusPlus.ID, "itemPlateIncoloyMA956", 1L);
     public static final ItemStack Grisium_Plate = getModItem(GTPlusPlus.ID, "itemPlateGrisium", 1L);
     public static final ItemStack HG_1223_Plate = getModItem(GTPlusPlus.ID, "itemPlateHG1223", 1L);
-    public static final ItemStack Trinium_Titanium_Alloy_Plate = getModItem(GTPlusPlus.ID, "itemPlateTriniumTitaniumAlloy", 1L);
-    public static final ItemStack Trinium_Naquadah_Alloy_Plate = getModItem(GTPlusPlus.ID, "itemPlateTriniumNaquadahAlloy", 1L);
-    public static final ItemStack Trinium_Naquadah_Carbonite_Plate = getModItem(GTPlusPlus.ID, "itemPlateTriniumNaquadahCarbonite", 1L);
+    public static final ItemStack Trinium_Titanium_Alloy_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateTriniumTitaniumAlloy",
+        1L);
+    public static final ItemStack Trinium_Naquadah_Alloy_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateTriniumNaquadahAlloy",
+        1L);
+    public static final ItemStack Trinium_Naquadah_Carbonite_Plate = getModItem(
+        GTPlusPlus.ID,
+        "itemPlateTriniumNaquadahCarbonite",
+        1L);
     public static final ItemStack Arceus_Alloy_2B_Plate = getModItem(GTPlusPlus.ID, "itemPlateArceusAlloy2B", 1L);
     public static final ItemStack HeLiCoPtEr_Plate = getModItem(GTPlusPlus.ID, "itemPlateHeLiCoPtEr", 1L);
     public static final ItemStack Lafium_Compound_Plate = getModItem(GTPlusPlus.ID, "itemPlateLafiumCompound", 1L);

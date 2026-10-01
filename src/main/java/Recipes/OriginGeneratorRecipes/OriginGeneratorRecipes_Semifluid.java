@@ -10,7 +10,6 @@ import net.minecraftforge.fluids.FluidStack;
 
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.Materials;
-//import gregtech.api.enums.MaterialsKevlar;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
@@ -51,23 +50,14 @@ public class OriginGeneratorRecipes_Semifluid {
         // "Fish Oil"
         fuelList.add(new FuelList("4,000", 4_000, 20, Materials.FishOil.getFluid(1)));
 
-        // "Raw Animal Waste"
-        fuelList.add(new FuelList("12,000", 12_000, 20, FluidRegistry.getFluidStack("fluid.raw.waste", 1)));
-
         // "Coal Tar"
         fuelList.add(new FuelList("16,000", 16_000, 20, FluidRegistry.getFluidStack("fluid.coaltar", 1)));
 
         // Biomass
         fuelList.add(new FuelList("16,000", 16_000, 20, Materials.Biomass.getFluid(1)));
 
-        // "Manure Slurry"
-        fuelList.add(new FuelList("24,000", 24_000, 20, FluidRegistry.getFluidStack("fluid.manure.slurry", 1)));
-
         // "Coal Tar Oil"
         fuelList.add(new FuelList("32,000", 32_000, 20, FluidRegistry.getFluidStack("fluid.coaltaroil", 1)));
-
-        // "Fertile Manure Slurry"
-        fuelList.add(new FuelList("32,000", 32_000, 20, FluidRegistry.getFluidStack("fluid.fertile.manure.slurry", 1)));
 
         // "Light Oil"
         fuelList.add(new FuelList("40,000", 40_000, 20, Materials.OilLight.getFluid(1)));

@@ -1,7 +1,5 @@
 package EnumList.EnumItemList.EnumOreProductList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.EtFuturumRequiem;
 import static gregtech.api.enums.Mods.GTPlusPlus;
@@ -11,12 +9,22 @@ import static gregtech.api.enums.Mods.ProjectRedExploration;
 import static gregtech.api.enums.Mods.TaintedMagic;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class OreList {
+
     public static final ItemStack End_Powder_Ore = getModItem(HardcoreEnderExpansion.ID, "end_powder_ore", 1L);
     public static final ItemStack Stardust_Ore = getModItem(HardcoreEnderExpansion.ID, "stardust_ore", 1L);
     public static final ItemStack Igneous_Rock_Ore = getModItem(HardcoreEnderExpansion.ID, "igneous_rock_ore", 1L);
-    public static final ItemStack Instability_Orb_Ore = getModItem(HardcoreEnderExpansion.ID, "instability_orb_ore", 1L);
-    public static final ItemStack Peridot_Ore = getModItem(ProjectRedExploration.ID, "projectred.exploration.ore", 1L, 2);
+    public static final ItemStack Instability_Orb_Ore = getModItem(
+        HardcoreEnderExpansion.ID,
+        "instability_orb_ore",
+        1L);
+    public static final ItemStack Peridot_Ore = getModItem(
+        ProjectRedExploration.ID,
+        "projectred.exploration.ore",
+        1L,
+        2);
     public static final ItemStack Shadow_Ore = getModItem(TaintedMagic.ID, "BlockShadowOre", 1L);
     public static final ItemStack Bismutite_Ore = getModItem(BartWorks.ID, "bw.blockores.01", 1L, 1);
     public static final ItemStack Bismuthinite_Ore = getModItem(BartWorks.ID, "bw.blockores.01", 1L, 2);
@@ -56,7 +64,11 @@ public class OreList {
     public static final ItemStack Terlinguaite_Ore = getModItem(BartWorks.ID, "bw.blockores.01", 1L, 95);
     public static final ItemStack Orundum_Ore = getModItem(BartWorks.ID, "bw.blockores.01", 1L, 10023);
     public static final ItemStack Naquadah_Oxide_Mixture_Ore = getModItem(BartWorks.ID, "bw.blockores.01", 1L, 10054);
-    public static final ItemStack Enriched_Naquadah_Oxide_Mixture_Ore = getModItem(BartWorks.ID, "bw.blockores.01", 1L, 10067);
+    public static final ItemStack Enriched_Naquadah_Oxide_Mixture_Ore = getModItem(
+        BartWorks.ID,
+        "bw.blockores.01",
+        1L,
+        10067);
     public static final ItemStack Naquadria_Oxide_Mixture_Ore = getModItem(BartWorks.ID, "bw.blockores.01", 1L, 10072);
     public static final ItemStack Ancient_Debris = getModItem(EtFuturumRequiem.ID, "ancient_debris", 1L);
     public static final ItemStack Lithium_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 6);
@@ -333,7 +345,11 @@ public class OreList {
     public static final ItemStack Bedrockium_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1395);
     public static final ItemStack Bedrockium_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2395);
     public static final ItemStack Mysterious_Crystal_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 398);
-    public static final ItemStack Mysterious_Crystal_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1398);
+    public static final ItemStack Mysterious_Crystal_Ore_Netherrack = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        1398);
     public static final ItemStack Mysterious_Crystal_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2398);
     public static final ItemStack Alduorite_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 485);
     public static final ItemStack Alduorite_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1485);
@@ -396,8 +412,16 @@ public class OreList {
     public static final ItemStack Certus_Quartz_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1516);
     public static final ItemStack Certus_Quartz_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2516);
     public static final ItemStack Charged_Certus_Quartz_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 517);
-    public static final ItemStack Charged_Certus_Quartz_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1517);
-    public static final ItemStack Charged_Certus_Quartz_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2517);
+    public static final ItemStack Charged_Certus_Quartz_Ore_Netherrack = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        1517);
+    public static final ItemStack Charged_Certus_Quartz_Ore_EndStone = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        2517);
     public static final ItemStack Forcicium_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 518);
     public static final ItemStack Forcicium_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1518);
     public static final ItemStack Forcicium_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2518);
@@ -441,8 +465,16 @@ public class OreList {
     public static final ItemStack Niter_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1531);
     public static final ItemStack Niter_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2531);
     public static final ItemStack Tricalcium_Phosphate_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 534);
-    public static final ItemStack Tricalcium_Phosphate_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1534);
-    public static final ItemStack Tricalcium_Phosphate_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2534);
+    public static final ItemStack Tricalcium_Phosphate_Ore_Netherrack = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        1534);
+    public static final ItemStack Tricalcium_Phosphate_Ore_EndStone = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        2534);
     public static final ItemStack Coal_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 535);
     public static final ItemStack Coal_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1535);
     public static final ItemStack Coal_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2535);
@@ -465,7 +497,11 @@ public class OreList {
     public static final ItemStack Aqua_Infused_Stone_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1543);
     public static final ItemStack Aqua_Infused_Stone_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2543);
     public static final ItemStack Perditio_Infused_Stone_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 544);
-    public static final ItemStack Perditio_Infused_Stone_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1544);
+    public static final ItemStack Perditio_Infused_Stone_Netherrack = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        1544);
     public static final ItemStack Perditio_Infused_Stone_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2544);
     public static final ItemStack Ordo_Infused_Stone_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 545);
     public static final ItemStack Ordo_Infused_Stone_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1545);
@@ -563,9 +599,21 @@ public class OreList {
     public static final ItemStack Chalcopyrite_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 855);
     public static final ItemStack Chalcopyrite_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1855);
     public static final ItemStack Chalcopyrite_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2855);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 856);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1856);
-    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Ore_Stone = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Ore_Netherrack = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        1856);
+    public static final ItemStack Silicon_Solar_Grade_Poly_SI_Ore_EndStone = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        2856);
     public static final ItemStack Emery_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 861);
     public static final ItemStack Emery_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1861);
     public static final ItemStack Emery_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2861);
@@ -672,7 +720,11 @@ public class OreList {
     public static final ItemStack Uraninite_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1922);
     public static final ItemStack Uraninite_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2922);
     public static final ItemStack Vanadium_Magnetite_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 923);
-    public static final ItemStack Vanadium_Magnetite_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1923);
+    public static final ItemStack Vanadium_Magnetite_Ore_Netherrack = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        1923);
     public static final ItemStack Vanadium_Magnetite_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2923);
     public static final ItemStack Kyanite_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 924);
     public static final ItemStack Kyanite_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1924);
@@ -759,16 +811,28 @@ public class OreList {
     public static final ItemStack Orichalcum_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1966);
     public static final ItemStack Orichalcum_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2966);
     public static final ItemStack Aluminium_Fluoride_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 969);
-    public static final ItemStack Aluminium_Fluoride_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1969);
+    public static final ItemStack Aluminium_Fluoride_Ore_Netherrack = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        1969);
     public static final ItemStack Aluminium_Fluoride_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2969);
     public static final ItemStack Calcium_Disilicide_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 971);
-    public static final ItemStack Calcium_Disilicide_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1971);
+    public static final ItemStack Calcium_Disilicide_Ore_Netherrack = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        1971);
     public static final ItemStack Calcium_Disilicide_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2971);
     public static final ItemStack Draconium_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 975);
     public static final ItemStack Draconium_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1975);
     public static final ItemStack Draconium_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2975);
     public static final ItemStack Awakened_Draconium_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 976);
-    public static final ItemStack Awakened_Draconium_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1976);
+    public static final ItemStack Awakened_Draconium_Ore_Netherrack = getModItem(
+        GregTech.ID,
+        "gt.blockores2",
+        1L,
+        1976);
     public static final ItemStack Awakened_Draconium_Ore_EndStone = getModItem(GregTech.ID, "gt.blockores2", 1L, 2976);
     public static final ItemStack Ichorium_Ore_Stone = getModItem(GregTech.ID, "gt.blockores2", 1L, 978);
     public static final ItemStack Ichorium_Ore_Netherrack = getModItem(GregTech.ID, "gt.blockores2", 1L, 1978);

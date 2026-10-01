@@ -9,17 +9,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import Recipes.ChaosRecipes.ChaosAntimatterRecipes;
-import Recipes.ChaosRecipes.ChaosArcaneWorktableRecipes;
-import Recipes.ChaosRecipes.ChaosBloodMagicRecipes;
-import Recipes.ChaosRecipes.ChaosBotaniaRecipes;
 import Recipes.ChaosRecipes.ChaosCircuitAssemblerRecipes;
-import Recipes.ChaosRecipes.ChaosCrucibleRecipes;
-import Recipes.ChaosRecipes.ChaosEssenceFarmRecipes;
 import Recipes.ChaosRecipes.ChaosExoticRecipes;
 import Recipes.ChaosRecipes.ChaosFallingTowerRecipes;
 import Recipes.ChaosRecipes.ChaosOreRecipes;
 import Recipes.ChaosRecipes.ChaosReplicatorRecipes;
-import Recipes.ChaosRecipes.ChaosRunicMatrixRecipes;
 import Recipes.ChaosRecipes.ChaosSpecialCompressRecipes;
 import Recipes.ChaosRecipes.ChaosXtremeCraftingRecipes;
 import Recipes.ChaosRecipes.ChaosZhuHaiRecipes;
@@ -65,7 +59,12 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import loader.AssemblyLineWithoutResearchRecipePool;
 import loader.CraftingLoader;
 
-@Mod(modid = MyMod.MODID, version = Tags.VERSION, name = "GT Not Hard", acceptedMinecraftVersions = "[1.7.10]")
+@Mod(
+    modid = MyMod.MODID,
+    version = Tags.VERSION,
+    name = "GT Not Hard",
+    acceptedMinecraftVersions = "[1.7.10]",
+    dependencies = "required-after:gregtech@[5.09.54.133,);required-after:gtnhlib@[0.11.46,)")
 public class MyMod {
 
     public static final String MODID = "gtnothard";
@@ -270,13 +269,13 @@ public class MyMod {
         ChaosZhuHaiRecipes.addChaosZhuHaiFisheryRecipes();
         ChaosXtremeCraftingRecipes.addChaosXtremeCraftingRecipes();
 
-        //ChaosArcaneWorktableRecipes.addArcaneWorktableRecipes();
-        //ChaosBloodMagicRecipes.addBloodMagicRecipes();
-        //ChaosBotaniaRecipes.addBotaniaRecipes();
-        //ChaosCrucibleRecipes.addCrucibleRecipes();
-        //ChaosEssenceFarmRecipes.addEssenceFarmRecipes();
-        //ChaosRunicMatrixRecipes.addRunicMatrixRecipes_1();
-        //ChaosRunicMatrixRecipes.addRunicMatrixRecipes_2();
+        // ChaosArcaneWorktableRecipes.addArcaneWorktableRecipes();
+        // ChaosBloodMagicRecipes.addBloodMagicRecipes();
+        // ChaosBotaniaRecipes.addBotaniaRecipes();
+        // ChaosCrucibleRecipes.addCrucibleRecipes();
+        // ChaosEssenceFarmRecipes.addEssenceFarmRecipes();
+        // ChaosRunicMatrixRecipes.addRunicMatrixRecipes_1();
+        // ChaosRunicMatrixRecipes.addRunicMatrixRecipes_2();
 
         // Debug
         // ChaosArcaneWorktableRecipes.addArcaneWorktableRecipes_test();

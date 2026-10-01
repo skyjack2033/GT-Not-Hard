@@ -1,14 +1,15 @@
 package EnumList.EnumItemList.EnumGTList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GoodGenerator;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.enums.Mods.KekzTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class BlockList {
+
     // Battery Buffer 1x
     public static final ItemStack Battery_Buffer1_ULV = getModItem(GregTech.ID, "gt.blockmachines", 1L, 160);
     public static final ItemStack Battery_Buffer1_LV = getModItem(GregTech.ID, "gt.blockmachines", 1L, 161);

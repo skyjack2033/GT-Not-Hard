@@ -1,18 +1,31 @@
 package EnumList.EnumItemList.EnumOreProductList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.GTPlusPlus;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class RawOreList {
+
     public static final ItemStack Raw_Bismutite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 1);
     public static final ItemStack Raw_Bismuthinite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 2);
-    public static final ItemStack Raw_Fluor_Buergerite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 5);
-    public static final ItemStack Raw_Chromo_Alumino_Povondraite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 7);
-    public static final ItemStack Raw_Vanadio_Oxy_Dravite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 8);
+    public static final ItemStack Raw_Fluor_Buergerite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        5);
+    public static final ItemStack Raw_Chromo_Alumino_Povondraite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        7);
+    public static final ItemStack Raw_Vanadio_Oxy_Dravite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        8);
     public static final ItemStack Raw_Olenite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 9);
     public static final ItemStack Raw_Arsenopyrite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 10);
     public static final ItemStack Raw_Ferberite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 11);
@@ -27,27 +40,67 @@ public class RawOreList {
     public static final ItemStack Raw_Fayalite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 23);
     public static final ItemStack Raw_Forsterite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 24);
     public static final ItemStack Raw_Hedenbergite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 25);
-    public static final ItemStack Raw_Red_Descloizite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 26);
-    public static final ItemStack Raw_Orange_Descloizite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 27);
+    public static final ItemStack Raw_Red_Descloizite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        26);
+    public static final ItemStack Raw_Orange_Descloizite_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        27);
     public static final ItemStack Raw_Green_Fuchsite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 28);
     public static final ItemStack Raw_Red_Fuchsite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 29);
     public static final ItemStack Raw_Prasiolite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 35);
     public static final ItemStack Raw_BArTiMaEuSNeK_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 43);
-    public static final ItemStack Raw_Platinum_Metallic_Powder_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 47);
-    public static final ItemStack Raw_Palladium_Metallic_Powder_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 53);
+    public static final ItemStack Raw_Platinum_Metallic_Powder_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        47);
+    public static final ItemStack Raw_Palladium_Metallic_Powder_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        53);
     public static final ItemStack Raw_Leach_Residue_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 60);
-    public static final ItemStack Raw_Rarest_Metal_Residue_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 69);
-    public static final ItemStack Raw_Iridium_Metal_Residue_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 70);
-    public static final ItemStack Raw_Crude_Rhodium_Metal_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 79);
+    public static final ItemStack Raw_Rarest_Metal_Residue_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        69);
+    public static final ItemStack Raw_Iridium_Metal_Residue_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        70);
+    public static final ItemStack Raw_Crude_Rhodium_Metal_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        79);
     public static final ItemStack Raw_Tiberium_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 89);
     public static final ItemStack Raw_Fluorspar_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 91);
     public static final ItemStack Raw_Atheneite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 93);
     public static final ItemStack Raw_Temagamite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 94);
     public static final ItemStack Raw_Terlinguaite_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 95);
     public static final ItemStack Raw_Orundum_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 10023);
-    public static final ItemStack Raw_Naquadah_Oxide_Mixture_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 10054);
-    public static final ItemStack Raw_Enriched_Naquadah_Oxide_Mixture_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 10067);
-    public static final ItemStack Raw_Naquadria_Oxide_Mixture_Ore = getModItem(BartWorks.ID, "gt.bwMetaGeneratedrawOre", 1L, 10072);
+    public static final ItemStack Raw_Naquadah_Oxide_Mixture_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        10054);
+    public static final ItemStack Raw_Enriched_Naquadah_Oxide_Mixture_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        10067);
+    public static final ItemStack Raw_Naquadria_Oxide_Mixture_Ore = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedrawOre",
+        1L,
+        10072);
     public static final ItemStack Raw_Hydrogen_Ice = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 5001);
     public static final ItemStack Raw_Lithium_Ore = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 5006);
     public static final ItemStack Raw_Beryllium_Ore = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 5008);
@@ -223,7 +276,11 @@ public class RawOreList {
     public static final ItemStack Raw_Tungstate_Ore = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 5841);
     public static final ItemStack Raw_Uvarovite_Ore = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 5842);
     public static final ItemStack Raw_Chalcopyrite_Ore = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 5855);
-    public static final ItemStack Raw_Silicon_Solar_Grade_Poly_SI_Ore = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 5856);
+    public static final ItemStack Raw_Silicon_Solar_Grade_Poly_SI_Ore = getModItem(
+        GregTech.ID,
+        "gt.metaitem.03",
+        1L,
+        5856);
     public static final ItemStack Raw_Emery_Ore = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 5861);
     public static final ItemStack Raw_Graphite_Ore = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 5865);
     public static final ItemStack Raw_Trinium_Ore = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 5868);

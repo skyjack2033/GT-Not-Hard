@@ -1,11 +1,12 @@
 package EnumList.EnumItemList.EnumGTList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class HatchList {
+
     // Advanced Muffler Hatch
     public static final ItemStack Advanced_Muffler_Hatch_LV = getModItem(GregTech.ID, "gt.blockmachines", 1L, 30001);
     public static final ItemStack Advanced_Muffler_Hatch_MV = getModItem(GregTech.ID, "gt.blockmachines", 1L, 30002);

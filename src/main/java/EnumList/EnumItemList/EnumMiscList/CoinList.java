@@ -1,16 +1,32 @@
 package EnumList.EnumItemList.EnumMiscList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.NewHorizonsCoreMod;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class CoinList {
-    public static final ItemStack Chunkloader_Coin_Tier_I = getModItem(NewHorizonsCoreMod.ID, "CoinChunkloaderTierI", 1L);
-    public static final ItemStack Chunkloader_Coin_Tier_II = getModItem(NewHorizonsCoreMod.ID, "CoinChunkloaderTierII", 1L);
-    public static final ItemStack Chunkloader_Coin_Tier_III = getModItem(NewHorizonsCoreMod.ID, "CoinChunkloaderTierIII", 1L);
-    public static final ItemStack Chunkloader_Coin_Tier_IV = getModItem(NewHorizonsCoreMod.ID, "CoinChunkloaderTierIV", 1L);
-    public static final ItemStack Chunkloader_Coin_Tier_V = getModItem(NewHorizonsCoreMod.ID, "CoinChunkloaderTierV", 1L);
+
+    public static final ItemStack Chunkloader_Coin_Tier_I = getModItem(
+        NewHorizonsCoreMod.ID,
+        "CoinChunkloaderTierI",
+        1L);
+    public static final ItemStack Chunkloader_Coin_Tier_II = getModItem(
+        NewHorizonsCoreMod.ID,
+        "CoinChunkloaderTierII",
+        1L);
+    public static final ItemStack Chunkloader_Coin_Tier_III = getModItem(
+        NewHorizonsCoreMod.ID,
+        "CoinChunkloaderTierIII",
+        1L);
+    public static final ItemStack Chunkloader_Coin_Tier_IV = getModItem(
+        NewHorizonsCoreMod.ID,
+        "CoinChunkloaderTierIV",
+        1L);
+    public static final ItemStack Chunkloader_Coin_Tier_V = getModItem(
+        NewHorizonsCoreMod.ID,
+        "CoinChunkloaderTierV",
+        1L);
     public static final ItemStack Coin_The_Explorer_1 = getModItem(NewHorizonsCoreMod.ID, "CoinAdventure", 1L);
     public static final ItemStack Coin_The_Explorer_10 = getModItem(NewHorizonsCoreMod.ID, "CoinAdventureI", 1L);
     public static final ItemStack Coin_The_Explorer_100 = getModItem(NewHorizonsCoreMod.ID, "CoinAdventureII", 1L);
@@ -44,7 +60,10 @@ public class CoinList {
     public static final ItemStack Coin_The_Dark_Wizard_1 = getModItem(NewHorizonsCoreMod.ID, "CoinDarkWizard", 1L);
     public static final ItemStack Coin_The_Dark_Wizard_10 = getModItem(NewHorizonsCoreMod.ID, "CoinDarkWizardI", 1L);
     public static final ItemStack Coin_The_Dark_Wizard_100 = getModItem(NewHorizonsCoreMod.ID, "CoinDarkWizardII", 1L);
-    public static final ItemStack Coin_The_Dark_Wizard_1000 = getModItem(NewHorizonsCoreMod.ID, "CoinDarkWizardIII", 1L);
+    public static final ItemStack Coin_The_Dark_Wizard_1000 = getModItem(
+        NewHorizonsCoreMod.ID,
+        "CoinDarkWizardIII",
+        1L);
     public static final ItemStack Coin_The_Dark_Wizard_10k = getModItem(NewHorizonsCoreMod.ID, "CoinDarkWizardIV", 1L);
     public static final ItemStack Coin_The_Farmer_1 = getModItem(NewHorizonsCoreMod.ID, "CoinFarmer", 1L);
     public static final ItemStack Coin_The_Farmer_10 = getModItem(NewHorizonsCoreMod.ID, "CoinFarmerI", 1L);
@@ -59,7 +78,10 @@ public class CoinList {
     public static final ItemStack Coin_The_Forest_Ranger_1 = getModItem(NewHorizonsCoreMod.ID, "CoinForestry", 1L);
     public static final ItemStack Coin_The_Forest_Ranger_10 = getModItem(NewHorizonsCoreMod.ID, "CoinForestryI", 1L);
     public static final ItemStack Coin_The_Forest_Ranger_100 = getModItem(NewHorizonsCoreMod.ID, "CoinForestryII", 1L);
-    public static final ItemStack Coin_The_Forest_Ranger_1000 = getModItem(NewHorizonsCoreMod.ID, "CoinForestryIII", 1L);
+    public static final ItemStack Coin_The_Forest_Ranger_1000 = getModItem(
+        NewHorizonsCoreMod.ID,
+        "CoinForestryIII",
+        1L);
     public static final ItemStack Coin_The_Forest_Ranger_10k = getModItem(NewHorizonsCoreMod.ID, "CoinForestryIV", 1L);
     public static final ItemStack Coin_Blacksmith_1 = getModItem(NewHorizonsCoreMod.ID, "CoinSmith", 1L);
     public static final ItemStack Coin_Blacksmith_10 = getModItem(NewHorizonsCoreMod.ID, "CoinSmithI", 1L);

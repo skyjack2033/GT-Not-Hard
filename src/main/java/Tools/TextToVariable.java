@@ -101,7 +101,8 @@ public class TextToVariable {
         // 遍历行，每次处理两行（注释行 + 代码行）
         for (int i = 0; i < lines.size(); i++) {
             // 获取当前行并去除前后空格
-            String line = lines.get(i).trim();
+            String line = lines.get(i)
+                .trim();
 
             // 跳过空行
             if (line.isEmpty()) {
@@ -115,7 +116,8 @@ public class TextToVariable {
 
                 // 检查是否有下一行（代码行）
                 if (i + 1 < lines.size()) {
-                    String nextLine = lines.get(i + 1).trim();
+                    String nextLine = lines.get(i + 1)
+                        .trim();
 
                     // 如果下一行是代码行（以 "getModItem" 开头或包含 "getModItem"）
                     if (nextLine.contains("getModItem")) {
@@ -123,7 +125,9 @@ public class TextToVariable {
                         String processedCodeLine = processCodeLine(nextLine);
 
                         // 组合成变量声明行
-                        String convertedLine = "public static final ItemStack " + variableName + " = " + processedCodeLine;
+                        String convertedLine = "public static final ItemStack " + variableName
+                            + " = "
+                            + processedCodeLine;
                         convertedLines.add(convertedLine);
 
                         // 跳过已处理的代码行
@@ -157,14 +161,16 @@ public class TextToVariable {
         int firstQuote = commentLine.indexOf("\"");
         if (firstQuote == -1) {
             // 如果没有找到双引号，返回处理后的注释内容（去除 "// " 前缀）
-            return commentLine.replace("// ", "").trim();
+            return commentLine.replace("// ", "")
+                .trim();
         }
 
         // 查找第二个双引号的位置
         int secondQuote = commentLine.indexOf("\"", firstQuote + 1);
         if (secondQuote == -1) {
             // 如果没有找到第二个双引号，返回第一个双引号之后的内容
-            return commentLine.substring(firstQuote + 1).trim();
+            return commentLine.substring(firstQuote + 1)
+                .trim();
         }
 
         // 提取双引号之间的内容作为变量名
@@ -204,7 +210,7 @@ public class TextToVariable {
      * 将行列表写入文件
      *
      * @param filePath 输出文件路径
-     * @param lines 要写入的行列表
+     * @param lines    要写入的行列表
      * @throws IOException 文件写入异常
      */
     private void writeLines(String filePath, List<String> lines) throws IOException {

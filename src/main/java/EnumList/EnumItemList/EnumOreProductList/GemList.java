@@ -1,7 +1,5 @@
 package EnumList.EnumItemList.EnumOreProductList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.AppliedEnergistics2;
 import static gregtech.api.enums.Mods.BartWorks;
 import static gregtech.api.enums.Mods.BiomesOPlenty;
@@ -14,7 +12,10 @@ import static gregtech.api.enums.Mods.Railcraft;
 import static gregtech.api.enums.Mods.Thaumcraft;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class GemList {
+
     public static final ItemStack Coal = getModItem(Minecraft.ID, "coal", 1L);
     public static final ItemStack Charcoal = getModItem(Minecraft.ID, "coal", 1L, 1);
     public static final ItemStack Diamond = getModItem(Minecraft.ID, "diamond", 1L);
@@ -39,7 +40,11 @@ public class GemList {
     public static final ItemStack Earth_Shard = getModItem(Thaumcraft.ID, "ItemShard", 1L, 3);
     public static final ItemStack Order_Shard = getModItem(Thaumcraft.ID, "ItemShard", 1L, 4);
     public static final ItemStack Entropy_Shard = getModItem(Thaumcraft.ID, "ItemShard", 1L, 5);
-    public static final ItemStack Charged_Certus_Quartz_Crystal = getModItem(AppliedEnergistics2.ID, "item.ItemMultiMaterial", 1L, 1);
+    public static final ItemStack Charged_Certus_Quartz_Crystal = getModItem(
+        AppliedEnergistics2.ID,
+        "item.ItemMultiMaterial",
+        1L,
+        1);
     public static final ItemStack Fluix_Crystal = getModItem(AppliedEnergistics2.ID, "item.ItemMultiMaterial", 1L, 7);
     public static final ItemStack Bismutite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgem", 1L, 1);
     public static final ItemStack Cubic_Zirconia = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgem", 1L, 4);
@@ -60,10 +65,20 @@ public class GemList {
     public static final ItemStack Tiberium = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgem", 1L, 89);
     public static final ItemStack Fluorspar = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgem", 1L, 91);
     public static final ItemStack Orundum = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgem", 1L, 10023);
-    public static final ItemStack Cerium_doped_Lutetium_Aluminium_Garnet_CeLuAG = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgem", 1L, 11499);
+    public static final ItemStack Cerium_doped_Lutetium_Aluminium_Garnet_CeLuAG = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgem",
+        1L,
+        11499);
     public static final ItemStack Lanthanum_Hexaboride = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgem", 1L, 11358);
-    public static final ItemStack Exquisite_Probable_Crystal = getModItem(NewHorizonsCoreMod.ID, "MysteriousCrystalGemExquisite", 1L);
-    public static final ItemStack Exquisite_Chromatic_Crystal = getModItem(NewHorizonsCoreMod.ID, "ChromaticGemExquisite", 1L);
+    public static final ItemStack Exquisite_Probable_Crystal = getModItem(
+        NewHorizonsCoreMod.ID,
+        "MysteriousCrystalGemExquisite",
+        1L);
+    public static final ItemStack Exquisite_Chromatic_Crystal = getModItem(
+        NewHorizonsCoreMod.ID,
+        "ChromaticGemExquisite",
+        1L);
     public static final ItemStack Exquisite_Mana_Diamond = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 30208);
     public static final ItemStack Exquisite_Dragonstone = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 30209);
     public static final ItemStack Exquisite_Diamond = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 30500);
@@ -83,8 +98,14 @@ public class GemList {
     public static final ItemStack Exquisite_Red_Garnet = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 30527);
     public static final ItemStack Exquisite_Yellow_Garnet = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 30528);
     public static final ItemStack Exquisite_Glass_Crystal = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 30890);
-    public static final ItemStack Flawless_Unknown_Crystal = getModItem(NewHorizonsCoreMod.ID, "MysteriousCrystalGemFlawless", 1L);
-    public static final ItemStack Flawless_Chromatic_Crystal = getModItem(NewHorizonsCoreMod.ID, "ChromaticGemFlawless", 1L);
+    public static final ItemStack Flawless_Unknown_Crystal = getModItem(
+        NewHorizonsCoreMod.ID,
+        "MysteriousCrystalGemFlawless",
+        1L);
+    public static final ItemStack Flawless_Chromatic_Crystal = getModItem(
+        NewHorizonsCoreMod.ID,
+        "ChromaticGemFlawless",
+        1L);
     public static final ItemStack Flawless_Mana_Diamond = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 29208);
     public static final ItemStack Flawless_Dragonstone = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 29209);
     public static final ItemStack Flawless_Diamond = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 29500);
@@ -174,72 +195,216 @@ public class GemList {
     public static final ItemStack Flawed_Yellow_Garnet = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 28528);
     public static final ItemStack Flawed_Glass_Crystal = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 28890);
 
-    public static final ItemStack Exquisite_Bismutite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 1);
+    public static final ItemStack Exquisite_Bismutite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        1);
     public static final ItemStack Flawless_Bismutite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 1);
     public static final ItemStack Flawed_Bismutite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 1);
     public static final ItemStack Chipped_Bismutite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 1);
-    public static final ItemStack Exquisite_Fluor_Buergerite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 5);
-    public static final ItemStack Flawless_Fluor_Buergerite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 5);
-    public static final ItemStack Flawed_Fluor_Buergerite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 5);
-    public static final ItemStack Chipped_Fluor_Buergerite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 5);
-    public static final ItemStack Exquisite_Chromo_Alumino_Povondraite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 7);
-    public static final ItemStack Flawless_Chromo_Alumino_Povondraite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 7);
-    public static final ItemStack Flawed_Chromo_Alumino_Povondraite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 7);
-    public static final ItemStack Chipped_Chromo_Alumino_Povondraite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 7);
-    public static final ItemStack Exquisite_Vanadio_Oxy_Dravite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 8);
-    public static final ItemStack Flawless_Vanadio_Oxy_Dravite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 8);
-    public static final ItemStack Flawed_Vanadio_Oxy_Dravite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 8);
-    public static final ItemStack Chipped_Vanadio_Oxy_Dravite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 8);
+    public static final ItemStack Exquisite_Fluor_Buergerite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        5);
+    public static final ItemStack Flawless_Fluor_Buergerite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        5);
+    public static final ItemStack Flawed_Fluor_Buergerite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawed",
+        1L,
+        5);
+    public static final ItemStack Chipped_Fluor_Buergerite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemChipped",
+        1L,
+        5);
+    public static final ItemStack Exquisite_Chromo_Alumino_Povondraite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        7);
+    public static final ItemStack Flawless_Chromo_Alumino_Povondraite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        7);
+    public static final ItemStack Flawed_Chromo_Alumino_Povondraite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawed",
+        1L,
+        7);
+    public static final ItemStack Chipped_Chromo_Alumino_Povondraite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemChipped",
+        1L,
+        7);
+    public static final ItemStack Exquisite_Vanadio_Oxy_Dravite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        8);
+    public static final ItemStack Flawless_Vanadio_Oxy_Dravite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        8);
+    public static final ItemStack Flawed_Vanadio_Oxy_Dravite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawed",
+        1L,
+        8);
+    public static final ItemStack Chipped_Vanadio_Oxy_Dravite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemChipped",
+        1L,
+        8);
     public static final ItemStack Exquisite_Olenite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 9);
     public static final ItemStack Flawless_Olenite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 9);
     public static final ItemStack Flawed_Olenite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 9);
     public static final ItemStack Chipped_Olenite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 9);
-    public static final ItemStack Exquisite_Red_Zircon = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 19);
-    public static final ItemStack Flawless_Red_Zircon = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 19);
+    public static final ItemStack Exquisite_Red_Zircon = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        19);
+    public static final ItemStack Flawless_Red_Zircon = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        19);
     public static final ItemStack Flawed_Red_Zircon = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 19);
     public static final ItemStack Chipped_Red_Zircon = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 19);
-    public static final ItemStack Exquisite_Fayalite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 23);
+    public static final ItemStack Exquisite_Fayalite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        23);
     public static final ItemStack Flawless_Fayalite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 23);
     public static final ItemStack Flawed_Fayalite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 23);
     public static final ItemStack Chipped_Fayalite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 23);
-    public static final ItemStack Exquisite_Forsterite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 24);
-    public static final ItemStack Flawless_Forsterite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 24);
+    public static final ItemStack Exquisite_Forsterite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        24);
+    public static final ItemStack Flawless_Forsterite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        24);
     public static final ItemStack Flawed_Forsterite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 24);
     public static final ItemStack Chipped_Forsterite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 24);
-    public static final ItemStack Exquisite_Hedenbergite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 25);
-    public static final ItemStack Flawless_Hedenbergite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 25);
+    public static final ItemStack Exquisite_Hedenbergite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        25);
+    public static final ItemStack Flawless_Hedenbergite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        25);
     public static final ItemStack Flawed_Hedenbergite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 25);
-    public static final ItemStack Chipped_Hedenbergite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 25);
-    public static final ItemStack Exquisite_Prasiolite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 35);
-    public static final ItemStack Flawless_Prasiolite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 35);
+    public static final ItemStack Chipped_Hedenbergite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemChipped",
+        1L,
+        25);
+    public static final ItemStack Exquisite_Prasiolite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        35);
+    public static final ItemStack Flawless_Prasiolite = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        35);
     public static final ItemStack Flawed_Prasiolite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 35);
     public static final ItemStack Chipped_Prasiolite = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 35);
-    public static final ItemStack Exquisite_BArTiMaEuSNeK = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 43);
-    public static final ItemStack Flawless_BArTiMaEuSNeK = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 43);
-    public static final ItemStack Flawed_BArTiMaEuSNeK = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 43);
-    public static final ItemStack Chipped_BArTiMaEuSNeK = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 43);
-    public static final ItemStack Exquisite_Tiberium = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 89);
+    public static final ItemStack Exquisite_BArTiMaEuSNeK = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        43);
+    public static final ItemStack Flawless_BArTiMaEuSNeK = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        43);
+    public static final ItemStack Flawed_BArTiMaEuSNeK = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawed",
+        1L,
+        43);
+    public static final ItemStack Chipped_BArTiMaEuSNeK = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemChipped",
+        1L,
+        43);
+    public static final ItemStack Exquisite_Tiberium = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        89);
     public static final ItemStack Flawless_Tiberium = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 89);
     public static final ItemStack Flawed_Tiberium = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 89);
     public static final ItemStack Chipped_Tiberium = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 89);
-    public static final ItemStack Exquisite_Fluorspar = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 91);
-    public static final ItemStack Flawless_Fluorspar = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 91);
+    public static final ItemStack Exquisite_Fluorspar = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        91);
+    public static final ItemStack Flawless_Fluorspar = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        91);
     public static final ItemStack Flawed_Fluorspar = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 91);
     public static final ItemStack Chipped_Fluorspar = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 91);
-    public static final ItemStack Exquisite_Orundum = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 10023);
-    public static final ItemStack Flawless_Orundum = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 10023);
+    public static final ItemStack Exquisite_Orundum = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        10023);
+    public static final ItemStack Flawless_Orundum = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        10023);
     public static final ItemStack Flawed_Orundum = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 10023);
     public static final ItemStack Chipped_Orundum = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 10023);
     public static final ItemStack Exquisite_Salt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 20);
     public static final ItemStack Flawless_Salt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 20);
     public static final ItemStack Flawed_Salt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 20);
     public static final ItemStack Chipped_Salt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 20);
-    public static final ItemStack Exquisite_Spodumene = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 21);
-    public static final ItemStack Flawless_Spodumene = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 21);
+    public static final ItemStack Exquisite_Spodumene = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        21);
+    public static final ItemStack Flawless_Spodumene = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        21);
     public static final ItemStack Flawed_Spodumene = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 21);
     public static final ItemStack Chipped_Spodumene = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 21);
-    public static final ItemStack Exquisite_Rock_Salt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemExquisite", 1L, 22);
-    public static final ItemStack Flawless_Rock_Salt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawless", 1L, 22);
+    public static final ItemStack Exquisite_Rock_Salt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemExquisite",
+        1L,
+        22);
+    public static final ItemStack Flawless_Rock_Salt = getModItem(
+        BartWorks.ID,
+        "gt.bwMetaGeneratedgemFlawless",
+        1L,
+        22);
     public static final ItemStack Flawed_Rock_Salt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemFlawed", 1L, 22);
     public static final ItemStack Chipped_Rock_Salt = getModItem(BartWorks.ID, "gt.bwMetaGeneratedgemChipped", 1L, 22);
     // public static final ItemStack Exquisite_ = ;

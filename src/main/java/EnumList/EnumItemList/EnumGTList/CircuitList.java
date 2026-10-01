@@ -1,12 +1,13 @@
 package EnumList.EnumItemList.EnumGTList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.enums.Mods.NewHorizonsCoreMod;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class CircuitList {
+
     // Circuit
     // Circuit - ULV
     public static final ItemStack Vacuum_Tube = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 32700);
@@ -126,18 +127,42 @@ public class CircuitList {
     public static final ItemStack Advanced_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32102);
     public static final ItemStack Fiber_Reinforced_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 32720);
     public static final ItemStack More_Advanced_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32103);
-    public static final ItemStack Multilayer_Fiber_Reinforced_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 32712);
+    public static final ItemStack Multilayer_Fiber_Reinforced_Circuit_Board = getModItem(
+        GregTech.ID,
+        "gt.metaitem.01",
+        1L,
+        32712);
     public static final ItemStack Elite_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32104);
-    public static final ItemStack Wetware_Lifesupport_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32006);
-    public static final ItemStack Extreme_Wetware_Lifesupport_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32105);
+    public static final ItemStack Wetware_Lifesupport_Circuit_Board = getModItem(
+        GregTech.ID,
+        "gt.metaitem.03",
+        1L,
+        32006);
+    public static final ItemStack Extreme_Wetware_Lifesupport_Circuit_Board = getModItem(
+        GregTech.ID,
+        "gt.metaitem.03",
+        1L,
+        32105);
     public static final ItemStack Bio_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32008);
-    public static final ItemStack Ultra_Bio_Mutated_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32107);
+    public static final ItemStack Ultra_Bio_Mutated_Circuit_Board = getModItem(
+        GregTech.ID,
+        "gt.metaitem.03",
+        1L,
+        32107);
     public static final ItemStack Raw_Exposed_Optical_Chip = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32724);
     public static final ItemStack Optically_Compatible_Memory = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32725);
     public static final ItemStack Optically_Perfected_CPU = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32726);
-    public static final ItemStack Optical_CPU_Containment_Housing = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32727);
+    public static final ItemStack Optical_CPU_Containment_Housing = getModItem(
+        GregTech.ID,
+        "gt.metaitem.03",
+        1L,
+        32727);
     public static final ItemStack Optical_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32728);
     public static final ItemStack Exotic_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32729);
     public static final ItemStack Cosmic_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32730);
-    public static final ItemStack Temporally_Transcendent_Circuit_Board = getModItem(GregTech.ID, "gt.metaitem.03", 1L, 32731);
+    public static final ItemStack Temporally_Transcendent_Circuit_Board = getModItem(
+        GregTech.ID,
+        "gt.metaitem.03",
+        1L,
+        32731);
 }

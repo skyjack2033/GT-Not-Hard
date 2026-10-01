@@ -1,7 +1,6 @@
 package util.RecipesFrontend;
 
 import java.util.List;
-import java.util.function.Supplier;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
@@ -15,14 +14,14 @@ import com.gtnewhorizons.modularui.common.widget.ProgressBar;
 import gregtech.api.gui.modularui.GTUITextures;
 import gregtech.api.recipe.BasicUIPropertiesBuilder;
 import gregtech.api.recipe.NEIRecipePropertiesBuilder;
-import gregtech.api.recipe.RecipeMapFrontend;
 import gregtech.api.util.MethodsReturnNonnullByDefault;
 import gregtech.common.gui.modularui.UIHelper;
 import gregtech.nei.GTNEIDefaultHandler;
+import gregtech.nei.GTNEIDefaultHandler.NEITemplateContext;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-public class ItemFuelOfGeneratorFrontend extends RecipeMapFrontend {
+public class ItemFuelOfGeneratorFrontend extends LocalizedRecipeFrontend {
 
     public ItemFuelOfGeneratorFrontend(BasicUIPropertiesBuilder uiPropertiesBuilder,
         NEIRecipePropertiesBuilder neiRecipePropertiesBuilder) {
@@ -49,16 +48,19 @@ public class ItemFuelOfGeneratorFrontend extends RecipeMapFrontend {
     }
 
     public void drawNEIOverlays(GTNEIDefaultHandler.CachedDefaultRecipe neiCachedRecipe) {
-        this.drawNEIOverlayText(StatCollector.translateToLocal("NC"), neiCachedRecipe.mInputs.get(0));
+        this.drawNEIOverlayText(
+            StatCollector.translateToLocal("gtnothard.nei.not_consumed"),
+            neiCachedRecipe.mInputs.get(0));
     }
 
-    public void addProgressBar(ModularWindow.Builder builder, Supplier<Float> progressSupplier, Pos2d windowOffset) {
+    @Override
+    public void addProgressBar(ModularWindow.Builder builder, NEITemplateContext context) {
         builder.widget(
             (new ProgressBar()).setTexture(GTUITextures.PROGRESSBAR_ARROW, 16)
                 .setDirection(ProgressBar.Direction.RIGHT)
-                .setProgress(progressSupplier)
+                .setProgress(context.progressSupplier)
                 .setSynced(false, false)
-                .setPos((new Pos2d(90, 10)).add(windowOffset))
+                .setPos((new Pos2d(90, 10)).add(context.windowOffset))
                 .setSize(20, 16));
     }
 }

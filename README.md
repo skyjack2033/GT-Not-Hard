@@ -46,9 +46,64 @@
 
 # mod版本与GTNH版本对应关系
 1.0.x~1.1.x对应GTNH 2.7.0  
-1.2.x对应GTNH 2.8.0 
+1.2.x对应GTNH 2.8.0
 
-## 临时适配版本
-2.9.0.Beta1下载链接：https://pan.ustc.edu.cn/seafile/seafhttp/files/19e39dcd-22fe-4998-b007-1e221dd37bfb/GT-Not-Hard-1.2.4-290-beta1.jar  
-提供者：Torch1230
+`290-beta3`分支对应GTNH 2.9.0-beta-3。
 
+## GTNH 2.9.0 Beta 3
+本分支按官方 `2.9.0-beta-3` manifest 固定直接依赖：
+
+| 模组 | 版本 |
+| --- | --- |
+| GT5-Unofficial | 5.09.54.133 |
+| GTNHLib | 0.11.46 |
+| Galacticraft | 3.4.33-GTNH |
+| NewHorizonsCoreMod | 2.9.61 |
+| Avaritia | 1.99 |
+| NotEnoughItems | 2.8.130-GTNH |
+
+保留以下 Beta 3 适配修复：
+
+- 将 GT++ 配方表引用更新到 `gregtech.api.recipe.RecipeMaps`。
+- 保留 Chaos、Origin 的无线开关，兼容已移除的 `KTUITextures`。
+- 修复装罐机、电弧炉和切割机配方表合并后，旧模式索引导致的数组越界。
+- 使用模组自身的日志接口，移除对旧 `GT_FML_LOGGER` 字段的依赖。
+- 更新 87 处 CoreMod 物品/方块注册名，修复坠落之塔等配方加载时的空物品崩溃。
+- 移除 Beta 3 中不存在的三种农业废料燃料，以及 AE2Stuff、HarvestTheNether 的 NEI 展示入口。
+- 生态资源按模组是否安装加载 HarvestTheNether，T10 流体目录忽略已移除的流体，不再用石头或水填充这些缺失项。
+
+机器 ID 和已有 NBT 字段保持不变。本分支面向 GTNH 2.9.0-beta-3。
+Forge 最低版本要求为 GregTech `5.09.54.133` 和 GTNHLib `0.11.46`，与编译依赖一致。
+Chaos 和 Origin 继续使用包含无线开关的 MUI1 界面，避免新版默认 MUI2 界面遗漏这些按钮。
+
+### NEI 机器配方消失修复
+旧适配包在初始化资源目录界面时可能抛出 `Catalog outputs must be split into pages of 27`，
+中断 `gregtech.nei.NEIGTConfig` 的加载，使原版格雷和本模组的机器配方一起消失。
+修复保留正常目录的每页 27 项展示，同时允许模板按实际输出槽位数量初始化。
+安装新包时请替换旧的 GT Not Hard JAR，避免同时保留多个版本。
+
+### 中文本地化
+已内置简体中文 `src/main/resources/assets/gtnothard/lang/zh_CN.lang` 和英文回退 `en_US.lang`。
+覆盖三台机器的名称、说明、结构提示、无线模式按钮、模式切换消息、Waila 状态，以及全部 97 个自定义配方分类。
+在游戏中选择简体中文即可使用，无需额外汉化资源包。模式切换消息由接收方客户端翻译，联机时不依赖服务器语言。
+翻译只影响显示内容，不修改机器注册名、配方表标识或旧存档中的模式值。
+
+### 构建
+当前 Gradle 插件需要 **JDK 25**。`gradle/gradle-daemon-jvm.properties` 固定 Gradle 守护进程使用 Java 25，
+GTNH 共用 CI 工作流也会读取该版本并安装对应 JDK。本地请先安装 JDK 25，建议将 `JAVA_HOME` 指向它，然后执行：
+
+```powershell
+.\gradlew.bat build
+```
+
+Linux/macOS 使用 `./gradlew build`。构建产物位于 `build/libs/`，安装时使用普通模组 JAR，不使用 `-dev` 或 `-sources` JAR。此构建面向完整的 GTNH 2.9.0-beta-3 整合包。
+
+`build` 会执行编译、打包、单元测试、Spotless 和 Checkstyle。历史格式问题已修复，所有检查保持启用。
+JDK 25 仅用于运行构建工具，模组仍输出 Java 8 字节码。
+
+如需网络代理，请在个人的 `~/.gradle/gradle.properties` 中配置，不要将本机代理地址提交到项目中。
+
+### 验证范围
+自动化测试检查实际解析的 Beta 3 核心依赖、Forge 最低版本声明，以及 NEI 目录模板初始化和输出布局。
+测试报告位于 `build/reports/tests/test/index.html`。
+游戏内行为仍需另行验证，编译及自动化测试通过不代表已完成实机测试。

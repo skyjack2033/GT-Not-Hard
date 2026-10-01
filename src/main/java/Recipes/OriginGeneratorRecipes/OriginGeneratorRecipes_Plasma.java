@@ -12,7 +12,6 @@ import net.minecraftforge.fluids.FluidStack;
 import bartworks.system.material.WerkstoffLoader;
 import gregtech.api.enums.GTValues;
 import gregtech.api.enums.Materials;
-// import gregtech.api.enums.MaterialsUEVplus;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
@@ -103,15 +102,15 @@ public class OriginGeneratorRecipes_Plasma {
                 61_440_000,
                 FluidRegistry.getFluidStack("plasma.tritium", 1),
                 Materials.Tritium.getGas(1)));
-/*
-        // "Helium-3 Plasma"
-        fuelList.add(
-            new FuelList(
-                "61,440,000",
-                61_440_000,
-                FluidRegistry.getFluidStack("plasma.helium_3", 1),
-                Materials.Helium_3.getGas(1)));
-*/
+        /*
+         * // "Helium-3 Plasma"
+         * fuelList.add(
+         * new FuelList(
+         * "61,440,000",
+         * 61_440_000,
+         * FluidRegistry.getFluidStack("plasma.helium_3", 1),
+         * Materials.Helium_3.getGas(1)));
+         */
         // "Meteoric Iron Plasma"
         fuelList.add(
             new FuelList(
@@ -195,15 +194,15 @@ public class OriginGeneratorRecipes_Plasma {
                 100_352_000,
                 Materials.DraconiumAwakened.getPlasma(1),
                 Materials.DraconiumAwakened.getMolten(1)));
-/*
-        // "Six-Phased Copper Plasma"
-        fuelList.add(
-            new FuelList(
-                "100,352,000",
-                100_352_000,
-                MaterialsUEVplus.SixPhasedCopper.getPlasma(1),
-                MaterialsUEVplus.SixPhasedCopper.getMolten(1)));
-*/
+        /*
+         * // "Six-Phased Copper Plasma"
+         * fuelList.add(
+         * new FuelList(
+         * "100,352,000",
+         * 100_352_000,
+         * MaterialsUEVplus.SixPhasedCopper.getPlasma(1),
+         * MaterialsUEVplus.SixPhasedCopper.getMolten(1)));
+         */
         // "Draconium Plasma"
         fuelList.add(
             new FuelList(

@@ -14,6 +14,10 @@ import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_ORE_FACTORY_A
 import static gregtech.api.enums.Textures.BlockIcons.OVERLAY_FRONT_ORE_FACTORY_GLOW;
 import static gregtech.api.enums.Textures.BlockIcons.casingTexturePages;
 import static gregtech.api.util.GTStructureUtility.buildHatchAdder;
+import static net.minecraft.util.StatCollector.translateToLocal;
+import static net.minecraft.util.StatCollector.translateToLocalFormatted;
+import static util.MachineLocalization.sendMode;
+import static util.MachineLocalization.translateMode;
 
 import java.util.List;
 import java.util.Objects;
@@ -152,23 +156,24 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
     @Override
     protected MultiblockTooltipBuilder createTooltip() {
         final MultiblockTooltipBuilder tt = new MultiblockTooltipBuilder();
-        tt.addMachineType("Singularity")
-            .addInfo("Runs supplied machines as if placed in the world")
-            .addInfo("Parallel quantity = 2^x")
-            .addInfo("x = Number of machines in the controller")
-            .addInfo("-----------------------------------------------------------------------------")
-            .addInfo("You can place some item in controller to get resources")
-            .addInfo("This machine can get eight types of resources:")
-            .addInfo("Void Ore/Void Gem/Void Dust/Void Fluid/Void Ingot/Ecosystem/Mod Item/Pachinko")
-            .addInfo("Sneak left click controller to switch resources type")
-            .addInfo("-----------------------------------------------------------------------------")
-            .addInfo("Add By: GT Not Hard")
+        tt.addMachineType(translateToLocal("gt.blockmachines.singularity.name"))
+            .addInfo(translateToLocal("gtnothard.tooltip.singularity.resources"))
+            .addInfo(translateToLocal("gtnothard.tooltip.parallel"))
+            .addInfo(translateToLocal("gtnothard.tooltip.item_count"))
+            .addSeparator()
+            .addInfo(translateToLocal("gtnothard.tooltip.singularity.selector"))
+            .addInfo(translateToLocal("gtnothard.tooltip.singularity.types"))
+            .addInfo(translateToLocal("gtnothard.tooltip.singularity.types_materials"))
+            .addInfo(translateToLocal("gtnothard.tooltip.singularity.types_other"))
+            .addInfo(translateToLocal("gtnothard.tooltip.singularity.switch_mode"))
+            .addSeparator()
+            .addInfo(translateToLocal("gtnothard.tooltip.added_by"))
             .beginStructureBlock(3, 3, 3, true)
-            .addController("Front center")
-            .addCasingInfoRange("Stable Titanium Machine Casing", 4, 24, false)
-            .addMaintenanceHatch("Any casing", 1)
-            .addOutputBus("Any casing", 1)
-            .addOutputHatch("Any casing", 1)
+            .addController(translateToLocal("gtnothard.structure.front_center"))
+            .addCasingInfoRange(translateToLocal("gtnothard.structure.titanium"), 4, 24, false)
+            .addMaintenanceHatch(translateToLocal("gtnothard.structure.any_casing"), 1)
+            .addOutputBus(translateToLocal("gtnothard.structure.any_casing"), 1)
+            .addOutputHatch(translateToLocal("gtnothard.structure.any_casing"), 1)
             .toolTipFinisher();
         return tt;
     }
@@ -254,29 +259,22 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
             mode = (mode + 1) % 8;
             if (mode == 1) {
                 machineType = "Void Ore";
-                GTUtility.sendChatToPlayer(aPlayer, "mode: Void Ore");
             } else if (mode == 2) {
                 machineType = "Void Gem";
-                GTUtility.sendChatToPlayer(aPlayer, "mode: Void Gem");
             } else if (mode == 3) {
                 machineType = "Void Dust";
-                GTUtility.sendChatToPlayer(aPlayer, "mode: Void Dust");
             } else if (mode == 4) {
                 machineType = "Void Fluid";
-                GTUtility.sendChatToPlayer(aPlayer, "mode: Void Fluid");
             } else if (mode == 5) {
                 machineType = "Void Ingot";
-                GTUtility.sendChatToPlayer(aPlayer, "mode: Void Ingot");
             } else if (mode == 6) {
                 machineType = "Ecosystem";
-                GTUtility.sendChatToPlayer(aPlayer, "mode: Ecosystem");
             } else if (mode == 7) {
                 machineType = "Mod Item";
-                GTUtility.sendChatToPlayer(aPlayer, "mode: Mod Item");
             } else {
                 machineType = "Pachinko";
-                GTUtility.sendChatToPlayer(aPlayer, "mode: Pachinko");
             }
+            sendMode(aPlayer, machineType);
         }
         super.onLeftclick(aBaseMetaTileEntity, aPlayer);
     }
@@ -416,7 +414,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
                     ItemStack recipeDust = DustRecipes[index];
                     recipeDust.stackSize = getMaxParallel();
                     for (int mStack = 0; mStack < 64; mStack++) {
-                        //addOutput(recipeDust);
+                        // addOutput(recipeDust);
                         addOutputAtomic(recipeDust);
                     }
                 }
@@ -1146,9 +1144,16 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
         super.getWailaBody(itemStack, currentTip, accessor, config);
         final NBTTagCompound tag = accessor.getNBTData();
         if (tag.hasKey("Item")) {
-            currentTip.add("Item: " + EnumChatFormatting.YELLOW + tag.getString("Item"));
-            currentTip.add("Type: " + EnumChatFormatting.YELLOW + tag.getString("Type"));
-            currentTip.add("Parallel: " + EnumChatFormatting.YELLOW + getMaxParallel());
+            currentTip.add(
+                translateToLocalFormatted("gtnothard.waila.item", EnumChatFormatting.YELLOW + tag.getString("Item")));
+            currentTip.add(
+                translateToLocalFormatted(
+                    "gtnothard.waila.type",
+                    EnumChatFormatting.YELLOW + translateMode(tag.getString("Type"))));
+            currentTip.add(
+                translateToLocalFormatted(
+                    "gtnothard.waila.parallel",
+                    EnumChatFormatting.YELLOW.toString() + getMaxParallel()));
         }
     }
 }

@@ -1,7 +1,5 @@
 package EnumList.EnumItemList.EnumBiologyList;
 
-import net.minecraft.item.ItemStack;
-
 import static gregtech.api.enums.Mods.ExtraBees;
 import static gregtech.api.enums.Mods.Forestry;
 import static gregtech.api.enums.Mods.GTPlusPlus;
@@ -10,7 +8,10 @@ import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.enums.Mods.MagicBees;
 import static gregtech.api.util.GTModHandler.getModItem;
 
+import net.minecraft.item.ItemStack;
+
 public class CombList {
+
     public static final ItemStack Oily_Comb = getModItem(ExtraBees.ID, "honeyComb", 1L, 3);
     public static final ItemStack Fossilised_Comb = getModItem(ExtraBees.ID, "honeyComb", 1L, 4);
     public static final ItemStack Petroleum_Comb = getModItem(ExtraBees.ID, "honeyComb", 1L, 5);
