@@ -31,7 +31,9 @@ public class ResourceCatalogFrontendTest {
 
     @Test
     public void catalogLayoutKeepsAllOutputsIncludingLegacyCapacities() {
-        assertTrue(ResourceCatalogFrontend.outputPositions(-1).isEmpty());
+        assertTrue(
+            ResourceCatalogFrontend.outputPositions(-1)
+                .isEmpty());
         for (int count : OUTPUT_COUNTS) {
             List<Pos2d> positions = ResourceCatalogFrontend.outputPositions(count);
             assertEquals("Output count " + count, count, positions.size());
@@ -45,12 +47,13 @@ public class ResourceCatalogFrontendTest {
     @Test
     public void allCatalogTemplatesRegisterWithLegacyCapacities() {
         for (int count : OUTPUT_COUNTS) {
-            for (RecipeMapFrontend.FrontendCreator creator : Arrays.asList(
+            for (RecipeMapFrontend.FrontendCreator creator : Arrays.<RecipeMapFrontend.FrontendCreator>asList(
                 OneToManyItemsFrontend_Large::new,
                 OneToManyItemsFrontend_Small::new,
                 OneToManyFluidsFrontend_Large::new)) {
                 boolean fluids = creator.create(
-                    BasicUIProperties.builder().maxItemInputs(1),
+                    BasicUIProperties.builder()
+                        .maxItemInputs(1),
                     NEIRecipeProperties.builder()) instanceof OneToManyFluidsFrontend_Large;
                 int[] counts = fluids ? new int[] { 1, 0, 0, count } : new int[] { 1, count, 0, 0 };
                 RecipeMapFrontend frontend = createFrontend(creator, counts, NEIRecipeProperties.builder());
@@ -64,7 +67,10 @@ public class ResourceCatalogFrontendTest {
         RecipeMapFrontend frontend = createFrontend(
             OneToManyItemsFrontend_Large::new,
             new int[] { 1, 135, 0, 0 },
-            NEIRecipeProperties.builder().handlerInfoCreator(handler -> handler.setWidth(192).setHeight(140)));
+            NEIRecipeProperties.builder()
+                .handlerInfoCreator(
+                    handler -> handler.setWidth(192)
+                        .setHeight(140)));
         NEIRecipeProperties properties = frontend.getNEIProperties();
         assertEquals(316, properties.recipeBackgroundSize.height);
         HandlerInfo info = properties.handlerInfoCreator
@@ -126,9 +132,16 @@ public class ResourceCatalogFrontendTest {
             new ItemStackHandler(counts[2]), new ItemStackHandler(counts[3]) };
         Pos2d offset = new Pos2d(-5, -11);
         NEITemplateContext context = new NEITemplateContext(
-            inventories[0], inventories[1], new ItemStackHandler(1), inventories[2], inventories[3],
-            () -> 0.5f, () -> null, offset);
-        ModularWindow window = frontend.createNEITemplate(context).build();
+            inventories[0],
+            inventories[1],
+            new ItemStackHandler(1),
+            inventories[2],
+            inventories[3],
+            () -> 0.5f,
+            () -> null,
+            offset);
+        ModularWindow window = frontend.createNEITemplate(context)
+            .build();
         int[] actual = new int[4];
         for (Widget widget : window.getChildren()) {
             if (!(widget instanceof SlotWidget)) {
@@ -136,10 +149,12 @@ public class ResourceCatalogFrontendTest {
             }
             SlotWidget slot = (SlotWidget) widget;
             for (int i = 0; i < inventories.length; i++) {
-                if (slot.getMcSlot().getItemHandler() != inventories[i]) {
+                if (slot.getMcSlot()
+                    .getItemHandler() != inventories[i]) {
                     continue;
                 }
-                int index = slot.getMcSlot().getSlotIndex();
+                int index = slot.getMcSlot()
+                    .getSlotIndex();
                 assertTrue(index >= 0 && index < counts[i]);
                 // Reading an invalid slot reproduces the real inventory bounds check.
                 inventories[i].getStackInSlot(index);
@@ -151,7 +166,12 @@ public class ResourceCatalogFrontendTest {
             }
         }
         for (int i = 0; i < counts.length; i++) {
-            assertEquals(frontend.getClass().getSimpleName() + " inventory " + i, counts[i], actual[i]);
+            assertEquals(
+                frontend.getClass()
+                    .getSimpleName() + " inventory "
+                    + i,
+                counts[i],
+                actual[i]);
         }
     }
 }

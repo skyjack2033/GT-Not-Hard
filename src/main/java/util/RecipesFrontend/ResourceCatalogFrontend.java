@@ -52,7 +52,11 @@ public class ResourceCatalogFrontend extends LocalizedRecipeFrontend {
             .handlerInfoCreator(handler -> {
                 HandlerInfo.Builder configured = existing.handlerInfoCreator == null ? handler
                     : existing.handlerInfoCreator.apply(handler);
-                return configured.setHeight(Math.max(configured.build().getHeight(), height + 40));
+                return configured.setHeight(
+                    Math.max(
+                        configured.build()
+                            .getHeight(),
+                        height + 40));
             });
     }
 
