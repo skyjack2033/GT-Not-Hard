@@ -8,6 +8,9 @@ import java.util.Map;
 
 import net.minecraft.item.ItemStack;
 
+import gregtech.api.enums.OrePrefixes;
+import util.RegisteredResourceCatalog;
+
 public class SingularityOreRecipes {
 
     public static final Map<String, ItemStack[]> VoidOreRecipes_T0 = new HashMap<>();
@@ -745,7 +748,6 @@ public class SingularityOreRecipes {
 
     public static void addVoidOreRecipes_T10() {
         // T10 - DeepDark - DD
-        ItemStack[] T10_Ore_Checked = checkItemStack(Vein.T10_Ore);
-        VoidOreRecipes_T10.put("DD", T10_Ore_Checked);
+        VoidOreRecipes_T10.put("DD", RegisteredResourceCatalog.collectOreItems(OrePrefixes.ore, Vein.T10_Ore));
     }
 }

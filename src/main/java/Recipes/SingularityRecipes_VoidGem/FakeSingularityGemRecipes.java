@@ -16,6 +16,7 @@ import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
 import util.RecipesFrontend.OneToManyItemsFrontend_Large;
 import util.RecipesFrontend.OneToManyItemsFrontend_Small;
+import util.RegisteredResourceCatalog;
 
 public class FakeSingularityGemRecipes {
 
@@ -1051,7 +1052,13 @@ public class FakeSingularityGemRecipes {
 
     public static void addFakeVoidGemRecipes_T10() {
         // T10 - DeepDark - DD
-        ItemStack[] Fake_T10_Gem_Checked = checkItemStack(Vein_Gem.T10_Gem);
+        ItemStack[] resources = SingularityGemRecipes.VoidGemRecipes_T10.get("DD");
+        if (resources == null) {
+            throw new IllegalStateException("Build the T10 gem catalog before registering its NEI recipes");
+        }
+        addFakeVoidGemRecipes_T10.getBackend()
+            .clearRecipes();
+        ItemStack[] Fake_T10_Gem_Checked = RegisteredResourceCatalog.copyItems(resources);
         ItemStack[][] Fake_T10_DeepDark_Gem_Split = addSplitAggregateArray(Fake_T10_Gem_Checked, OUTPUTS_PER_PAGE);
         for (ItemStack[] tempItemStacks : Fake_T10_DeepDark_Gem_Split) {
             GTValues.RA.stdBuilder()

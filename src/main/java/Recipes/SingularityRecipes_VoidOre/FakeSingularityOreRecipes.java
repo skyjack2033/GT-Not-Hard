@@ -14,6 +14,7 @@ import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
 import util.RecipesFrontend.OneToManyItemsFrontend_Large;
+import util.RegisteredResourceCatalog;
 
 public class FakeSingularityOreRecipes {
 
@@ -1299,7 +1300,13 @@ public class FakeSingularityOreRecipes {
 
     public static void addFakeVoidOreRecipes_T10() {
         // T10 - DeepDark - DD
-        ItemStack[] Fake_T10_Ore_Checked = checkItemStack(Vein.T10_Ore);
+        ItemStack[] resources = SingularityOreRecipes.VoidOreRecipes_T10.get("DD");
+        if (resources == null) {
+            throw new IllegalStateException("Build the T10 ore catalog before registering its NEI recipes");
+        }
+        addFakeVoidOreRecipes_T10.getBackend()
+            .clearRecipes();
+        ItemStack[] Fake_T10_Ore_Checked = RegisteredResourceCatalog.copyItems(resources);
         ItemStack[][] Fake_T10_DeepDark_Ore_Split = addSplitAggregateArray(Fake_T10_Ore_Checked, NEI_ItemOutput_Size);
         for (ItemStack[] tempItemStacks : Fake_T10_DeepDark_Ore_Split) {
             GTValues.RA.stdBuilder()
