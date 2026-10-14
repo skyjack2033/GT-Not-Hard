@@ -40,6 +40,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import loader.CraftingLoader;
+import util.MachineRecipeCatalog;
 import util.OriginGeneratorRegistry;
 
 @Mod(
@@ -65,6 +66,7 @@ public class MyMod {
     public void init(FMLInitializationEvent event) {
         proxy.init(event);
         loaderMachines();
+        MachineRecipeCatalog.initialize();
         new CraftingLoader();
     }
 
