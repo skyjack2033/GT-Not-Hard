@@ -13,8 +13,6 @@ import net.minecraftforge.fluids.FluidStack;
 import gregtech.api.enums.GTValues;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
-import gregtech.api.recipe.RecipeMapBuilder;
-import util.RecipesFrontend.OneToManyFluidsFrontend_Large;
 import util.RecipesFrontend.ResourceCatalogFrontend;
 import util.RegisteredResourceCatalog;
 
@@ -24,14 +22,7 @@ public class SingularityFluidRecipes_T10 {
 
     public static final int NEI_ItemOutput_Size = ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
 
-    public static final RecipeMap<RecipeMapBackend> addFakeVoidFluidRecipes_T10 = RecipeMapBuilder
-        .of("Singularity of T10 Fluid")
-        .maxIO(1, 0, 0, NEI_ItemOutput_Size)
-        .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
-        .frontend(OneToManyFluidsFrontend_Large::new)
-        .neiTransferRect(81, 27, 14, 16)
-        .build();
+    public static final RecipeMap<RecipeMapBackend> addFakeVoidFluidRecipes_T10 = FakeSingularityFluidRecipes.addFakeVoidFluidRecipes;
 
     public static void addVoidFluidRecipes_T10() {
         VoidFluidRecipes_T10.put("DD", RegisteredResourceCatalog.collectFluids());
@@ -42,8 +33,6 @@ public class SingularityFluidRecipes_T10 {
         if (fluids == null) {
             throw new IllegalStateException("Build the T10 fluid catalog before registering its NEI recipes");
         }
-        addFakeVoidFluidRecipes_T10.getBackend()
-            .clearRecipes();
         for (FluidStack[] page : addSplitAggregateArray(
             RegisteredResourceCatalog.copyFluids(fluids),
             NEI_ItemOutput_Size)) {

@@ -13,8 +13,6 @@ import net.minecraft.item.ItemStack;
 import gregtech.api.enums.GTValues;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
-import gregtech.api.recipe.RecipeMapBuilder;
-import util.RecipesFrontend.OneToManyItemsFrontend_Large;
 import util.RecipesFrontend.ResourceCatalogFrontend;
 import util.RegisteredResourceCatalog;
 
@@ -24,14 +22,7 @@ public class SingularityDustRecipes_T10 {
 
     public static final int NEI_ItemOutput_Size = ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
 
-    public static final RecipeMap<RecipeMapBackend> addFakeVoidDustRecipes_T10 = RecipeMapBuilder
-        .of("Singularity of T10 Dust")
-        .maxIO(1, NEI_ItemOutput_Size, 0, 0)
-        .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
-        .frontend(OneToManyItemsFrontend_Large::new)
-        .neiTransferRect(81, 27, 14, 16)
-        .build();
+    public static final RecipeMap<RecipeMapBackend> addFakeVoidDustRecipes_T10 = FakeSingularityDustRecipes.addFakeVoidDustRecipes;
 
     public static void addVoidDustRecipes_T10() {
         VoidDustRecipes_T10.put("DD", RegisteredResourceCatalog.collectDusts());
@@ -42,8 +33,6 @@ public class SingularityDustRecipes_T10 {
         if (dusts == null) {
             throw new IllegalStateException("Build the T10 dust catalog before registering its NEI recipes");
         }
-        addFakeVoidDustRecipes_T10.getBackend()
-            .clearRecipes();
         for (ItemStack[] page : addSplitAggregateArray(
             RegisteredResourceCatalog.copyItems(dusts),
             NEI_ItemOutput_Size)) {
