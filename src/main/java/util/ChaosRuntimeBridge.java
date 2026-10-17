@@ -20,7 +20,7 @@ public final class ChaosRuntimeBridge {
     private ChaosRuntimeBridge() {}
 
     public static boolean supports(MTEMultiBlockBase prototype) {
-        return prototype != null && (isCustomCheckProcessing(prototype) || isCustomRunningTick(prototype));
+        return prototype != null;
     }
 
     public static MTEMultiBlockBase create(MTEMultiBlockBase prototype, MTEMultiBlockBase source)

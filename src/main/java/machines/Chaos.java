@@ -626,7 +626,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             }
         }
 
-        if (runtimeMachine != null && ChaosRuntimeBridge.isCustomCheckProcessing(runtimeMachine)) {
+        if (runtimeMachine != null) {
             try {
                 return ChaosRuntimeBridge.checkProcessing(this, runtimeMachine);
             } catch (ReflectiveOperationException | RuntimeException exception) {
