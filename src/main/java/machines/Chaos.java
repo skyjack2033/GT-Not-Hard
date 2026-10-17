@@ -96,6 +96,7 @@ import gregtech.common.blocks.ItemMachines;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 import util.ChaosManager;
+import util.ChaosRuntimeBridge;
 import util.GTNotHardUITextures;
 import util.MachineRecipeCatalog;
 
@@ -116,6 +117,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
 
     private RecipeMap<?> mLastRecipeMap;
     private ItemStack lastControllerStack;
+    private MTEMultiBlockBase runtimeMachine;
     private int tTier = 0;
     private int mode = 0;
     private String specialMachineType = null;
@@ -312,6 +314,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
     private RecipeMap<?> fetchRecipeMap() {
         ItemStack controller = getControllerSlot();
         isMultiBlock = false;
+        runtimeMachine = null;
         if (!isCorrectMachinePart(controller)) return null;
         RecipeMap<?> recipeMap = getMultifunctionalRecipeMap(controller.getItemDamage());
         if (recipeMap != null) {
@@ -321,6 +324,13 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
         IMetaTileEntity machine = ItemMachines.getMetaTileEntity(controller);
         if (machine instanceof MTEMultiBlockBase multiblock) {
             isMultiBlock = true;
+            if (ChaosRuntimeBridge.supports(multiblock)) {
+                try {
+                    runtimeMachine = ChaosRuntimeBridge.create(multiblock, this);
+                } catch (ReflectiveOperationException | RuntimeException exception) {
+                    MyMod.LOG.warn("Cannot create Chaos runtime bridge for " + machine.getMetaName(), exception);
+                }
+            }
             return replacementRecipeMap(multiblock.getRecipeMap());
         }
         return ChaosManager.giveRecipeMap(ChaosManager.getMachineName(controller));
@@ -616,6 +626,18 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             }
         }
 
+        if (runtimeMachine != null && ChaosRuntimeBridge.isCustomCheckProcessing(runtimeMachine)) {
+            try {
+                return ChaosRuntimeBridge.checkProcessing(this, runtimeMachine);
+            } catch (ReflectiveOperationException | RuntimeException exception) {
+                MyMod.LOG.warn(
+                    "Chaos runtime bridge failed for "
+                        + (getControllerSlot() == null ? "unknown" : getControllerSlot().getDisplayName()),
+                    exception);
+                runtimeMachine = null;
+            }
+        }
+
         if (mLastRecipeMap != null && wirelessMode && ownerUUID != null) {
             boolean succeeded = false;
             CheckRecipeResult finalResult = CheckRecipeResultRegistry.SUCCESSFUL;
@@ -639,6 +661,26 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             return CheckRecipeResultRegistry.SUCCESSFUL;
         }
         return super.checkProcessing();
+    }
+
+    @Override
+    public boolean onRunningTick(ItemStack aStack) {
+        boolean result = super.onRunningTick(aStack);
+        if (!result || runtimeMachine == null || !ChaosRuntimeBridge.isCustomRunningTick(runtimeMachine)) {
+            return result;
+        }
+        try {
+            ChaosRuntimeBridge.syncToDelegate(this, runtimeMachine);
+            boolean delegatedResult = ChaosRuntimeBridge.invokeCustomRunningTick(this, runtimeMachine, aStack);
+            ChaosRuntimeBridge.syncFromDelegate(runtimeMachine, this);
+            return delegatedResult && result;
+        } catch (ReflectiveOperationException | RuntimeException exception) {
+            MyMod.LOG.warn(
+                "Chaos runtime tick bridge failed for " + (aStack == null ? "unknown" : aStack.getDisplayName()),
+                exception);
+            runtimeMachine = null;
+            return result;
+        }
     }
 
     @Override
