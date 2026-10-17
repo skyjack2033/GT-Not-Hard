@@ -1,8 +1,11 @@
 package util;
 
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import net.minecraft.item.ItemStack;
@@ -21,6 +24,22 @@ public final class ChaosRuntimeBridge {
 
     public static boolean supports(MTEMultiBlockBase prototype) {
         return prototype != null;
+    }
+
+    public static boolean supportsMachineModeSwitch(MTEMultiBlockBase delegate) {
+        if (delegate == null) {
+            return false;
+        }
+        if (delegate.supportsMachineModeSwitch()) {
+            return true;
+        }
+        try {
+            return delegate.getClass()
+                .getMethod("setMachineMode", int.class)
+                .getDeclaringClass() != MTEMultiBlockBase.class;
+        } catch (NoSuchMethodException exception) {
+            return false;
+        }
     }
 
     public static MTEMultiBlockBase create(MTEMultiBlockBase prototype, MTEMultiBlockBase source)
@@ -57,6 +76,78 @@ public final class ChaosRuntimeBridge {
     public static void syncFromDelegate(MTEMultiBlockBase delegate, MTEMultiBlockBase source)
         throws IllegalAccessException {
         copyFields(delegate, source);
+    }
+
+    public static void setMachineMode(MTEMultiBlockBase source, MTEMultiBlockBase delegate, int index)
+        throws ReflectiveOperationException {
+        invokeWithBase(source, delegate, () -> {
+            delegate.setMachineMode(index);
+            return null;
+        });
+    }
+
+    public static int switchMachineMode(MTEMultiBlockBase source, MTEMultiBlockBase delegate)
+        throws ReflectiveOperationException {
+        syncToDelegate(source, delegate);
+        return invokeWithBase(source, delegate, () -> {
+            delegate.onMachineModeSwitchClick();
+            int currentMode = delegate.getMachineMode();
+            int nextMode;
+            if (overrides(delegate, "nextMachineMode")) {
+                nextMode = delegate.nextMachineMode();
+            } else {
+                Integer modeCount = findEnumModeCount(delegate, currentMode);
+                if (modeCount != null) {
+                    nextMode = Math.floorMod(currentMode + 1, modeCount);
+                } else {
+                    Integer iconCount = findModeIconCount(delegate);
+                    nextMode = iconCount == null ? delegate.nextMachineMode()
+                        : Math.floorMod(currentMode + 1, iconCount);
+                }
+            }
+            delegate.setMachineMode(nextMode);
+            return delegate.getMachineMode();
+        });
+    }
+
+    private static boolean overrides(MTEMultiBlockBase delegate, String method) throws NoSuchMethodException {
+        return delegate.getClass()
+            .getMethod(method)
+            .getDeclaringClass() != MTEMultiBlockBase.class;
+    }
+
+    private static Integer findEnumModeCount(MTEMultiBlockBase delegate, int mode) throws IllegalAccessException {
+        for (Field field : fieldsFor(delegate.getClass()).values()) {
+            if (Modifier.isStatic(field.getModifiers()) || !field.getType()
+                .isEnum()
+                || !field.getName()
+                    .toLowerCase(Locale.ROOT)
+                    .contains("mode")) {
+                continue;
+            }
+            if (field.get(delegate) instanceof Enum<?>current && current.ordinal() == mode) {
+                return field.getType()
+                    .getEnumConstants().length;
+            }
+        }
+        return null;
+    }
+
+    private static Integer findModeIconCount(MTEMultiBlockBase delegate) throws IllegalAccessException {
+        for (Field field : fieldsFor(delegate.getClass()).values()) {
+            if (!field.getName()
+                .replace("_", "")
+                .toLowerCase(Locale.ROOT)
+                .endsWith("modeicons")) {
+                continue;
+            }
+            Object icons = field.get(delegate);
+            int count = icons instanceof List<?>list ? list.size()
+                : icons != null && icons.getClass()
+                    .isArray() ? Array.getLength(icons) : 0;
+            if (count > 0) return count;
+        }
+        return null;
     }
 
     public static CheckRecipeResult checkProcessing(MTEMultiBlockBase source, MTEMultiBlockBase delegate)
@@ -134,7 +225,10 @@ public final class ChaosRuntimeBridge {
             String name = entry.getKey();
             if (name.equals("mInventory") || name.equals("mBaseMetaTileEntity")
                 || name.equals("processingLogic")
-                || name.equals("inventoryHandler")) {
+                || name.equals("inventoryHandler")
+                || name.equals("mode")
+                || name.equals("machineMode")
+                || name.equals("machineModeIcons")) {
                 continue;
             }
             Field sourceField = entry.getValue();

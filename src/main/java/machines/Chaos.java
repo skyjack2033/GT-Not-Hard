@@ -93,6 +93,7 @@ import gregtech.api.util.GTUtility;
 import gregtech.api.util.MultiblockTooltipBuilder;
 import gregtech.api.util.OverclockCalculator;
 import gregtech.common.blocks.ItemMachines;
+import gregtech.common.tileentities.machines.RecipeCheckReason;
 import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 import util.ChaosManager;
@@ -118,6 +119,10 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
     private RecipeMap<?> mLastRecipeMap;
     private ItemStack lastControllerStack;
     private MTEMultiBlockBase runtimeMachine;
+    private String runtimeMachineName = "";
+    private int runtimeMachineMode = 0;
+    private boolean machineModeAvailable = false;
+    private String machineModeName = "";
     private int tTier = 0;
     private int mode = 0;
     private String specialMachineType = null;
@@ -137,6 +142,8 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
         aNBT.setBoolean("wirelessMode", wirelessMode);
         aNBT.setBoolean("downtierUEV", downtierUEV);
         aNBT.setInteger("mode", mode);
+        aNBT.setString("runtimeMachineName", runtimeMachineName);
+        aNBT.setInteger("runtimeMachineMode", runtimeMachineMode);
         if (getSpecialMachine() && specialMachineType != null
             && !specialMachineType.trim()
                 .isEmpty()) {
@@ -164,6 +171,8 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
         wirelessMode = aNBT.getBoolean("wirelessMode");
         downtierUEV = aNBT.getBoolean("downtierUEV");
         mode = aNBT.getInteger("mode");
+        runtimeMachineName = aNBT.getString("runtimeMachineName");
+        runtimeMachineMode = aNBT.getInteger("runtimeMachineMode");
     }
 
     private static final int mcasingIndex = getTextureIndex(
@@ -327,13 +336,72 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             if (ChaosRuntimeBridge.supports(multiblock)) {
                 try {
                     runtimeMachine = ChaosRuntimeBridge.create(multiblock, this);
+                    if (runtimeMachine != null) {
+                        if (!machine.getMetaName()
+                            .equals(runtimeMachineName)) {
+                            runtimeMachineName = machine.getMetaName();
+                            runtimeMachineMode = runtimeMachine.getMachineMode();
+                        }
+                        if (ChaosRuntimeBridge.supportsMachineModeSwitch(runtimeMachine)) {
+                            ChaosRuntimeBridge.setMachineMode(this, runtimeMachine, runtimeMachineMode);
+                            runtimeMachineMode = runtimeMachine.getMachineMode();
+                        }
+                    }
                 } catch (ReflectiveOperationException | RuntimeException exception) {
+                    runtimeMachine = null;
                     MyMod.LOG.warn("Cannot create Chaos runtime bridge for " + machine.getMetaName(), exception);
                 }
             }
-            return replacementRecipeMap(multiblock.getRecipeMap());
+            return replacementRecipeMap(
+                runtimeMachine == null ? multiblock.getRecipeMap() : runtimeMachine.getRecipeMap());
         }
         return ChaosManager.giveRecipeMap(ChaosManager.getMachineName(controller));
+    }
+
+    private void refreshMachine() {
+        if (!GTUtility.areStacksEqual(lastControllerStack, getControllerSlot()) || updateMode) {
+            updateMode = false;
+            lastControllerStack = getControllerSlot() == null ? null : getControllerSlot().copy();
+            mLastRecipeMap = fetchRecipeMap();
+            setMachineTier();
+        }
+    }
+
+    private boolean hasMachineModes() {
+        refreshMachine();
+        machineModeAvailable = mLastRecipeMap != null && getSpecialMachine()
+            || runtimeMachine != null && ChaosRuntimeBridge.supportsMachineModeSwitch(runtimeMachine);
+        return machineModeAvailable;
+    }
+
+    private String getSelectedMachineModeName() {
+        if (!hasMachineModes()) return "";
+        if (runtimeMachine != null) {
+            return runtimeMachine.getMachineModeName();
+        }
+        return specialMachineType == null ? "" : translateMode(specialMachineType);
+    }
+
+    private void switchMachineMode(EntityPlayer player) {
+        refreshMachine();
+        if (runtimeMachine != null && ChaosRuntimeBridge.supportsMachineModeSwitch(runtimeMachine)) {
+            try {
+                runtimeMachineMode = ChaosRuntimeBridge.switchMachineMode(this, runtimeMachine);
+                mLastRecipeMap = replacementRecipeMap(runtimeMachine.getRecipeMap());
+                setSingleRecipeCheck(null);
+                markDirty();
+                scheduleRecipeCheck(RecipeCheckReason.IMMEDIATE);
+            } catch (ReflectiveOperationException | RuntimeException exception) {
+                MyMod.LOG.warn("Cannot switch Chaos runtime mode for " + runtimeMachine.getMetaName(), exception);
+            }
+            return;
+        }
+        if (mLastRecipeMap != null && getSpecialMachine()) {
+            switchSpecialMachineMode(player);
+            setSingleRecipeCheck(null);
+            markDirty();
+            scheduleRecipeCheck(RecipeCheckReason.IMMEDIATE);
+        }
     }
 
     private static final Integer[] specialMachine = { 358, 360, 792, 850, 862, 942, 992, 995, 3006, 3008, 12735, 13001,
@@ -418,80 +486,84 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
         if (getBaseMetaTileEntity() != null && getControllerSlot() != null
             && aPlayer.isSneaking()
             && getBaseMetaTileEntity().isServerSide()) {
-            this.mode = (this.mode + 1) % 3;
-            updateMode = true;
-            switch (getControllerSlot().getItemDamage()) {
-                case 358 -> {
-                    sendMode(aPlayer, selectMode(Magnetic_Flux_Exhibitor_mod, mode));
-                    specialMachineType = selectMode(Magnetic_Flux_Exhibitor_mod, mode);
-                }
-                case 360 -> {
-                    sendMode(aPlayer, selectMode(TurboCan_Pro_mod, mode));
-                    specialMachineType = selectMode(TurboCan_Pro_mod, mode);
-                }
-                case 792 -> {
-                    sendMode(aPlayer, selectMode(Industrial_Material_Press_mod, mode));
-                    specialMachineType = selectMode(Industrial_Material_Press_mod, mode);
-                }
-                case 850 -> {
-                    sendMode(aPlayer, selectMode(Ore_Washing_Plant_mod, mode));
-                    specialMachineType = selectMode(Ore_Washing_Plant_mod, mode);
-                }
-                case 862 -> {
-                    sendMode(aPlayer, selectMode(High_Current_Industrial_Arc_Furnace_mod, mode));
-                    specialMachineType = selectMode(High_Current_Industrial_Arc_Furnace_mod, mode);
-                }
-                case 942 -> {
-                    sendMode(aPlayer, selectMode(Amazon_Warehousing_Depot_mod, mode));
-                    specialMachineType = selectMode(Amazon_Warehousing_Depot_mod, mode);
-                }
-                case 992 -> {
-                    sendMode(aPlayer, selectMode(Industrial_Cutting_Factory_mod, mode));
-                    specialMachineType = selectMode(Industrial_Cutting_Factory_mod, mode);
-                }
-                case 995 -> {
-                    sendMode(aPlayer, selectMode(Utupu_Tanuri_mod, mode));
-                    specialMachineType = selectMode(Utupu_Tanuri_mod, mode);
-                }
-                case 3006 -> {
-                    sendMode(aPlayer, selectMode(Hot_Isostatic_Pressurization_Unit_mod, mode));
-                    specialMachineType = selectMode(Hot_Isostatic_Pressurization_Unit_mod, mode);
-                }
-                case 3008 -> {
-                    sendMode(aPlayer, selectMode(Pseudostable_Black_Hole_Containment_Field_mod, mode));
-                    specialMachineType = selectMode(Pseudostable_Black_Hole_Containment_Field_mod, mode);
-                }
-                case 12735 -> {
-                    sendMode(aPlayer, selectMode(Circuit_Assembly_Line_mod, mode));
-                    specialMachineType = selectMode(Circuit_Assembly_Line_mod, mode);
-                }
-                case 13001 -> {
-                    sendMode(aPlayer, selectMode(Research_Completer_mod, mode));
-                    specialMachineType = selectMode(Research_Completer_mod, mode);
-                }
-                case 15415 -> {
-                    sendMode(aPlayer, selectMode(Heliofusion_Exoticizer_mod, mode));
-                    specialMachineType = selectMode(Heliofusion_Exoticizer_mod, mode);
-                }
-                case 31021 -> {
-                    sendMode(aPlayer, selectMode(Dangote_Distillus_mod, mode));
-                    specialMachineType = selectMode(Dangote_Distillus_mod, mode);
-                }
-                case 31050 -> {
-                    sendMode(aPlayer, selectMode(Elemental_Duplicator_mod, mode));
-                    specialMachineType = selectMode(Elemental_Duplicator_mod, mode);
-                }
-                case 32018 -> {
-                    sendMode(aPlayer, selectMode(Precise_Auto_Assembler_MT_3662_mod, mode));
-                    specialMachineType = selectMode(Precise_Auto_Assembler_MT_3662_mod, mode);
-                }
-                case 32024 -> {
-                    sendMode(aPlayer, selectMode(Large_Essentia_Smeltery_mod, mode));
-                    specialMachineType = selectMode(Large_Essentia_Smeltery_mod, mode);
-                }
-            }
+            switchMachineMode(aPlayer);
         }
         super.onLeftclick(aBaseMetaTileEntity, aPlayer);
+    }
+
+    private void switchSpecialMachineMode(EntityPlayer aPlayer) {
+        this.mode = (this.mode + 1) % 3;
+        updateMode = true;
+        switch (getControllerSlot().getItemDamage()) {
+            case 358 -> {
+                sendMode(aPlayer, selectMode(Magnetic_Flux_Exhibitor_mod, mode));
+                specialMachineType = selectMode(Magnetic_Flux_Exhibitor_mod, mode);
+            }
+            case 360 -> {
+                sendMode(aPlayer, selectMode(TurboCan_Pro_mod, mode));
+                specialMachineType = selectMode(TurboCan_Pro_mod, mode);
+            }
+            case 792 -> {
+                sendMode(aPlayer, selectMode(Industrial_Material_Press_mod, mode));
+                specialMachineType = selectMode(Industrial_Material_Press_mod, mode);
+            }
+            case 850 -> {
+                sendMode(aPlayer, selectMode(Ore_Washing_Plant_mod, mode));
+                specialMachineType = selectMode(Ore_Washing_Plant_mod, mode);
+            }
+            case 862 -> {
+                sendMode(aPlayer, selectMode(High_Current_Industrial_Arc_Furnace_mod, mode));
+                specialMachineType = selectMode(High_Current_Industrial_Arc_Furnace_mod, mode);
+            }
+            case 942 -> {
+                sendMode(aPlayer, selectMode(Amazon_Warehousing_Depot_mod, mode));
+                specialMachineType = selectMode(Amazon_Warehousing_Depot_mod, mode);
+            }
+            case 992 -> {
+                sendMode(aPlayer, selectMode(Industrial_Cutting_Factory_mod, mode));
+                specialMachineType = selectMode(Industrial_Cutting_Factory_mod, mode);
+            }
+            case 995 -> {
+                sendMode(aPlayer, selectMode(Utupu_Tanuri_mod, mode));
+                specialMachineType = selectMode(Utupu_Tanuri_mod, mode);
+            }
+            case 3006 -> {
+                sendMode(aPlayer, selectMode(Hot_Isostatic_Pressurization_Unit_mod, mode));
+                specialMachineType = selectMode(Hot_Isostatic_Pressurization_Unit_mod, mode);
+            }
+            case 3008 -> {
+                sendMode(aPlayer, selectMode(Pseudostable_Black_Hole_Containment_Field_mod, mode));
+                specialMachineType = selectMode(Pseudostable_Black_Hole_Containment_Field_mod, mode);
+            }
+            case 12735 -> {
+                sendMode(aPlayer, selectMode(Circuit_Assembly_Line_mod, mode));
+                specialMachineType = selectMode(Circuit_Assembly_Line_mod, mode);
+            }
+            case 13001 -> {
+                sendMode(aPlayer, selectMode(Research_Completer_mod, mode));
+                specialMachineType = selectMode(Research_Completer_mod, mode);
+            }
+            case 15415 -> {
+                sendMode(aPlayer, selectMode(Heliofusion_Exoticizer_mod, mode));
+                specialMachineType = selectMode(Heliofusion_Exoticizer_mod, mode);
+            }
+            case 31021 -> {
+                sendMode(aPlayer, selectMode(Dangote_Distillus_mod, mode));
+                specialMachineType = selectMode(Dangote_Distillus_mod, mode);
+            }
+            case 31050 -> {
+                sendMode(aPlayer, selectMode(Elemental_Duplicator_mod, mode));
+                specialMachineType = selectMode(Elemental_Duplicator_mod, mode);
+            }
+            case 32018 -> {
+                sendMode(aPlayer, selectMode(Precise_Auto_Assembler_MT_3662_mod, mode));
+                specialMachineType = selectMode(Precise_Auto_Assembler_MT_3662_mod, mode);
+            }
+            case 32024 -> {
+                sendMode(aPlayer, selectMode(Large_Essentia_Smeltery_mod, mode));
+                specialMachineType = selectMode(Large_Essentia_Smeltery_mod, mode);
+            }
+        }
     }
 
     private RecipeMap<?> getMultifunctionalRecipeMap(int meta) {
@@ -611,21 +683,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
     @Override
     @NotNull
     public CheckRecipeResult checkProcessing() {
-        if (!GTUtility.areStacksEqual(lastControllerStack, getControllerSlot()) || updateMode) {
-            if (updateMode) updateMode = false;
-            lastControllerStack = getControllerSlot() == null ? null : getControllerSlot().copy();
-            mLastRecipeMap = fetchRecipeMap();
-            setMachineTier();
-        }
-        if (mLastRecipeMap == null) {
-            return SimpleCheckRecipeResult.ofFailure("no_machine");
-        }
-        if (mLockedToSingleRecipe && mSingleRecipeCheck != null) {
-            if (mSingleRecipeCheck.getRecipeMap() != mLastRecipeMap) {
-                return SimpleCheckRecipeResult.ofFailure("machine_mismatch");
-            }
-        }
-
+        refreshMachine();
         if (runtimeMachine != null) {
             try {
                 return ChaosRuntimeBridge.checkProcessing(this, runtimeMachine);
@@ -635,6 +693,15 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
                         + (getControllerSlot() == null ? "unknown" : getControllerSlot().getDisplayName()),
                     exception);
                 runtimeMachine = null;
+            }
+        }
+
+        if (mLastRecipeMap == null) {
+            return SimpleCheckRecipeResult.ofFailure("no_machine");
+        }
+        if (mLockedToSingleRecipe && mSingleRecipeCheck != null) {
+            if (mSingleRecipeCheck.getRecipeMap() != mLastRecipeMap) {
+                return SimpleCheckRecipeResult.ofFailure("machine_mismatch");
             }
         }
 
@@ -880,6 +947,24 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             .addTooltip(translateToLocal("gtnothard.gui.wireless_mode"))
             .setTooltipShowUpDelay(TOOLTIP_DELAY))
             .widget(new FakeSyncWidget.BooleanSyncer(() -> wirelessMode, val -> wirelessMode = val));
+
+        builder.widget(new ButtonWidget().setOnClick((clickData, widget) -> {
+            if (!widget.isClient()) {
+                switchMachineMode(buildContext.getPlayer());
+            }
+        })
+            .setPlayClickSound(true)
+            .setBackground(GTUITextures.BUTTON_STANDARD, GTUITextures.OVERLAY_BUTTON_MACHINEMODE_DEFAULT)
+            .setPos(116, 91)
+            .setSize(16, 16)
+            .setEnabled(widget -> machineModeAvailable)
+            .addTooltip(translateToLocal("GT5U.gui.button.mode_switch"))
+            .dynamicTooltip(
+                () -> machineModeName.isEmpty() ? Collections.emptyList() : Arrays.asList(machineModeName.split("\n")))
+            .setUpdateTooltipEveryTick(true)
+            .setTooltipShowUpDelay(TOOLTIP_DELAY))
+            .widget(new FakeSyncWidget.BooleanSyncer(this::hasMachineModes, val -> machineModeAvailable = val))
+            .widget(new FakeSyncWidget.StringSyncer(this::getSelectedMachineModeName, val -> machineModeName = val));
     }
 
     @Override
@@ -887,7 +972,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
         int z) {
         super.getWailaNBTData(player, tile, tag, world, x, y, z);
         ItemStack controllerSlot = getControllerSlot();
-        if (mLastRecipeMap != null && controllerSlot != null) {
+        if ((mLastRecipeMap != null || runtimeMachine != null) && controllerSlot != null) {
             tag.setString("Machine", controllerSlot.getDisplayName());
             if (getSpecialMachine() && specialMachineType != null
                 && !specialMachineType.trim()
