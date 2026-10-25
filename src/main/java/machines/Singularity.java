@@ -286,7 +286,7 @@ public class Singularity extends MTEExtendedPowerMultiBlockBase<Singularity> imp
             }
 
             ItemStack[] OreRecipes = switch (dim) {
-                case "Ow", "Ne", "TF", "ED", "EA" -> SingularityOreRecipes.VoidOreRecipes_T0.get(dim);
+                case "Ow", "Ne", "TF", "ED", "EA", "Eg" -> SingularityOreRecipes.VoidOreRecipes_T0.get(dim);
                 case "Mo" -> SingularityOreRecipes.VoidOreRecipes_T1.get(dim);
                 case "De", "Ma", "Ph" -> SingularityOreRecipes.VoidOreRecipes_T2.get(dim);
                 case "As", "Ca", "Ce", "Eu", "Ga", "Rb" -> SingularityOreRecipes.VoidOreRecipes_T3.get(dim);

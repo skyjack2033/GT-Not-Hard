@@ -123,6 +123,8 @@ public class SingularityOreRecipes {
             SmallOre.EndAsteroid_SmallOre);
         ItemStack[] T0_EndAsteroid_Ore_Checked = checkItemStack(T0_EndAsteroid_Ore);
         VoidOreRecipes_T0.put("EA", T0_EndAsteroid_Ore_Checked);
+
+        VoidOreRecipes_T0.put("Eg", DimensionOreCatalog.collect("Eg", SmallOre.Overworld_SmallOre));
     }
 
     public static void addVoidOreRecipes_T1() {
@@ -478,6 +480,8 @@ public class SingularityOreRecipes {
             SmallOre.Haumea_SmallOre);
         ItemStack[] T7_Haumea_Ore_Checked = checkItemStack(T7_Haumea_Ore);
         VoidOreRecipes_T7.put("Ha", T7_Haumea_Ore_Checked);
+
+        VoidOreRecipes_T7.put("KB", DimensionOreCatalog.collect("KB", SmallOre.Kuiperbelt_SmallOre));
 
         // T7 - Makemake - MM
         ItemStack[] T7_Makemake_Ore = addAggregateArray(

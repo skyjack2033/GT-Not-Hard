@@ -18,7 +18,7 @@ import util.RegisteredResourceCatalog;
 
 public class FakeSingularityOreRecipes {
 
-    public static int NEI_ItemOutput_Size = util.RecipesFrontend.ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
+    public static int NEI_ItemOutput_Size = util.RecipesFrontend.ResourceCatalogFrontend.OUTPUTS_PER_SCROLL_PAGE;
 
     public static final RecipeMap<RecipeMapBackend> addFakeVoidOreRecipes = RecipeMapBuilder
         .of("Singularity of Void Ore")
@@ -199,6 +199,8 @@ public class FakeSingularityOreRecipes {
                 .eut(0)
                 .addTo(addFakeVoidOreRecipes_T0);
         }
+
+        addDimensionRecipes("Eg", SingularityOreRecipes.VoidOreRecipes_T0.get("Eg"), addFakeVoidOreRecipes_T0);
     }
 
     public static void addFakeVoidOreRecipes_T1() {
@@ -795,6 +797,8 @@ public class FakeSingularityOreRecipes {
                 .addTo(addFakeVoidOreRecipes_T7);
         }
 
+        addDimensionRecipes("KB", SingularityOreRecipes.VoidOreRecipes_T7.get("KB"), addFakeVoidOreRecipes_T7);
+
         // T7 - Makemake - MM
         ItemStack[] Fake_T7_Makemake_Ore = addCompressAggregateArray(
             Vein.Uranium238_Vein,
@@ -1237,6 +1241,20 @@ public class FakeSingularityOreRecipes {
                 .setNEIDesc("Singularity with Void Ore Mode")
                 .eut(0)
                 .addTo(addFakeVoidOreRecipes_T10);
+        }
+    }
+
+    private static void addDimensionRecipes(String abbreviation, ItemStack[] resources,
+        RecipeMap<RecipeMapBackend> recipeMap) {
+        for (ItemStack[] outputs : addSplitAggregateArray(checkItemStack(resources), NEI_ItemOutput_Size)) {
+            GTValues.RA.stdBuilder()
+                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_" + abbreviation, 1L))
+                .itemOutputs(outputs)
+                .fake()
+                .duration(3 * SECONDS)
+                .setNEIDesc("Singularity with Void Ore Mode")
+                .eut(0)
+                .addTo(recipeMap);
         }
     }
 }
