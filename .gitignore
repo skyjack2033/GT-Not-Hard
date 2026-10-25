@@ -42,3 +42,4 @@ layout.json
 /.tmp-gradle/
 /META-INF/
 /fernflower.jar
+/.crash-inspect/
