@@ -686,7 +686,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
         refreshMachine();
         if (runtimeMachine != null) {
             try {
-                return ChaosRuntimeBridge.checkProcessing(this, runtimeMachine);
+                return ChaosRuntimeBridge.checkProcessing(this, runtimeMachine, getMaxParallel());
             } catch (ReflectiveOperationException | RuntimeException exception) {
                 MyMod.LOG.warn(
                     "Chaos runtime bridge failed for "
@@ -738,7 +738,11 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
         }
         try {
             ChaosRuntimeBridge.syncToDelegate(this, runtimeMachine);
-            boolean delegatedResult = ChaosRuntimeBridge.invokeCustomRunningTick(this, runtimeMachine, aStack);
+            boolean delegatedResult = ChaosRuntimeBridge.invokeCustomRunningTick(
+                this,
+                runtimeMachine,
+                aStack,
+                ChaosRuntimeBridge.getLastSuccessfulInstances(runtimeMachine));
             ChaosRuntimeBridge.syncFromDelegate(runtimeMachine, this);
             return delegatedResult && result;
         } catch (ReflectiveOperationException | RuntimeException exception) {

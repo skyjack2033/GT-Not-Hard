@@ -3,10 +3,12 @@ package util;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.WeakHashMap;
 
 import net.minecraft.item.ItemStack;
 
@@ -15,10 +17,12 @@ import gregtech.api.metatileentity.implementations.MTEEnhancedMultiBlockBase;
 import gregtech.api.metatileentity.implementations.MTEExtendedPowerMultiBlockBase;
 import gregtech.api.metatileentity.implementations.MTEMultiBlockBase;
 import gregtech.api.recipe.check.CheckRecipeResult;
+import gregtech.api.recipe.check.CheckRecipeResultRegistry;
 
 public final class ChaosRuntimeBridge {
 
     private static final Map<Class<?>, Map<String, Field>> FIELD_CACHE = new HashMap<>();
+    private static final Map<MTEMultiBlockBase, Integer> LAST_INSTANCE_COUNTS = new WeakHashMap<>();
 
     private ChaosRuntimeBridge() {}
 
@@ -152,10 +156,45 @@ public final class ChaosRuntimeBridge {
 
     public static CheckRecipeResult checkProcessing(MTEMultiBlockBase source, MTEMultiBlockBase delegate)
         throws ReflectiveOperationException {
-        syncToDelegate(source, delegate);
-        CheckRecipeResult result = invokeWithBase(source, delegate, delegate::checkProcessing);
+        return checkProcessing(source, delegate, 1);
+    }
+
+    public static CheckRecipeResult checkProcessing(MTEMultiBlockBase source, MTEMultiBlockBase delegate, int parallel)
+        throws ReflectiveOperationException {
+        int requestedInstances = Math.max(1, parallel);
+        setLastSuccessfulInstances(delegate, 0);
+        ProcessingAggregate aggregate = new ProcessingAggregate(isCustomCheckProcessing(delegate));
+        CheckRecipeResult lastResult = CheckRecipeResultRegistry.NO_RECIPE;
+        CheckRecipeResult lastSuccessfulResult = CheckRecipeResultRegistry.SUCCESSFUL;
+
+        for (int instance = 0; instance < requestedInstances; instance++) {
+            syncToDelegate(source, delegate);
+            clearProcessingState(delegate);
+            CheckRecipeResult result = invokeWithBase(source, delegate, delegate::checkProcessing);
+            if (!result.wasSuccessful()) {
+                lastResult = result;
+                break;
+            }
+            aggregate.add(delegate);
+            lastSuccessfulResult = result;
+            setLastSuccessfulInstances(delegate, aggregate.instances);
+        }
+
+        if (aggregate.instances == 0) {
+            syncFromDelegate(delegate, source);
+            return lastResult;
+        }
+
+        aggregate.apply(delegate);
         syncFromDelegate(delegate, source);
-        return result;
+        return lastSuccessfulResult;
+    }
+
+    public static int getLastSuccessfulInstances(MTEMultiBlockBase delegate) {
+        synchronized (LAST_INSTANCE_COUNTS) {
+            Integer count = LAST_INSTANCE_COUNTS.get(delegate);
+            return count == null ? 1 : Math.max(1, count);
+        }
     }
 
     public static boolean isCustomCheckProcessing(MTEMultiBlockBase delegate) {
@@ -183,6 +222,11 @@ public final class ChaosRuntimeBridge {
 
     public static boolean invokeCustomRunningTick(MTEMultiBlockBase source, MTEMultiBlockBase delegate,
         ItemStack controller) throws ReflectiveOperationException {
+        return invokeCustomRunningTick(source, delegate, controller, getLastSuccessfulInstances(delegate));
+    }
+
+    public static boolean invokeCustomRunningTick(MTEMultiBlockBase source, MTEMultiBlockBase delegate,
+        ItemStack controller, int instances) throws ReflectiveOperationException {
         if (!isCustomRunningTick(delegate)) {
             return true;
         }
@@ -193,9 +237,15 @@ public final class ChaosRuntimeBridge {
         boolean completed = false;
         boolean result = false;
         try {
-            if (euTick != null) euTick.set(delegate, 0L);
-            if (mEuTick != null) mEuTick.set(delegate, 0);
-            result = invokeWithBase(source, delegate, () -> delegate.onRunningTick(controller));
+            result = true;
+            for (int instance = 0; instance < Math.max(1, instances); instance++) {
+                if (euTick != null) euTick.set(delegate, 0L);
+                if (mEuTick != null) mEuTick.set(delegate, 0);
+                if (!invokeWithBase(source, delegate, () -> delegate.onRunningTick(controller))) {
+                    result = false;
+                    break;
+                }
+            }
             completed = true;
             return result;
         } finally {
@@ -204,6 +254,104 @@ public final class ChaosRuntimeBridge {
                 if (mEuTick != null) mEuTick.set(delegate, oldMEuTick);
             }
         }
+    }
+
+    private static void setLastSuccessfulInstances(MTEMultiBlockBase delegate, int count) {
+        synchronized (LAST_INSTANCE_COUNTS) {
+            LAST_INSTANCE_COUNTS.put(delegate, count);
+        }
+    }
+
+    private static void clearProcessingState(MTEMultiBlockBase delegate) {
+        setField(delegate, "mOutputItems", null);
+        setField(delegate, "mOutputFluids", null);
+        setField(delegate, "mMaxProgresstime", 0);
+        setField(delegate, "lEUt", 0L);
+        setField(delegate, "mEUt", 0);
+    }
+
+    private static final class ProcessingAggregate {
+
+        private final boolean aggregateTargetParallel;
+        private final List<ItemStack> items = new ArrayList<>();
+        private final List<net.minecraftforge.fluids.FluidStack> fluids = new ArrayList<>();
+        private int instances;
+        private int maxProgress;
+        private int efficiency;
+        private int efficiencyIncrease;
+        private boolean hasEfficiency;
+        private long lEUt;
+        private int mEUt;
+        private int lastParallel;
+        private int maxParallel;
+
+        private ProcessingAggregate(boolean aggregateTargetParallel) {
+            this.aggregateTargetParallel = aggregateTargetParallel;
+        }
+
+        private void add(MTEMultiBlockBase delegate) {
+            instances++;
+            if (delegate.mOutputItems != null) {
+                for (ItemStack item : delegate.mOutputItems) {
+                    if (item != null) items.add(item.copy());
+                }
+            }
+            if (delegate.mOutputFluids != null) {
+                for (net.minecraftforge.fluids.FluidStack fluid : delegate.mOutputFluids) {
+                    if (fluid != null) fluids.add(fluid.copy());
+                }
+            }
+            maxProgress = Math.max(maxProgress, delegate.mMaxProgresstime);
+            if (!hasEfficiency) {
+                efficiency = delegate.mEfficiency;
+                efficiencyIncrease = delegate.mEfficiencyIncrease;
+                hasEfficiency = true;
+            }
+            lEUt = addLong(lEUt, getLongField(delegate, "lEUt"));
+            mEUt = addInt(mEUt, delegate.mEUt);
+            if (aggregateTargetParallel) {
+                lastParallel = addInt(lastParallel, delegate.lastParallel);
+                maxParallel = addInt(maxParallel, getIntField(delegate, "maxParallel"));
+            }
+        }
+
+        private void apply(MTEMultiBlockBase delegate) {
+            delegate.mOutputItems = items.isEmpty() ? null : items.toArray(new ItemStack[0]);
+            delegate.mOutputFluids = fluids.isEmpty() ? null
+                : fluids.toArray(new net.minecraftforge.fluids.FluidStack[0]);
+            delegate.mMaxProgresstime = maxProgress;
+            delegate.mEfficiency = efficiency;
+            delegate.mEfficiencyIncrease = efficiencyIncrease;
+            setField(delegate, "lEUt", lEUt);
+            delegate.mEUt = mEUt;
+            if (aggregateTargetParallel) {
+                delegate.lastParallel = lastParallel;
+                setField(delegate, "maxParallel", maxParallel);
+            }
+        }
+    }
+
+    private static int getIntField(Object source, String name) {
+        Object value = getField(source, name);
+        return value instanceof Number ? ((Number) value).intValue() : 0;
+    }
+
+    private static long getLongField(Object source, String name) {
+        Object value = getField(source, name);
+        return value instanceof Number ? ((Number) value).longValue() : 0L;
+    }
+
+    private static long addLong(long left, long right) {
+        if (right > 0 && left > Long.MAX_VALUE - right) return Long.MAX_VALUE;
+        if (right < 0 && left < Long.MIN_VALUE - right) return Long.MIN_VALUE;
+        return left + right;
+    }
+
+    private static int addInt(int left, int right) {
+        long result = (long) left + right;
+        if (result > Integer.MAX_VALUE) return Integer.MAX_VALUE;
+        if (result < Integer.MIN_VALUE) return Integer.MIN_VALUE;
+        return (int) result;
     }
 
     private static <T> T invokeWithBase(MTEMultiBlockBase source, MTEMultiBlockBase delegate,
