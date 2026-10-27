@@ -724,10 +724,22 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
             mEfficiency = 10000;
             mEfficiencyIncrease = 10000;
             mMaxProgresstime = 128;
+            mMaxProgresstime = scaleProcessingTime(mMaxProgresstime, getMaxParallel());
 
             return CheckRecipeResultRegistry.SUCCESSFUL;
         }
-        return super.checkProcessing();
+        CheckRecipeResult result = super.checkProcessing();
+        if (result.wasSuccessful()) {
+            mMaxProgresstime = scaleProcessingTime(mMaxProgresstime, getMaxParallel());
+        }
+        return result;
+    }
+
+    private static int scaleProcessingTime(int processingTime, int machineCount) {
+        if (processingTime <= 1 || machineCount <= 1) {
+            return Math.max(1, processingTime);
+        }
+        return (int) Math.max(1L, ((long) processingTime + machineCount - 1L) / machineCount);
     }
 
     @Override

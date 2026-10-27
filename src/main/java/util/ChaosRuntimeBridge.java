@@ -60,17 +60,12 @@ public final class ChaosRuntimeBridge {
 
     public static void syncToDelegate(MTEMultiBlockBase source, MTEMultiBlockBase delegate)
         throws IllegalAccessException {
-        syncToDelegate(source, delegate, 1);
-    }
-
-    public static void syncToDelegate(MTEMultiBlockBase source, MTEMultiBlockBase delegate, int machineCount)
-        throws IllegalAccessException {
         copyFields(source, delegate);
         ItemStack controller = source.getControllerSlot();
         delegate
             .setInventorySlotContents(delegate.getControllerSlotIndex(), controller == null ? null : controller.copy());
         setField(delegate, "mMachine", source.mMachine);
-        setField(delegate, "EUtCanUse", multiply(source.getMaxInputEu(), machineCount));
+        setField(delegate, "EUtCanUse", source.getMaxInputEu());
         setAliasField(delegate, "isWirelessMode", getField(source, "wirelessMode"));
         if (Boolean.TRUE.equals(getField(source, "wirelessMode"))) {
             setField(delegate, "lEUt", 0L);
@@ -162,16 +157,24 @@ public final class ChaosRuntimeBridge {
 
     public static CheckRecipeResult checkProcessing(MTEMultiBlockBase source, MTEMultiBlockBase delegate,
         int machineCount) throws ReflectiveOperationException {
-        syncToDelegate(source, delegate, machineCount);
+        syncToDelegate(source, delegate);
         CheckRecipeResult result = invokeWithBase(source, delegate, delegate::checkProcessing);
+        if (result.wasSuccessful()) {
+            setProcessingTime(delegate, machineCount);
+        }
         syncFromDelegate(delegate, source);
         return result;
     }
 
-    private static long multiply(long value, int multiplier) {
-        if (value <= 0 || multiplier <= 1) return value;
-        if (value > Long.MAX_VALUE / multiplier) return Long.MAX_VALUE;
-        return value * multiplier;
+    private static void setProcessingTime(MTEMultiBlockBase delegate, int machineCount) {
+        int processingTime = delegate.mMaxProgresstime;
+        if (processingTime <= 1 || machineCount <= 1) {
+            delegate.mMaxProgresstime = Math.max(1, processingTime);
+            return;
+        }
+        delegate.mMaxProgresstime = (int) Math.max(
+            1L,
+            ((long) processingTime + machineCount - 1L) / machineCount);
     }
 
     public static boolean isCustomCheckProcessing(MTEMultiBlockBase delegate) {
