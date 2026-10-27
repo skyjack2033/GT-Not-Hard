@@ -738,11 +738,7 @@ public class Chaos extends MTEExtendedPowerMultiBlockBase<Chaos> implements ISur
         }
         try {
             ChaosRuntimeBridge.syncToDelegate(this, runtimeMachine);
-            boolean delegatedResult = ChaosRuntimeBridge.invokeCustomRunningTick(
-                this,
-                runtimeMachine,
-                aStack,
-                ChaosRuntimeBridge.getLastSuccessfulInstances(runtimeMachine));
+            boolean delegatedResult = ChaosRuntimeBridge.invokeCustomRunningTick(this, runtimeMachine, aStack);
             ChaosRuntimeBridge.syncFromDelegate(runtimeMachine, this);
             return delegatedResult && result;
         } catch (ReflectiveOperationException | RuntimeException exception) {
