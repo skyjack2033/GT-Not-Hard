@@ -1,5 +1,6 @@
 package Recipes.ChaosRecipes;
 
+import gregtech.api.recipe.GTNotHardLargeRecipeBackend;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
@@ -9,7 +10,7 @@ import util.RecipesFrontend.SpecialAssemblyLineItemFrontend;
 public class ChaosRecipeMap {
 
     public static final RecipeMap<RecipeMapBackend> AssemblyLineNormalRecipe = RecipeMapBuilder
-        .of("Chaos of AssemblyLine Normal")
+        .<RecipeMapBackend>of("Chaos of AssemblyLine Normal", GTNotHardLargeRecipeBackend::new)
         .maxIO(16, 1, 4, 0)
         .minInputs(1, 0)
         .useSpecialSlot()
@@ -20,7 +21,7 @@ public class ChaosRecipeMap {
         .build();
 
     public static final RecipeMap<RecipeMapBackend> AssemblyLineItemRecipe = RecipeMapBuilder
-        .of("Chaos of AssemblyLine Item")
+        .<RecipeMapBackend>of("Chaos of AssemblyLine Item", GTNotHardLargeRecipeBackend::new)
         .maxIO(92, 1, 18, 0)
         .minInputs(1, 0)
         .neiHandlerInfo(builder -> builder.setHeight(400))

@@ -1256,7 +1256,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
                     setStackSize(IngotList.Naquadria_Ingot.copy(), 64 * 49),
                     setStackSize(IngotList.Neutronium_Ingot.copy(), 64 * 117 + 16),
 
-                    setStackSize(SingularityList.Eternal_Singularity.copy(), 1),
+                    setStackSize(SingularityList.Eternal_Singularity, 1),
 
                     setStackSize(WireList.Superconductor_UHV_Wire_1x.copy(), 64 * 2))
                 .fluidInputs(
@@ -1292,7 +1292,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
 
                     setStackSize(GemList.Nether_Star.copy(), 16),
 
-                    setStackSize(GTItemList.Gravitation_Engine.copy(), 4),
+                    setStackSize(GTItemList.Gravitation_Engine, 4),
 
                     setStackSize(IngotList.Attuned_Tengam_Ingot.copy(), 8),
                     setStackSize(IngotList.Cosmic_Neutronium_Ingot.copy(), 64),
@@ -1310,8 +1310,8 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
 
                     setStackSize(NewHorizonsCoreModList.Heavy_Duty_Rocket_Engine_Tier_4.copy(), 1),
 
-                    setStackSize(OpenComputersList.Drone_Case_Tier3.copy(), 4),
-                    setStackSize(OpenComputersList.Navigation_Upgrade.copy(), 64))
+                    setStackSize(OpenComputersList.Drone_Case_Tier3, 4),
+                    setStackSize(OpenComputersList.Navigation_Upgrade, 64))
                 .fluidInputs(
                     requiredFluid("lubricant", 1000 * 4),
                     requiredFluid("molten.mutatedlivingsolder", 144 * 41),
@@ -1347,7 +1347,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
                     setStackSize(IngotList.Neutronium_Ingot.copy(), 32),
                     setStackSize(IngotList.Quantium_Ingot.copy(), 39),
 
-                    setStackSize(OpenComputersList.Microcontroller_Case_Tier3.copy(), 4),
+                    setStackSize(OpenComputersList.Microcontroller_Case_Tier3, 4),
 
                     setStackSize(WireList.Superconductor_UEV_Wire_1x.copy(), 4))
                 .fluidInputs(
@@ -1389,7 +1389,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
                     setStackSize(GemList.Nether_Star.copy(), 40),
 
                     setStackSize(GTItemList.Energised_Tesseract.copy(), 1),
-                    setStackSize(GTItemList.Gravitation_Engine.copy(), 4),
+                    setStackSize(GTItemList.Gravitation_Engine, 4),
 
                     setStackSize(GTNHIntergalacticList.Hyperfine_TrNq_Radioisomer_Pellet.copy(), 1),
                     setStackSize(GTNHIntergalacticList.Ultra_Durable_Solar_Sail.copy(), 4),
@@ -1425,9 +1425,9 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
 
                     setStackSize(NewHorizonsCoreModList.Heavy_Duty_Rocket_Engine_Tier_4.copy(), 1),
 
-                    setStackSize(OpenComputersList.Drone_Case_Tier3.copy(), 4),
-                    setStackSize(OpenComputersList.Microcontroller_Case_Tier3.copy(), 4),
-                    setStackSize(OpenComputersList.Navigation_Upgrade.copy(), 64),
+                    setStackSize(OpenComputersList.Drone_Case_Tier3, 4),
+                    setStackSize(OpenComputersList.Microcontroller_Case_Tier3, 4),
+                    setStackSize(OpenComputersList.Navigation_Upgrade, 64),
 
                     setStackSize(WireList.Superconductor_UEV_Wire_1x.copy(), 4))
                 .fluidInputs(
@@ -2535,7 +2535,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
         ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#73")
             .itemInputsUnsafe(
                 GTUtility.getIntegratedCircuit(1),
-                setStackSize(GTItemList.Gravitation_Engine.copy(), 0),
+                setStackSize(GTItemList.Gravitation_Engine, 0),
 
                 getMaterialInput(OrePrefixes.circuit, Materials.EV, 8),
                 getMaterialInput(OrePrefixes.circuit, Materials.HV, 16),
@@ -4292,7 +4292,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#147")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(MatterManipulatorList.Matter_Manipulator_Power_Core_MKII.copy(), 0),
+                    setStackSize(MatterManipulatorList.Matter_Manipulator_Power_Core_MKII, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.LuV, 6),
 
@@ -4321,7 +4321,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#148")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(MatterManipulatorList.Matter_Manipulator_Computer_Core_MKII.copy(), 0),
+                    setStackSize(MatterManipulatorList.Matter_Manipulator_Computer_Core_MKII, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.UV, 2),
 
@@ -4339,14 +4339,14 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#149")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(MatterManipulatorList.Matter_Manipulator_Teleporter_Core_MKII.copy(), 0),
+                    setStackSize(MatterManipulatorList.Matter_Manipulator_Teleporter_Core_MKII, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.ZPM, 4),
                     getMaterialInput(OrePrefixes.circuit, Materials.LuV, 24),
 
                     setStackSize(GemList.Nether_Star.copy(), 12),
 
-                    setStackSize(GTItemList.Gravitation_Engine.copy(), 4),
+                    setStackSize(GTItemList.Gravitation_Engine, 4),
 
                     setStackSize(IngotList.Duranium_Ingot.copy(), 8),
                     setStackSize(IngotList.Gallium_Ingot.copy(), 64 * 4 + 32),
@@ -4370,7 +4370,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#150")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(MatterManipulatorList.Matter_Manipulator_Lens_Assembly_MKII.copy(), 0),
+                    setStackSize(MatterManipulatorList.Matter_Manipulator_Lens_Assembly_MKII, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.LuV, 16),
                     getMaterialInput(OrePrefixes.circuit, Materials.ZPM, 4),
@@ -4396,7 +4396,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#151")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(MatterManipulatorList.Matter_Manipulator_Power_Core_MKIII.copy(), 0),
+                    setStackSize(MatterManipulatorList.Matter_Manipulator_Power_Core_MKIII, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.ZPM, 14),
                     getMaterialInput(OrePrefixes.circuit, Materials.LuV, 32),
@@ -4434,7 +4434,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#152")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(MatterManipulatorList.Matter_Manipulator_Computer_Core_MKIII.copy(), 0),
+                    setStackSize(MatterManipulatorList.Matter_Manipulator_Computer_Core_MKIII, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.UV, 2),
 
@@ -4452,14 +4452,14 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#153")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(MatterManipulatorList.Matter_Manipulator_Teleporter_Core_MKIII.copy(), 0),
+                    setStackSize(MatterManipulatorList.Matter_Manipulator_Teleporter_Core_MKIII, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.UV, 4),
                     getMaterialInput(OrePrefixes.circuit, Materials.ZPM, 24),
 
                     setStackSize(GemList.Nether_Star.copy(), 18),
 
-                    setStackSize(GTItemList.Gravitation_Engine.copy(), 16),
+                    setStackSize(GTItemList.Gravitation_Engine, 16),
                     setStackSize(GTItemList.Stable_Baryon_Containment_Unit.copy(), 8),
                     setStackSize(GTItemList.Stable_Lepton_Containment_Unit.copy(), 8),
 
@@ -4487,7 +4487,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#154")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(MatterManipulatorList.Matter_Manipulator_Lens_Assembly_MKIII.copy(), 0),
+                    setStackSize(MatterManipulatorList.Matter_Manipulator_Lens_Assembly_MKIII, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.UV, 4),
                     getMaterialInput(OrePrefixes.circuit, Materials.ZPM, 16),
@@ -4514,7 +4514,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#155")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(MatterManipulatorList.Matter_Manipulator_Quantum_Downlink.copy(), 0),
+                    setStackSize(MatterManipulatorList.Matter_Manipulator_Quantum_Downlink, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.UV, 4),
 
@@ -4539,7 +4539,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#156")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(MatterManipulatorList.Energy_Tunnel_Manipulator_Upgrade.copy(), 0),
+                    setStackSize(MatterManipulatorList.Energy_Tunnel_Manipulator_Upgrade, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.UEV, 4),
 
@@ -5142,7 +5142,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
                     setStackSize(IngotList.Draconium_Ingot.copy(), 9),
                     setStackSize(IngotList.Ichorium_Ingot.copy(), 1),
                     setStackSize(IngotList.Sunnarium_Ingot.copy(), 64 + 36),
-                    setStackSize(IngotList.Void_Metal_Ingot.copy(), 64 * 3 + 8))
+                    setStackSize(IngotList.Void_Metal_Ingot, 64 * 3 + 8))
                 .itemOutputs(setStackSize(KubaTechList.Draconic_Core_Schematic, 1))
                 .eut(RECIPE_UHV)
                 .duration(180 * SECONDS)
@@ -5161,7 +5161,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
                     setStackSize(IngotList.Draconium_Ingot.copy(), 9),
                     setStackSize(IngotList.Neutronium_Ingot.copy(), 1),
                     setStackSize(IngotList.Neutronium_Ingot.copy(), 64 + 36),
-                    setStackSize(IngotList.Void_Metal_Ingot.copy(), 64 * 6 + 16))
+                    setStackSize(IngotList.Void_Metal_Ingot, 64 * 6 + 16))
                 .itemOutputs(setStackSize(KubaTechList.Wyvern_Core_Schematic, 1))
                 .eut(RECIPE_UEV)
                 .duration(180 * SECONDS)
@@ -5180,7 +5180,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
                     setStackSize(IngotList.Awakened_Draconium_Ingot.copy(), 9),
                     setStackSize(IngotList.Infinity_Ingot.copy(), 1),
                     setStackSize(IngotList.Infinity_Ingot.copy(), 64 + 36),
-                    setStackSize(IngotList.Void_Metal_Ingot.copy(), 64 * 12 + 32))
+                    setStackSize(IngotList.Void_Metal_Ingot, 64 * 12 + 32))
                 .itemOutputs(setStackSize(KubaTechList.Awakened_Core_Schematic, 1))
                 .eut(RECIPE_UIV)
                 .duration(180 * SECONDS)
@@ -5199,7 +5199,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
                     setStackSize(IngotList.Awakened_Draconium_Ingot.copy(), 36),
                     setStackSize(IngotList.SpaceTime_Ingot.copy(), 1),
                     setStackSize(IngotList.SpaceTime_Ingot.copy(), 64 + 36),
-                    setStackSize(IngotList.Void_Metal_Ingot.copy(), 64 * 25))
+                    setStackSize(IngotList.Void_Metal_Ingot, 64 * 25))
                 .itemOutputs(setStackSize(KubaTechList.Chaotic_Core_Schematic, 1))
                 .eut(RECIPE_UMV)
                 .duration(180 * SECONDS)
@@ -5209,7 +5209,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Item#172")
                 .itemInputsUnsafe(
                     GTUtility.getIntegratedCircuit(1),
-                    setStackSize(AmunRaList.Shuttle_Schematic.copy(), 0),
+                    setStackSize(AmunRaList.Shuttle_Schematic, 0),
 
                     getMaterialInput(OrePrefixes.circuit, Materials.UEV, 32),
                     getMaterialInput(OrePrefixes.circuit, Materials.UHV, 64 * 2 + 48),
@@ -5322,7 +5322,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
                         setStackSize(IngotList.Superconductor_Base_ZPM_Ingot.copy(), 64 * 4),
                         setStackSize(IngotList.Tritanium_Ingot.copy(), 64 * 8),
 
-                        setStackSize(SingularityList.Eternal_Singularity.copy(), 1),
+                        setStackSize(SingularityList.Eternal_Singularity, 1),
 
                         setStackSize(WireList.Superconductor_UHV_Wire_1x.copy(), 64 * 32))
                     .fluidInputs(
@@ -5545,7 +5545,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
 
                         setStackSize(NewHorizonsCoreModList.Pico_Wafer.copy(), 64 * 2),
 
-                        setStackSize(SingularityList.Eternal_Singularity.copy(), 1),
+                        setStackSize(SingularityList.Eternal_Singularity, 1),
 
                         setStackSize(WireList.Superconductor_UHV_Wire_1x.copy(), 64 * 128))
                     .fluidInputs(
@@ -5783,7 +5783,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
 
                         setStackSize(NewHorizonsCoreModList.Pico_Wafer.copy(), 64 * 2),
 
-                        setStackSize(SingularityList.Eternal_Singularity.copy(), 16),
+                        setStackSize(SingularityList.Eternal_Singularity, 16),
 
                         setStackSize(WireList.Superconductor_UHV_Wire_1x.copy(), 64 * 128))
                     .fluidInputs(
@@ -5944,7 +5944,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
 
                         setStackSize(MultiMachineCasingList.Dimensional_Bridge.copy(), 64),
                         setStackSize(NewHorizonsCoreModList.Pico_Wafer.copy(), 64 * 4),
-                        setStackSize(SingularityList.Eternal_Singularity.copy(), 16),
+                        setStackSize(SingularityList.Eternal_Singularity, 16),
                         setStackSize(TecTechList.Gallifreyan_Stabilisation_Field_Generator.copy(), 64))
                     .fluidInputs(
                         requiredFluid("dimensionallyshiftedsuperfluid", 1000 * (64 * 4)),
@@ -6157,7 +6157,7 @@ public class ChaosAssemblyLine_ItemRecipe_Item {
 
                         setStackSize(NewHorizonsCoreModList.Pico_Wafer.copy(), 64 * 2),
 
-                        setStackSize(SingularityList.Chronic_Singularity.copy(), 64),
+                        setStackSize(SingularityList.Chronic_Singularity, 64),
 
                         setStackSize(TecTechList.Gallifreyan_Stabilisation_Field_Generator.copy(), 64),
                         setStackSize(TecTechList.Harmonic_Phonon_Transmission_Conduit.copy(), 32),

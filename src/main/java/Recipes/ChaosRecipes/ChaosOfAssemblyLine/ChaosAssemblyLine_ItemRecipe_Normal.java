@@ -1021,7 +1021,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Normal#39")
                 .itemInputsUnsafe(
                     setStackSize(IngotList.Hypogen_Ingot.copy(), 1),
-                    setStackSize(SingularityList.Eternal_Singularity.copy(), 1),
+                    setStackSize(SingularityList.Eternal_Singularity, 1),
                     getMaterialInput(OrePrefixes.circuit, Materials.UEV, 4),
                     setStackSize(GTItemList.Field_Generator_UHV.copy(), 16),
 
@@ -1043,12 +1043,12 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
             // "Corona-Resistant Drone Case"
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Normal#40")
                 .itemInputsUnsafe(
-                    setStackSize(OpenComputersList.Drone_Case_Tier3.copy(), 4),
+                    setStackSize(OpenComputersList.Drone_Case_Tier3, 4),
                     setStackSize(FrameBoxList.Transcendent_Metal_Frame_Box.copy(), 4),
                     setStackSize(GTItemList.Emitter_UEV.copy(), 1),
-                    setStackSize(OpenComputersList.Navigation_Upgrade.copy(), 64),
+                    setStackSize(OpenComputersList.Navigation_Upgrade, 64),
 
-                    setStackSize(GTItemList.Gravitation_Engine.copy(), 4),
+                    setStackSize(GTItemList.Gravitation_Engine, 4),
                     setStackSize(BatteryList.Lapotronic_Energy_Orb_Cluster_Empty.copy(), 4),
                     setStackSize(NewHorizonsCoreModList.Heavy_Duty_Rocket_Engine_Tier_4.copy(), 1))
                 .fluidInputs(requiredFluid("plasma.xenon", 1000), requiredFluid("molten.mutatedlivingsolder", 144 * 5))
@@ -1060,7 +1060,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
             // "Magnetically Shielded Femtocontroller"
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Normal#41")
                 .itemInputsUnsafe(
-                    setStackSize(OpenComputersList.Microcontroller_Case_Tier3.copy(), 4),
+                    setStackSize(OpenComputersList.Microcontroller_Case_Tier3, 4),
                     setStackSize(CircuitList.Optically_Perfected_CPU.copy(), 1),
                     setStackSize(GTItemList.Sensor_UEV.copy(), 1),
                     getMaterialInput(OrePrefixes.circuit, Materials.UHV, 2),
@@ -3289,7 +3289,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
                     setStackSize(GTItemList.Field_Generator_LuV.copy(), 1),
                     setStackSize(GTItemList.Quantum_Star.copy(), 4),
 
-                    setStackSize(GTItemList.Gravitation_Engine.copy(), 4),
+                    setStackSize(GTItemList.Gravitation_Engine, 4),
                     setStackSize(CasingList.HSSS_Casing.copy(), 8),
                     setStackSize(ScrewList.HSSS_Screw.copy(), 16))
                 .fluidInputs(
@@ -3312,7 +3312,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
 
                     setStackSize(GTItemList.Electric_Piston_LuV.copy(), 2))
                 .fluidInputs(requiredFluid("molten.indalloy140", 144 * 4))
-                .itemOutputs(setStackSize(MatterManipulatorList.Matter_Manipulator_Lens_Assembly_MKII.copy(), 1))
+                .itemOutputs(setStackSize(MatterManipulatorList.Matter_Manipulator_Lens_Assembly_MKII, 1))
                 .eut(RECIPE_LuV)
                 .duration(60 * SECONDS)
                 .addTo(AssemblyLineNormalRecipe);
@@ -3357,7 +3357,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
 
                     setStackSize(GTItemList.Stable_Baryon_Containment_Unit.copy(), 8),
                     setStackSize(GTItemList.Stable_Lepton_Containment_Unit.copy(), 8),
-                    setStackSize(GTItemList.Gravitation_Engine.copy(), 16),
+                    setStackSize(GTItemList.Gravitation_Engine, 16),
                     setStackSize(CasingList.Trinium_Casing.copy(), 8),
 
                     setStackSize(ScrewList.Trinium_Screw.copy(), 16))
@@ -3381,7 +3381,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
 
                     setStackSize(GTItemList.Electric_Motor_ZPM.copy(), 2))
                 .fluidInputs(requiredFluid("molten.indalloy140", 144 * 16))
-                .itemOutputs(setStackSize(MatterManipulatorList.Matter_Manipulator_Lens_Assembly_MKIII.copy(), 1))
+                .itemOutputs(setStackSize(MatterManipulatorList.Matter_Manipulator_Lens_Assembly_MKIII, 1))
                 .eut(RECIPE_ZPM)
                 .duration(60 * SECONDS)
                 .addTo(AssemblyLineNormalRecipe);
@@ -3558,7 +3558,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
                     setStackSize(GTItemList.Field_Generator_UEV.copy(), 2),
                     getMaterialInput(OrePrefixes.circuit, Materials.UIV, 4),
 
-                    setStackSize(MiscPlateList.Lightweight_Plate.copy(), 32),
+                    setStackSize(MiscPlateList.Lightweight_Plate, 32),
                     setStackSize(NewHorizonsCoreModList.Heavy_Duty_Rocket_Engine_Tier_4.copy(), 8),
                     setStackSize(GTItemList.Sensor_UEV.copy(), 8))
                 .fluidInputs(
@@ -3578,7 +3578,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
                     setStackSize(GTItemList.Field_Generator_UIV.copy(), 2),
                     getMaterialInput(OrePrefixes.circuit, Materials.UMV, 4),
 
-                    setStackSize(MiscPlateList.Lightweight_Plate.copy(), 64),
+                    setStackSize(MiscPlateList.Lightweight_Plate, 64),
                     setStackSize(NewHorizonsCoreModList.Heavy_Duty_Rocket_Engine_Tier_4.copy(), 16),
                     setStackSize(GTItemList.Sensor_UIV.copy(), 8))
                 .fluidInputs(
@@ -3598,7 +3598,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
                     setStackSize(GTItemList.Field_Generator_UMV.copy(), 2),
                     getMaterialInput(OrePrefixes.circuit, Materials.UXV, 4),
 
-                    setStackSize(MiscPlateList.Lightweight_Plate.copy(), 128),
+                    setStackSize(MiscPlateList.Lightweight_Plate, 128),
                     setStackSize(NewHorizonsCoreModList.Heavy_Duty_Rocket_Engine_Tier_4.copy(), 32),
                     setStackSize(GTItemList.Sensor_UMV.copy(), 8))
                 .fluidInputs(
@@ -3618,7 +3618,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
                     setStackSize(GTItemList.Field_Generator_UXV.copy(), 2),
                     getMaterialInput(OrePrefixes.circuit, Materials.MAX, 4),
 
-                    setStackSize(MiscPlateList.Lightweight_Plate.copy(), 256),
+                    setStackSize(MiscPlateList.Lightweight_Plate, 256),
                     setStackSize(NewHorizonsCoreModList.Heavy_Duty_Rocket_Engine_Tier_4.copy(), 64),
                     setStackSize(GTItemList.Sensor_UXV.copy(), 8))
                 .fluidInputs(
@@ -3634,7 +3634,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
         // "Raw Deep Dark Portal Block"
         ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_ItemRecipe_Normal#162")
             .itemInputsUnsafe(
-                setStackSize(ExtraUtilitieList.Octuple_Compressed_Cobblestone.copy(), 1),
+                setStackSize(ExtraUtilitieList.Octuple_Compressed_Cobblestone, 1),
                 setStackSize(MachineList.Teleporter.copy(), 1),
                 setStackSize(AvaritiaList.Infinity_Block.copy(), 4),
                 getMaterialInput(OrePrefixes.circuit, Materials.UIV, 4),
@@ -3775,7 +3775,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
                     .itemInputsUnsafe(
                         GTUtility.getIntegratedCircuit(1),
 
-                        setStackSize(SingularityList.Eternal_Singularity.copy(), 1),
+                        setStackSize(SingularityList.Eternal_Singularity, 1),
                         setStackSize(GTItemList.Sensor_UV.copy(), 16),
                         setStackSize(AvaritiaList.Infinity_Block.copy(), 16),
                         setStackSize(AvaritiaList.Cosmic_Neutronium_Block.copy(), 16),
@@ -3901,7 +3901,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
                     .itemInputsUnsafe(
                         GTUtility.getIntegratedCircuit(2),
 
-                        setStackSize(SingularityList.Eternal_Singularity.copy(), 1),
+                        setStackSize(SingularityList.Eternal_Singularity, 1),
                         setStackSize(GTItemList.Sensor_UEV.copy(), 16),
                         setStackSize(AvaritiaList.Infinity_Block.copy(), 16),
                         setStackSize(AvaritiaList.Cosmic_Neutronium_Block.copy(), 16),
@@ -4037,7 +4037,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
                         setStackSize(GTItemList.Sensor_UMV.copy(), 16),
                         setStackSize(GTItemList.Emitter_UMV.copy(), 16),
 
-                        setStackSize(SingularityList.Eternal_Singularity.copy(), 16))
+                        setStackSize(SingularityList.Eternal_Singularity, 16))
                     .fluidInputs(
                         requiredFluid("molten.neutronium", 1000 * 64 * 64 * 8),
                         requiredFluid("molten.spacetime", 144 * 64 * 16),
@@ -4134,7 +4134,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
                         setStackSize(DensePlateList.Dense_Shirabon_Plate.copy(), 8),
                         setStackSize(GTItemList.Sensor_UXV.copy(), 16),
                         setStackSize(GTItemList.Emitter_UXV.copy(), 16),
-                        setStackSize(SingularityList.Eternal_Singularity.copy(), 16),
+                        setStackSize(SingularityList.Eternal_Singularity, 16),
 
                         setStackSize(GTItemList.Universium_Nanites.copy(), 16),
                         setStackSize(GTItemList.Black_Dwarf_Matter_Nanites.copy(), 16),
@@ -4292,7 +4292,7 @@ public class ChaosAssemblyLine_ItemRecipe_Normal {
 
                         setStackSize(GTItemList.Sensor_UXV.copy(), 16),
                         setStackSize(GTItemList.Emitter_UXV.copy(), 16),
-                        setStackSize(SingularityList.Chronic_Singularity.copy(), 64),
+                        setStackSize(SingularityList.Chronic_Singularity, 64),
                         setStackSize(GTItemList.Universium_Nanites.copy(), 16),
 
                         setStackSize(GTItemList.Black_Dwarf_Matter_Nanites.copy(), 16),

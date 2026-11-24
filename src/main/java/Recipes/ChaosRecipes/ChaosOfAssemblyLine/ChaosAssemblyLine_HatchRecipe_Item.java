@@ -479,7 +479,7 @@ public class ChaosAssemblyLine_HatchRecipe_Item {
 
                 setStackSize(MultiMachineControllerList.Static_Network_Switch_With_QoS.copy(), 1),
 
-                setStackSize(OpenComputersList.Internet_Card.copy(), 1))
+                setStackSize(OpenComputersList.Internet_Card, 1))
             .fluidInputs(requiredFluid("molten.mutatedlivingsolder", 144 * 9), requiredFluid("exciteddtec", 500))
             .itemOutputs(setStackSize(HatchList.Cloud_Computation_Client_Hatch.copy(), 1))
             .eut(RECIPE_UMV)
@@ -505,7 +505,7 @@ public class ChaosAssemblyLine_HatchRecipe_Item {
 
                 setStackSize(MultiMachineControllerList.Static_Network_Switch_With_QoS.copy(), 1),
 
-                setStackSize(OpenComputersList.Internet_Card.copy(), 1))
+                setStackSize(OpenComputersList.Internet_Card, 1))
             .fluidInputs(requiredFluid("molten.mutatedlivingsolder", 144 * 9), requiredFluid("exciteddtec", 500))
             .itemOutputs(setStackSize(HatchList.Cloud_Computation_Server_Hatch.copy(), 1))
             .eut(RECIPE_UMV)
@@ -872,7 +872,7 @@ public class ChaosAssemblyLine_HatchRecipe_Item {
                 setStackSize(HatchList.Input_Bus_UHV.copy(), 1),
                 setStackSize(GTBlockList.Quantum_Chest_IV.copy(), 1),
                 setStackSize(GTItemList.Field_Generator_UHV.copy(), 1),
-                setStackSize(AmunRaList.Nanite_Control_Module.copy(), 4),
+                setStackSize(AmunRaList.Nanite_Control_Module, 4),
 
                 setStackSize(IngotList.Enriched_Naquadah_Alloy_Ingot.copy(), 36),
                 setStackSize(IngotList.Cosmic_Neutronium_Ingot.copy(), 64 * 4))
@@ -905,7 +905,7 @@ public class ChaosAssemblyLine_HatchRecipe_Item {
                 setStackSize(HatchList.Assembly_line_Reception_Connector.copy(), 1),
                 setStackSize(MultiMachineControllerList.Data_Bank.copy(), 1),
                 setStackSize(GTBlockList.Optical_Fiber_Cable.copy(), 64),
-                setStackSize(OpenComputersList.Internet_Card.copy(), 1),
+                setStackSize(OpenComputersList.Internet_Card, 1),
 
                 setStackSize(IngotList.Neutronium_Ingot.copy(), 64 * 4),
                 setStackSize(IngotList.Infinity_Ingot.copy(), 16),
@@ -923,7 +923,7 @@ public class ChaosAssemblyLine_HatchRecipe_Item {
                 setStackSize(HatchList.Data_Bank_Transmission_Connector.copy(), 1),
                 setStackSize(MultiMachineControllerList.Data_Bank.copy(), 1),
                 setStackSize(GTBlockList.Optical_Fiber_Cable.copy(), 64),
-                setStackSize(OpenComputersList.Internet_Card.copy(), 1),
+                setStackSize(OpenComputersList.Internet_Card, 1),
 
                 setStackSize(IngotList.Neutronium_Ingot.copy(), 64 * 4),
                 setStackSize(IngotList.Infinity_Ingot.copy(), 16),

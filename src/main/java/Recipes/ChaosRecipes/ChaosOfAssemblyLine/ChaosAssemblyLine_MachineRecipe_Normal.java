@@ -222,7 +222,7 @@ public class ChaosAssemblyLine_MachineRecipe_Normal {
                     setStackSize(GTItemList.Emitter_UIV.copy(), 8),
 
                     setStackSize(GTItemList.Conveyor_Module_UIV.copy(), 8),
-                    setStackSize(SingularityList.Eternal_Singularity.copy(), 4),
+                    setStackSize(SingularityList.Eternal_Singularity, 4),
                     setStackSize(Appliedenergistics2List.Singularity.copy(), 8))
                 .fluidInputs(
                     requiredFluid("molten.chromaticglass", 144 * 64 * 16),
@@ -337,7 +337,7 @@ public class ChaosAssemblyLine_MachineRecipe_Normal {
 
                 getMaterialInput(OrePrefixes.circuit, Materials.UIV, 20),
                 setStackSize(GTItemList.Field_Generator_UEV.copy(), 4),
-                setStackSize(SingularityList.Eternal_Singularity.copy(), 4),
+                setStackSize(SingularityList.Eternal_Singularity, 4),
                 setStackSize(GTPPList.Quantum_Anomaly.copy(), 1),
 
                 setStackSize(SuperdensePlateList.Superdense_Osmiridium_Plate.copy(), 4),
@@ -366,9 +366,9 @@ public class ChaosAssemblyLine_MachineRecipe_Normal {
                 getMaterialInput(OrePrefixes.circuit, Materials.UHV, 4),
                 setStackSize(GTItemList.Gravi_Star.copy(), 4),
 
-                setStackSize(ThaumcraftList.Primordial_Pearl.copy(), 1),
-                setStackSize(BloodMagicList.Soul_Shard.copy(), 8),
-                setStackSize(BloodMagicList.Life_Shard.copy(), 8),
+                setStackSize(ThaumcraftList.Primordial_Pearl, 1),
+                setStackSize(BloodMagicList.Soul_Shard, 8),
+                setStackSize(BloodMagicList.Life_Shard, 8),
                 setStackSize(SuperdensePlateList.Superdense_Void_Metal_Plate.copy(), 1))
             .fluidInputs(
                 requiredFluid("molten.indalloy140", 144 * 20),
@@ -513,7 +513,7 @@ public class ChaosAssemblyLine_MachineRecipe_Normal {
 
                 setStackSize(SuperdensePlateList.Superdense_Netherite_Plate.copy(), 4),
                 setStackSize(RotorList.Cosmic_Neutronium_Rotor.copy(), 8),
-                setStackSize(SingularityList.Eternal_Singularity.copy(), 1),
+                setStackSize(SingularityList.Eternal_Singularity, 1),
                 setStackSize(GTPPList.Quantum_Anomaly.copy(), 1))
             .fluidInputs(
                 requiredFluid("molten.mutatedlivingsolder", 144 * 64),
@@ -579,7 +579,7 @@ public class ChaosAssemblyLine_MachineRecipe_Normal {
                     setStackSize(MultiMachineCasingList.Stellar_Energy_Siphon_Casing.copy(), 4),
                     setStackSize(BatteryList.Extremely_Ultimate_Battery_Empty.copy(), 2),
                     setStackSize(MultiMachineCasingList.Dimensional_Bridge.copy(), 64),
-                    setStackSize(SingularityList.Eternal_Singularity.copy(), 32),
+                    setStackSize(SingularityList.Eternal_Singularity, 32),
 
                     setStackSize(DensePlateList.Dense_Mellion_Plate.copy(), 16),
                     setStackSize(DensePlateList.Dense_Six_Phased_Copper_Plate.copy(), 16),
@@ -905,7 +905,7 @@ public class ChaosAssemblyLine_MachineRecipe_Normal {
                 setStackSize(MultiMachineControllerList.Large_Electric_Compressor.copy(), 4),
                 setStackSize(MultiMachineCasingList.Heating_Duct.copy(), 4),
                 setStackSize(MultiMachineCasingList.Coolant_Duct.copy(), 4),
-                setStackSize(BlockList.Block_of_Netherite.copy(), 4),
+                setStackSize(BlockList.Block_of_Netherite, 4),
 
                 setStackSize(GTItemList.Electric_Piston_ZPM.copy(), 16),
                 setStackSize(GTItemList.Robot_Arm_ZPM.copy(), 4),
@@ -1206,9 +1206,9 @@ public class ChaosAssemblyLine_MachineRecipe_Normal {
         ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_MachineRecipe_Normal#52")
             .itemInputsUnsafe(
                 setStackSize(GTBlockList.Machine_Hull_UHV.copy(), 1),
-                setStackSize(AmunRaList.Nanite_Control_Module.copy(), 32),
+                setStackSize(AmunRaList.Nanite_Control_Module, 32),
                 setStackSize(MiscPlateList.Irradiant_Reinforced_Neutronium_Plate.copy(), 64),
-                setStackSize(GalaxySpaceList.Rocket_Control_Computer_Tier_8.copy(), 4),
+                setStackSize(GalaxySpaceList.Rocket_Control_Computer_Tier_8, 4),
 
                 getMaterialInput(OrePrefixes.circuit, Materials.UHV, 16),
                 setStackSize(GTItemList.Sensor_UHV.copy(), 8),
@@ -1263,8 +1263,8 @@ public class ChaosAssemblyLine_MachineRecipe_Normal {
 
                 setStackSize(GTItemList.Sensor_UEV.copy(), 4),
                 setStackSize(GTItemList.Emitter_UEV.copy(), 4),
-                setStackSize(OpenComputersList.Screen_Tier3.copy(), 1),
-                setStackSize(OpenComputersList.Keyboard.copy(), 1))
+                setStackSize(OpenComputersList.Screen_Tier3, 1),
+                setStackSize(OpenComputersList.Keyboard, 1))
             .fluidInputs(
                 requiredFluid("molten.mutatedlivingsolder", 144 * 64 * 4),
                 requiredFluid("plasma.celestialtungsten", 144 * 64),
@@ -1370,7 +1370,7 @@ public class ChaosAssemblyLine_MachineRecipe_Normal {
         ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_MachineRecipe_Normal#59")
             .itemInputsUnsafe(
                 setStackSize(MultiMachineControllerList.Molecular_Transformer.copy(), 1),
-                setStackSize(SingularityList.Eternal_Singularity.copy(), 1),
+                setStackSize(SingularityList.Eternal_Singularity, 1),
                 getMaterialInput(OrePrefixes.circuit, Materials.UEV, 8),
                 setStackSize(GTItemList.Electric_Pump_UEV.copy(), 4),
 
@@ -1460,7 +1460,7 @@ public class ChaosAssemblyLine_MachineRecipe_Normal {
             // "Space Elevator"
             ChaosAssemblyRecipeBuilder.builder("ChaosAssemblyLine_MachineRecipe_Normal#63")
                 .itemInputsUnsafe(
-                    setStackSize(OpenBlocksList.Elevator.copy(), 1),
+                    setStackSize(OpenBlocksList.Elevator, 1),
                     setStackSize(FrameBoxList.Neutronium_Frame_Box.copy(), 64),
                     setStackSize(GTItemList.Field_Generator_UV.copy(), 16),
                     getMaterialInput(OrePrefixes.circuit, Materials.UHV, 16),

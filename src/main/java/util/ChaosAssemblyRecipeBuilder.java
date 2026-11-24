@@ -22,6 +22,7 @@ public final class ChaosAssemblyRecipeBuilder {
 
     private final String source;
     private final GTRecipeBuilder delegate;
+    private final List<String> missingItems = new ArrayList<>();
     private final List<String> missingFluids = new ArrayList<>();
     private boolean skipRecorded;
 
@@ -43,13 +44,28 @@ public final class ChaosAssemblyRecipeBuilder {
     }
 
     public ChaosAssemblyRecipeBuilder itemInputsUnsafe(ItemStack... inputs) {
-        delegate.itemInputsUnsafe(inputs);
+        if (!recordMissingItems("input", inputs)) {
+            delegate.itemInputsUnsafe(inputs);
+        }
         return this;
     }
 
     public ChaosAssemblyRecipeBuilder itemOutputs(ItemStack... outputs) {
-        delegate.itemOutputs(outputs);
+        if (!recordMissingItems("output", outputs)) {
+            delegate.itemOutputs(outputs);
+        }
         return this;
+    }
+
+    private boolean recordMissingItems(String kind, ItemStack[] items) {
+        boolean missing = false;
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] == null) {
+                missingItems.add(kind + "[" + i + "]");
+                missing = true;
+            }
+        }
+        return missing;
     }
 
     public ChaosAssemblyRecipeBuilder fluidInputs(RequiredFluid... inputs) {
@@ -89,11 +105,15 @@ public final class ChaosAssemblyRecipeBuilder {
     }
 
     public Collection<GTRecipe> addTo(RecipeMap<?> recipeMap) {
-        if (!missingFluids.isEmpty()) {
+        if (!missingItems.isEmpty() || !missingFluids.isEmpty()) {
             if (!skipRecorded) {
                 skippedRecipeCount++;
                 skipRecorded = true;
-                MyMod.LOG.warn("[assembly-recipes] skipped {}: missing required fluids {}", source, missingFluids);
+                MyMod.LOG.warn(
+                    "[assembly-recipes] skipped {}: missing required items {}, fluids {}",
+                    source,
+                    missingItems,
+                    missingFluids);
             }
             return Collections.emptyList();
         }

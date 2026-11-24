@@ -44,9 +44,7 @@ import Recipes.SingularityRecipes_VoidIngot.SingularityIngotRecipes;
 import Recipes.SingularityRecipes_VoidOre.FakeSingularityOreRecipes;
 import Recipes.SingularityRecipes_VoidOre.SingularityOreRecipes;
 import Tools.FluidExporter;
-import Tools.RecipeExport;
 import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -64,7 +62,7 @@ import util.OriginGeneratorRegistry;
     version = Tags.VERSION,
     name = "GT Not Hard",
     acceptedMinecraftVersions = "[1.7.10]",
-    dependencies = "required-after:gregtech@[5.09.54.265,);required-after:gtnhlib@[0.11.54,)")
+    dependencies = "required-after:gregtech@[5.09.54.275,);required-after:gtnhlib@[0.11.58,)")
 public class MyMod {
 
     public static final String MODID = "gtnothard";
@@ -82,13 +80,6 @@ public class MyMod {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         proxy.init(event);
-        Tools.CheckEnumItemList.registerCommand();
-        Tools.CheckEnumFluidList.registerCommand();
-        if (Loader.isModLoaded("NotEnoughItems")) {
-            RecipeExport.registerCommand();
-        } else {
-            MyMod.LOG.warn("NEI is not loaded; /ExportRecipe is unavailable.");
-        }
         MinecraftForge.EVENT_BUS.register(this);
         FMLCommonHandler.instance()
             .bus()
@@ -293,7 +284,7 @@ public class MyMod {
         LOG.info("[assembly-recipes] group {} begin", name);
         registration.run();
         LOG.info(
-            "[assembly-recipes] group {} done in {} ms; skipped for missing fluids={}",
+            "[assembly-recipes] group {} done in {} ms; skipped for missing ingredients={}",
             name,
             (System.nanoTime() - started) / 1_000_000L,
             ChaosAssemblyRecipeBuilder.getSkippedRecipeCount() - skippedBefore);
