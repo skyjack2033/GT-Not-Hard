@@ -377,7 +377,6 @@ public class BlockList {
     public static final ItemStack Block_of_Shijima = getModItem(GregTech.ID, "gt.blockmetal10", 1L);
     public static final ItemStack Block_of_Churitsu = getModItem(GregTech.ID, "gt.blockmetal10", 1L, 1);
     public static final ItemStack Block_of_Selenium = getModItem(GTPlusPlus.ID, "blockBlockSelenium", 1L);
-    public static final ItemStack Block_of_Iodine = getModItem(GTPlusPlus.ID, "blockBlockIodine", 1L);
     public static final ItemStack Block_of_Rhenium = getModItem(GTPlusPlus.ID, "blockBlockRhenium", 1L);
     public static final ItemStack Block_of_Thallium = getModItem(GTPlusPlus.ID, "blockBlockThallium", 1L);
     public static final ItemStack Block_of_Germanium = getModItem(GTPlusPlus.ID, "blockBlockGermanium", 1L);
@@ -872,7 +871,7 @@ public class BlockList {
         Block_of_White_Dwarf_Matter, Block_of_Black_Dwarf_Matter, Block_of_Universium, Block_of_Eternity,
         Block_of_Magmatter, Block_of_Six_Phased_Copper, Block_of_Hellish_Metal,
         Block_of_Magnetohydrodynamically_Constrained_Star_Matter, Block_of_Hexanite, Block_of_Shijima,
-        Block_of_Churitsu, Block_of_Selenium, Block_of_Iodine, Block_of_Rhenium, Block_of_Thallium, Block_of_Germanium,
+        Block_of_Churitsu, Block_of_Selenium, Block_of_Rhenium, Block_of_Thallium, Block_of_Germanium,
         Block_of_Technetium, Block_of_Polonium, Block_of_Radium, Block_of_Protactinium, Block_of_Curium,
         Block_of_Neptunium, Block_of_Fermium, Block_of_Lithium_7, Block_of_Uranium_232, Block_of_Uranium_233,
         Block_of_Plutonium_238, Block_of_Advanced_Nitinol, Block_of_Astral_Titanium, Block_of_Celestial_Tungsten,

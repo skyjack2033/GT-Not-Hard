@@ -1210,7 +1210,6 @@ public class DustList {
     public static final ItemStack Superconductor_Base_ZPM_Dust = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 2992);
     public static final ItemStack Tumbaga_Mix_Dust = getModItem(GTPlusPlus.ID, "itemDustMixTumbaga", 1L);
     public static final ItemStack Selenium_Dust = getModItem(GTPlusPlus.ID, "itemDustSelenium", 1L);
-    public static final ItemStack Iodine_Dust_GTPP = getModItem(GTPlusPlus.ID, "itemDustIodine", 1L);
     public static final ItemStack Rhenium_Dust = getModItem(GTPlusPlus.ID, "itemDustRhenium", 1L);
     public static final ItemStack Thallium_Dust = getModItem(GTPlusPlus.ID, "itemDustThallium", 1L);
     public static final ItemStack Germanium_Dust = getModItem(GTPlusPlus.ID, "itemDustGermanium", 1L);
@@ -1671,7 +1670,7 @@ public class DustList {
         Ichorium_Dust, Radox_Polymer_Pulp, Gallium_Arsenide_Dust, Indium_Gallium_Phosphide_Dust, Cosmic_Neutronium_Dust,
         Flerovium_Dust, Superconductor_Base_UHV_Dust, Superconductor_Base_UV_Dust, Superconductor_Base_MV_Dust,
         Superconductor_Base_HV_Dust, Superconductor_Base_EV_Dust, Superconductor_Base_IV_Dust,
-        Superconductor_Base_LuV_Dust, Superconductor_Base_ZPM_Dust, Tumbaga_Mix_Dust, Selenium_Dust, Iodine_Dust_GTPP,
+        Superconductor_Base_LuV_Dust, Superconductor_Base_ZPM_Dust, Tumbaga_Mix_Dust, Selenium_Dust,
         Rhenium_Dust, Thallium_Dust, Germanium_Dust, Technetium_Dust, Polonium_Dust, Radium_Dust, Protactinium_Dust,
         Curium_Dust, Neptunium_Dust, Fermium_Dust, Lithium_7_Dust, Uranium_232_Dust, Uranium_233_Dust,
         Plutonium_238_Dust, Advanced_Nitinol_Dust, Astral_Titanium_Dust, Celestial_Tungsten_Dust, Hypogen_Dust,

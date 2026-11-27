@@ -473,7 +473,6 @@ public class PlateList {
     public static final ItemStack Clay_Plate = getModItem(GTPlusPlus.ID, "itemPlateClay", 1L);
     public static final ItemStack Sodium_Plate = getModItem(GTPlusPlus.ID, "itemPlateSodium", 1L);
     public static final ItemStack Selenium_Plate = getModItem(GTPlusPlus.ID, "itemPlateSelenium", 1L);
-    public static final ItemStack Iodine_Plate = getModItem(GTPlusPlus.ID, "itemPlateIodine", 1L);
     public static final ItemStack Rhenium_Plate = getModItem(GTPlusPlus.ID, "itemPlateRhenium", 1L);
     public static final ItemStack Thallium_Plate = getModItem(GTPlusPlus.ID, "itemPlateThallium", 1L);
     public static final ItemStack Germanium_Plate = getModItem(GTPlusPlus.ID, "itemPlateGermanium", 1L);
@@ -629,7 +628,7 @@ public class PlateList {
         Cosmic_Neutronium_Plate, Flerovium_Plate, Superconductor_Base_UHV_Plate, Superconductor_Base_UV_Plate,
         Superconductor_Base_MV_Plate, Superconductor_Base_HV_Plate, Superconductor_Base_EV_Plate,
         Superconductor_Base_IV_Plate, Superconductor_Base_LuV_Plate, Superconductor_Base_ZPM_Plate, Clay_Plate,
-        Sodium_Plate, Selenium_Plate, Iodine_Plate, Rhenium_Plate, Thallium_Plate, Germanium_Plate, Technetium_Plate,
+        Sodium_Plate, Selenium_Plate, Rhenium_Plate, Thallium_Plate, Germanium_Plate, Technetium_Plate,
         Lithium_7_Plate, Uranium_232_Plate, Uranium_233_Plate, Advanced_Nitinol_Plate, Astral_Titanium_Plate,
         Celestial_Tungsten_Plate, Hypogen_Plate, Chromatic_Glass_Plate, Black_Metal_Plate, Ancient_Granite_Plate,
         Runite_Plate, Dragonblood_Plate, Silicon_Carbide_Plate, Zirconium_Carbide_Plate, Tantalum_Carbide_Plate,

@@ -812,7 +812,7 @@ public class Vein_Ingot {
         IngotList.Superconductor_Base_MV_Ingot, IngotList.Superconductor_Base_HV_Ingot,
         IngotList.Superconductor_Base_EV_Ingot, IngotList.Superconductor_Base_IV_Ingot,
         IngotList.Superconductor_Base_LuV_Ingot, IngotList.Superconductor_Base_ZPM_Ingot, IngotList.Firebrick,
-        IngotList.Selenium_Ingot, IngotList.Iodine_Ingot, IngotList.Rhenium_Ingot, IngotList.Thallium_Ingot,
+        IngotList.Selenium_Ingot, IngotList.Rhenium_Ingot, IngotList.Thallium_Ingot,
         IngotList.Germanium_Ingot, IngotList.Technetium_Ingot, IngotList.Polonium_Ingot, IngotList.Radium_Ingot,
         IngotList.Protactinium_Ingot, IngotList.Curium_Ingot, IngotList.Neptunium_Ingot, IngotList.Fermium_Ingot,
         IngotList.Lithium_7_Ingot, IngotList.Uranium_232_Ingot, IngotList.Uranium_233_Ingot,

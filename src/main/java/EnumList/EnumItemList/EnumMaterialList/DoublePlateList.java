@@ -475,7 +475,6 @@ public class DoublePlateList {
         18992);
     public static final ItemStack Double_Clay_Plate = getModItem(GTPlusPlus.ID, "itemPlateDoubleClay", 1L);
     public static final ItemStack Double_Selenium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDoubleSelenium", 1L);
-    public static final ItemStack Double_Iodine_Plate = getModItem(GTPlusPlus.ID, "itemPlateDoubleIodine", 1L);
     public static final ItemStack Double_Rhenium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDoubleRhenium", 1L);
     public static final ItemStack Double_Thallium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDoubleThallium", 1L);
     public static final ItemStack Double_Germanium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDoubleGermanium", 1L);
@@ -706,7 +705,7 @@ public class DoublePlateList {
         Double_Cosmic_Neutronium_Plate, Double_Flerovium_Plate, Double_Superconductor_Base_UHV_Plate,
         Double_Superconductor_Base_UV_Plate, Double_Superconductor_Base_MV_Plate, Double_Superconductor_Base_HV_Plate,
         Double_Superconductor_Base_EV_Plate, Double_Superconductor_Base_IV_Plate, Double_Superconductor_Base_LuV_Plate,
-        Double_Superconductor_Base_ZPM_Plate, Double_Clay_Plate, Double_Selenium_Plate, Double_Iodine_Plate,
+        Double_Superconductor_Base_ZPM_Plate, Double_Clay_Plate, Double_Selenium_Plate,
         Double_Rhenium_Plate, Double_Thallium_Plate, Double_Germanium_Plate, Double_Lithium_7_Plate,
         Double_Advanced_Nitinol_Plate, Double_Astral_Titanium_Plate, Double_Celestial_Tungsten_Plate,
         Double_Hypogen_Plate, Double_Chromatic_Glass_Plate, Double_Black_Metal_Plate, Double_Ancient_Granite_Plate,

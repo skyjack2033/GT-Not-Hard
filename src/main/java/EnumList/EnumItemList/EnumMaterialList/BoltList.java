@@ -390,7 +390,6 @@ public class BoltList {
     public static final ItemStack Superconductor_Base_LuV_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26991);
     public static final ItemStack Superconductor_Base_ZPM_Bolt = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 26992);
     public static final ItemStack Selenium_Bolt = getModItem(GTPlusPlus.ID, "itemBoltSelenium", 1L);
-    public static final ItemStack Iodine_Bolt = getModItem(GTPlusPlus.ID, "itemBoltIodine", 1L);
     public static final ItemStack Rhenium_Bolt = getModItem(GTPlusPlus.ID, "itemBoltRhenium", 1L);
     public static final ItemStack Thallium_Bolt = getModItem(GTPlusPlus.ID, "itemBoltThallium", 1L);
     public static final ItemStack Germanium_Bolt = getModItem(GTPlusPlus.ID, "itemBoltGermanium", 1L);
@@ -515,7 +514,7 @@ public class BoltList {
         Radox_Polymer_Bolt, Gallium_Arsenide_Bolt, Indium_Gallium_Phosphide_Bolt, Cosmic_Neutronium_Bolt,
         Flerovium_Bolt, Superconductor_Base_UHV_Bolt, Superconductor_Base_UV_Bolt, Superconductor_Base_MV_Bolt,
         Superconductor_Base_HV_Bolt, Superconductor_Base_EV_Bolt, Superconductor_Base_IV_Bolt,
-        Superconductor_Base_LuV_Bolt, Superconductor_Base_ZPM_Bolt, Selenium_Bolt, Iodine_Bolt, Rhenium_Bolt,
+        Superconductor_Base_LuV_Bolt, Superconductor_Base_ZPM_Bolt, Selenium_Bolt, Rhenium_Bolt,
         Thallium_Bolt, Germanium_Bolt, Astral_Titanium_Bolt, Celestial_Tungsten_Bolt, Hypogen_Bolt,
         Chromatic_Glass_Bolt, Black_Metal_Bolt, Dragonblood_Bolt, Silicon_Carbide_Bolt, Zirconium_Carbide_Bolt,
         Tantalum_Carbide_Bolt, Niobium_Carbide_Bolt, Tungsten_Titanium_Carbide_Bolt, Energy_Crystal_Bolt,

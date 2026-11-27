@@ -448,7 +448,6 @@ public class DensePlateList {
         1L,
         22992);
     public static final ItemStack Dense_Selenium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseSelenium", 1L);
-    public static final ItemStack Dense_Iodine_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseIodine", 1L);
     public static final ItemStack Dense_Rhenium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseRhenium", 1L);
     public static final ItemStack Dense_Thallium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseThallium", 1L);
     public static final ItemStack Dense_Germanium_Plate = getModItem(GTPlusPlus.ID, "itemPlateDenseGermanium", 1L);
@@ -640,7 +639,7 @@ public class DensePlateList {
         Dense_Flerovium_Plate, Dense_Superconductor_Base_UHV_Plate, Dense_Superconductor_Base_UV_Plate,
         Dense_Superconductor_Base_MV_Plate, Dense_Superconductor_Base_HV_Plate, Dense_Superconductor_Base_EV_Plate,
         Dense_Superconductor_Base_IV_Plate, Dense_Superconductor_Base_LuV_Plate, Dense_Superconductor_Base_ZPM_Plate,
-        Dense_Selenium_Plate, Dense_Iodine_Plate, Dense_Rhenium_Plate, Dense_Thallium_Plate, Dense_Germanium_Plate,
+        Dense_Selenium_Plate, Dense_Rhenium_Plate, Dense_Thallium_Plate, Dense_Germanium_Plate,
         Dense_Astral_Titanium_Plate, Dense_Celestial_Tungsten_Plate, Dense_Hypogen_Plate, Dense_Chromatic_Glass_Plate,
         Dense_Black_Metal_Plate, Dense_Dragonblood_Plate, Dense_Silicon_Carbide_Plate, Dense_Zirconium_Carbide_Plate,
         Dense_Tantalum_Carbide_Plate, Dense_Niobium_Carbide_Plate, Dense_Tungsten_Titanium_Carbide_Plate,

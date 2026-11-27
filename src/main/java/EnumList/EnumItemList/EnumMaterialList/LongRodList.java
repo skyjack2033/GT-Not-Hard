@@ -621,7 +621,6 @@ public class LongRodList {
         1L,
         22992);
     public static final ItemStack Long_Selenium_Rod = getModItem(GTPlusPlus.ID, "itemRodLongSelenium", 1L);
-    public static final ItemStack Long_Iodine_Rod = getModItem(GTPlusPlus.ID, "itemRodLongIodine", 1L);
     public static final ItemStack Long_Rhenium_Rod = getModItem(GTPlusPlus.ID, "itemRodLongRhenium", 1L);
     public static final ItemStack Long_Thallium_Rod = getModItem(GTPlusPlus.ID, "itemRodLongThallium", 1L);
     public static final ItemStack Long_Germanium_Rod = getModItem(GTPlusPlus.ID, "itemRodLongGermanium", 1L);
@@ -859,7 +858,7 @@ public class LongRodList {
         Long_Cosmic_Neutronium_Rod, Long_Flerovium_Rod, Long_Superconductor_Base_UHV_Rod,
         Long_Superconductor_Base_UV_Rod, Long_Superconductor_Base_MV_Rod, Long_Superconductor_Base_HV_Rod,
         Long_Superconductor_Base_EV_Rod, Long_Superconductor_Base_IV_Rod, Long_Superconductor_Base_LuV_Rod,
-        Long_Superconductor_Base_ZPM_Rod, Long_Selenium_Rod, Long_Iodine_Rod, Long_Rhenium_Rod, Long_Thallium_Rod,
+        Long_Superconductor_Base_ZPM_Rod, Long_Selenium_Rod, Long_Rhenium_Rod, Long_Thallium_Rod,
         Long_Germanium_Rod, Long_Technetium_Rod, Long_Polonium_Rod, Long_Radium_Rod, Long_Protactinium_Rod,
         Long_Curium_Rod, Long_Neptunium_Rod, Long_Fermium_Rod, Long_Uranium_232_Rod, Long_Uranium_233_Rod,
         Long_Plutonium_238_Rod, Long_Astral_Titanium_Rod, Long_Celestial_Tungsten_Rod, Long_Hypogen_Rod,

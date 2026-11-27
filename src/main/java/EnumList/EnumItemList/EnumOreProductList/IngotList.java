@@ -418,7 +418,6 @@ public class IngotList {
     public static final ItemStack Superconductor_Base_ZPM_Ingot = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 11992);
     public static final ItemStack Firebrick = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 32111);
     public static final ItemStack Selenium_Ingot = getModItem(GTPlusPlus.ID, "itemIngotSelenium", 1L);
-    public static final ItemStack Iodine_Ingot = getModItem(GTPlusPlus.ID, "itemIngotIodine", 1L);
     public static final ItemStack Rhenium_Ingot = getModItem(GTPlusPlus.ID, "itemIngotRhenium", 1L);
     public static final ItemStack Thallium_Ingot = getModItem(GTPlusPlus.ID, "itemIngotThallium", 1L);
     public static final ItemStack Germanium_Ingot = getModItem(GTPlusPlus.ID, "itemIngotGermanium", 1L);
@@ -609,7 +608,7 @@ public class IngotList {
         Ichorium_Ingot, Radox_Polymer_Bar, Gallium_Arsenide_Ingot, Indium_Gallium_Phosphide_Ingot, Flerovium_Ingot,
         Superconductor_Base_UHV_Ingot, Superconductor_Base_UV_Ingot, Superconductor_Base_MV_Ingot,
         Superconductor_Base_HV_Ingot, Superconductor_Base_EV_Ingot, Superconductor_Base_IV_Ingot,
-        Superconductor_Base_LuV_Ingot, Superconductor_Base_ZPM_Ingot, Firebrick, Selenium_Ingot, Iodine_Ingot,
+        Superconductor_Base_LuV_Ingot, Superconductor_Base_ZPM_Ingot, Firebrick, Selenium_Ingot,
         Rhenium_Ingot, Thallium_Ingot, Germanium_Ingot, Technetium_Ingot, Polonium_Ingot, Radium_Ingot,
         Protactinium_Ingot, Curium_Ingot, Neptunium_Ingot, Fermium_Ingot, Lithium_7_Ingot, Uranium_232_Ingot,
         Uranium_233_Ingot, Plutonium_238_Ingot, Advanced_Nitinol_Ingot, Astral_Titanium_Ingot, Celestial_Tungsten_Ingot,

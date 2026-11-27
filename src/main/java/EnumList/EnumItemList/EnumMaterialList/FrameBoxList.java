@@ -348,7 +348,6 @@ public class FrameBoxList {
     public static final ItemStack Shirabon = getModItem(GregTech.ID, "bw.frames", 1L, 10112);
     public static final ItemStack Mu_metal = getModItem(GregTech.ID, "bw.frames", 1L, 11351);
     public static final ItemStack Selenium_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtSelenium", 1L);
-    public static final ItemStack Iodine_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtIodine", 1L);
     public static final ItemStack Rhenium_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtRhenium", 1L);
     public static final ItemStack Thallium_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtThallium", 1L);
     public static final ItemStack Germanium_Frame_Box = getModItem(GTPlusPlus.ID, "blockFrameGtGermanium", 1L);
@@ -520,7 +519,7 @@ public class FrameBoxList {
         Atomic_Separation_Catalyst, Extremely_Unstable_Naquadah, Zircaloy_4, Zircaloy_2, Incoloy_903, Adamantium_Alloy,
         MAR_M200_Steel, MAR_Ce_M200_Steel, Signalium, Lumiium, Artherium_Sn, Tanmolyium_Beta_C, Dalisenite, Hikarium,
         Tairitsu, Precious_Metals_Alloy, Enriched_Naquadah_Alloy, Metastable_Oganesson, Shirabon, Mu_metal,
-        Selenium_Frame_Box, Iodine_Frame_Box, Rhenium_Frame_Box, Thallium_Frame_Box, Germanium_Frame_Box,
+        Selenium_Frame_Box, Rhenium_Frame_Box, Thallium_Frame_Box, Germanium_Frame_Box,
         Astral_Titanium_Frame_Box, Celestial_Tungsten_Frame_Box, Hypogen_Frame_Box, Chromatic_Glass_Frame_Box,
         Black_Metal_Frame_Box, Dragonblood_Frame_Box, Silicon_Carbide_Frame_Box, Zirconium_Carbide_Frame_Box,
         Tantalum_Carbide_Frame_Box, Niobium_Carbide_Frame_Box, Tungsten_Titanium_Carbide_Frame_Box,

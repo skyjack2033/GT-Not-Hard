@@ -345,7 +345,6 @@ public class RingList {
     public static final ItemStack Superconductor_Base_LuV_Ring = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 28991);
     public static final ItemStack Superconductor_Base_ZPM_Ring = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 28992);
     public static final ItemStack Selenium_Ring = getModItem(GTPlusPlus.ID, "itemRingSelenium", 1L);
-    public static final ItemStack Iodine_Ring = getModItem(GTPlusPlus.ID, "itemRingIodine", 1L);
     public static final ItemStack Rhenium_Ring = getModItem(GTPlusPlus.ID, "itemRingRhenium", 1L);
     public static final ItemStack Thallium_Ring = getModItem(GTPlusPlus.ID, "itemRingThallium", 1L);
     public static final ItemStack Germanium_Ring = getModItem(GTPlusPlus.ID, "itemRingGermanium", 1L);
@@ -464,7 +463,7 @@ public class RingList {
         Indium_Gallium_Phosphide_Ring, Cosmic_Neutronium_Ring, Flerovium_Ring, Superconductor_Base_UHV_Ring,
         Superconductor_Base_UV_Ring, Superconductor_Base_MV_Ring, Superconductor_Base_HV_Ring,
         Superconductor_Base_EV_Ring, Superconductor_Base_IV_Ring, Superconductor_Base_LuV_Ring,
-        Superconductor_Base_ZPM_Ring, Selenium_Ring, Iodine_Ring, Rhenium_Ring, Thallium_Ring, Germanium_Ring,
+        Superconductor_Base_ZPM_Ring, Selenium_Ring, Rhenium_Ring, Thallium_Ring, Germanium_Ring,
         Astral_Titanium_Ring, Celestial_Tungsten_Ring, Hypogen_Ring, Chromatic_Glass_Ring, Black_Metal_Ring,
         Dragonblood_Ring, Silicon_Carbide_Ring, Zirconium_Carbide_Ring, Tantalum_Carbide_Ring, Niobium_Carbide_Ring,
         Tungsten_Titanium_Carbide_Ring, Energy_Crystal_Ring, Blood_Steel_Ring, Zeron_100_Ring, Tumbaga_Ring, Potin_Ring,

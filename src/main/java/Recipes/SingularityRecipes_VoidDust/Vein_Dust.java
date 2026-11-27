@@ -967,7 +967,7 @@ public class Vein_Dust {
         DustList.Superconductor_Base_MV_Dust, DustList.Superconductor_Base_HV_Dust,
         DustList.Superconductor_Base_EV_Dust, DustList.Superconductor_Base_IV_Dust,
         DustList.Superconductor_Base_LuV_Dust, DustList.Superconductor_Base_ZPM_Dust, DustList.Tumbaga_Mix_Dust,
-        DustList.Selenium_Dust, DustList.Iodine_Dust_GTPP, DustList.Rhenium_Dust, DustList.Thallium_Dust,
+        DustList.Selenium_Dust, DustList.Iodine_Dust_BartWorks, DustList.Rhenium_Dust, DustList.Thallium_Dust,
         DustList.Germanium_Dust, DustList.Technetium_Dust, DustList.Polonium_Dust, DustList.Radium_Dust,
         DustList.Protactinium_Dust, DustList.Curium_Dust, DustList.Neptunium_Dust, DustList.Fermium_Dust,
         DustList.Lithium_7_Dust, DustList.Uranium_232_Dust, DustList.Uranium_233_Dust, DustList.Plutonium_238_Dust,

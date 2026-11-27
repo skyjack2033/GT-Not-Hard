@@ -15,6 +15,7 @@ import gregtech.api.enums.Materials;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
+import gtnhlanth.common.register.WerkstoffMaterialPool;
 import util.RecipesFrontend.FluidFuelOfGeneratorFrontend;
 
 public class OriginGeneratorRecipes_Plasma {
@@ -245,7 +246,7 @@ public class OriginGeneratorRecipes_Plasma {
                 "130,048,000",
                 130_048_000,
                 FluidRegistry.getFluidStack("plasma.iodine", 1),
-                FluidRegistry.getFluidStack("molten.iodine", 1)));
+                WerkstoffMaterialPool.Iodine.getFluidOrGas(1)));
 
         // "Tellurium Plasma"
         fuelList.add(

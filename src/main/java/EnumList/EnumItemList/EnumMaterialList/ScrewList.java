@@ -402,7 +402,6 @@ public class ScrewList {
     public static final ItemStack Superconductor_Base_LuV_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27991);
     public static final ItemStack Superconductor_Base_ZPM_Screw = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 27992);
     public static final ItemStack Selenium_Screw = getModItem(GTPlusPlus.ID, "itemScrewSelenium", 1L);
-    public static final ItemStack Iodine_Screw = getModItem(GTPlusPlus.ID, "itemScrewIodine", 1L);
     public static final ItemStack Rhenium_Screw = getModItem(GTPlusPlus.ID, "itemScrewRhenium", 1L);
     public static final ItemStack Thallium_Screw = getModItem(GTPlusPlus.ID, "itemScrewThallium", 1L);
     public static final ItemStack Germanium_Screw = getModItem(GTPlusPlus.ID, "itemScrewGermanium", 1L);
@@ -533,7 +532,7 @@ public class ScrewList {
         Indium_Gallium_Phosphide_Screw, Cosmic_Neutronium_Screw, Flerovium_Screw, Superconductor_Base_UHV_Screw,
         Superconductor_Base_UV_Screw, Superconductor_Base_MV_Screw, Superconductor_Base_HV_Screw,
         Superconductor_Base_EV_Screw, Superconductor_Base_IV_Screw, Superconductor_Base_LuV_Screw,
-        Superconductor_Base_ZPM_Screw, Selenium_Screw, Iodine_Screw, Rhenium_Screw, Thallium_Screw, Germanium_Screw,
+        Superconductor_Base_ZPM_Screw, Selenium_Screw, Rhenium_Screw, Thallium_Screw, Germanium_Screw,
         Astral_Titanium_Screw, Celestial_Tungsten_Screw, Hypogen_Screw, Chromatic_Glass_Screw, Black_Metal_Screw,
         Dragonblood_Screw, Silicon_Carbide_Screw, Zirconium_Carbide_Screw, Tantalum_Carbide_Screw,
         Niobium_Carbide_Screw, Tungsten_Titanium_Carbide_Screw, Energy_Crystal_Screw, Blood_Steel_Screw,

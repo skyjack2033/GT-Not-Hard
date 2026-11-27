@@ -435,7 +435,6 @@ public class RodList {
     public static final ItemStack Superconductor_Base_LuV_Rod = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 23991);
     public static final ItemStack Superconductor_Base_ZPM_Rod = getModItem(GregTech.ID, "gt.metaitem.01", 1L, 23992);
     public static final ItemStack Selenium_Rod = getModItem(GTPlusPlus.ID, "itemRodSelenium", 1L);
-    public static final ItemStack Iodine_Rod = getModItem(GTPlusPlus.ID, "itemRodIodine", 1L);
     public static final ItemStack Rhenium_Rod = getModItem(GTPlusPlus.ID, "itemRodRhenium", 1L);
     public static final ItemStack Thallium_Rod = getModItem(GTPlusPlus.ID, "itemRodThallium", 1L);
     public static final ItemStack Germanium_Rod = getModItem(GTPlusPlus.ID, "itemRodGermanium", 1L);
@@ -625,7 +624,7 @@ public class RodList {
         Superconductor_Base_UEV_Rod, Draconium_Rod, Awakened_Draconium_Rod, Blood_Infused_Iron_Rod, Ichorium_Rod,
         Radox_Polymer_Rod, Gallium_Arsenide_Rod, Indium_Gallium_Phosphide_Rod, Cosmic_Neutronium_Rod, Flerovium_Rod,
         Superconductor_Base_MV_Rod, Superconductor_Base_HV_Rod, Superconductor_Base_EV_Rod, Superconductor_Base_IV_Rod,
-        Superconductor_Base_LuV_Rod, Superconductor_Base_ZPM_Rod, Selenium_Rod, Iodine_Rod, Rhenium_Rod, Thallium_Rod,
+        Superconductor_Base_LuV_Rod, Superconductor_Base_ZPM_Rod, Selenium_Rod, Rhenium_Rod, Thallium_Rod,
         Germanium_Rod, Technetium_Rod, Polonium_Rod, Radium_Rod, Protactinium_Rod, Curium_Rod, Neptunium_Rod,
         Fermium_Rod, Uranium_232_Rod, Uranium_233_Rod, Plutonium_238_Rod, Astral_Titanium_Rod, Celestial_Tungsten_Rod,
         Hypogen_Rod, Chromatic_Glass_Rod, Black_Metal_Rod, Dragonblood_Rod, Silicon_Carbide_Rod, Zirconium_Carbide_Rod,

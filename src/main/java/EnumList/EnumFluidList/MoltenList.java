@@ -203,7 +203,6 @@ public class MoltenList {
     public static final FluidStack Molten_Infused_Gold = FluidRegistry.getFluidStack("molten.infusedgold", 1);
     public static final FluidStack Molten_Invar_GregTech = FluidRegistry.getFluidStack("molten.invar", 1);
     public static final FluidStack Molten_Invar_Tinkers = FluidRegistry.getFluidStack("invar.molten", 1);
-    public static final FluidStack Molten_Iodine = FluidRegistry.getFluidStack("molten.iodine", 1);
     public static final FluidStack Molten_Iridium = FluidRegistry.getFluidStack("molten.iridium", 1);
     public static final FluidStack Molten_Iron_GregTech = FluidRegistry.getFluidStack("molten.iron", 1);
     public static final FluidStack Molten_Iron_Tinkers = FluidRegistry.getFluidStack("iron.molten", 1);
@@ -535,7 +534,7 @@ public class MoltenList {
         Molten_HSS_E, Molten_HSS_G, Molten_HSS_S, Molten_Hypogen, Molten_Ichorium, Molten_Incoloy_020,
         Molten_Incoloy_903, Molten_Incoloy_DS, Molten_Incoloy_MA956, Molten_Inconel_625, Molten_Inconel_690,
         Molten_Inconel_792, Molten_Indalloy_140, Molten_Indium, Molten_Indium_Gallium_Phosphide, Molten_Infinity,
-        Molten_Infinity_Catalyst, Molten_Infused_Gold, Molten_Invar_GregTech, Molten_Invar_Tinkers, Molten_Iodine,
+        Molten_Infinity_Catalyst, Molten_Infused_Gold, Molten_Invar_GregTech, Molten_Invar_Tinkers,
         Molten_Iridium, Molten_Iron_GregTech, Molten_Iron_Tinkers, Molten_Ironwood, Molten_Kanthal, Molten_Kevlar,
         Molten_Knightmetal, Molten_Koboldite, Molten_Lafium_Compound, Molten_Lanthanum, Molten_Laurenium,
         Molten_Lead_GregTech, Molten_Lead_Tinkers, Molten_Ledox, Molten_Lithium, Molten_Lithium_7,

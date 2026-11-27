@@ -252,7 +252,6 @@ public class RotorList {
     public static final ItemStack Cosmic_Neutronium_Rotor = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 21982);
     public static final ItemStack Flerovium_Rotor = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 21984);
     public static final ItemStack Selenium_Rotor = getModItem(GTPlusPlus.ID, "itemRotorSelenium", 1L);
-    public static final ItemStack Iodine_Rotor = getModItem(GTPlusPlus.ID, "itemRotorIodine", 1L);
     public static final ItemStack Rhenium_Rotor = getModItem(GTPlusPlus.ID, "itemRotorRhenium", 1L);
     public static final ItemStack Thallium_Rotor = getModItem(GTPlusPlus.ID, "itemRotorThallium", 1L);
     public static final ItemStack Germanium_Rotor = getModItem(GTPlusPlus.ID, "itemRotorGermanium", 1L);
@@ -358,7 +357,7 @@ public class RotorList {
         Endium_Rotor, Wood_Rotor, Trinium_Rotor, Desh_Rotor, Sealed_Wood_Rotor, Chrysotile_Rotor, Realgar_Rotor,
         Ceruclase_Rotor, Orichalcum_Rotor, Void_Metal_Rotor, Draconium_Rotor, Awakened_Draconium_Rotor,
         Blood_Infused_Iron_Rotor, Ichorium_Rotor, Cosmic_Neutronium_Rotor, Flerovium_Rotor, Selenium_Rotor,
-        Iodine_Rotor, Rhenium_Rotor, Thallium_Rotor, Germanium_Rotor, Astral_Titanium_Rotor, Celestial_Tungsten_Rotor,
+        Rhenium_Rotor, Thallium_Rotor, Germanium_Rotor, Astral_Titanium_Rotor, Celestial_Tungsten_Rotor,
         Hypogen_Rotor, Chromatic_Glass_Rotor, Black_Metal_Rotor, Dragonblood_Rotor, Silicon_Carbide_Rotor,
         Zirconium_Carbide_Rotor, Tantalum_Carbide_Rotor, Niobium_Carbide_Rotor, Tungsten_Titanium_Carbide_Rotor,
         Energy_Crystal_Rotor, Blood_Steel_Rotor, Zeron_100_Rotor, Tumbaga_Rotor, Potin_Rotor, Staballoy_Rotor,

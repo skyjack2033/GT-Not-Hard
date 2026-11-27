@@ -62,7 +62,7 @@ import util.OriginGeneratorRegistry;
     version = Tags.VERSION,
     name = "GT Not Hard",
     acceptedMinecraftVersions = "[1.7.10]",
-    dependencies = "required-after:gregtech@[5.09.54.275,);required-after:gtnhlib@[0.11.58,)")
+    dependencies = "required-after:gregtech@[5.09.54.277,);required-after:gtnhlib@[0.11.58,)")
 public class MyMod {
 
     public static final String MODID = "gtnothard";

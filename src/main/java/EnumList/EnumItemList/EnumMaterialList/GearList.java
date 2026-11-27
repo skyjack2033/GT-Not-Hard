@@ -270,7 +270,6 @@ public class GearList {
     public static final ItemStack Flerovium_Gear = getModItem(GregTech.ID, "gt.metaitem.02", 1L, 31984);
     public static final ItemStack Rhugnor_Gear = getModItem(GTPlusPlus.ID, "itemGearRhugnor", 1L);
     public static final ItemStack Selenium_Gear = getModItem(GTPlusPlus.ID, "itemGearSelenium", 1L);
-    public static final ItemStack Iodine_Gear = getModItem(GTPlusPlus.ID, "itemGearIodine", 1L);
     public static final ItemStack Rhenium_Gear = getModItem(GTPlusPlus.ID, "itemGearRhenium", 1L);
     public static final ItemStack Thallium_Gear = getModItem(GTPlusPlus.ID, "itemGearThallium", 1L);
     public static final ItemStack Germanium_Gear = getModItem(GTPlusPlus.ID, "itemGearGermanium", 1L);
@@ -374,7 +373,7 @@ public class GearList {
         Red_Granite_Gear, Construction_Foam_Gear, Trinium_Gear, Polyethylene_PE_Gear, Rubber_Gear, Desh_Gear,
         Sealed_Wood_Gear, Chrysotile_Gear, Realgar_Gear, Ceruclase_Gear, Orichalcum_Gear, Void_Metal_Gear,
         Draconium_Gear, Awakened_Draconium_Gear, Blood_Infused_Iron_Gear, Ichorium_Gear, Cosmic_Neutronium_Gear,
-        Flerovium_Gear, Rhugnor_Gear, Selenium_Gear, Iodine_Gear, Rhenium_Gear, Thallium_Gear, Germanium_Gear,
+        Flerovium_Gear, Rhugnor_Gear, Selenium_Gear, Rhenium_Gear, Thallium_Gear, Germanium_Gear,
         Astral_Titanium_Gear, Celestial_Tungsten_Gear, Hypogen_Gear, Chromatic_Glass_Gear, Black_Metal_Gear,
         Dragonblood_Gear, Silicon_Carbide_Gear, Zirconium_Carbide_Gear, Tantalum_Carbide_Gear, Niobium_Carbide_Gear,
         Tungsten_Titanium_Carbide_Gear, Energy_Crystal_Gear, Blood_Steel_Gear, Zeron_100_Gear, Tumbaga_Gear, Potin_Gear,
