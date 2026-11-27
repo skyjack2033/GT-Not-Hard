@@ -1,10 +1,9 @@
 package Recipes.SingularityRecipes_Pachinko;
 
+import static Recipes.SingularityNEICatalog.addItemDisplay;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
-import static gregtech.api.util.GTRecipeBuilder.SECONDS;
 import static util.AggregateItemStackArray.addCompressAggregateArray;
-import static util.AggregateItemStackArray.addSplitAggregateArray;
 import static util.AggregateItemStackArray.checkItemStack;
 
 import java.util.HashMap;
@@ -12,50 +11,47 @@ import java.util.Map;
 
 import net.minecraft.item.ItemStack;
 
-import gregtech.api.enums.GTValues;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
 import util.RecipesFrontend.OneToManyItemsFrontend_Large;
 import util.RecipesFrontend.OneToManyItemsFrontend_Small;
+import util.RecipesFrontend.ResourceCatalogFrontend;
 
 public class FakeSingularityPachinkoRecipes {
 
-    public static int NEI_ItemOutput_Size_Small = 27;
-    public static int NEI_ItemOutput_Size_Large = util.RecipesFrontend.ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
-
     public static final RecipeMap<RecipeMapBackend> addFakePachinkoRecipes_GT_Item = RecipeMapBuilder
         .of("Singularity of Pachinko_GT_Item")
-        .maxIO(1, NEI_ItemOutput_Size_Large, 0, 0)
+        .maxIO(1, ResourceCatalogFrontend.OUTPUTS_PER_PAGE, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
+        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
 
     public static final RecipeMap<RecipeMapBackend> addFakePachinkoRecipes_GT_Machine = RecipeMapBuilder
         .of("Singularity of Pachinko_GT_Machine")
-        .maxIO(1, NEI_ItemOutput_Size_Small, 0, 0)
+        .maxIO(1, ResourceCatalogFrontend.OUTPUTS_PER_PAGE, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
+        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Small::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
 
     public static final RecipeMap<RecipeMapBackend> addFakePachinkoRecipes_GT_Machine_Special = RecipeMapBuilder
         .of("Singularity of Pachinko_GT_Machine_Special")
-        .maxIO(1, NEI_ItemOutput_Size_Large, 0, 0)
+        .maxIO(1, ResourceCatalogFrontend.OUTPUTS_PER_PAGE, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
+        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
 
     public static final RecipeMap<RecipeMapBackend> addFakePachinkoRecipes_Storage = RecipeMapBuilder
         .of("Singularity of Pachinko_Storage")
-        .maxIO(1, NEI_ItemOutput_Size_Large, 0, 0)
+        .maxIO(1, ResourceCatalogFrontend.OUTPUTS_PER_PAGE, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
+        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -69,19 +65,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.Steam_Tier_Machine,
             GT_Item.Steam_Tier_Misc);
         ItemStack[] Fake_Steam_Tier_Checked = checkItemStack(Fake_Steam_Tier);
-        ItemStack[][] Fake_Steam_Tier_Split = addSplitAggregateArray(
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 1),
             Fake_Steam_Tier_Checked,
-            NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_Steam_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 1))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+            "Singularity with Pachinko Mode");
 
         // ULV Tier
         // "ULV Machine Hull" - 10
@@ -92,17 +80,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.ULV_Tier_Misc,
             GT_Item.ULV_Tier_Wire);
         ItemStack[] Fake_ULV_Tier_Checked = checkItemStack(Fake_ULV_Tier);
-        ItemStack[][] Fake_ULV_Tier_Split = addSplitAggregateArray(Fake_ULV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_ULV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 10))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 10),
+            Fake_ULV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // LV Tier
         // "LV Machine Hull" - 11
@@ -114,17 +96,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.LV_Tier_Misc,
             GT_Item.LV_Tier_Wire);
         ItemStack[] Fake_LV_Tier_Checked = checkItemStack(Fake_LV_Tier);
-        ItemStack[][] Fake_LV_Tier_Split = addSplitAggregateArray(Fake_LV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_LV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 11))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 11),
+            Fake_LV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // MV Tier
         // "MV Machine Hull" - 12
@@ -136,17 +112,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.MV_Tier_Misc,
             GT_Item.MV_Tier_Wire);
         ItemStack[] Fake_MV_Tier_Checked = checkItemStack(Fake_MV_Tier);
-        ItemStack[][] Fake_MV_Tier_Split = addSplitAggregateArray(Fake_MV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_MV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 12))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 12),
+            Fake_MV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // HV Tier
         // "HV Machine Hull" - 13
@@ -158,17 +128,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.HV_Tier_Misc,
             GT_Item.HV_Tier_Wire);
         ItemStack[] Fake_HV_Tier_Checked = checkItemStack(Fake_HV_Tier);
-        ItemStack[][] Fake_HV_Tier_Split = addSplitAggregateArray(Fake_HV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_HV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 13))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 13),
+            Fake_HV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // EV Tier
         // "EV Machine Hull" - 14
@@ -180,17 +144,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.EV_Tier_Misc,
             GT_Item.EV_Tier_Wire);
         ItemStack[] Fake_EV_Tier_Checked = checkItemStack(Fake_EV_Tier);
-        ItemStack[][] Fake_EV_Tier_Split = addSplitAggregateArray(Fake_EV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_EV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 14))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 14),
+            Fake_EV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // IV Tier
         // "IV Machine Hull" - 15
@@ -202,17 +160,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.IV_Tier_Misc,
             GT_Item.IV_Tier_Wire);
         ItemStack[] Fake_IV_Tier_Checked = checkItemStack(Fake_IV_Tier);
-        ItemStack[][] Fake_IV_Tier_Split = addSplitAggregateArray(Fake_IV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_IV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 15))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 15),
+            Fake_IV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // LuV Tier
         // "LuV Machine Hull" - 16
@@ -224,17 +176,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.LuV_Tier_Misc,
             GT_Item.LuV_Tier_Wire);
         ItemStack[] Fake_LuV_Tier_Checked = checkItemStack(Fake_LuV_Tier);
-        ItemStack[][] Fake_LuV_Tier_Split = addSplitAggregateArray(Fake_LuV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_LuV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 16))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 16),
+            Fake_LuV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // ZPM Tier
         // "ZPM Machine Hull" - 17
@@ -246,17 +192,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.ZPM_Tier_Misc,
             GT_Item.ZPM_Tier_Wire);
         ItemStack[] Fake_ZPM_Tier_Checked = checkItemStack(Fake_ZPM_Tier);
-        ItemStack[][] Fake_ZPM_Tier_Split = addSplitAggregateArray(Fake_ZPM_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_ZPM_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 17))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 17),
+            Fake_ZPM_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // UV Tier
         // "UV Machine Hull" - 18
@@ -268,17 +208,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.UV_Tier_Misc,
             GT_Item.UV_Tier_Wire);
         ItemStack[] Fake_UV_Tier_Checked = checkItemStack(Fake_UV_Tier);
-        ItemStack[][] Fake_UV_Tier_Split = addSplitAggregateArray(Fake_UV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_UV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 18))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 18),
+            Fake_UV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // UHV Tier
         // "UHV Machine Hull" - 19
@@ -290,17 +224,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.UHV_Tier_Misc,
             GT_Item.UHV_Tier_Wire);
         ItemStack[] Fake_UHV_Tier_Checked = checkItemStack(Fake_UHV_Tier);
-        ItemStack[][] Fake_UHV_Tier_Split = addSplitAggregateArray(Fake_UHV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_UHV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 19))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 19),
+            Fake_UHV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // UEV Tier
         // "UEV Machine Hull" - 11230
@@ -312,17 +240,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.UEV_Tier_Misc,
             GT_Item.UEV_Tier_Wire);
         ItemStack[] Fake_UEV_Tier_Checked = checkItemStack(Fake_UEV_Tier);
-        ItemStack[][] Fake_UEV_Tier_Split = addSplitAggregateArray(Fake_UEV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_UEV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 11230))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 11230),
+            Fake_UEV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // UIV Tier
         // "UIV Machine Hull" - 11231
@@ -334,17 +256,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.UIV_Tier_Misc,
             GT_Item.UIV_Tier_Wire);
         ItemStack[] Fake_UIV_Tier_Checked = checkItemStack(Fake_UIV_Tier);
-        ItemStack[][] Fake_UIV_Tier_Split = addSplitAggregateArray(Fake_UIV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_UIV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 11231))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 11231),
+            Fake_UIV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // UMV Tier
         // "UMV Machine Hull" - 11232
@@ -356,17 +272,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.UMV_Tier_Misc,
             GT_Item.UMV_Tier_Wire);
         ItemStack[] Fake_UMV_Tier_Checked = checkItemStack(Fake_UMV_Tier);
-        ItemStack[][] Fake_UMV_Tier_Split = addSplitAggregateArray(Fake_UMV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_UMV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 11232))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 11232),
+            Fake_UMV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // UXV Tier
         // "UXV Machine Hull" - 11233
@@ -377,17 +287,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.UXV_Tier_Misc,
             GT_Item.UXV_Tier_Wire);
         ItemStack[] Fake_UXV_Tier_Checked = checkItemStack(Fake_UXV_Tier);
-        ItemStack[][] Fake_UXV_Tier_Split = addSplitAggregateArray(Fake_UXV_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_UXV_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 11233))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 11233),
+            Fake_UXV_Tier_Checked,
+            "Singularity with Pachinko Mode");
 
         // MAX Tier
         // "1x SpaceTime Wire" - 2606
@@ -398,17 +302,11 @@ public class FakeSingularityPachinkoRecipes {
             GT_Item.MAX_Tier_Misc,
             GT_Item.MAX_Tier_Wire);
         ItemStack[] Fake_MAX_Tier_Checked = checkItemStack(Fake_MAX_Tier);
-        ItemStack[][] Fake_MAX_Tier_Split = addSplitAggregateArray(Fake_MAX_Tier_Checked, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_MAX_Tier_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 2606))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Item);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Item,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 2606),
+            Fake_MAX_Tier_Checked,
+            "Singularity with Pachinko Mode");
     }
 
     public static void addFakePachinkoRecipes_GT_Machine() {
@@ -1375,107 +1273,58 @@ public class FakeSingularityPachinkoRecipes {
             GT_Machine.Shielded_Lagrangian_Annihilation_Matrix);
 
         for (Map.Entry<ItemStack, ItemStack[]> Temp : PachinkoRecipes_GT_Machine.entrySet()) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(Temp.getKey())
-                .itemOutputs(Temp.getValue())
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Machine);
+            addItemDisplay(
+                addFakePachinkoRecipes_GT_Machine,
+                Temp.getKey(),
+                Temp.getValue(),
+                "Singularity with Pachinko Mode");
         }
 
         // "Water Purification Plant" - 9402
-        ItemStack[][] Water_Purification_Plant_Split = addSplitAggregateArray(
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Machine_Special,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 9402),
             GT_Machine.Water_Purification_Plant,
-            NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Water_Purification_Plant_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 9402))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Machine_Special);
-        }
+            "Singularity with Pachinko Mode");
 
         // "Eye of Harmony" - 15410
-        ItemStack[][] Eye_of_Harmony_Split = addSplitAggregateArray(
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Machine_Special,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 15410),
             GT_Machine.Eye_of_Harmony,
-            NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Eye_of_Harmony_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 15410))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Machine_Special);
-        }
+            "Singularity with Pachinko Mode");
 
         // "Forge of the Gods" - 15411
-        ItemStack[][] Forge_of_the_Gods_Split = addSplitAggregateArray(
+        addItemDisplay(
+            addFakePachinkoRecipes_GT_Machine_Special,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 15411),
             GT_Machine.Forge_of_the_Gods,
-            NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Forge_of_the_Gods_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 15411))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_GT_Machine_Special);
-        }
+            "Singularity with Pachinko Mode");
     }
 
     public static void addFakePachinkoRecipes_Storage() {
         // Item Storage
         // "Super Chest I" - 135
-        ItemStack[][] Fake_Item_Storage_Split = addSplitAggregateArray(Storage.Item_Storage, NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_Item_Storage_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 135))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_Storage);
-        }
+        addItemDisplay(
+            addFakePachinkoRecipes_Storage,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 135),
+            Storage.Item_Storage,
+            "Singularity with Pachinko Mode");
 
         // Fluid Storage
         // "Ultra Low Voltage Fluid Tank" - 817
-        ItemStack[][] Fake_Fluid_Storage_Split = addSplitAggregateArray(
+        addItemDisplay(
+            addFakePachinkoRecipes_Storage,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 817),
             Storage.Fluid_Storage,
-            NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_Fluid_Storage_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 817))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_Storage);
-        }
+            "Singularity with Pachinko Mode");
 
         // AppliedEnergistics2 Storage
         // "Super Tank I" - 130
-        ItemStack[][] Fake_AppliedEnergistics2_Storage_Split = addSplitAggregateArray(
+        addItemDisplay(
+            addFakePachinkoRecipes_Storage,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 130),
             Storage.AppliedEnergistics2_Storage,
-            NEI_ItemOutput_Size_Large);
-        for (ItemStack[] tempItemStacks : Fake_AppliedEnergistics2_Storage_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 130))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Pachinko Mode")
-                .eut(0)
-                .addTo(addFakePachinkoRecipes_Storage);
-        }
+            "Singularity with Pachinko Mode");
     }
 }

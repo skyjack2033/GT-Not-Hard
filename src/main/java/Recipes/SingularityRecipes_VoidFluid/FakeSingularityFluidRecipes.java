@@ -1,28 +1,25 @@
 package Recipes.SingularityRecipes_VoidFluid;
 
+import static Recipes.SingularityNEICatalog.addFluidDisplay;
 import static gregtech.api.enums.Mods.NEIOrePlugin;
 import static gregtech.api.util.GTModHandler.getModItem;
-import static gregtech.api.util.GTRecipeBuilder.SECONDS;
 import static util.AggregateFluidStackArray.addCompressAggregateArray;
-import static util.AggregateFluidStackArray.addSplitAggregateArray;
 
 import net.minecraftforge.fluids.FluidStack;
 
-import gregtech.api.enums.GTValues;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
 import util.RecipesFrontend.OneToManyFluidsFrontend_Large;
+import util.RecipesFrontend.ResourceCatalogFrontend;
 
 public class FakeSingularityFluidRecipes {
 
-    public static int NEI_ItemOutput_Size = util.RecipesFrontend.ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
-
     public static final RecipeMap<RecipeMapBackend> addFakeVoidFluidRecipes = RecipeMapBuilder
         .of("Singularity of Void Fluid")
-        .maxIO(1, 0, 0, NEI_ItemOutput_Size)
+        .maxIO(1, 0, 0, ResourceCatalogFrontend.OUTPUTS_PER_PAGE)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
+        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyFluidsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -73,19 +70,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Zinc_SmallOre,
             SmallOre_Fluid.Nickel_SmallOre,
             Void_Fluid.Overworld_VoidFluid);
-        FluidStack[][] Fake_T0_Overworld_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T0,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ow", 1L),
             Fake_T0_Overworld_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T0_Overworld_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ow", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T0);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T0 - Nether - Ne
         FluidStack[] Fake_T0_Nether_Fluid = addCompressAggregateArray(
@@ -113,17 +102,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Zinc_SmallOre,
             SmallOre_Fluid.Realgar_SmallOre,
             Void_Fluid.Nether_VoidFluid);
-        FluidStack[][] Fake_T0_Nether_Fluid_Split = addSplitAggregateArray(Fake_T0_Nether_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T0_Nether_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ne", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T0);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T0,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ne", 1L),
+            Fake_T0_Nether_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T0 - Twilight - TF
         FluidStack[] Fake_T0_Twilight_Fluid = addCompressAggregateArray(
@@ -163,19 +146,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Sapphire_SmallOre,
             SmallOre_Fluid.Jasper_SmallOre,
             SmallOre_Fluid.Olivine_SmallOre);
-        FluidStack[][] Fake_T0_Twilight_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T0,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_TF", 1L),
             Fake_T0_Twilight_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T0_Twilight_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_TF", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T0);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T0 - TheEnd - ED
         FluidStack[] Fake_T0_TheEnd_Fluid = addCompressAggregateArray(
@@ -194,17 +169,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Gold_SmallOre,
             SmallOre_Fluid.Zinc_SmallOre,
             SmallOre_Fluid.Nickel_SmallOre);
-        FluidStack[][] Fake_T0_TheEnd_Fluid_Split = addSplitAggregateArray(Fake_T0_TheEnd_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T0_TheEnd_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_ED", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T0);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T0,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_ED", 1L),
+            Fake_T0_TheEnd_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T0 - EndAsteroid - EA
         FluidStack[] Fake_T0_EndAsteroid_Fluid = addCompressAggregateArray(
@@ -227,19 +196,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Gold_SmallOre,
             SmallOre_Fluid.Zinc_SmallOre,
             SmallOre_Fluid.Nickel_SmallOre);
-        FluidStack[][] Fake_T0_EndAsteroid_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T0,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_EA", 1L),
             Fake_T0_EndAsteroid_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T0_EndAsteroid_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_EA", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T0);
-        }
+            "Singularity with Void Fluid Mode");
     }
 
     public static void addFakeVoidFluidRecipes_T1() {
@@ -255,17 +216,11 @@ public class FakeSingularityFluidRecipes {
             Vein_Fluid.Cassiterite_Vein,
             SmallOre_Fluid.Meteoric_Iron_SmallOre,
             Void_Fluid.Moon_VoidFluid);
-        FluidStack[][] Fake_T1_Moon_Fluid_Split = addSplitAggregateArray(Fake_T1_Moon_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T1_Moon_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Mo", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T1);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T1,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Mo", 1L),
+            Fake_T1_Moon_Fluid,
+            "Singularity with Void Fluid Mode");
     }
 
     public static void addFakeVoidFluidRecipes_T2() {
@@ -291,17 +246,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Meteoric_Iron_SmallOre,
             SmallOre_Fluid.Desh_SmallOre,
             SmallOre_Fluid.Nickel_SmallOre);
-        FluidStack[][] Fake_T2_Deimos_Fluid_Split = addSplitAggregateArray(Fake_T2_Deimos_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T2_Deimos_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_De", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T2);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T2,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_De", 1L),
+            Fake_T2_Deimos_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T2 - Mars - Ma
         FluidStack[] Fake_T2_Mars_Fluid = addCompressAggregateArray(
@@ -335,17 +284,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Zinc_SmallOre,
             SmallOre_Fluid.Nickel_SmallOre,
             Void_Fluid.Mars_VoidFluid);
-        FluidStack[][] Fake_T2_Mars_Fluid_Split = addSplitAggregateArray(Fake_T2_Mars_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T2_Mars_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ma", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T2);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T2,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ma", 1L),
+            Fake_T2_Mars_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T2 - Phobos - Ph
         FluidStack[] Fake_T2_Phobos_Fluid = addCompressAggregateArray(
@@ -371,17 +314,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Meteoric_Iron_SmallOre,
             SmallOre_Fluid.Lapis_SmallOre,
             SmallOre_Fluid.Desh_SmallOre);
-        FluidStack[][] Fake_T2_Phobos_Fluid_Split = addSplitAggregateArray(Fake_T2_Phobos_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T2_Phobos_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ph", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T2);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T2,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ph", 1L),
+            Fake_T2_Phobos_Fluid,
+            "Singularity with Void Fluid Mode");
     }
 
     public static void addFakeVoidFluidRecipes_T3() {
@@ -400,19 +337,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Chromite_SmallOre,
             SmallOre_Fluid.Tungstate_SmallOre,
             SmallOre_Fluid.Nickel_SmallOre);
-        FluidStack[][] Fake_T3_Asteroids_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T3,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_As", 1L),
             Fake_T3_Asteroids_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T3_Asteroids_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_As", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T3);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T3 - Callisto - Ca
         FluidStack[] Fake_T3_Callisto_Fluid = addCompressAggregateArray(
@@ -435,19 +364,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Desh_SmallOre,
             SmallOre_Fluid.Bismuth_SmallOre,
             Void_Fluid.Callisto_VoidFluid);
-        FluidStack[][] Fake_T3_Callisto_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T3,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ca", 1L),
             Fake_T3_Callisto_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T3_Callisto_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ca", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T3);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T3 - Ceres - Ce
         FluidStack[] Fake_T3_Ceres_Fluid = addCompressAggregateArray(
@@ -475,17 +396,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Quantium_SmallOre,
             SmallOre_Fluid.Naquadah_SmallOre,
             Void_Fluid.Ceres_VoidFluid);
-        FluidStack[][] Fake_T3_Ceres_Fluid_Split = addSplitAggregateArray(Fake_T3_Ceres_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T3_Ceres_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ce", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T3);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T3,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ce", 1L),
+            Fake_T3_Ceres_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T3 - Europa - Eu
         FluidStack[] Fake_T3_Europa_Fluid = addCompressAggregateArray(
@@ -494,17 +409,11 @@ public class FakeSingularityFluidRecipes {
             Vein_Fluid.Chrome_Vein,
             Vein_Fluid.Ledox_Vein,
             Vein_Fluid.Tin_Vein);
-        FluidStack[][] Fake_T3_Europa_Fluid_Split = addSplitAggregateArray(Fake_T3_Europa_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T3_Europa_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Eu", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T3);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T3,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Eu", 1L),
+            Fake_T3_Europa_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T3 - Ganymede - Ga
         FluidStack[] Fake_T3_Ganymede_Fluid = addCompressAggregateArray(
@@ -530,19 +439,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Tungstate_SmallOre,
             SmallOre_Fluid.Lapis_SmallOre,
             SmallOre_Fluid.Zinc_SmallOre);
-        FluidStack[][] Fake_T3_Ganymede_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T3,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ga", 1L),
             Fake_T3_Ganymede_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T3_Ganymede_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ga", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T3);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T3 - Ross128b - Rb
         FluidStack[] Fake_T3_Ross128b_Fluid = addCompressAggregateArray(
@@ -555,19 +456,11 @@ public class FakeSingularityFluidRecipes {
             Vein_Fluid.Fayalite_GreenFuchsite_RedZircon_RedFuchsite_Vein,
             Vein_Fluid.Forsterite_Fayalite_OrangeDescloizite_RedDescloizite_Vein,
             Void_Fluid.Ross128b_VoidFluid);
-        FluidStack[][] Fake_T3_Ross128b_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T3,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Rb", 1L),
             Fake_T3_Ross128b_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T3_Ross128b_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Rb", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T3);
-        }
+            "Singularity with Void Fluid Mode");
     }
 
     public static void addFakeVoidFluidRecipes_T4() {
@@ -601,17 +494,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Quantium_SmallOre,
             SmallOre_Fluid.Naquadah_SmallOre,
             Void_Fluid.Io_VoidFluid);
-        FluidStack[][] Fake_T4_Io_Fluid_Split = addSplitAggregateArray(Fake_T4_Io_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T4_Io_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Io", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T4);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T4,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Io", 1L),
+            Fake_T4_Io_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T4 - Mercury - Me
         FluidStack[] Fake_T4_Mercury_Fluid = addCompressAggregateArray(
@@ -640,17 +527,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Nickel_SmallOre,
             SmallOre_Fluid.Naquadah_SmallOre,
             Void_Fluid.Mercury_VoidFluid);
-        FluidStack[][] Fake_T4_Mercury_Fluid_Split = addSplitAggregateArray(Fake_T4_Mercury_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T4_Mercury_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Me", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T4);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T4,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Me", 1L),
+            Fake_T4_Mercury_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T4 - Venus - Ve
         FluidStack[] Fake_T4_Venus_Fluid = addCompressAggregateArray(
@@ -681,17 +562,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Nickel_SmallOre,
             SmallOre_Fluid.Naquadah_SmallOre,
             Void_Fluid.Venus_VoidFluid);
-        FluidStack[][] Fake_T4_Venus_Fluid_Split = addSplitAggregateArray(Fake_T4_Venus_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T4_Venus_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ve", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T4);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T4,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ve", 1L),
+            Fake_T4_Venus_Fluid,
+            "Singularity with Void Fluid Mode");
     }
 
     public static void addFakeVoidFluidRecipes_T5() {
@@ -717,19 +592,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Lapis_SmallOre,
             SmallOre_Fluid.Zinc_SmallOre,
             SmallOre_Fluid.Naquadah_SmallOre);
-        FluidStack[][] Fake_T5_Enceladus_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T5,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_En", 1L),
             Fake_T5_Enceladus_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T5_Enceladus_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_En", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T5);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T5 - Miranda - Mi
         FluidStack[] Fake_T5_Miranda_Fluid = addCompressAggregateArray(
@@ -750,17 +617,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Tungstate_SmallOre,
             SmallOre_Fluid.Desh_SmallOre,
             Void_Fluid.Miranda_VoidFluid);
-        FluidStack[][] Fake_T5_Miranda_Fluid_Split = addSplitAggregateArray(Fake_T5_Miranda_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T5_Miranda_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Mi", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T5);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T5,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Mi", 1L),
+            Fake_T5_Miranda_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T5 - Oberon - Ob
         FluidStack[] Fake_T5_Oberon_Fluid = addCompressAggregateArray(
@@ -783,17 +644,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Tungstate_SmallOre,
             SmallOre_Fluid.Lapis_SmallOre,
             Void_Fluid.Oberon_VoidFluid);
-        FluidStack[][] Fake_T5_Oberon_Fluid_Split = addSplitAggregateArray(Fake_T5_Oberon_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T5_Oberon_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ob", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T5);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T5,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ob", 1L),
+            Fake_T5_Oberon_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T5 - Titan - Ti
         FluidStack[] Fake_T5_Titan_Fluid = addCompressAggregateArray(
@@ -823,17 +678,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Zinc_SmallOre,
             SmallOre_Fluid.Quantium_SmallOre,
             Void_Fluid.Titan_VoidFluid);
-        FluidStack[][] Fake_T5_Titan_Fluid_Split = addSplitAggregateArray(Fake_T5_Titan_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T5_Titan_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ti", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T5);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T5,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ti", 1L),
+            Fake_T5_Titan_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T5 - Ross128ba - Ra
         FluidStack[] Fake_T5_Ross128ba_Fluid = addCompressAggregateArray(
@@ -845,19 +694,11 @@ public class FakeSingularityFluidRecipes {
             Vein_Fluid.Tiberium_Vein,
             Vein_Fluid.Fluorspar_Vein,
             Void_Fluid.Ross128ba_VoidFluid);
-        FluidStack[][] Fake_T5_Ross128ba_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T5,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ra", 1L),
             Fake_T5_Ross128ba_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T5_Ross128ba_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ra", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T5);
-        }
+            "Singularity with Void Fluid Mode");
     }
 
     public static void addFakeVoidFluidRecipes_T6() {
@@ -890,17 +731,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Zinc_SmallOre,
             SmallOre_Fluid.Naquadah_SmallOre,
             Void_Fluid.Proteus_VoidFluid);
-        FluidStack[][] Fake_T6_Proteus_Fluid_Split = addSplitAggregateArray(Fake_T6_Proteus_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T6_Proteus_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Pr", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T6);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T6,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Pr", 1L),
+            Fake_T6_Proteus_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T6 - Triton - Tr
         FluidStack[] Fake_T6_Triton_Fluid = addCompressAggregateArray(
@@ -927,17 +762,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Tungstate_SmallOre,
             SmallOre_Fluid.Desh_SmallOre,
             Void_Fluid.Triton_VoidFluid);
-        FluidStack[][] Fake_T6_Triton_Fluid_Split = addSplitAggregateArray(Fake_T6_Triton_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T6_Triton_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Tr", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T6);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T6,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Tr", 1L),
+            Fake_T6_Triton_Fluid,
+            "Singularity with Void Fluid Mode");
     }
 
     public static void addFakeVoidFluidRecipes_T7() {
@@ -966,17 +795,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Desh_SmallOre,
             SmallOre_Fluid.Zinc_SmallOre,
             SmallOre_Fluid.Quantium_SmallOre);
-        FluidStack[][] Fake_T7_Haumea_Fluid_Split = addSplitAggregateArray(Fake_T7_Haumea_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T7_Haumea_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ha", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T7);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T7,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ha", 1L),
+            Fake_T7_Haumea_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T7 - Makemake - MM
         FluidStack[] Fake_T7_Makemake_Fluid = addCompressAggregateArray(
@@ -1006,19 +829,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Nickel_SmallOre,
             SmallOre_Fluid.Quantium_SmallOre,
             Void_Fluid.Makemake_VoidFluid);
-        FluidStack[][] Fake_T7_Makemake_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T7,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_MM", 1L),
             Fake_T7_Makemake_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T7_Makemake_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_MM", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T7);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T7 - Pluto - Pl
         FluidStack[] Fake_T7_Pluto_Fluid = addCompressAggregateArray(
@@ -1052,17 +867,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Quantium_SmallOre,
             SmallOre_Fluid.Naquadah_SmallOre,
             Void_Fluid.Pluto_VoidFluid);
-        FluidStack[][] Fake_T7_Pluto_Fluid_Split = addSplitAggregateArray(Fake_T7_Pluto_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T7_Pluto_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Pl", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T7);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T7,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Pl", 1L),
+            Fake_T7_Pluto_Fluid,
+            "Singularity with Void Fluid Mode");
     }
 
     public static void addFakeVoidFluidRecipes_T8() {
@@ -1079,19 +888,11 @@ public class FakeSingularityFluidRecipes {
             Vein_Fluid.Basaltic_Mineral_Sand_Vein,
             Vein_Fluid.Salt_Vein,
             Void_Fluid.BarnardC_VoidFluid);
-        FluidStack[][] Fake_T8_BarnardC_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T8,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_BC", 1L),
             Fake_T8_BarnardC_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T8_BarnardC_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_BC", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T8);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T8 - BarnardE - BE
         FluidStack[] Fake_T8_BarnardE_Fluid = addCompressAggregateArray(
@@ -1117,19 +918,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Nickel_SmallOre,
             SmallOre_Fluid.Naquadah_SmallOre,
             Void_Fluid.BarnardE_VoidFluid);
-        FluidStack[][] Fake_T8_BarnardE_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T8,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_BE", 1L),
             Fake_T8_BarnardE_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T8_BarnardE_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_BE", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T8);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T8 - BarnardF - BF
         FluidStack[] Fake_T8_BarnardF_Fluid = addCompressAggregateArray(
@@ -1160,19 +953,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Naquadah_SmallOre,
             SmallOre_Fluid.Bedrockium_SmallOre,
             Void_Fluid.BarnardF_VoidFluid);
-        FluidStack[][] Fake_T8_BarnardF_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T8,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_BF", 1L),
             Fake_T8_BarnardF_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T8_BarnardF_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_BF", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T8);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T8 - α Centauri Bb - CB
         FluidStack[] Fake_T8_Centauri_Fluid = addCompressAggregateArray(
@@ -1190,19 +975,11 @@ public class FakeSingularityFluidRecipes {
             Vein_Fluid.Tin_Vein,
             Vein_Fluid.Nether_Quartz_Vein,
             Void_Fluid.Centauri_VoidFluid);
-        FluidStack[][] Fake_T8_Centauri_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T8,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_CB", 1L),
             Fake_T8_Centauri_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T8_Centauri_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_CB", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T8);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T8 - TCetiE - TE
         FluidStack[] Fake_T8_TCetiE_Fluid = addCompressAggregateArray(
@@ -1224,17 +1001,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Neutronium_SmallOre,
             SmallOre_Fluid.Lapis_SmallOre,
             Void_Fluid.TCetiE_VoidFluid);
-        FluidStack[][] Fake_T8_TCetiE_Fluid_Split = addSplitAggregateArray(Fake_T8_TCetiE_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T8_TCetiE_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_TE", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T8);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T8,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_TE", 1L),
+            Fake_T8_TCetiE_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T8 - VegaB - VB
         FluidStack[] Fake_T8_VegaB_Fluid = addCompressAggregateArray(
@@ -1263,17 +1034,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Black_Plutonium_SmallOre,
             SmallOre_Fluid.Chromite_SmallOre,
             SmallOre_Fluid.Bismuth_SmallOre);
-        FluidStack[][] Fake_T8_VegaB_Fluid_Split = addSplitAggregateArray(Fake_T8_VegaB_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T8_VegaB_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_VB", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T8);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T8,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_VB", 1L),
+            Fake_T8_VegaB_Fluid,
+            "Singularity with Void Fluid Mode");
     }
 
     public static void addFakeVoidFluidRecipes_T9() {
@@ -1292,17 +1057,11 @@ public class FakeSingularityFluidRecipes {
             Vein_Fluid.Rutile_Vein,
             Vein_Fluid.Basaltic_Mineral_Sand_Vein,
             SmallOre_Fluid.Infinity_Catalyst_SmallOre);
-        FluidStack[][] Fake_T9_Anubis_Fluid_Split = addSplitAggregateArray(Fake_T9_Anubis_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T9_Anubis_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_An", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T9);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T9,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_An", 1L),
+            Fake_T9_Anubis_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T9 - Horus - Ho
         FluidStack[] Fake_T9_Horus_Fluid = addCompressAggregateArray(
@@ -1337,17 +1096,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Sapphire_SmallOre,
             SmallOre_Fluid.Jasper_SmallOre,
             SmallOre_Fluid.Olivine_SmallOre);
-        FluidStack[][] Fake_T9_Horus_Fluid_Split = addSplitAggregateArray(Fake_T9_Horus_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T9_Horus_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ho", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T9);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T9,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Ho", 1L),
+            Fake_T9_Horus_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T9 - Maahes - Mh
         FluidStack[] Fake_T9_Maahes_Fluid = addCompressAggregateArray(
@@ -1362,17 +1115,11 @@ public class FakeSingularityFluidRecipes {
             Vein_Fluid.Basaltic_Mineral_Sand_Vein,
             Vein_Fluid.Quantium_Vein,
             Vein_Fluid.Chrome_Vein);
-        FluidStack[][] Fake_T9_Maahes_Fluid_Split = addSplitAggregateArray(Fake_T9_Maahes_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T9_Maahes_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Mh", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T9);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T9,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Mh", 1L),
+            Fake_T9_Maahes_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T9 - MehenBelt - MB
         FluidStack[] Fake_T9_MehenBelt_Fluid = addCompressAggregateArray(
@@ -1395,19 +1142,11 @@ public class FakeSingularityFluidRecipes {
             SmallOre_Fluid.Lapis_SmallOre,
             SmallOre_Fluid.Nickel_SmallOre,
             SmallOre_Fluid.Olivine_SmallOre);
-        FluidStack[][] Fake_T9_MehenBelt_Fluid_Split = addSplitAggregateArray(
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T9,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_MB", 1L),
             Fake_T9_MehenBelt_Fluid,
-            NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T9_MehenBelt_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_MB", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T9);
-        }
+            "Singularity with Void Fluid Mode");
 
         // T9 - Neper - Np
         FluidStack[] Fake_T9_Neper_Fluid = addCompressAggregateArray(
@@ -1423,17 +1162,11 @@ public class FakeSingularityFluidRecipes {
             Vein_Fluid.Kaolinite_Vein,
             Vein_Fluid.Aqua_Ignis_Amber_Vein,
             Vein_Fluid.Nether_Quartz_Vein);
-        FluidStack[][] Fake_T9_Neper_Fluid_Split = addSplitAggregateArray(Fake_T9_Neper_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T9_Neper_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Np", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T9);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T9,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Np", 1L),
+            Fake_T9_Neper_Fluid,
+            "Singularity with Void Fluid Mode");
 
         // T9 - Seth - Se
         FluidStack[] Fake_T9_Seth_Fluid = addCompressAggregateArray(
@@ -1450,16 +1183,10 @@ public class FakeSingularityFluidRecipes {
             Vein_Fluid.Cassiterite_Vein,
             SmallOre_Fluid.Awakened_Draconium_SmallOre,
             SmallOre_Fluid.Draconium_SmallOre);
-        FluidStack[][] Fake_T9_Seth_Fluid_Split = addSplitAggregateArray(Fake_T9_Seth_Fluid, NEI_ItemOutput_Size);
-        for (FluidStack[] tempFluidStacks : Fake_T9_Seth_Fluid_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Se", 1L))
-                .fluidOutputs(tempFluidStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Void Fluid Mode")
-                .eut(0)
-                .addTo(addFakeVoidFluidRecipes_T9);
-        }
+        addFluidDisplay(
+            addFakeVoidFluidRecipes_T9,
+            getModItem(NEIOrePlugin.ID, "blockDimensionDisplay_Se", 1L),
+            Fake_T9_Seth_Fluid,
+            "Singularity with Void Fluid Mode");
     }
 }

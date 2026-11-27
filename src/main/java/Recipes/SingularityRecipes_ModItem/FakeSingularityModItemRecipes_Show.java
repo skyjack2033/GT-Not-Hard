@@ -1,14 +1,10 @@
 package Recipes.SingularityRecipes_ModItem;
 
+import static Recipes.SingularityNEICatalog.addItemDisplay;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
-import static gregtech.api.util.GTRecipeBuilder.SECONDS;
-import static util.AggregateItemStackArray.addSplitAggregateArray;
 import static util.RecipesFrontend.ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
 
-import net.minecraft.item.ItemStack;
-
-import gregtech.api.enums.GTValues;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
@@ -28,19 +24,10 @@ public class FakeSingularityModItemRecipes_Show {
 
     public static void addFakeModItemRecipes_Show() {
         SingularityModItemRecipes_Generate.refreshCatalog();
-        addFakeModItemRecipes_Show.getBackend()
-            .clearRecipes();
-        for (ItemStack[] page : addSplitAggregateArray(
+        addItemDisplay(
+            addFakeModItemRecipes_Show,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 15498),
             SingularityModItemRecipes_Generate.getModItemSelectors(),
-            OUTPUTS_PER_PAGE)) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 15498))
-                .itemOutputs(page)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Mod Mode")
-                .eut(0)
-                .addTo(addFakeModItemRecipes_Show);
-        }
+            "Singularity with Mod Mode");
     }
 }

@@ -1,56 +1,53 @@
 package Recipes.SingularityRecipes_Ecosystem;
 
+import static Recipes.SingularityNEICatalog.addItemDisplay;
 import static gregtech.api.enums.Mods.GregTech;
 import static gregtech.api.util.GTModHandler.getModItem;
-import static gregtech.api.util.GTRecipeBuilder.SECONDS;
 import static util.AggregateItemStackArray.addCompressAggregateArray;
-import static util.AggregateItemStackArray.addSplitAggregateArray;
 import static util.AggregateItemStackArray.checkItemStack;
 
 import net.minecraft.item.ItemStack;
 
-import gregtech.api.enums.GTValues;
 import gregtech.api.recipe.RecipeMap;
 import gregtech.api.recipe.RecipeMapBackend;
 import gregtech.api.recipe.RecipeMapBuilder;
 import util.RecipesFrontend.OneToManyItemsFrontend_Large;
+import util.RecipesFrontend.ResourceCatalogFrontend;
 
 public class FakeSingularityEcosystemRecipes {
 
-    public static int NEI_ItemOutput_Size = util.RecipesFrontend.ResourceCatalogFrontend.OUTPUTS_PER_PAGE;
-
     public static final RecipeMap<RecipeMapBackend> addFakeEcosystemRecipes_AlgaeFarm = RecipeMapBuilder
         .of("Singularity of Ecosystem AlgaeFarm")
-        .maxIO(1, NEI_ItemOutput_Size, 0, 0)
+        .maxIO(1, ResourceCatalogFrontend.OUTPUTS_PER_PAGE, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
+        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
 
     public static final RecipeMap<RecipeMapBackend> addFakeEcosystemRecipes_Comb = RecipeMapBuilder
         .of("Singularity of Ecosystem Comb")
-        .maxIO(1, NEI_ItemOutput_Size, 0, 0)
+        .maxIO(1, ResourceCatalogFrontend.OUTPUTS_PER_PAGE, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
+        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
 
     public static final RecipeMap<RecipeMapBackend> addFakeEcosystemRecipes_Food = RecipeMapBuilder
         .of("Singularity of Ecosystem Food")
-        .maxIO(1, NEI_ItemOutput_Size, 0, 0)
+        .maxIO(1, ResourceCatalogFrontend.OUTPUTS_PER_PAGE, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
+        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
 
     public static final RecipeMap<RecipeMapBackend> addFakeEcosystemRecipes_TreeGrowth = RecipeMapBuilder
         .of("Singularity of Ecosystem TreeGrowth")
-        .maxIO(1, NEI_ItemOutput_Size, 0, 0)
+        .maxIO(1, ResourceCatalogFrontend.OUTPUTS_PER_PAGE, 0, 0)
         .minInputs(1, 0)
-        .neiHandlerInfo(builder -> builder.setHeight(util.RecipesFrontend.ResourceCatalogFrontend.HANDLER_HEIGHT))
+        .neiHandlerInfo(builder -> builder.setHeight(ResourceCatalogFrontend.HANDLER_HEIGHT))
         .frontend(OneToManyItemsFrontend_Large::new)
         .neiTransferRect(81, 27, 14, 16)
         .build();
@@ -58,19 +55,11 @@ public class FakeSingularityEcosystemRecipes {
     public static void addFakeEcosystemRecipes_AlgaeFarm() {
         ItemStack[] Fake_Ecosystem_AlgaeFarm_List = addCompressAggregateArray(Ecosystem_AlgaeFarm.Pure_AlgaeFarm);
         ItemStack[] Fake_Ecosystem_AlgaeFarm_List_Checked = checkItemStack(Fake_Ecosystem_AlgaeFarm_List);
-        ItemStack[][] Fake_Ecosystem_AlgaeFarm_List_Split = addSplitAggregateArray(
+        addItemDisplay(
+            addFakeEcosystemRecipes_AlgaeFarm,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 997),
             Fake_Ecosystem_AlgaeFarm_List_Checked,
-            NEI_ItemOutput_Size);
-        for (ItemStack[] tempItemStacks : Fake_Ecosystem_AlgaeFarm_List_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 997))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Ecosystem Mode")
-                .eut(0)
-                .addTo(addFakeEcosystemRecipes_AlgaeFarm);
-        }
+            "Singularity with Ecosystem Mode");
     }
 
     public static void addFakeEcosystemRecipes_Comb() {
@@ -84,19 +73,11 @@ public class FakeSingularityEcosystemRecipes {
             Ecosystem_Comb.Gendustry_Comb,
             Ecosystem_Comb.GregTech_Comb);
         ItemStack[] Fake_Ecosystem_Comb_List_Checked = checkItemStack(Fake_Ecosystem_Comb_List);
-        ItemStack[][] Fake_Ecosystem_Comb_List_Split = addSplitAggregateArray(
+        addItemDisplay(
+            addFakeEcosystemRecipes_Comb,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 9399),
             Fake_Ecosystem_Comb_List_Checked,
-            NEI_ItemOutput_Size);
-        for (ItemStack[] tempItemStacks : Fake_Ecosystem_Comb_List_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 9399))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Ecosystem Mode")
-                .eut(0)
-                .addTo(addFakeEcosystemRecipes_Comb);
-        }
+            "Singularity with Ecosystem Mode");
     }
 
     public static void addFakeEcosystemRecipes_Food() {
@@ -131,19 +112,11 @@ public class FakeSingularityEcosystemRecipes {
             Ecosystem_Food.GTPlusPlus_Food,
             Ecosystem_Food.Witchery_Food);
         ItemStack[] Fake_Ecosystem_Food_List_Checked = checkItemStack(Fake_Ecosystem_Food_List);
-        ItemStack[][] Fake_Ecosystem_Food_List_Split = addSplitAggregateArray(
+        addItemDisplay(
+            addFakeEcosystemRecipes_Food,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 311),
             Fake_Ecosystem_Food_List_Checked,
-            NEI_ItemOutput_Size);
-        for (ItemStack[] tempItemStacks : Fake_Ecosystem_Food_List_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 311))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Ecosystem Mode")
-                .eut(0)
-                .addTo(addFakeEcosystemRecipes_Food);
-        }
+            "Singularity with Ecosystem Mode");
     }
 
     public static void addFakeEcosystemRecipes_TreeGrowth() {
@@ -167,18 +140,10 @@ public class FakeSingularityEcosystemRecipes {
             Ecosystem_TreeGrowth.Forestry_TreeGrowth,
             Ecosystem_TreeGrowth.ExtraTrees_TreeGrowth);
         ItemStack[] Fake_Ecosystem_TreeGrowth_List_Checked = checkItemStack(Fake_Ecosystem_TreeGrowth_List);
-        ItemStack[][] Fake_Ecosystem_TreeGrowth_List_Split = addSplitAggregateArray(
+        addItemDisplay(
+            addFakeEcosystemRecipes_TreeGrowth,
+            getModItem(GregTech.ID, "gt.blockmachines", 1L, 836),
             Fake_Ecosystem_TreeGrowth_List_Checked,
-            NEI_ItemOutput_Size);
-        for (ItemStack[] tempItemStacks : Fake_Ecosystem_TreeGrowth_List_Split) {
-            GTValues.RA.stdBuilder()
-                .itemInputs(getModItem(GregTech.ID, "gt.blockmachines", 1L, 836))
-                .itemOutputs(tempItemStacks)
-                .fake()
-                .duration(3 * SECONDS)
-                .setNEIDesc("Singularity with Ecosystem Mode")
-                .eut(0)
-                .addTo(addFakeEcosystemRecipes_TreeGrowth);
-        }
+            "Singularity with Ecosystem Mode");
     }
 }
