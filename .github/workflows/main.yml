@@ -71,10 +71,11 @@ jobs:
       - name: Setup the workspace
         run: ./gradlew --build-cache --info --stacktrace setupCIWorkspace
 
-      - name: Build installable JAR
-        run: ./gradlew --build-cache --info --stacktrace reobfJar
+      - name: Build AE2Things
+        run: ./gradlew --build-cache --info --stacktrace assemble
 
-      - name: Prepare installable artifact
+      - name: Prepare release assets
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
           set -euo pipefail
@@ -82,24 +83,35 @@ jobs:
           rm -rf build/release-assets
           mkdir -p build/release-assets
 
-          base_name="gtnothard-${VERSION}"
-          file="build/libs/${base_name}.jar"
-          if [[ ! -f "$file" ]]; then
-            echo "Installable JAR not found: $file" >&2
+          shopt -s nullglob
+          files=(build/libs/*.jar)
+
+          if (( ${#files[@]} == 0 )); then
+            echo 'No build jars found.' >&2
             exit 1
           fi
 
-          asset_name="${base_name}-${BRANCH_KEY}-${COMMIT_SHORT}.jar"
-          cp "$file" "build/release-assets/$asset_name"
-          printf '%s\n' "$asset_name" > build/release-assets/asset-names.txt
-          printf '%s\n' "$base_name" > build/release-assets/legacy-asset-bases.txt
+          for file in "${files[@]}"; do
+            filename=$(basename "$file")
+            base_name=${filename%.jar}
+
+            if [[ "$base_name" =~ ^(.*)-[[:xdigit:]]{7,40}$ ]]; then
+              base_name=${BASH_REMATCH[1]}
+            fi
+
+            asset_name="${base_name}-${BRANCH_KEY}-${COMMIT_SHORT}.jar"
+
+            cp "$file" "build/release-assets/$asset_name"
+            printf '%s\n' "$asset_name" >> build/release-assets/asset-names.txt
+            printf '%s\n' "$base_name" >> build/release-assets/legacy-asset-bases.txt
+          done
 
       - name: Upload build artifacts
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v7
         with:
-          name: gtnothard-build-${{ github.event.pull_request.number }}-${{ steps.version.outputs.commit_short }}
-          path: build/release-assets/*.jar
+          name: ae2things-dev-build-${{ github.event.pull_request.number }}-${{ steps.version.outputs.commit_short }}
+          path: build/libs/*.jar
           if-no-files-found: error
           overwrite: true
 
